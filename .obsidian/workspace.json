@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "de64c07b7f76d9b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "fae3bb622e5df963",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d43925a9b9e70b4",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dd53fd3f06aeb385",
+    "type": "split",
+    "children": [
+      {
+        "id": "b64c8c850e659af6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b559c1d34165e516",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f878f233607402bb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "path:\"Templates/\" ",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "cb43e0c70de518c7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 335.5
+  },
+  "right": {
+    "id": "63018f4f54280857",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c699bd7f7c0dfaa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e5247ff17b3877cd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "7910e3c3f79cf41f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "5d16d14aa89692fb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "74c53356902e929d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
+    }
+  },
+  "active": "5d43925a9b9e70b4",
+  "lastOpenFiles": [
+    "Papers/References/lira2023_The underlying mechanical properties of membranes tune their ability to fuse.pdf",
+    "Dashboard.md",
+    "Untitled 3.md",
+    "Untitled 2.md",
+    "Untitled 1.md",
+    "Templates/Paper_Notes.md",
+    "Untitled.md",
+    "Projects/Postdoc Project.md",
+    "Papers Tracker.md",
+    "References/Reading_Notes.md",
+    "References",
+    "Templates/Experiment_Log.md",
+    "Templates/Theory_Note.md",
+    "Notes Tracker.md",
+    "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
+    "Papers/References/guan2024_Effect of the shape of microswimmers and slip boundary conditions on the dynamic characteristics of.pdf",
+    "Papers/References/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
+    "Papers/References/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.pdf",
+    "Papers/References/van der wel2017_Microparticle Assembly Pathways on Lipid Membranes.pdf",
+    "Papers/References/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.pdf",
+    "Research_Dashboard.md",
+    "Papers/Reading_Notes/Lipid membrane-mediated attractions between curvature inducing objects_2016.md",
+    "Papers/Reading_Notes/welLipidMembranemediatedAttractions2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
+    "Papers/References/Wel et al._2016_Lipid membrane-mediated attractions between curvature inducing objects.pdf",
+    "Papers/References/Van Der Wel et al._2017_Microparticle Assembly Pathways on Lipid Membranes.pdf",
+    "Papers/References/Lira et al._2023_The underlying mechanical properties of membranes tune their ability to fuse.pdf",
+    "Papers/Reading_Notes/_2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
+    "Papers/Reading_Notes/@welLipidMembranemediatedAttractions2016.md"
+  ]
+}

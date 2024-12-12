@@ -1,0 +1,11 @@
+{
+  "templater-obsidian:Templates/Paper_Notes.md": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ]
+}
