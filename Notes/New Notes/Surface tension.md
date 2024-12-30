@@ -1,0 +1,1 @@
+ Surface tension ( $\sigma$ ) is the energy cost per unit area associated with deforming a liquid interface. It arises due to the imbalance of intermolecular forces at the interface compared to the bulk.

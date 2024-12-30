@@ -465,7 +465,7 @@
   "markdownNodeOneClickEditing": false,
   "canvasImmersiveEmbed": true,
   "startupScriptPath": "",
-  "openAIAPIToken": "",
+  "openAIAPIToken": "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",
   "openAIDefaultTextModel": "gpt-3.5-turbo-1106",
   "openAIDefaultVisionModel": "gpt-4o",
   "openAIDefaultImageGenerationModel": "dall-e-3",
