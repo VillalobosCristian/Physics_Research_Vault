@@ -26,4 +26,6 @@ The project is divided in three interconnected work packages, each of them tackl
 
 # WP1: Fabrication of [[Giant Unilamellar Vesicles (GUVs)|GUVs]] with localized deformable lipids domains
 
+> ([[FrontiersOfLife-PostDocCall-ApplicationForm-2024_LAF.pdf#page=4&selection=35,0,89,0&color=yellow|FrontiersOfLife-PostDocCall-ApplicationForm-2024_LAF, p.4]])
+> chemical gradients will drive localized membrane deformations. We will fabricate Janus GUVs (DOPC:DPPC:Chol)19 with liquid- ordered (Lo) and liquid-disordered (Ld) domains, equipped with internal synthetic motors (enzymatic Janus rods).
 

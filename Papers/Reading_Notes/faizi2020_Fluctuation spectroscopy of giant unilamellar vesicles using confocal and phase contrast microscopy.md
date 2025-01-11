@@ -2,6 +2,13 @@
 title: Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy
 authors: Hammad A. Faizi, Cody J. Reeves, Vasil N. Georgiev, Petia M. Vlahovska, Rumiana Dimova
 year: 2020
+tags:
+  - "#membrane-biophysics"
+  - "#bilayer-properties"
+  - "#physics"
+  - "#research"
+  - "#microscopy-methods"
+  - "#fluctuation-analysis"
 ---
 
 # Abstract 

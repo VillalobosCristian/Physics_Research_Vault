@@ -1,3 +1,11 @@
+---
+tags:
+  - "#differential-geometry"
+  - "#surface-parameterization"
+  - "#mathematical-physics"
+  - "#gaussian-curvature"
+  - "#gauss-mapping"
+---
 ## Gaussian Curvature
 Given a point on the surface, we can determine the normal vector a that point. Demanding that the length of this vector is $1$, so that this vector can be contain within a unit sphere whose tip is now on the sphere. 
 

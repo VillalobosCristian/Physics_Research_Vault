@@ -1,30 +1,38 @@
-GUVs are synthetic analogues of cell membrane, typically formed by bilayers of amphiphilic lipids which allow encapsulation of biomolecules and selective permeability. 
 ---
-Giant Unilamellar Vesicles (GUVs) are spherical structures composed of a single lipid bilayer that encapsulates an aqueous core. 
+tags:
+  - "#membrane-biophysics"
+  - "#lipids"
+  - "#bilayer-properties"
+  - "#membrane-elasticity"
+  - "#guv-formation"
+  - "#phase-transitions"
+  - "#lipid-structure"
+---
 
-  
+GUVs are a  single [[Lipid Bilayer Structure]], with sizes  that typically range from 10 to 100 microns in diameter, making them easily observable under a light microscope.
 
-**Key Features of GUVs:**
+### Formation Methods
 
-1. **Lipid Composition**:
+Different methods exist for GUV preparation, including: 
+- **Electroformation**: Applying an [[electric field]] to lipids films.
+-  **Hydratation**: Sponteaneous sweilling when hydrating dried lipid films.
+- **Microfluidics**
 
-• Formed from amphiphilic lipids that self-assemble into bilayers.
+### Lipid Nomenclature
+**[[DOPC]]**: Stands for **1,2-dioleoyl-sn-glycero-3-phosphocholine**. Its a common phospholipid used in model membranes studies. The *PC* part indicates that it has a phosphatidylcholine head group, while *DO* (dioleoyl) indicates the fatty acid chains. 
 
-• The bilayer structure mimics the natural cell membrane, providing insights into membrane dynamics and properties.
+- **Chain length and saturation of the lipid tails affect the membranes fluidity**
+- **Head group chemistry affects membrane curvature, charge, and interaction with external molecules**
 
-2. **Size**:
+## Membrane phase Behavior: Ordered vs Disordered Phases
 
-• Typically range from 10 to 100 microns in diameter, making them easily observable under a light microscope.
 
-3. **Encapsulation**:
+Lipid membranes can exhibit different thermodynamics phases depending on temperature, composition, and external conditioins. Two commonly mentioned phase states in lipid bilayers are: 
+- **Liquid-ordered phase ($L_o$):** Typically associated with cholesterol containing  membranes or saturated lipids. The lipids are highly packed (ordered), but retain some lateral mobility.
+- **Liquid-disordered phase ($L_d$):** Lipids have more freedom of movement due to unsaturated hydrocarbon chains the bilayer is more fluid. 
 
-• GUVs can encapsulate various biomolecules, including proteins, nucleic acids, and small molecules.
 
-• This makes them valuable for studying biochemical reactions in a controlled environment.
+ 
+## Elastic and Mechanical properties of lipid membranes
 
-4. **Selective Permeability**:
-
-• The lipid bilayer allows selective transport of molecules, depending on size, charge, and hydrophobicity.
-
-• This property is critical for mimicking cellular transport mechanisms.
-
+Lipids membranes can be described in terms of [[Bending elasticity|bending rigidity]] $\kappa$, [[Surface tension]] $\sigma$, and [[Spontaneous curvature]]. For the case of GUVs, which are large enough to see mechanical deformations, such as shape fluctuations, micropipette aspiration, etc.

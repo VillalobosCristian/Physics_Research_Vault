@@ -1,8 +1,12 @@
 [
   "dataview",
   "templater-obsidian",
-  "obsidian-citation-plugin",
   "pdf-plus",
   "obsidian-excalidraw-plugin",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-linter",
+  "ai-tagger",
+  "tags-overview",
+  "ink",
+  "obsidian-citation-plugin"
 ]

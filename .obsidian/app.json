@@ -3,5 +3,11 @@
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
   "newFileFolderPath": "Notes/New Notes",
-  "attachmentFolderPath": "./"
+  "attachmentFolderPath": "./",
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

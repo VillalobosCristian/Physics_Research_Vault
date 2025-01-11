@@ -2,6 +2,15 @@
 title: Lipid membrane-mediated attractions between curvature inducing objects
 authors: Casper van der Wel, Afshin Vahid, Anđela Šarić, Timon Idema, Doris Heinrich, Daniela J. Kraft
 year: 2016
+tags:
+  - "#membrane-biophysics"
+  - "#bilayer-properties"
+  - "#membrane-elasticity"
+  - "#biological-physics"
+  - "#microscopy-methods"
+  - "#protein-interactions"
+  - "#colloidal-physics"
+  - "#monte-carlo-simulation"
 ---
 
 # Abstract 

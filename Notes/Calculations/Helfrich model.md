@@ -1,9 +1,19 @@
+---
+tags:
+  - "#physics"
+  - "#membranes"
+  - "#interface-physics"
+  - "#two-dimensional-surfaces"
+  - "#helfrich-model"
+  - "#spherical-harmonics"
+  - "#membrane-biophysics"
+---
 The total energy of the system is given by the Helfrich model:
 $$E=\frac{\kappa}{2}\int_A \mathrm{d}A\ (c_1+c_2)^2+\sigma A+pV$$
-where $\kappa$ is the bending rigidity, $c_1$ and $c_2$ are the local radii curvature, $\sigma$ is the surface tension, $A$ the total surface area, $p$ is the pressure difference inside the membrane, and $V$ is the interior volume of the vesicle. 
+where $\kappa$ is the bending rigidity, $c_1$ and $c_2$ are the local radii curvature, $\sigma$ is the [[Surface tension]], $A$ the total surface area, $p$ is the pressure difference inside the membrane, and $V$ is the interior volume of the vesicle. 
 
 
-## Helfrich Energy Functional
+## <font color="#c00000"> Helfrich Energy Functional</font>
 
 The Helfrich energy  for a closed vesicle without spontaneous curvature can be written as:
 
@@ -12,7 +22,7 @@ $$E = \frac{\kappa}{2} \int (2H)^2\, dA + \sigma \int dA + \Delta p \int dV,$$
 where
    $\kappa$ is the bending rigidity.
    $H=\frac{1}{2}(c_1+c_2)$ is the mean curvature of the membrane surface.
-   $\sigma$ is the surface tension.
+   $\sigma$ is the [[Surface tension]].
    $\Delta p$ is the pressure difference between the inside and outside of the vesicle. 
    $dA$ is the surface element.
    $dV$ is the volume element enclosed by the membrane. 
@@ -26,10 +36,6 @@ For a sphere of radius $R_0$, the mean curvature is constant, $H = 1/(2R_0)$, an
  Assuming this, we have $\Delta V \approx 0$, and $\Delta A \approx 0$
 
 Consider a coordinate system $(r,\theta,\phi)$ where $\theta$ is the polar angle ($0 \leq \theta \leq \pi$) and $\phi$ is the azimuthal angle ($0 \leq \phi < 2\pi$). For a perfect sphere of radius $R_0$, every point on the surface is given by:
-
-![[Spherical_Coordinates.excalidraw]]
-
-
 
 We start from the assumption that a lipid vesicle at equilibrium is a perfect sphere. This is a natural baseline configuration when there are no external perturbations or imbalances. We then consider a small deformation of the vesicle and introduce a dimensionless parameter to measure these deformations.
 In spherical coordinates $(\theta,\phi)$, a perfect sphere of radius $R_0$ is described as:
@@ -87,3 +93,7 @@ Thus, the full vesicle radius can be written as:
 $$R(\theta,\phi) = R_0 \left[1 + \sum_{\ell=0}^{\infty}\sum_{m=-\ell}^{\ell} u_{\ell m} Y_{\ell m}(\theta,\phi)\right].
 $$
 Each pair $(\ell,m)$ represents a particular angular mode of deformation. Modes with low $\ell$ correspond to large-scale, low-frequency deformations, while high $\ell$ modes represent more intricate shape fluctuations.
+
+
+
+
