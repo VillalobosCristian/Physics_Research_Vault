@@ -33,7 +33,7 @@ Vesicles consisting of a bilayer membrane of amphiphilic lipid molecules are rem
 [[Surface tension]]   is the energy cost per unit area associated with deforming a liquid interface. It arises due to the imbalance of intermolecular forces at the interface compared to the bulk.
 [[Bending elasticity]]  characterizes the energy associated with bending a membrane away from its preferred curvature. Unlike [[Surface tension]], [[Bending elasticity]] is not solely an energy per unit area but depends on the curvature of the membrane.
 Important, [[Bending elasticity]] is anisotropic, while [[Surface tension]] is isotropic. 
-Unlike [[Surface tension]], which is linear in area, bending energy depends quadratically on the deviation of curvature from the spontaneous curvature.
+Unlike [[Surface tension]], which is linear in area, bending energy depends quadratically on the deviation of curvature from the [[Spontaneous curvature]].
 
 ## Highlights 2
 

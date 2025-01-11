@@ -307,7 +307,7 @@ which is the drag on a bubble.
 
 ---
 
-Now let us consider the case when there is a gradient of surface tension. This is known as the [[Marangoni Effect]], and in this particular scenario it produces self-propulsion of the droplet.
+Now let us consider the case when there is a gradient of [[Surface tension]]. This is known as the [[Marangoni Effect]], and in this particular scenario it produces self-propulsion of the droplet.
 
 We impose a temperature gradient acting on the droplet, with temperature decaying as $T(z)=T_{\infty}(0)-\alpha\,z$, where $T(0)$ is a reference value at $z=0$.  
 We will **not** solve the [[Laplace equation]] for temperature on the droplet surface; instead, we will simplify the problem using the tools described above.
@@ -320,7 +320,7 @@ $$
 \quad\text{when }r=1
 $$
 
-This is the tangential stress balance in dimensionless form. To calculate the derivative of surface tension with respect to the angle, we use the expression for temperature in spherical coordinates and the fact that surface tension decreases as temperature increases:
+This is the tangential stress balance in dimensionless form. To calculate the derivative of [[Surface tension]] with respect to the angle, we use the expression for temperature in spherical coordinates and the fact that [[Surface tension]] decreases as temperature increases:
 $$
 \frac{\partial\gamma}{\partial T} = -\beta < 0
 $$

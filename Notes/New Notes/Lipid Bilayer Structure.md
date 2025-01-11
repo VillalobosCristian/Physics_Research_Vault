@@ -7,7 +7,7 @@ tags:
   - "#molecular-diffusion"
 ---
 A lipid bilayer is composed of amphiphilic lipid molecules arranged so that their hydrophobic tails face inward and hydrophilic heads face the aqueous environment. This [[self-assembled]] structure is the basis of all biological membranes.
-![[Lipids.excalidraw]]
+![[[[Lipids.excalidraw]]]]
 
 
 **Key Parameters:**
@@ -17,14 +17,14 @@ A lipid bilayer is composed of amphiphilic lipid molecules arranged so that thei
 
 
 
-![[Bilayer.excalidraw|800]]
+![[[[Bilayer.excalidraw]]|800]]
 
 Because of the two tails the hydrophobicity is strong, therefore there is not exchange between the bilayer and the bulk. 
 For example of [[Micelles]], the hydrophobicity is not that strong and the number of monomers can fluctuate by exchange with the bulk. 
 
 The bilayer also have steric repulsions, which make that exist a prefer distance between each other.
 
-![[Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw]]
+![[[[Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw]]]]
 The order within the biological membrane is a fluid-like, meaning that the lipid molecules can diffuse in the $2-D$ plane of the membrane.
 
 ### Interfacial Tension
@@ -40,7 +40,7 @@ In the case of the bilayer the number of molecules in the interface is fixed so 
 ## Surface free energy
 
 $$F_s=\frac{1}{2}\kappa_s\left(\frac{A-A_0}{A_0}\right)$$
-![[Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw|800]]
+![[[[Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw]]|800]]
  Doing this, has a cost of $F_s$. 
 
 ## Bending

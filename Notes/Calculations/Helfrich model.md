@@ -15,7 +15,7 @@ where $\kappa$ is the bending rigidity, $c_1$ and $c_2$ are the local radii curv
 
 ## <font color="#c00000"> Helfrich Energy Functional</font>
 
-The Helfrich energy  for a closed vesicle without spontaneous curvature can be written as:
+The Helfrich energy  for a closed vesicle without [[Spontaneous curvature]] can be written as:
 
 $$E = \frac{\kappa}{2} \int (2H)^2\, dA + \sigma \int dA + \Delta p \int dV,$$
 
