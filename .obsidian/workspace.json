@@ -25,14 +25,10 @@
             "id": "995b1e58a75e29c3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Giant Unilamellar Vesicles (GUVs)"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
@@ -182,11 +178,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-git:Open Git source control": false,
       "ai-tagger:Generate tags!": false,
-      "tags-overview:Tags overview": false
+      "tags-overview:Tags overview": false,
+      "obisidian-note-linker:Note Linker": false
     }
   },
   "active": "995b1e58a75e29c3",
   "lastOpenFiles": [
+    "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
     "Data/Protocols/Protocol GUVs.md",
     "Data/Codes/Edge Detection.md",
     "Data/Protocols",
@@ -195,7 +193,6 @@
     "References/Reading_Notes.md",
     "Papers/References/karal, ahmed2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesic.pdf",
     "Papers/Reading_Notes/karal2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.md",
-    "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
     "Notes/New Notes/Spontaneous curvature.md",
     "Notes/New Notes/Fluctuation GUVS.md",
     "Notes/New Notes/Gauss map.md",
