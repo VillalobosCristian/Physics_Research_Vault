@@ -4,6 +4,28 @@
     "type": "split",
     "children": [
       {
+        "id": "3560d6ac1329d063",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "995b1e58a75e29c3",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
+                "page": 1,
+                "left": -9,
+                "top": 629,
+                "zoom": 1.7118055555555556
+              },
+              "icon": "lucide-file-text",
+              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
+            }
+          }
+        ]
+      },
+      {
         "id": "35021a544747e9c7",
         "type": "tabs",
         "children": [
@@ -13,32 +35,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data/Protocols/Protocol GUVs.md",
+                "file": "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Protocol GUVs"
-            }
-          },
-          {
-            "id": "995b1e58a75e29c3",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
-                "page": 4,
-                "left": -5,
-                "top": 474,
-                "zoom": 2.8159722222222223
-              },
-              "icon": "lucide-file-text",
               "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,11 +193,13 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "995b1e58a75e29c3",
+  "active": "c9932045b08d58bc",
   "lastOpenFiles": [
+    "Data/Protocols/Protocol GUVs.md",
+    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
+    "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/References/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
     "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
-    "Data/Protocols/Protocol GUVs.md",
     "Data/Codes/Edge Detection.md",
     "Data/Protocols",
     "Data/Untitled.md",
@@ -221,11 +228,9 @@
     "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw.md",
     "Projects/FrontiersOfLife-PostDocCall-ApplicationForm-2024_LAF.pdf",
     "Notes/Ideas/Model_F.pdf",
-    "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/References/helfrich1973_Elastic Properties of Lipid Bilayers Theory and Possible Experiments.pdf",
     "Papers/References/lipowsky1991_The conformation of membranes.pdf",
     "Notes/Calculations/Ink/Writing/2024.12.30 - 2.32am.writing",
-    "Notes/Calculations/Ink/Writing/2024.12.30 - 2.34am.writing",
     "Notes/New Notes/Pasted image 20250107133201.png",
     "Notes/New Notes/pdf_maxwell 1.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
