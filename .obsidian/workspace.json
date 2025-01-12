@@ -25,10 +25,16 @@
             "id": "995b1e58a75e29c3",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "pdf",
+              "state": {
+                "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
+                "page": 4,
+                "left": -5,
+                "top": 474,
+                "zoom": 2.8159722222222223
+              },
+              "icon": "lucide-file-text",
+              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
             }
           }
         ],
@@ -184,6 +190,7 @@
   },
   "active": "995b1e58a75e29c3",
   "lastOpenFiles": [
+    "Papers/References/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
     "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
     "Data/Protocols/Protocol GUVs.md",
     "Data/Codes/Edge Detection.md",
@@ -212,7 +219,6 @@
     "Notes/New Notes/summation convention.md",
     "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw.md",
     "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw.md",
-    "Notes/New Notes/Index notation.md",
     "Projects/FrontiersOfLife-PostDocCall-ApplicationForm-2024_LAF.pdf",
     "Notes/Ideas/Model_F.pdf",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
