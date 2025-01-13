@@ -11,16 +11,14 @@
             "id": "c9932045b08d58bc",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Papers/References/spanke, style2020_Wrapping of Microparticles by Floppy Lipid Vesicles.pdf",
-                "page": 1,
-                "left": -6,
-                "top": 796,
-                "zoom": 2.4877450980392157
+                "file": "Data/Codes/code-docs.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "spanke, style2020_Wrapping of Microparticles by Floppy Lipid Vesicles"
+              "icon": "lucide-file",
+              "title": "code-docs"
             }
           }
         ]
@@ -175,8 +173,9 @@
   },
   "active": "c9932045b08d58bc",
   "lastOpenFiles": [
-    "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/References/spanke, style2020_Wrapping of Microparticles by Floppy Lipid Vesicles.pdf",
+    "Data/Codes/code-docs.md",
+    "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Data/Protocols/Protocol GUVs.md",
     "Papers/References/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
@@ -205,12 +204,10 @@
     "Notes/New Notes/Differentials on Surfaces.md",
     "Notes/New Notes/Surface tension.md",
     "Notes/New Notes/summation convention.md",
-    "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw.md",
     "Projects/FrontiersOfLife-PostDocCall-ApplicationForm-2024_LAF.pdf",
     "Notes/Ideas/Model_F.pdf",
     "Papers/References/helfrich1973_Elastic Properties of Lipid Bilayers Theory and Possible Experiments.pdf",
     "Papers/References/lipowsky1991_The conformation of membranes.pdf",
-    "Notes/Calculations/Ink/Writing/2024.12.30 - 2.32am.writing",
     "Notes/New Notes/Pasted image 20250107133201.png",
     "Notes/New Notes/pdf_maxwell 1.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
