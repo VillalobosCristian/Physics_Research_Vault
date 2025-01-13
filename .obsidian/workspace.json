@@ -4,28 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "3560d6ac1329d063",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "995b1e58a75e29c3",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
-                "page": 9,
-                "left": -9,
-                "top": 502,
-                "zoom": 1.7118055555555556
-              },
-              "icon": "lucide-file-text",
-              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
-            }
-          }
-        ]
-      },
-      {
         "id": "35021a544747e9c7",
         "type": "tabs",
         "children": [
@@ -33,14 +11,16 @@
             "id": "c9932045b08d58bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
-                "mode": "source",
-                "source": false
+                "file": "Papers/References/spanke, style2020_Wrapping of Microparticles by Floppy Lipid Vesicles.pdf",
+                "page": 1,
+                "left": -6,
+                "top": 796,
+                "zoom": 2.4877450980392157
               },
-              "icon": "lucide-file",
-              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
+              "icon": "lucide-file-text",
+              "title": "spanke, style2020_Wrapping of Microparticles by Floppy Lipid Vesicles"
             }
           }
         ]
@@ -195,9 +175,10 @@
   },
   "active": "c9932045b08d58bc",
   "lastOpenFiles": [
-    "Data/Protocols/Protocol GUVs.md",
-    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
+    "Papers/References/spanke, style2020_Wrapping of Microparticles by Floppy Lipid Vesicles.pdf",
+    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
+    "Data/Protocols/Protocol GUVs.md",
     "Papers/References/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
     "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
     "Data/Codes/Edge Detection.md",
@@ -225,7 +206,6 @@
     "Notes/New Notes/Surface tension.md",
     "Notes/New Notes/summation convention.md",
     "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw.md",
-    "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw.md",
     "Projects/FrontiersOfLife-PostDocCall-ApplicationForm-2024_LAF.pdf",
     "Notes/Ideas/Model_F.pdf",
     "Papers/References/helfrich1973_Elastic Properties of Lipid Bilayers Theory and Possible Experiments.pdf",
