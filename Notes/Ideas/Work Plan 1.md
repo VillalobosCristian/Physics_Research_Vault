@@ -6,3 +6,4 @@
 
 Mixing the ps particles in the suspension with vesicles it will be a good test to study the thermal fluctuation, both from vesicle shape and brownian motion.
 
+- Changes in the behavior of particles close to the vesicle membrane it would be nice to see. 
