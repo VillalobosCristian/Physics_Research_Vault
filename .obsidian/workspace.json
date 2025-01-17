@@ -11,14 +11,16 @@
             "id": "c9932045b08d58bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Notes/Calculations/Helfrich model.md",
-                "mode": "source",
-                "source": false
+                "file": "Papers/References/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
+                "page": 1,
+                "left": -6,
+                "top": 796,
+                "zoom": 2.4877450980392157
               },
-              "icon": "lucide-file",
-              "title": "Helfrich model"
+              "icon": "lucide-file-text",
+              "title": "faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer"
             }
           }
         ]
@@ -173,10 +175,10 @@
   },
   "active": "c9932045b08d58bc",
   "lastOpenFiles": [
+    "Notes/Calculations/Helfrich model.md",
     "Notes/Calculations/Differentials on Surfaces.md",
     "Excalidraw/Bilayer.excalidraw.md",
     "Excalidraw/Lipids.excalidraw.md",
-    "Notes/Calculations/Helfrich model.md",
     "Data/Protocols/Protocol GUVs.md",
     "Data/Codes/code-docs.md",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
