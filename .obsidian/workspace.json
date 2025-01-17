@@ -4,23 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "35021a544747e9c7",
+        "id": "fb53830b076fcf51",
         "type": "tabs",
         "children": [
           {
-            "id": "c9932045b08d58bc",
+            "id": "ec17d20fb36edfe7",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Papers/References/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
-                "page": 1,
-                "left": -6,
-                "top": 796,
-                "zoom": 2.4877450980392157
+                "file": "Notes/Ideas/Work Plan 1.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer"
+              "icon": "lucide-file",
+              "title": "Work Plan 1"
             }
           }
         ]
@@ -173,8 +171,11 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "c9932045b08d58bc",
+  "active": "ec17d20fb36edfe7",
   "lastOpenFiles": [
+    "Papers/References/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.pdf",
+    "Notes/Ideas/Work Plan 1.md",
+    "Papers/References/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
     "Notes/Calculations/Helfrich model.md",
     "Notes/Calculations/Differentials on Surfaces.md",
     "Excalidraw/Bilayer.excalidraw.md",
@@ -206,11 +207,8 @@
     "Notes/New Notes/Untitled 1.md",
     "Notes/New Notes/Radioactivity.md",
     "Notes/New Notes/Micelles.md",
-    "Notes/Ideas/Derivation_Helfrich_free.pdf",
     "Notes/New Notes/Budding.md",
     "Notes/New Notes/Differentials on Surfaces.md",
-    "Notes/New Notes/Surface tension.md",
-    "Notes/New Notes/summation convention.md",
     "Notes/New Notes/Pasted image 20250107133201.png",
     "Notes/New Notes/pdf_maxwell 1.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
