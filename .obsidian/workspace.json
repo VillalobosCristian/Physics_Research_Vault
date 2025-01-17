@@ -11,14 +11,12 @@
             "id": "c9932045b08d58bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Notes/Calculations/Helfrich model.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Bilayer.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "Helfrich model"
+              "icon": "excalidraw-icon",
+              "title": "Bilayer.excalidraw"
             }
           }
         ]
@@ -173,6 +171,8 @@
   },
   "active": "c9932045b08d58bc",
   "lastOpenFiles": [
+    "Excalidraw/Lipids.excalidraw.md",
+    "Notes/Calculations/Helfrich model.md",
     "Data/Protocols/Protocol GUVs.md",
     "Data/Codes/code-docs.md",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
@@ -187,7 +187,6 @@
     "Data/Codes/Edge Detection.md",
     "Data/Protocols",
     "Data/Untitled.md",
-    "Notes/Calculations/Helfrich model.md",
     "References/Reading_Notes.md",
     "Papers/References/karal, ahmed2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesic.pdf",
     "Papers/Reading_Notes/karal2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.md",
@@ -202,7 +201,6 @@
     "Notes/New Notes/Radioactivity.md",
     "Notes/Calculations/Differentials on Surfaces.md",
     "Notes/New Notes/Micelles.md",
-    "Excalidraw/Lipids.excalidraw.md",
     "Notes/Ideas/Derivation_Helfrich_free.pdf",
     "Notes/New Notes/Budding.md",
     "Notes/New Notes/Differentials on Surfaces.md",
