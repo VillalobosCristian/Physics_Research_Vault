@@ -1,4 +1,4 @@
-# Week of 20 January
+		# Week of 20 January
 
 - Create GUV with hydratation method, create DOPC GUV, with and without dye, try to focus in a range of size for the vesicles.
 - See the fluctuations of the membrane for this case, try to recreate some of the results from the paper [[faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy]]
