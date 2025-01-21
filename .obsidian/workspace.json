@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "vanderwel2017_Microparticle Assembly Pathways on Lipid Membranes"
             }
+          },
+          {
+            "id": "2ead5854956e6834",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Example charge density of ps particles.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Example charge density of ps particles"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -171,9 +186,10 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "ec17d20fb36edfe7",
+  "active": "2ead5854956e6834",
   "lastOpenFiles": [
     "Papers/Reading_Notes/vanderwel2017_Microparticle Assembly Pathways on Lipid Membranes.md",
+    "Notes/New Notes/Example charge density of ps particles.md",
     "Data/Protocols/Protocol GUVs.md",
     "Notes/Ideas/Work Plan 1.md",
     "Papers/References/popescu, ikeda2006_Optical Measurement of Cell Membrane Tension 1.pdf",
@@ -208,7 +224,6 @@
     "Notes/New Notes/Untitled 1.md",
     "Notes/New Notes/Radioactivity.md",
     "Notes/New Notes/Micelles.md",
-    "Notes/New Notes/Budding.md",
     "Notes/New Notes/Pasted image 20250107133201.png",
     "Notes/New Notes/pdf_maxwell 1.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
