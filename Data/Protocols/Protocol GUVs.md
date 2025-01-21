@@ -32,7 +32,7 @@
 ### 5. Hydration
 1. Place slide with spacer onto the heating plate at **$60^\circ \mathrm{C}$**.
    - Cover with aluminum foil and wait **$10 \, \mathrm{min}$** for the temperature to stabilize.
-2. Add **$500 \, \mu\mathrm{L}$** of    solution (normally **$200 \, \mathrm{mM}$**) into the spacer.
+2. Add **$500 \, \mu\mathrm{L}$** of solution (normally **$200 \, \mathrm{mM}$**) into the spacer.
    - Ensure the whole glass slide inside is covered.
 3. Cover again with aluminum foil.
    - Wait **$30 \, \mathrm{min}$** for hydration to take place.
