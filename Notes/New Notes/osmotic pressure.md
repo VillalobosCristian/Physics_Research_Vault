@@ -1,0 +1,1 @@
+Osmotic pressure is the necessary pressure needed to stop the flow of solvents across a membrane due to osmosis. 
