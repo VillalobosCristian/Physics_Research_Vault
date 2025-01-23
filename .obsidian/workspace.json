@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Mean and Gaussian Curvature.md",
+                "file": "Data/Protocols/Protocol GUVs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mean and Gaussian Curvature"
+              "title": "Protocol GUVs"
             }
           }
         ],
@@ -258,8 +258,8 @@
   },
   "active": "d4199bc6aedc6ae8",
   "lastOpenFiles": [
-    "Clippings/Mean and Gaussian curvature-web.md",
     "Notes/New Notes/Mean and Gaussian Curvature.md",
+    "Clippings/Mean and Gaussian curvature-web.md",
     "Notes/New Notes/Biomembranes and Giant Vesicles.md",
     "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
     "Notes/New Notes/osmosis.md",
