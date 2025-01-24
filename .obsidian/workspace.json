@@ -106,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -256,8 +256,9 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "d4199bc6aedc6ae8",
+  "active": "4396207e9e6bcab7",
   "lastOpenFiles": [
+    "Data/Protocols/Protocol GUVs.md",
     "Notes/New Notes/Mean and Gaussian Curvature.md",
     "Clippings/Mean and Gaussian curvature-web.md",
     "Notes/New Notes/Biomembranes and Giant Vesicles.md",
@@ -275,7 +276,6 @@
     "Notes/New Notes/Maxwell distribution.md",
     "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw.md",
     "Notes/New Notes/Index notation.md",
-    "Data/Protocols/Protocol GUVs.md",
     "Notes/Ideas/Work Plan 1.md",
     "Notes/Calculations/Helfrich model.md",
     "Notes/New Notes/Example charge density of ps particles.md",
