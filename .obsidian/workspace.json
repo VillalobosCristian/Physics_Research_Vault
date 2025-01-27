@@ -81,12 +81,14 @@
             "id": "4396207e9e6bcab7",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Bilayer.excalidraw.md"
+                "file": "Data/Protocols/Protocol GUVs.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Bilayer.excalidraw"
+              "icon": "lucide-file",
+              "title": "Protocol GUVs"
             }
           },
           {
@@ -256,8 +258,8 @@
   },
   "active": "4396207e9e6bcab7",
   "lastOpenFiles": [
-    "Excalidraw/Lipids.excalidraw.md",
     "Excalidraw/Bilayer.excalidraw.md",
+    "Excalidraw/Lipids.excalidraw.md",
     "Excalidraw/Spherical_Coordinates.excalidraw.md",
     "Data/Protocols/Protocol GUVs.md",
     "Clippings/Mean and Gaussian curvature-web.md",
