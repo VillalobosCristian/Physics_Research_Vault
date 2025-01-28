@@ -81,10 +81,14 @@
             "id": "4396207e9e6bcab7",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Data/Protocols/Hydratation Method.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hydratation Method"
             }
           },
           {
@@ -158,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 335.5
+    "width": 335.5,
+    "collapsed": true
   },
   "right": {
     "id": "63018f4f54280857",
@@ -254,6 +259,7 @@
   },
   "active": "4396207e9e6bcab7",
   "lastOpenFiles": [
+    "Data/Protocols/Hydratation Method.md",
     "Data/Protocols/Protocol GUVs.md",
     "Excalidraw/Bilayer.excalidraw.md",
     "Excalidraw/Lipids.excalidraw.md",
@@ -285,7 +291,6 @@
     "Papers/Reading_Notes/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.md",
     "Papers/References/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.pdf",
     "Papers/References/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
-    "Notes/Calculations/Differentials on Surfaces.md",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
     "Papers/References/genova, vitkova2013_Registration and analysis of the shape fluctuations of nearly spherical lipid vesicles.pdf",
     "Papers/References/sharma, azar2021_Active colloids orbiting giant vesicles.pdf",
