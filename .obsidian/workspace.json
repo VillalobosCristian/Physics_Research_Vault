@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data/Protocols/Protocol GUVs.md",
+                "file": "Notes/Calculations/Helfrich model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Protocol GUVs"
+              "title": "Helfrich model"
             }
           },
           {
@@ -106,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -256,10 +256,11 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "4396207e9e6bcab7",
+  "active": "d4199bc6aedc6ae8",
   "lastOpenFiles": [
-    "Data/Protocols/Hydratation Method.md",
+    "Notes/Calculations/Helfrich model.md",
     "Data/Protocols/Protocol GUVs.md",
+    "Data/Protocols/Hydratation Method.md",
     "Excalidraw/Bilayer.excalidraw.md",
     "Excalidraw/Lipids.excalidraw.md",
     "Excalidraw/Spherical_Coordinates.excalidraw.md",
@@ -281,7 +282,6 @@
     "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw.md",
     "Notes/New Notes/Index notation.md",
     "Notes/Ideas/Work Plan 1.md",
-    "Notes/Calculations/Helfrich model.md",
     "Notes/New Notes/Example charge density of ps particles.md",
     "Papers/Reading_Notes/vanderwel2017_Microparticle Assembly Pathways on Lipid Membranes.md",
     "Papers/References/popescu, ikeda2006_Optical Measurement of Cell Membrane Tension 1.pdf",
