@@ -35,12 +35,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
+                "file": "Data/Protocols/Protocol GUVs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
+              "title": "Protocol GUVs"
             }
           }
         ]
@@ -195,6 +195,7 @@
   },
   "active": "f308ec8ff9cbc382",
   "lastOpenFiles": [
+    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Papers/References/wennerström, sparr2024_On the coupling between membrane bending and stretching in lipid vesicles.pdf",
     "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Papers/References/bahrami, raatz2014_Wrapping of nanoparticles by membranes.pdf",
@@ -231,7 +232,6 @@
     "Notes/New Notes/pdf_maxwell 1.png",
     "Notes/New Notes/Neo Training.md",
     "Papers/References/popescu, ikeda2006_Optical Measurement of Cell Membrane Tension 1.pdf",
-    "Papers/References/monzel, sengupta2016_Measuring shape fluctuations in biological membranes.pdf",
     "Notes/New Notes/Pasted image 20250107133201.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
     "Notes/New Notes/Pasted image 20241218215221.png"
