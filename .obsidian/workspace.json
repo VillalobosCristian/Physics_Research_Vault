@@ -6,6 +6,7 @@
       {
         "id": "dbc9f0f7e70ab752",
         "type": "tabs",
+        "dimension": 68.92935982339957,
         "children": [
           {
             "id": "c1250f92fa7d2608",
@@ -14,8 +15,10 @@
               "type": "pdf",
               "state": {
                 "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
-                "page": 1,
-                "zoom": 1
+                "page": 10,
+                "left": -7,
+                "top": 215,
+                "zoom": 2.0729166666666665
               },
               "icon": "lucide-file-text",
               "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
@@ -26,6 +29,7 @@
       {
         "id": "3e31aeefb3546126",
         "type": "tabs",
+        "dimension": 31.07064017660044,
         "children": [
           {
             "id": "f308ec8ff9cbc382",
@@ -193,11 +197,12 @@
   },
   "active": "f308ec8ff9cbc382",
   "lastOpenFiles": [
+    "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
+    "Data/Protocols/Protocol GUVs.md",
     "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Papers/References/wennerström, sparr2024_On the coupling between membrane bending and stretching in lipid vesicles.pdf",
     "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Papers/References/bahrami, raatz2014_Wrapping of nanoparticles by membranes.pdf",
-    "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
     "Papers/References/bahrami, bahrami2024_Cooperative engulfment of nanoparticles by membranes and vesicles.pdf",
     "Papers/References/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
@@ -212,7 +217,6 @@
     "Clippings/Lecture Materials and Photos – Summer School on Soft Solids and Complex Fluids.md",
     "Clippings/Mean and Gaussian curvature-web.md",
     "Clippings/UMA EVENTS-1235 - Summer School On Soft Solids And Complex Fluids Bruinsma Lec 4.md",
-    "Data/Protocols/Protocol GUVs.md",
     "Papers/References/walde, cosentino2010_Giant Vesicles Preparations and Applications.pdf",
     "Data/Protocols/Hydratation Method.md",
     "Excalidraw/Bilayer.excalidraw.md",
@@ -228,7 +232,6 @@
     "Notes/New Notes/Spontaneous curvature.md",
     "Notes/New Notes/Radioactivity.md",
     "Notes/New Notes/pdf_maxwell 1.png",
-    "Notes/New Notes/Neo Training.md",
     "Papers/References/popescu, ikeda2006_Optical Measurement of Cell Membrane Tension 1.pdf",
     "Notes/New Notes/Pasted image 20250107133201.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
