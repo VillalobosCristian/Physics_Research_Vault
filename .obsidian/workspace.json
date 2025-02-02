@@ -15,10 +15,8 @@
               "type": "pdf",
               "state": {
                 "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
-                "page": 10,
-                "left": -7,
-                "top": 215,
-                "zoom": 2.0729166666666665
+                "page": 1,
+                "zoom": 1
               },
               "icon": "lucide-file-text",
               "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
@@ -29,7 +27,7 @@
       {
         "id": "3e31aeefb3546126",
         "type": "tabs",
-        "dimension": 31.07064017660044,
+        "dimension": 31.070640176600435,
         "children": [
           {
             "id": "f308ec8ff9cbc382",
@@ -44,8 +42,21 @@
               "icon": "lucide-file",
               "title": "Helfrich model"
             }
+          },
+          {
+            "id": "be282d713066a4fc",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -64,7 +75,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -195,7 +207,7 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "f308ec8ff9cbc382",
+  "active": "be282d713066a4fc",
   "lastOpenFiles": [
     "Data/Protocols/Protocol GUVs.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
