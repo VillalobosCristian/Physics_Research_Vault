@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Calculations/Helfrich model.md",
+                "file": "Notes/New Notes/Biomembranes and Giant Vesicles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Helfrich model"
+              "title": "Biomembranes and Giant Vesicles"
             }
           }
         ]
@@ -174,6 +174,10 @@
   },
   "active": "f308ec8ff9cbc382",
   "lastOpenFiles": [
+    "Notes/New Notes/Bending elasticity.md",
+    "Notes/Calculations/Marangoni Flow.md",
+    "Notes/Calculations/Differentials on Surfaces.md",
+    "Notes/Calculations/Helfrich model.md",
     "Clippings/Perplexity GUV search.md",
     "Data/Protocols/Protocol GUVs.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
@@ -188,8 +192,6 @@
     "Projects/FrontiersOfLife-PostDocCall-ApplicationForm-2024_LAF.pdf",
     "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
     "Projects/Membrane_Study/Eukaryogenesis.md",
-    "Notes/Calculations/Helfrich model.md",
-    "Notes/Calculations/Differentials on Surfaces.md",
     "Data/Codes/Edge Detection.md",
     "Data/Codes/code-docs.md",
     "Clippings/Lecture Materials and Photos – Summer School on Soft Solids and Complex Fluids.md",
@@ -207,8 +209,6 @@
     "Notes/New Notes/osmotic pressure.md",
     "Notes/New Notes/Biomimetic.md",
     "Notes/New Notes/Fluctuation GUVS.md",
-    "Notes/New Notes/Spontaneous curvature.md",
-    "Notes/New Notes/Radioactivity.md",
     "Notes/New Notes/pdf_maxwell 1.png",
     "Papers/References/popescu, ikeda2006_Optical Measurement of Cell Membrane Tension 1.pdf",
     "Notes/New Notes/Pasted image 20250107133201.png",
