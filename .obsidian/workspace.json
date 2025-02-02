@@ -6,7 +6,7 @@
       {
         "id": "dbc9f0f7e70ab752",
         "type": "tabs",
-        "dimension": 68.92935982339957,
+        "dimension": 30.684326710816777,
         "children": [
           {
             "id": "c1250f92fa7d2608",
@@ -15,8 +15,10 @@
               "type": "pdf",
               "state": {
                 "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
-                "page": 1,
-                "zoom": 1
+                "page": 10,
+                "left": -18,
+                "top": 251,
+                "zoom": 0.8697916666666669
               },
               "icon": "lucide-file-text",
               "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
@@ -27,7 +29,7 @@
       {
         "id": "3e31aeefb3546126",
         "type": "tabs",
-        "dimension": 31.070640176600435,
+        "dimension": 69.31567328918322,
         "children": [
           {
             "id": "f308ec8ff9cbc382",
@@ -47,12 +49,10 @@
             "id": "be282d713066a4fc",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.4"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
@@ -209,6 +209,7 @@
   },
   "active": "be282d713066a4fc",
   "lastOpenFiles": [
+    "Clippings/Perplexity GUV search.md",
     "Data/Protocols/Protocol GUVs.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
