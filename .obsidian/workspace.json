@@ -49,10 +49,14 @@
             "id": "be282d713066a4fc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Clippings/Perplexity GUV search.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Perplexity GUV search"
             }
           }
         ],
