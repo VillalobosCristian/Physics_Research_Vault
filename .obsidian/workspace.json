@@ -14,11 +14,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
-                "page": 8,
-                "left": -116,
-                "top": 530,
-                "zoom": 1.9
+                "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf"
               },
               "icon": "lucide-file-text",
               "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
@@ -29,7 +25,7 @@
       {
         "id": "665d50e98bc5b7fd",
         "type": "tabs",
-        "dimension": 15.130260521042086,
+        "dimension": 15.130260521042084,
         "children": [
           {
             "id": "5aa86d191032dff8",
