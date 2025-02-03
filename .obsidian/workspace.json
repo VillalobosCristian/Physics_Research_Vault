@@ -4,20 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "cdeb14a273058937",
+        "id": "0e7d58928b1c985e",
         "type": "tabs",
-        "dimension": 84.86973947895791,
         "children": [
           {
-            "id": "eb5597aa6f18f4e3",
+            "id": "6bf4fb98ba84ebf7",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf"
+                "file": "Papers/References/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
+                "page": 1,
+                "left": -15,
+                "top": 795,
+                "zoom": 0.9852572588177586
               },
               "icon": "lucide-file-text",
-              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
+              "title": "ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles"
             }
           }
         ]
@@ -25,7 +28,6 @@
       {
         "id": "665d50e98bc5b7fd",
         "type": "tabs",
-        "dimension": 15.130260521042084,
         "children": [
           {
             "id": "5aa86d191032dff8",
@@ -33,12 +35,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
+                "file": "Papers/Reading_Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
+              "title": "ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles"
             }
           }
         ]
@@ -94,13 +96,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
-    "collapsed": true
+    "width": 330.5
   },
   "right": {
     "id": "63018f4f54280857",
@@ -196,8 +196,8 @@
   },
   "active": "5aa86d191032dff8",
   "lastOpenFiles": [
-    "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
+    "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
     "Notes/New Notes/Particle-Membrane interaction notes.md",
     "Notes/New Notes/Biomembranes and Giant Vesicles.md",
