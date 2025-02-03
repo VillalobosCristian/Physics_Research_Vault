@@ -6,4 +6,17 @@ The wrapping process depends on the competition between the elastic energy requi
 ---
 ## Literature Review Plan
 
-The idea meanwhile well reproduced experiments are done is to do a small literature review focusing in the particle-membrane and environment interaction 
+The idea meanwhile well reproduced experiments are done is to do a small literature review focusing in the particle-membrane and environment interaction. 
+
+I plan to separate this by: 
+
+## Membrane Fluctuations
+Some of the important references i've been reading 
+
+
+## Membrane Particle Interaction
+
+
+
+## Membrane Environment 
+
