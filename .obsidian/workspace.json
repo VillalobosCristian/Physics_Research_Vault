@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f4f5961eeb8fddb9",
+        "id": "665d50e98bc5b7fd",
         "type": "tabs",
         "children": [
           {
-            "id": "b95ccccf18748548",
+            "id": "5aa86d191032dff8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Particle-Membrane interaction notes.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Particle-Membrane interaction notes"
+              "title": "New tab"
             }
           }
         ]
@@ -172,8 +168,9 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "b95ccccf18748548",
+  "active": "5aa86d191032dff8",
   "lastOpenFiles": [
+    "Notes/New Notes/Particle-Membrane interaction notes.md",
     "Notes Tracker.md",
     "Notes/Ideas.md",
     "Notes/New Notes/Untitled 1.md",
@@ -191,7 +188,6 @@
     "Notes/New Notes/Thermal fluctuations.md",
     "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
-    "Notes/New Notes/Particle-Membrane interaction notes.md",
     "Notes/New Notes/Gauss map.md",
     "Notes/New Notes/Fluctuation GUVS.md",
     "Notes/New Notes/Differentials on Surfaces.md",
