@@ -44,7 +44,7 @@ $$R_{\text{sphere}}(\theta,\phi) = R_0.$$
 This means that at every point on the surface, regardless of direction, the radial distance from the center is the same.
 ## Introducing a Small Perturbation
 
-Now, suppose the vesicle is slightly deformed due to various factors (e.g., thermal fluctuations, chemical gradients, or external fields). The radius in a given direction $(\theta,\phi)$ is no longer $R_0$, but slightly different:
+Now, suppose the vesicle is slightly deformed due to various factors (e.g., [[Thermal fluctuations]], chemical gradients, or external fields). The radius in a given direction $(\theta,\phi)$ is no longer $R_0$, but slightly different:
 $$R(\theta,\phi) = R_0 + \Delta R(\theta,\phi),$$
 where $\Delta R(\theta,\phi)$ represents the small deviation from the original radius. The assumption of a *quasi-spherical* vesicle implies:
 

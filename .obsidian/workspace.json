@@ -15,10 +15,10 @@
               "type": "pdf",
               "state": {
                 "file": "Papers/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
-                "page": 6,
+                "page": 5,
                 "left": -11,
-                "top": 730,
-                "zoom": 1.3405546334809402
+                "top": 729,
+                "zoom": 1.4967846847512754
               },
               "icon": "lucide-file-text",
               "title": "morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts"
@@ -102,7 +102,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "63018f4f54280857",

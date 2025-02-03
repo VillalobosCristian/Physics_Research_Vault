@@ -7,7 +7,7 @@ This MATLAB code is designed for detecting and tracking lipid vesicles in micros
 - Manual vesicle size selection for reference
 - Adaptive parameter adjustment for varying light conditions
 - Sub-pixel boundary interpolation
-- Robust edge detection with multiple attempts
+- Robust [[Edge Detection]] with multiple attempts
 - Real-time visualization of tracking
 
 ## Code Structure
@@ -48,7 +48,7 @@ maxAttempts = 3;          % Maximum adaptation attempts
 ```
 
 #### Key Parameters Explained
-- `methodStr`: Edge detection algorithm
+- `methodStr`: [[Edge Detection]] algorithm
   - Options: 'Canny', 'Sobel', 'Prewitt', 'log', 'Roberts'
   - 'Canny' is generally most robust
 - `sigmaVal`: Controls smoothing
@@ -89,7 +89,7 @@ Makes multiple attempts with adjusted parameters if vesicle isn't found.
 
 ### 5. Edge Detection and Morphological Operations
 1. Gaussian blur for noise reduction
-2. Edge detection using specified method
+2. [[Edge Detection]] using specified method
 3. Morphological operations:
    - Opening (optional)
    - Closing
@@ -105,7 +105,7 @@ The code selects the appropriate vesicle based on:
 ### 7. Visualization
 Three panel display showing:
 1. Original image
-2. Edge detection result
+2. [[Edge Detection]] result
 3. Original with overlay of detected boundary
 
 ## Usage Tips
@@ -129,7 +129,7 @@ Three panel display showing:
 1. **If vesicle is missed:**
    - Increase `areaTolerance`
    - Decrease `minObjVal`
-   - Try different edge detection method
+   - Try different [[Edge Detection]] method
 
 2. **If wrong object is detected:**
    - Decrease `areaTolerance`
@@ -170,7 +170,7 @@ You can modify the adaptive behavior by adjusting:
 
 ## Related Topics
 - Image preprocessing techniques
-- Edge detection algorithms
+- [[Edge Detection]] algorithms
 - Morphological operations
 - Object tracking methods
 
