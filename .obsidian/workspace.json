@@ -4,67 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "3e31aeefb3546126",
+        "id": "f4f5961eeb8fddb9",
         "type": "tabs",
+        "dimension": 62.074148296593194,
         "children": [
           {
-            "id": "f308ec8ff9cbc382",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Particle-Membrane interaction notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Particle-Membrane interaction notes"
-            }
-          },
-          {
-            "id": "5204e3a41d1cd0d0",
+            "id": "b95ccccf18748548",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
-                "page": 4,
-                "left": -17,
-                "top": 91,
-                "zoom": 0.9197424597986414
+                "file": "Papers/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
+                "page": 6,
+                "left": -11,
+                "top": 730,
+                "zoom": 1.3405546334809402
               },
               "icon": "lucide-file-text",
-              "title": "bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets"
+              "title": "morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "c64255155f575c06",
+        "type": "tabs",
+        "dimension": 37.92585170340681,
+        "children": [
           {
-            "id": "bd46bb1061584143",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
-                "page": 1,
-                "left": -16,
-                "top": 814,
-                "zoom": 0.9196985857628192
-              },
-              "icon": "lucide-file-text",
-              "title": "wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles"
-            }
-          },
-          {
-            "id": "5a41de9405e4b818",
+            "id": "298a1f8c1956b54d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Thermal fluctuations.md",
+                "file": "Papers/Reading_Notes/morales-penningston2010_GUV preparation and imaging_ Minimizing artifacts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Thermal fluctuations"
+              "title": "morales-penningston2010_GUV preparation and imaging_ Minimizing artifacts"
             }
           }
         ]
@@ -124,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 364.5
+    "width": 200
   },
   "right": {
     "id": "63018f4f54280857",
@@ -218,13 +196,15 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "f308ec8ff9cbc382",
+  "active": "298a1f8c1956b54d",
   "lastOpenFiles": [
+    "Papers/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
+    "Papers/Reading_Notes/morales-penningston2010_GUV preparation and imaging_ Minimizing artifacts.md",
+    "Notes/New Notes/Thermal fluctuations.md",
+    "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
     "Notes/New Notes/Particle-Membrane interaction notes.md",
-    "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Notes/New Notes/[wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf.md",
-    "Notes/New Notes/Thermal fluctuations.md",
     "Notes/New Notes/Untitled 2.md",
     "Notes/New Notes/Gauss map.md",
     "Notes/New Notes/Fluctuation GUVS.md",
@@ -252,10 +232,8 @@
     "Data/Codes/code-docs.md",
     "Clippings/Lecture Materials and Photos – Summer School on Soft Solids and Complex Fluids.md",
     "Clippings/Mean and Gaussian curvature-web.md",
-    "Clippings/UMA EVENTS-1235 - Summer School On Soft Solids And Complex Fluids Bruinsma Lec 4.md",
     "Papers/References/walde, cosentino2010_Giant Vesicles Preparations and Applications.pdf",
     "Notes/New Notes/pdf_maxwell 1.png",
-    "Papers/References/popescu, ikeda2006_Optical Measurement of Cell Membrane Tension 1.pdf",
     "Notes/New Notes/Pasted image 20250107133201.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
     "Notes/New Notes/Pasted image 20241218215221.png"

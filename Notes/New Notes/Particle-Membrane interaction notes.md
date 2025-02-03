@@ -35,6 +35,9 @@ Some of the important references i've been reading that are important:
 - [[spanke, style2020_Wrapping of Microparticles by Floppy Lipid Vesicles.pdf]]
 - [[sharma, azar2021_Active colloids orbiting giant vesicles.pdf]]
 - [[lipowsky, döbereiner1998_Vesicles in contact with nanoparticles and colloids.pdf]]
+- [[bahrami, bahrami2024_Cooperative engulfment of nanoparticles by membranes and vesicles.pdf]]
+- [[bahrami, raatz2014_Wrapping of nanoparticles by membranes.pdf]]
+
 
 
 ## Membrane Environment 
