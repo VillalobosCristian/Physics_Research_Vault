@@ -22,6 +22,38 @@
             }
           },
           {
+            "id": "5204e3a41d1cd0d0",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
+                "page": 4,
+                "left": -17,
+                "top": 91,
+                "zoom": 0.9197424597986414
+              },
+              "icon": "lucide-file-text",
+              "title": "bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets"
+            }
+          },
+          {
+            "id": "bd46bb1061584143",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
+                "page": 1,
+                "left": -16,
+                "top": 814,
+                "zoom": 0.9196985857628192
+              },
+              "icon": "lucide-file-text",
+              "title": "wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles"
+            }
+          },
+          {
             "id": "5a41de9405e4b818",
             "type": "leaf",
             "state": {
@@ -188,8 +220,11 @@
   },
   "active": "f308ec8ff9cbc382",
   "lastOpenFiles": [
-    "Notes/New Notes/Thermal fluctuations.md",
+    "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
     "Notes/New Notes/Particle-Membrane interaction notes.md",
+    "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
+    "Notes/New Notes/[wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf.md",
+    "Notes/New Notes/Thermal fluctuations.md",
     "Notes/New Notes/Untitled 2.md",
     "Notes/New Notes/Gauss map.md",
     "Notes/New Notes/Fluctuation GUVS.md",
@@ -206,9 +241,7 @@
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Papers/References/wennerström, sparr2024_On the coupling between membrane bending and stretching in lipid vesicles.pdf",
-    "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Papers/References/bahrami, raatz2014_Wrapping of nanoparticles by membranes.pdf",
-    "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
     "Papers/References/bahrami, bahrami2024_Cooperative engulfment of nanoparticles by membranes and vesicles.pdf",
     "Papers/References/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
     "Papers/Reading_Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
@@ -221,8 +254,6 @@
     "Clippings/Mean and Gaussian curvature-web.md",
     "Clippings/UMA EVENTS-1235 - Summer School On Soft Solids And Complex Fluids Bruinsma Lec 4.md",
     "Papers/References/walde, cosentino2010_Giant Vesicles Preparations and Applications.pdf",
-    "Data/Protocols/Hydratation Method.md",
-    "Excalidraw/Bilayer.excalidraw.md",
     "Notes/New Notes/pdf_maxwell 1.png",
     "Papers/References/popescu, ikeda2006_Optical Measurement of Cell Membrane Tension 1.pdf",
     "Notes/New Notes/Pasted image 20250107133201.png",
