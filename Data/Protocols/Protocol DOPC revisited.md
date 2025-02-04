@@ -29,4 +29,19 @@ It suppose to be this values (ask to confirm)
 
 ## Calculate Total Lipid (in moles)
 
-$n_{\mathrm{totla}} = V \times C =
+$n_{\mathrm{totla}} = V \times C = 0.5 \mathrm{mL}\times 4 \mathrm{mol/mL}=2\ \mathrm{mol}\to$ total lipid
+## Distribute Moles According to Mole Percent
+
+**Desired mole fraction**:
+
+• $\mathrm{DOPC}$ = 99.9% = 0.999
+
+• $\mathrm{DOPE-Rh}$ = 0.1% = 0.001
+  
+
+$$n_{\text{DOPC}}= 0.999 \times 2\,\text{µmol}= 1.998\,\text{µmol}$$
+$$n_{\text{DOPE-Rh}}
+
+= 0.001 \times 2\,\text{µmol}
+
+= 0.002\,\text{µmol}.$$
