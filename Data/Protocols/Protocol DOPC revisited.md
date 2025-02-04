@@ -120,3 +120,62 @@ V_{\text{DOPE-Rh}}
 $$
   
 Pipette 63 µL of the DOPC stock and ~2.6 µL of the DOPE-Rh stock into a single vial.
+
+
+---
+
+To convert **1 mg/mL** of a compound with **MW** \approx 1300 **g/mol** into **mM** (millimolar), follow these steps:
+
+1. **Convert the mass in mg to grams** (per mL):
+
+  
+
+$$1\,\text{mg/mL}
+
+= 0.001\,\text{g/mL}.$$
+
+  
+
+2. **Use the molecular weight** to find the number of moles in that 0.001 g:
+
+  
+$$
+\text{moles}
+
+= \frac{\text{mass (g)}}{\text{MW (g/mol)}}
+
+= \frac{0.001\,\text{g}}{1300\,\text{g/mol}}
+
+\approx 7.69 \times 10^{-7}\,\text{mol}.
+$$
+  
+
+1. **Because this is per 1 mL**, the volume is 1 \times 10^{-3}\,\text{L}. So the molar concentration C (in \text{mol/L}) is:
+
+  
+
+$$C
+
+= \frac{7.69 \times 10^{-7}\,\text{mol}}{1 \times 10^{-3}\,\text{L}}
+
+= 7.69 \times 10^{-4}\,\text{mol/L}
+
+= 0.000769\,\text{mol/L}.
+$$
+  
+
+2. **Convert mol/L (M) to millimolar (mM)**:
+
+  
+
+0.000769\,\text{mol/L}
+
+= 0.769\,\text{mM}
+
+\approx 0.77\,\text{mM}.
+
+  
+
+  
+
+Hence, a **1 mg/mL** solution of a lipid with **MW** \approx 1300 **g/mol** corresponds to \approx 0.77 **mM**.
