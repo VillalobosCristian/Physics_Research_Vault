@@ -45,20 +45,34 @@ $$n_{\text{DOPE-Rh}}
 = 0.001 \times 2\,\text{µmol}
 
 = 0.002\,\text{µmol}.$$
-**Step 3: Convert Each Lipid’s Moles to Mass (if needed)**
+## Formula
+**If your stock is in mg/mL**,  need the MW to convert mg ↔ mol, hide that inside a single step.
+The **general one-step** formula to get volume (in mL) from a mg/mL stock is:
+
+  
+
+$$V_i (\text{mL})= n_i (\text{mol})\times \frac{\text{MW} (\text{g/mol})}{\text{Stock conc} (\text{mg/mL})}
+\times \frac{1000\,\text{mg}}{1\,\text{g}}.$$
+  
+
+$$V_{\text{DOPC}}
+
+= (1.998 \times 10^{-6}\,\text{mol})
+
+\times \frac{785\,\text{g/mol}}{25\,\text{mg/mL}}
+
+\times \frac{1000\,\text{mg}}{1\,\text{g}}.$$
+## Extra: Convert Each Lipid’s Moles to Mass (if needed)
 
   
 
 **A. DOPC**
 
-• Moles: 1.998\,\text{µmol}
+• Moles: $1.998\,\text{µmol}$
 
 • MW (approx.): 785 g/mol
 
-  
-
-  
-
+$$
 \text{Mass (DOPC)}
 
 = 1.998 \times 10^{-6}\,\text{mol}
@@ -68,7 +82,7 @@ $$n_{\text{DOPE-Rh}}
 = 1.57 \times 10^{-3}\,\text{g}
 
 = 1.57\,\text{mg}.
-
+$$
   
 
   
@@ -92,42 +106,3 @@ $$n_{\text{DOPE-Rh}}
 = 2.6\times10^{-6}\,\text{g}
 
 = 2.6\,\text{µg}.
-**Step 4: Convert Mass to Volume Based on Stock Concentrations**
-
-  
-
-**A. DOPC Stock (25 mg/mL in chloroform)**
-
-  
-
-  
-
-V_{\text{DOPC}}
-
-= \frac{1.57\,\text{mg}}{25\,\text{mg/mL}}
-
-= 0.0628\,\text{mL}
-
-= 62.8\,\text{µL}.
-
-  
-
-  
-
-**B. DOPE-Rh Stock (1 mg/mL in chloroform)**
-
-  
-
-  
-
-V_{\text{DOPE-Rh}}
-
-= \frac{2.6\,\text{µg}}{1\,\text{µg/µL}}
-
-= 2.6\,\text{µL}.
-
-  
-
-  
-
-So you pipette ~63 µL of the DOPC stock and ~2.6 µL of the DOPE-Rh stock into a single vial.
