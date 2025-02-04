@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Untitled 1.md",
+                "file": "Data/Protocols/Protocol DOPC revisited.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 1"
+              "title": "Protocol DOPC revisited"
             }
           }
         ],
@@ -189,8 +189,9 @@
   },
   "active": "dea2b1a9dac86c62",
   "lastOpenFiles": [
+    "Notes/New Notes/Cosas mecánica estadísitca.md",
+    "Data/Protocols/Protocol DOPC revisited.md",
     "Notes/New Notes/Maxwell distribution.md",
-    "Notes/New Notes/Untitled 1.md",
     "Notes/New Notes/Untitled.md",
     "Papers/References/faizi_Supplemental materials Fluctuation spectroscopy of giant unilamellar vesicles using confocal and ph.pdf",
     "Papers/Reading_Notes/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.md",
@@ -217,7 +218,6 @@
     "Notes/New Notes/Biomimetic.md",
     "Notes/New Notes/Bending elasticity.md",
     "Notes/Calculations/Marangoni Flow.md",
-    "Notes/Calculations/Helfrich model.md",
     "Papers/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
     "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
