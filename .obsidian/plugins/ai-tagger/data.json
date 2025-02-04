@@ -1,5 +1,5 @@
 {
-  "model": "claude-3-5-sonnet-latest",
+  "model": "gpt-4o",
   "lowerCaseMode": false,
   "anthropicApiKey": "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",
   "openaiApiKey": "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"

@@ -1,9 +1,10 @@
 The idea is to revisit the process, to avoid mistakes... 
 ##  Steps 
+
 - Decide the final volume and **total lipid concentration** 
 - Calcule **how many total moles** of lipid that represent 
 - **Distribute those moles** among each lipid according to the desired mole percentages (e.g., 99.9% **main lipid**, 0.1% **labeled lipid**).
-- **Convert the moles** of each component into  a volume (if you have a stock solution in mg/mL or mmol/L). 
+- **Convert the moles** of each component into  a volume (if a is stock solution in mg/mL or mmol/L). 
 - **Combine** the lipids in chloroform.
 # Example 
 
@@ -49,8 +50,6 @@ $$n_{\text{DOPE-Rh}}
 **If your stock is in mg/mL**,  need the MW to convert mg ↔ mol, hide that inside a single step.
 The **general one-step** formula to get volume (in mL) from a mg/mL stock is:
 
-  
-
 $$V_i (\text{mL})= n_i (\text{mol})\times \frac{\text{MW} (\text{g/mol})}{\text{Stock conc} (\text{mg/mL})}
 \times \frac{1000\,\text{mg}}{1\,\text{g}}.$$
   
@@ -65,7 +64,6 @@ $$V_{\text{DOPC}}
 ## Extra: Convert Each Lipid’s Moles to Mass (if needed)
 
   
-
 **A. DOPC**
 
 • Moles: $1.998\,\text{µmol}$
@@ -83,7 +81,6 @@ $$
 
 = 1.57\,\text{mg}.
 $$
-
 **B. DOPE-Rh**
 
 • Moles:$0.002\,\text{µmol} = 2 \times 10^{-9}\,\text{mol}$
@@ -101,7 +98,7 @@ $$
 
 = 2.6\,\text{µg}.$$
 
-## Convert Mass to Volume Based on Stock Concentrations**
+## Convert Mass to Volume Based on Stock Concentrations
 
 
 **A. DOPC Stock (25 mg/mL in chloroform)**
@@ -114,9 +111,6 @@ $$V_{\text{DOPC}}
 = 62.8\,\text{µL}.$$
 **B. DOPE-Rh Stock (1 mg/mL in chloroform)**
 
-  
-
-  
 $$
 V_{\text{DOPE-Rh}}
 

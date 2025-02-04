@@ -5,9 +5,9 @@
   "obsidian-excalidraw-plugin",
   "obsidian-git",
   "obsidian-linter",
-  "ai-tagger",
   "tags-overview",
   "ink",
   "obsidian-citation-plugin",
-  "obisidian-note-linker"
+  "obisidian-note-linker",
+  "ai-tagger"
 ]
