@@ -19,3 +19,14 @@ It suppose to be this values (ask to confirm)
 • **DOPC stock:** 25 mg/mL in chloroform (MW $\approx 785$ g/mol)
 
 • **DOPE-Rh stock:** 1 mg/mL in chloroform (MW $\approx 1300$ g/mol)
+
+## Calculation
+
+- Decide the final volume and **total lipid concentration** 
+**Final volume** ($V$)  = 0.50 mL
+
+**Final concentration** ($C$)  = 4 mM = 4 µmol/mL
+
+## Calculate Total Lipid (in moles)
+
+$n_{\mathrm{totla}} = V \times C =
