@@ -83,20 +83,14 @@ $$
 
 = 1.57\,\text{mg}.
 $$
-  
-
-  
 
 **B. DOPE-Rh**
 
-• Moles: 0.002\,\text{µmol} = 2 \times 10^{-9}\,\text{mol}
+• Moles:$0.002\,\text{µmol} = 2 \times 10^{-9}\,\text{mol}$
 
 • MW (approx.): 1300 g/mol
 
-  
-
-  
-
+$$
 \text{Mass (DOPE-Rh)}
 
 = 2\times10^{-9}\,\text{mol}
@@ -105,4 +99,30 @@ $$
 
 = 2.6\times10^{-6}\,\text{g}
 
-= 2.6\,\text{µg}.
+= 2.6\,\text{µg}.$$
+
+## Convert Mass to Volume Based on Stock Concentrations**
+
+
+**A. DOPC Stock (25 mg/mL in chloroform)**
+$$V_{\text{DOPC}}
+
+= \frac{1.57\,\text{mg}}{25\,\text{mg/mL}}
+
+= 0.0628\,\text{mL}
+
+= 62.8\,\text{µL}.$$
+**B. DOPE-Rh Stock (1 mg/mL in chloroform)**
+
+  
+
+  
+$$
+V_{\text{DOPE-Rh}}
+
+= \frac{2.6\,\text{µg}}{1\,\text{µg/µL}}
+
+= 2.6\,\text{µL}.
+$$
+  
+Pipette 63 µL of the DOPC stock and ~2.6 µL of the DOPE-Rh stock into a single vial.
