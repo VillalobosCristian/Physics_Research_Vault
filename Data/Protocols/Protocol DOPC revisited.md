@@ -13,8 +13,9 @@ For the protocol of DOPC.
 
 • **Total final lipid concentration:** 4 mM
 
-• **Lipid composition:** 99.9% DOPC (main lipid) and 0.1% DOPE-Rhodamine 
-It suppose to be at this 
-• **DOPC stock:** 25 mg/mL in chloroform (MW ≈ 785 g/mol)
 
-• **DOPE-Rh stock:** 1 mg/mL in chloroform (MW ≈ 1300 g/mol)
+• **Lipid composition:** 99.9% DOPC (main lipid) and 0.1% DOPE-Rhodamine 
+It suppose to be this values (ask to confirm)
+• **DOPC stock:** 25 mg/mL in chloroform (MW $\approx 785$ g/mol)
+
+• **DOPE-Rh stock:** 1 mg/mL in chloroform (MW $\approx 1300$ g/mol)
