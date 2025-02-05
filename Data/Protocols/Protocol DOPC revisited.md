@@ -124,11 +124,9 @@ Pipette 63 µL of the DOPC stock and ~2.6 µL of the DOPE-Rh stock into a single
 
 ---
 
-To convert **1 mg/mL** of a compound with **MW** \approx 1300 **g/mol** into **mM** (millimolar), follow these steps:
+To convert **1 mg/mL** of a compound with **MW** $\approx$ 1300 **g/mol** into **mM** 
 
 1. **Convert the mass in mg to grams** (per mL):
-
-  
 
 $$1\,\text{mg/mL}
 
@@ -167,15 +165,15 @@ $$
 2. **Convert mol/L (M) to millimolar (mM)**:
 
   
-
+$$
 0.000769\,\text{mol/L}
 
 = 0.769\,\text{mM}
 
 \approx 0.77\,\text{mM}.
 
-  
+  $$
 
   
 
-Hence, a **1 mg/mL** solution of a lipid with **MW** \approx 1300 **g/mol** corresponds to \approx 0.77 **mM**.
+Hence, a **1 mg/mL** solution of a lipid with **MW** $\approx 1300$ **g/mol** corresponds to $\approx 0.77$ **mM**.
