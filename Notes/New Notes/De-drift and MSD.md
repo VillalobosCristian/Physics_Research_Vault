@@ -33,4 +33,24 @@ $$
 $$
 The corresponding time lag in seconds is $m \,\Delta t$. 
 Where $m$ is is the parameter telling us how many time steps are two position compared.
-If one has multiple trajectories, the  sverage} MSD at lag $m\Delta t$ is the mean of each trajectory's MSD at that same lag (assuming **uniform sampling** and **aligned times**
+If one has multiple trajectories, the  sverage MSD at lag $m\Delta t$ is the mean of each trajectory's MSD at that same lag (assuming **uniform sampling** and **aligned times**
+
+usually when computing the MSD, for single trajectory we want to ensure statistical significance. 
+So i avoid lags longer than thr 10% of the total frames. (im not 100% if this depend on the experiment or not)
+## Ensemble
+
+Suppose we have \(M\) distinct trajectories, each with its own time series of positions. We compute the MSD of each trajectory \(i\), denoted as
+
+$$\mathrm{MSD}_i(\tau),$$
+
+up to some maximum lag time $\tau$. Here $\tau$ is discretized in increments of $\Delta t$, typically given by the sampling rate.
+
+The ensemble-averaged MSD at lag $\tau$ is defined as the  mean of the individual MSD values at that same lag:
+$$
+\mathrm{MSD}_\text{ensemble}(\tau) \;=\; \frac{1}{M} \sum_{i=1}^{M}\, \mathrm{MSD}_i(\tau).
+$$
+However, each trajectory may be of different length, or might only have valid data up to certain time lags. In practice, we average only over those trajectories that contribute valid data at a given $\tau$. In other words, if $n_\tau$ is the count of trajectories that have valid data at lag \(\tau\), then:
+\[
+\mathrm{MSD}_\text{ensemble}(\tau) \;=\; \frac{1}{n_\tau} \sum_{\substack{i=1 \\ i\text{ has data at }\tau}}^{M}\, \mathrm{MSD}_i(\tau).
+\]
+
