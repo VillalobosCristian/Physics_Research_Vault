@@ -11,7 +11,6 @@ The same over all the particles, and therefore the displacement is given by:
 
 $$\mathbf{r}_{\mathrm{drift}}=\int_{0}^{t} \mathrm{d}t'\  \langle \mathbf{v}_i \rangle$$
 
-
 ## MSD
 
 To compute the MSD usually i use the following implementation:
