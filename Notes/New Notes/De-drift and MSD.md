@@ -32,5 +32,5 @@ $$
 \mathrm{MSD}(m\Delta t) \;=\; \frac{1}{N - m} \sum_{k=0}^{N-m-1} \bigl[x_{k+m} - x_{k}\bigr]^{2} + \bigl[y_{k+m} - y_{k}\bigr]^{2}.
 $$
 The corresponding time lag in seconds is $m \,\Delta t$. 
-
-If one has multiple trajectories, the \emph{ensemble} or \emph{average} MSD at lag $m\Delta t$ is the mean of each trajectory's MSD at that same lag (assuming uniform sampling and aligned times).
+Where $m$ is is the parameter telling us how many time steps are two position compared.
+If one has multiple trajectories, the  sverage} MSD at lag $m\Delta t$ is the mean of each trajectory's MSD at that same lag (assuming **uniform sampling** and **aligned times**
