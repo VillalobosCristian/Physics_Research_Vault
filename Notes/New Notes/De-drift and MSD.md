@@ -17,12 +17,17 @@ $$\mathbf{r}_{\mathrm{drift}}=\int_{0}^{t} \mathrm{d}t'\  \langle \mathbf{v}_i \
 To compute the MSD usually i use the following implementation:
 
 In discrete sampling,  we have times $t_k = k \,\Delta t$ for $k=0,1,2,\ldots,N-1$.
-and $\Delta t$ i s
+and $\Delta t$ is the time interval between succesive  measurements, and $N$ the total number of frames. 
+
+
 The position is recorded as $\mathbf{x}(t_k) = (x_k,\,y_k)$. Then the squared displacement over $m$ time steps is
 $$
 \bigl[\Delta \mathbf{x}(k,m)\bigr]^{2} \;=\;\bigl[x_{k+m} - x_{k}\bigr]^{2} + \bigl[y_{k+m} - y_{k}\bigr]^{2}$$
 
-where $k+m \leq N-1$. The single-trajectory MSD for lag $m$ is typically computed as
+where $k+m \leq N-1$. The condition $k+m \leq N-1$ ensures that when you look m steps ahead from position k,  we are not trying to access data beyond the end of the trajectory
+
+
+The single-trajectory MSD for lag $m$ is typically computed as
 $$
 \mathrm{MSD}(m\Delta t) \;=\; \frac{1}{N - m} \sum_{k=0}^{N-m-1} \bigl[x_{k+m} - x_{k}\bigr]^{2} + \bigl[y_{k+m} - y_{k}\bigr]^{2}.
 $$
