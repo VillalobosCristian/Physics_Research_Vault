@@ -49,8 +49,8 @@ The ensemble-averaged MSD at lag $\tau$ is defined as the  mean of the individua
 $$
 \mathrm{MSD}_\text{ensemble}(\tau) \;=\; \frac{1}{M} \sum_{i=1}^{M}\, \mathrm{MSD}_i(\tau).
 $$
-However, each trajectory may be of different length, or might only have valid data up to certain time lags. In practice, we average only over those trajectories that contribute valid data at a given $\tau$. In other words, if $n_\tau$ is the count of trajectories that have valid data at lag \(\tau\), then:
-\[
-\mathrm{MSD}_\text{ensemble}(\tau) \;=\; \frac{1}{n_\tau} \sum_{\substack{i=1 \\ i\text{ has data at }\tau}}^{M}\, \mathrm{MSD}_i(\tau).
-\]
+However, each trajectory may be of different length, or might only have valid data up to certain time lags.
+In practice, we average only over those trajectories that contribute valid data at a given $\tau$. In other words, if $n_\tau$ is the count of trajectories that have valid data at lag $\tau$, then:
+$$\mathrm{MSD}_\text{ensemble}(\tau) \;=\; \frac{1}{n_\tau} \sum_{\substack{i=1 \\ i\text{ has data at }\tau}}^{M}\, \mathrm{MSD}_i(\tau).
+$$
 
