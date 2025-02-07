@@ -12,3 +12,20 @@ The same over all the particles, and therefore the displacement is given by:
 $$\mathbf{r}_{\mathrm{drift}}=\int_{0}^{t} \mathrm{d}t'\  \langle \mathbf{v}_i \rangle$$
 
 
+## MSD
+
+To compute the MSD usually i use the following implementation:
+
+In discrete sampling,  we have times $t_k = k \,\Delta t$ for $k=0,1,2,\ldots,N-1$.
+and $\Delta t$ i s
+The position is recorded as $\mathbf{x}(t_k) = (x_k,\,y_k)$. Then the squared displacement over $m$ time steps is
+$$
+\bigl[\Delta \mathbf{x}(k,m)\bigr]^{2} \;=\;\bigl[x_{k+m} - x_{k}\bigr]^{2} + \bigl[y_{k+m} - y_{k}\bigr]^{2}$$
+
+where $k+m \leq N-1$. The single-trajectory MSD for lag $m$ is typically computed as
+$$
+\mathrm{MSD}(m\Delta t) \;=\; \frac{1}{N - m} \sum_{k=0}^{N-m-1} \bigl[x_{k+m} - x_{k}\bigr]^{2} + \bigl[y_{k+m} - y_{k}\bigr]^{2}.
+$$
+The corresponding time lag in seconds is $m \,\Delta t$. 
+
+If one has multiple trajectories, the \emph{ensemble} or \emph{average} MSD at lag $m\Delta t$ is the mean of each trajectory's MSD at that same lag (assuming uniform sampling and aligned times).
