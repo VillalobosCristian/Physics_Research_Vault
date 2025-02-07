@@ -46,9 +46,23 @@
               "icon": "lucide-file",
               "title": "Notes 050225"
             }
+          },
+          {
+            "id": "a8ecdfc711632ead",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/De-drift and MSD.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "De-drift and MSD"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -199,10 +213,11 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "e856a69c8a6b4574",
+  "active": "a8ecdfc711632ead",
   "lastOpenFiles": [
-    "Excalidraw/Bilayer.excalidraw.md",
     "Notes/New Notes/Notes 050225.md",
+    "Notes/New Notes/De-drift and MSD.md",
+    "Excalidraw/Bilayer.excalidraw.md",
     "Excalidraw/Lipids.excalidraw.md",
     "Data/Protocols/Protocol DOPC revisited.md",
     "Notes/New Notes/Cosas mecánica estadísitca.md",
@@ -229,7 +244,6 @@
     "Notes/New Notes/Example charge density of ps particles.md",
     "Notes/New Notes/Differentials on Surfaces.md",
     "Notes/New Notes/Christoffel Symbols.md",
-    "Notes/New Notes/Budding.md",
     "Papers/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
     "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
