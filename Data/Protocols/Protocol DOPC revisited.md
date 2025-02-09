@@ -1,3 +1,12 @@
+---
+tags:
+  - "#protocol"
+  - "#lipids"
+  - "#membranes"
+  - "#bilayer-properties"
+  - "#lipid-calculation"
+  - "#stock-solution-preparation"
+---
 The idea is to revisit the process, to avoid mistakes... 
 ##  Steps 
 

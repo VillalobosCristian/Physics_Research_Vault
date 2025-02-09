@@ -11,14 +11,10 @@
             "id": "5aa86d191032dff8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Maxwell distribution.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Maxwell distribution"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -61,8 +57,7 @@
               "title": "De-drift and MSD"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -210,19 +205,26 @@
       "obsidian-git:Open Git source control": false,
       "ai-tagger:Generate tags!": false,
       "tags-overview:Tags overview": false,
-      "obisidian-note-linker:Note Linker": false
+      "obisidian-note-linker:Note Linker": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a8ecdfc711632ead",
+  "active": "5aa86d191032dff8",
   "lastOpenFiles": [
+    "Notes/New Notes/Particle-Membrane interaction notes.md",
+    "Notes/New Notes/Biomembranes and Giant Vesicles.md",
+    "Notes/New Notes/Thermal fluctuations.md",
+    "Notes/New Notes/Gauss Bonnet theorem.md",
+    "Notes/New Notes/Lipid Bilayer Structure.md",
+    "Notes/New Notes/Cosas mecánica estadísitca.md",
+    "Notes/New Notes/Untitled.md",
     "Notes/New Notes/Notes 050225.md",
+    "Data/Protocols/Protocol DOPC revisited.md",
+    "Data/Protocols/Hydratation Method.md",
+    "Notes/New Notes/Maxwell distribution.md",
     "Notes/New Notes/De-drift and MSD.md",
     "Excalidraw/Bilayer.excalidraw.md",
     "Excalidraw/Lipids.excalidraw.md",
-    "Data/Protocols/Protocol DOPC revisited.md",
-    "Notes/New Notes/Cosas mecánica estadísitca.md",
-    "Notes/New Notes/Maxwell distribution.md",
-    "Notes/New Notes/Untitled.md",
     "Papers/References/faizi_Supplemental materials Fluctuation spectroscopy of giant unilamellar vesicles using confocal and ph.pdf",
     "Papers/Reading_Notes/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.md",
     "Papers/Reading_Notes/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.md",
@@ -230,20 +232,14 @@
     "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
-    "Notes/New Notes/Particle-Membrane interaction notes.md",
-    "Notes/New Notes/Biomembranes and Giant Vesicles.md",
-    "Notes/New Notes/Thermal fluctuations.md",
     "Notes/New Notes/Neo Training.md",
     "Notes/New Notes/Micelles.md",
     "Notes/New Notes/Mean and Gaussian Curvature.md",
     "Notes/New Notes/Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw.md",
-    "Notes/New Notes/Lipid Bilayer Structure.md",
     "Notes/New Notes/Index notation.md",
     "Notes/New Notes/Gaussian curvature.md",
-    "Notes/New Notes/Gauss Bonnet theorem.md",
     "Notes/New Notes/Example charge density of ps particles.md",
     "Notes/New Notes/Differentials on Surfaces.md",
-    "Notes/New Notes/Christoffel Symbols.md",
     "Papers/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
     "Papers/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
     "Papers/References/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",

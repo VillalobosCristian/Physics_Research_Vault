@@ -1,3 +1,11 @@
+---
+tags:
+  - "#particle-dynamics"
+  - "#thermal-distributions"
+  - "#fluctuation-analysis"
+  - "#mean-square-displacement"
+  - "#trajectory-analysis"
+---
 Following https://tinevez.github.io/msdanalyzer/tutorial/MSDTuto_drift.html
 
 And assuming that particles in sample move due thermal motion

@@ -1,3 +1,14 @@
+---
+tags:
+  - "#thermal-distributions"
+  - "#particle-interactions"
+  - "#membrane-adhesion"
+  - "#fluctuation-analysis"
+  - "#membrane-fluidity"
+  - "#particle-uptake"
+  - "#membrane-deformation"
+  - "#adhesive-energy"
+---
 **What is the role of [[Thermal fluctuations]] in the context of particle uptake by GUVs?**
 
 [[Thermal fluctuations]] generate transient deformations—small indentations and protrusions—that temporarily modify the [[local curvature]] of the membrane. These random undulations can lower the energy barrier for particle adhesion, facilitating the initial contact and subsequent uptake of particles by creating favorable binding sites.
