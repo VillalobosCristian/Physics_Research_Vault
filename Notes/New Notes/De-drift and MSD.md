@@ -61,3 +61,4 @@ In practice, we average only over those trajectories that contribute valid data 
 $$\mathrm{MSD}_\text{ensemble}(\tau) \;=\; \frac{1}{n_\tau} \sum_{\substack{i=1 \\ i\text{ has data at }\tau}}^{M}\, \mathrm{MSD}_i(\tau).
 $$
 
+## Plots
