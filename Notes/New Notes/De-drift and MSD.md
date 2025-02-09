@@ -63,3 +63,12 @@ $$
 
 ## Plots
 
+![[tractories.png]]
+
+
+
+![[MSD.png]]
+
+
+![[Fitted_MSD.png]]
+
