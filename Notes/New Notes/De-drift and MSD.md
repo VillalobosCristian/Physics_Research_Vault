@@ -62,3 +62,4 @@ $$\mathrm{MSD}_\text{ensemble}(\tau) \;=\; \frac{1}{n_\tau} \sum_{\substack{i=1 
 $$
 
 ## Plots
+
