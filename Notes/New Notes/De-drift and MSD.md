@@ -72,3 +72,4 @@ $$
 
 ![[Fitted_MSD.png]]
 
+The expected value should be close to $D=0.2 (\mu m^2/s)$ 
