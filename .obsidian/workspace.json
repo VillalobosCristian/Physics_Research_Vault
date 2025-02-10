@@ -49,12 +49,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data/Protocols/Protocol DOPC revisited.md",
+                "file": "Clippings/Claude.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Protocol DOPC revisited"
+              "title": "Claude"
             }
           }
         ],
@@ -211,6 +211,8 @@
   },
   "active": "a8ecdfc711632ead",
   "lastOpenFiles": [
+    "Data/Protocols/Protocol DOPC revisited.md",
+    "Clippings/Claude.md",
     "Notes/New Notes/De-drift and MSD.md",
     "Notes/New Notes/MSD.png",
     "Notes/New Notes/Fitted_MSD.png",
@@ -225,7 +227,6 @@
     "Notes/New Notes/Lipid Bilayer Structure.md",
     "Notes/New Notes/Cosas mecánica estadísitca.md",
     "Notes/New Notes/Untitled.md",
-    "Data/Protocols/Protocol DOPC revisited.md",
     "Data/Protocols/Hydratation Method.md",
     "Notes/New Notes/Maxwell distribution.md",
     "Excalidraw/Lipids.excalidraw.md",
