@@ -49,12 +49,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/De-drift and MSD.md",
+                "file": "Data/Protocols/Protocol DOPC revisited.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "De-drift and MSD"
+              "title": "Protocol DOPC revisited"
             }
           }
         ],
@@ -211,8 +211,8 @@
   },
   "active": "a8ecdfc711632ead",
   "lastOpenFiles": [
-    "Notes/New Notes/MSD.png",
     "Notes/New Notes/De-drift and MSD.md",
+    "Notes/New Notes/MSD.png",
     "Notes/New Notes/Fitted_MSD.png",
     "Notes/New Notes/tractories.png",
     "Data/Codes/Drift Correction and MSD Analysis.md",
