@@ -42,23 +42,9 @@
               "icon": "lucide-file",
               "title": "Notes 050225"
             }
-          },
-          {
-            "id": "a8ecdfc711632ead",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clippings/Claude.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Claude"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -209,10 +195,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a8ecdfc711632ead",
+  "active": "e856a69c8a6b4574",
   "lastOpenFiles": [
-    "Data/Protocols/Protocol DOPC revisited.md",
     "Clippings/Claude.md",
+    "Data/Protocols/Protocol DOPC revisited.md",
     "Notes/New Notes/De-drift and MSD.md",
     "Notes/New Notes/MSD.png",
     "Notes/New Notes/Fitted_MSD.png",
