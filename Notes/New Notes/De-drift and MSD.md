@@ -40,7 +40,7 @@ $$
 $$
 The corresponding time lag in seconds is $m \,\Delta t$. 
 Where $m$ is is the parameter telling us how many time steps are two position compared.
-If one has multiple trajectories, the  sverage MSD at lag $m\Delta t$ is the mean of each trajectory's MSD at that same lag (assuming **uniform sampling** and **aligned times**
+If one has multiple trajectories, the  average MSD at lag $m\Delta t$ is the mean of each trajectory's MSD at that same lag (assuming **uniform sampling** and **aligned times**
 
 usually when computing the MSD, for single trajectory we want to ensure statistical significance. 
 So i avoid lags longer than thr 10% of the total frames. (im not 100% if this depend on the experiment or not)
