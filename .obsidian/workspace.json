@@ -49,12 +49,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Untitled 1.md",
+                "file": "Notes/New Notes/De-drift and MSD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 1"
+              "title": "De-drift and MSD"
             }
           }
         ],
@@ -211,8 +211,8 @@
   },
   "active": "9ea51ba1da5a7aa1",
   "lastOpenFiles": [
-    "Notes/New Notes/Notes 050225.md",
     "Notes/New Notes/Untitled 1.md",
+    "Notes/New Notes/Notes 050225.md",
     "Clippings/Claude.md",
     "Data/Protocols/Protocol DOPC revisited.md",
     "Notes/New Notes/De-drift and MSD.md",
