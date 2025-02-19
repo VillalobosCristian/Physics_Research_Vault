@@ -56,9 +56,21 @@
               "icon": "lucide-file",
               "title": "De-drift and MSD"
             }
+          },
+          {
+            "id": "8e17a3b2ce08ca38",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.7"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -209,7 +221,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "9ea51ba1da5a7aa1",
+  "active": "8e17a3b2ce08ca38",
   "lastOpenFiles": [
     "Notes/New Notes/Untitled 1.md",
     "Notes/New Notes/Notes 050225.md",
