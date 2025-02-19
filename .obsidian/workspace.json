@@ -61,12 +61,14 @@
             "id": "8e17a3b2ce08ca38",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.8.7"
+                "file": "Clippings/UMA EVENTS-1235 - Summer School On Soft Solids And Complex Fluids Bruinsma Lec 4.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.7"
+              "icon": "lucide-file",
+              "title": "UMA EVENTS-1235 - Summer School On Soft Solids And Complex Fluids Bruinsma Lec 4"
             }
           }
         ],
