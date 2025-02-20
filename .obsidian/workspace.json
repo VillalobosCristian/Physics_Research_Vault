@@ -63,12 +63,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Calculations/Fourier Analysis Vesicles.md",
+                "file": "Data/Protocols/Protocol DOPC revisited.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fourier Analysis Vesicles"
+              "title": "Protocol DOPC revisited"
             }
           },
           {
@@ -239,8 +239,10 @@
   },
   "active": "8e17a3b2ce08ca38",
   "lastOpenFiles": [
-    "Notes/New Notes/contour analysis of the vesicles.md",
+    "Data/Protocols/Hydratation Method.md",
+    "Data/Protocols/Protocol GUVs.md",
     "Notes/Calculations/Fourier Analysis Vesicles.md",
+    "Notes/New Notes/contour analysis of the vesicles.md",
     "Data/Codes/Edge Detection.md",
     "Data/Protocols/Protocol DOTAP.md",
     "Data/Protocols/Pasted image 20250220094708.png",
@@ -262,14 +264,12 @@
     "Notes/New Notes/Lipid Bilayer Structure.md",
     "Notes/New Notes/Cosas mecánica estadísitca.md",
     "Notes/New Notes/Untitled.md",
-    "Data/Protocols/Hydratation Method.md",
     "Notes/New Notes/Maxwell distribution.md",
     "Excalidraw/Lipids.excalidraw.md",
     "Papers/References/faizi_Supplemental materials Fluctuation spectroscopy of giant unilamellar vesicles using confocal and ph.pdf",
     "Papers/Reading_Notes/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.md",
     "Papers/Reading_Notes/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.md",
     "Papers/Reading_Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
-    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
     "Papers/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
