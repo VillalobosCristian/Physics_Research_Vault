@@ -3,5 +3,8 @@ We will use mainly quasi-spherical vesicles, so oblate vesicles probably should 
 
 For a quasi spherical vesicle we will think about the shape change as a perturbation due to the thermal fluctuations. We can describe the time dependent radius of the vesicle as:
 $$\begin{align}
-\mathbf{R}(\theta,\phi,t)=\bar{R}(1+\epsilon)
+\mathbf{R}(\theta,\phi,t)=\bar{R}(1+ \mathcal{T}(\theta,\phi,t))
 \end{align}$$
+where $\bar{R}$ is the average radii of the vesicle, and $\mathcal{T}$ is the perturbation respect of the mean shape of the vesicle. This perturbation can be expressed in spherical harmonics
+$$\mathcal{T}(\theta,\phi,t)=\sum_{l=0}^{l_{max}}\sum_{m=-l}^{l}u_{lm}(t)\mathcal{Y}_{l,m}(\theta,\phi)$$
+The first two modes,
