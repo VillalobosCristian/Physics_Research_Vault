@@ -1,3 +1,6 @@
+---
+´:
+---
  When performing the [[contour analysis of the vesicles]] we want to understand from those fluctuations how to extract information about the physical properties of the vesicle.
 We will use mainly quasi-spherical vesicles, so oblate vesicles probably should be decompose differently. 
 
@@ -7,7 +10,8 @@ $$\begin{align}
 \end{align}$$
 where $\bar{R}$ is the average radii of the vesicle, and $\mathcal{T}$ is the perturbation respect of the mean shape of the vesicle. This perturbation can be expressed in spherical harmonics
 $$\mathcal{T}(\theta,\phi,t)=\sum_{l=0}^{l_{max}}\sum_{m=-l}^{l}u_{lm}(t)\mathcal{Y}_{l,m}(\theta,\phi)$$
-With $\mathcal{Y}_{l,m}=n_{lm}\mathcal{P}_{l,m}(\cos{\theta})e^{im\phi}$, with $\mathcal{P}_{l,m}$, the Legendre polynomials and $n
+With $\mathcal{Y}_{l,m}=n_{lm}\mathcal{P}_{l,m}(\cos{\theta})e^{im\phi}$, with $\mathcal{P}_{l,m}$, the Legendre polynomials and $n_{l,m}=\sqrt{\frac{(2l+1)(l-m)!}{4\pi(l+m)!}}$
+the normalization. 
 
 Where the first two modes represents
 $$l=0, \ \text{Spherically symmetrical mode}$$
