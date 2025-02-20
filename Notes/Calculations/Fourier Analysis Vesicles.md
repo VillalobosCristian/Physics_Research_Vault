@@ -7,4 +7,9 @@ $$\begin{align}
 \end{align}$$
 where $\bar{R}$ is the average radii of the vesicle, and $\mathcal{T}$ is the perturbation respect of the mean shape of the vesicle. This perturbation can be expressed in spherical harmonics
 $$\mathcal{T}(\theta,\phi,t)=\sum_{l=0}^{l_{max}}\sum_{m=-l}^{l}u_{lm}(t)\mathcal{Y}_{l,m}(\theta,\phi)$$
-The first two modes,
+With $\mathcal{Y}_{l,m}=n_{lm}\mathcal{P}_{l,m}(\cos{\theta})e^{im\phi}$, with $\mathcal{P}_{l,m}$, the Legendre polynomials and $n
+
+Where the first two modes represents
+$$l=0, \ \text{Spherically symmetrical mode}$$
+$$l=1, \ \text{Translation without shape change}$$
+$$l\geq 2, \ \text{Shape changes}$$
