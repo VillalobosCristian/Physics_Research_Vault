@@ -7,7 +7,7 @@ tags:
   - "#lipid-calculation"
   - "#stock-solution-preparation"
 ---
-The idea is to revisit the process, to avoid mistakes... 
+xThe idea is to revisit the process, to avoid mistakes... 
 ##  Steps 
 
 - Decide the final volume and **total lipid concentration** 
