@@ -98,9 +98,21 @@
               "icon": "lucide-file",
               "title": "Untitled 2"
             }
+          },
+          {
+            "id": "e0fb818503cabe9d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -251,7 +263,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "b412b86f269a0e7f",
+  "active": "e0fb818503cabe9d",
   "lastOpenFiles": [
     "Notes/New Notes/Deep Research test.md",
     "Notes/New Notes/Untitled 2.md",
