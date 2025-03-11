@@ -103,12 +103,14 @@
             "id": "e0fb818503cabe9d",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.8.9"
+                "file": "Data/Protocols/Protocol DOTAP.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.9"
+              "icon": "lucide-file",
+              "title": "Protocol DOTAP"
             }
           }
         ],
@@ -265,13 +267,14 @@
   },
   "active": "e0fb818503cabe9d",
   "lastOpenFiles": [
+    "Notes/New Notes/Untitled 3.md",
+    "Data/Protocols/Protocol DOTAP.md",
     "Notes/New Notes/Deep Research test.md",
     "Notes/New Notes/Untitled 2.md",
     "Data/Protocols/Protocol DOPC revisited.md",
     "Clippings/ChatGPT.md",
     "Data/Protocols/Protocol GUVs.md",
     "Data/Protocols/Hydratation Method.md",
-    "Data/Protocols/Protocol DOTAP.md",
     "Notes/Calculations/Fourier Analysis Vesicles.md",
     "Notes/Calculations/Helfrich model.md",
     "Notes/New Notes/contour analysis of the vesicles.md",
@@ -294,7 +297,6 @@
     "Notes/New Notes/Lipid Bilayer Structure.md",
     "Notes/New Notes/Cosas mecánica estadísitca.md",
     "Notes/New Notes/Untitled.md",
-    "Notes/New Notes/Maxwell distribution.md",
     "Papers/References/faizi_Supplemental materials Fluctuation spectroscopy of giant unilamellar vesicles using confocal and ph.pdf",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
