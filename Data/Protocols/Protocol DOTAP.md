@@ -10,4 +10,4 @@ RHPE: 1 $\mu$L
 Chlo: 575 $\mu$L.
 
 It works, vesicles form, but some pop out in the bottom of the glass, it will be better to try with a thin film of PVA in the visualization chamber. 
-There where some bright spots in the membranes, like clusters of the fluorescence 
+There where some bright spots in the membranes, like clusters of the fluorescence 2
