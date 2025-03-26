@@ -5,6 +5,7 @@
   "newFileFolderPath": "Notes/New Notes",
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
+    "includeName": true,
     "pageSize": "Letter",
     "landscape": false,
     "margin": "0",
