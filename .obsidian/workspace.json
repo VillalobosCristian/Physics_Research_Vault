@@ -65,12 +65,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
+                "file": "Data/Protocols/Protocol GUVs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fluctuations and Particle interactions of giant unilamellar vesicles"
+              "title": "Protocol GUVs"
             }
           },
           {
@@ -283,9 +283,9 @@
   },
   "active": "6cd877d418465413",
   "lastOpenFiles": [
+    "Notes/New Notes/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
     "Notes/New Notes/Pasted image 20250326142010.png",
     "Notes/New Notes/Pasted image 20250318132123.png",
-    "Notes/New Notes/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
     "Papers/References/gracià, bezlyepkina2010_Effect of cholesterol on the rigidity of saturated and unsaturated membranes fluctuation and electr.pdf",
     "Papers/References/yoon, hong2009_Flickering Analysis of Erythrocyte Mechanical Properties Dependence on Oxygenation Level, Cell Shap.pdf",
     "Papers/References/Active_Bath_in_Droplet_PNAS_2024-8.pdf",
@@ -327,7 +327,6 @@
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
     "Notes/New Notes/pdf_maxwell 1.png",
     "Notes/New Notes/Pasted image 20250107133201.png",
-    "Notes/New Notes/Pasted image 20241223133932.png",
-    "Notes/New Notes/Pasted image 20241218215221.png"
+    "Notes/New Notes/Pasted image 20241223133932.png"
   ]
 }
