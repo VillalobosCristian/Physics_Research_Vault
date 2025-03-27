@@ -1,151 +1,42 @@
 {
   "main": {
-    "id": "de64c07b7f76d9b9",
+    "id": "b1bcd280d81fc207",
     "type": "split",
     "children": [
       {
-        "id": "665d50e98bc5b7fd",
+        "id": "7f1c26dad46da57b",
         "type": "tabs",
         "children": [
           {
-            "id": "5aa86d191032dff8",
+            "id": "062dba2dba8f40f7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data/Protocols/Protocol DOPC revisited.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Protocol DOPC revisited"
-            }
-          },
-          {
-            "id": "dea2b1a9dac86c62",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Bilayer.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Bilayer.excalidraw"
-            }
-          },
-          {
-            "id": "e856a69c8a6b4574",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Notes 050225.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Notes 050225"
-            }
-          },
-          {
-            "id": "9ea51ba1da5a7aa1",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Notes/New Notes/Pasted image 20250318132123.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250318132123"
-            }
-          },
-          {
-            "id": "6cd877d418465413",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "8e17a3b2ce08ca38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data/Protocols/Protocol DOPC revisited.md",
-                "mode": "source",
-                "source": false
-              },
               "icon": "lucide-file",
-              "title": "Protocol DOPC revisited"
-            }
-          },
-          {
-            "id": "5707161bdf06fdb8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/NotebookLM.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NotebookLM"
-            }
-          },
-          {
-            "id": "6aec4dbe72ea3718",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Study Guide Lipid Membranes and Vesicles.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Study Guide Lipid Membranes and Vesicles"
-            }
-          },
-          {
-            "id": "00a765d4c31dba14",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lipid Vesicles and Membranes Energetics, Shape, and Dynamics"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "dd53fd3f06aeb385",
+    "id": "27fffd68485046d8",
     "type": "split",
     "children": [
       {
-        "id": "b64c8c850e659af6",
+        "id": "7c7c69b450aa7941",
         "type": "tabs",
         "children": [
           {
-            "id": "b559c1d34165e516",
+            "id": "46dbf9b5205cc99d",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -153,7 +44,7 @@
             }
           },
           {
-            "id": "f878f233607402bb",
+            "id": "215c200f56340471",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -170,7 +61,7 @@
             }
           },
           {
-            "id": "cb43e0c70de518c7",
+            "id": "06aae403627440a5",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -183,23 +74,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5
+    "width": 300
   },
   "right": {
-    "id": "63018f4f54280857",
+    "id": "e8399e0dc7cf008f",
     "type": "split",
     "children": [
       {
-        "id": "1c699bd7f7c0dfaa",
+        "id": "72c8bb665d619d14",
         "type": "tabs",
         "children": [
           {
-            "id": "e5247ff17b3877cd",
+            "id": "b1f4ca98b2fc3a59",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -209,46 +99,49 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Untitled 1"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "7910e3c3f79cf41f",
+            "id": "434f3c8960f891f5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Untitled 1"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "5d16d14aa89692fb",
+            "id": "0d91ac8488ea3adb",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-            "id": "74c53356902e929d",
+            "id": "5b198c702f706979",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled 1.md"
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled 1"
+              "title": "Outline"
             }
           }
         ]
@@ -270,60 +163,13 @@
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-git:Open Git source control": false,
-      "ai-tagger:Generate tags!": false,
       "tags-overview:Tags overview": false,
       "obisidian-note-linker:Note Linker": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "ai-tagger:Generate tags!": false
     }
   },
-  "active": "6cd877d418465413",
-  "lastOpenFiles": [
-    "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
-    "Data/Protocols/Protocol GUVs.md",
-    "Notes/New Notes/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
-    "Notes/New Notes/Pasted image 20250326142010.png",
-    "Notes/New Notes/Pasted image 20250318132123.png",
-    "Papers/References/gracià, bezlyepkina2010_Effect of cholesterol on the rigidity of saturated and unsaturated membranes fluctuation and electr.pdf",
-    "Papers/References/yoon, hong2009_Flickering Analysis of Erythrocyte Mechanical Properties Dependence on Oxygenation Level, Cell Shap.pdf",
-    "Papers/References/Active_Bath_in_Droplet_PNAS_2024-8.pdf",
-    "Papers/References/rautu, orsi2017_The role of optical projection in the analysis of membrane fluctuations.pdf",
-    "Notes/New Notes/Untitled 5.md",
-    "Notes/New Notes/De-drift and MSD.md",
-    "Data/Protocols/Protocol DOPC revisited.md",
-    "Notes/New Notes/NotebookLM.md",
-    "Notes/New Notes/Study Guide Lipid Membranes and Vesicles.md",
-    "Notes/New Notes/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
-    "Data/Protocols/Pasted image 20250220094708.png",
-    "Data/Protocols/Hydratation Method.md",
-    "Data/Protocols/Protocol DOTAP.md",
-    "Notes/New Notes/Untitled 2.md",
-    "Notes/New Notes/Deep Research test.md",
-    "Notes/New Notes/Untitled 4.md",
-    "Papers/References/My papers/villalobos2024_Recovering the activity parameters of an active fluid confined in a sphere.pdf",
-    "Papers/References/My papers/villalobos2022_Geometrical description of impact cratering under microgravity conditions.pdf",
-    "Papers/References/My papers",
-    "Papers/References/untitled folder",
-    "Papers/References/pécréaux, döbereiner2004_Refined contour analysis of giant unilamellar vesicles.pdf",
-    "Papers/References/redwan, du2024_Probing wrapping dynamics of spherical nanoparticles by 3D vesicles using force-based simulations.pdf",
-    "Notes/New Notes/Untitled 3.md",
-    "Clippings/ChatGPT.md",
-    "Notes/Calculations/Fourier Analysis Vesicles.md",
-    "Notes/Calculations/Helfrich model.md",
-    "Notes/New Notes/contour analysis of the vesicles.md",
-    "Data/Codes/Edge Detection.md",
-    "Clippings/UMA EVENTS-1235 - Summer School On Soft Solids And Complex Fluids Bruinsma Lec 4.md",
-    "Notes/New Notes/Untitled 1.md",
-    "Notes/New Notes/Notes 050225.md",
-    "Clippings/Claude.md",
-    "Notes/New Notes/MSD.png",
-    "Notes/New Notes/Fitted_MSD.png",
-    "Notes/New Notes/tractories.png",
-    "Data/Codes/Drift Correction and MSD Analysis.md",
-    "Excalidraw/Bilayer.excalidraw.md",
-    "Papers/Reading_Notes/Pasted image 20250203111007.png",
-    "Notes/New Notes/pdf_maxwell 1.png",
-    "Notes/New Notes/Pasted image 20250107133201.png",
-    "Notes/New Notes/Pasted image 20241223133932.png"
-  ]
+  "active": "062dba2dba8f40f7",
+  "lastOpenFiles": []
 }
