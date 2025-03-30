@@ -11,10 +11,14 @@
             "id": "062dba2dba8f40f7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Papers/Reading_Notes/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer"
             }
           }
         ]
@@ -171,5 +175,10 @@
     }
   },
   "active": "062dba2dba8f40f7",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
+    "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
+    "Papers/Reading_Notes/Pasted image 20250203111007.png",
+    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md"
+  ]
 }
