@@ -1,41 +1,120 @@
 {
   "main": {
-    "id": "b1bcd280d81fc207",
+    "id": "1d538df7d7663bac",
     "type": "split",
     "children": [
       {
-        "id": "7f1c26dad46da57b",
+        "id": "7670c85b496fda86",
         "type": "tabs",
         "children": [
           {
-            "id": "062dba2dba8f40f7",
+            "id": "96b0ad4eaf628fec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Reading_Notes/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.md",
+                "file": "Notes/New Notes/De-drift and MSD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer"
+              "title": "De-drift and MSD"
+            }
+          },
+          {
+            "id": "c2b6d4cea07c8378",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 6.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 6"
+            }
+          },
+          {
+            "id": "1bbc65a0f47665ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Metric Tensor Basics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Metric Tensor Basics"
+            }
+          },
+          {
+            "id": "b7a2610f71443659",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
+            }
+          },
+          {
+            "id": "05e95c030afa3b6e",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-04-09 23.12.41.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-04-09 23.12.41.excalidraw"
+            }
+          },
+          {
+            "id": "0b488d4741771187",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-04-22 11.08.20.excalidraw"
+            }
+          },
+          {
+            "id": "4f8051f5c7bf1063",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "27fffd68485046d8",
+    "id": "bb9ae99ff97a6ea4",
     "type": "split",
     "children": [
       {
-        "id": "7c7c69b450aa7941",
+        "id": "f55f390a56c11f43",
         "type": "tabs",
         "children": [
           {
-            "id": "46dbf9b5205cc99d",
+            "id": "07a89a5c30172928",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,12 +127,12 @@
             }
           },
           {
-            "id": "215c200f56340471",
+            "id": "b90818a21ccb468e",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "bo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +144,7 @@
             }
           },
           {
-            "id": "06aae403627440a5",
+            "id": "91d1bfa12558f553",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,15 +160,15 @@
     "width": 300
   },
   "right": {
-    "id": "e8399e0dc7cf008f",
+    "id": "9237d53ae6b7e125",
     "type": "split",
     "children": [
       {
-        "id": "72c8bb665d619d14",
+        "id": "0ee9ce0b854ab9c7",
         "type": "tabs",
         "children": [
           {
-            "id": "b1f4ca98b2fc3a59",
+            "id": "b1520af847b6a856",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -107,7 +186,7 @@
             }
           },
           {
-            "id": "434f3c8960f891f5",
+            "id": "8ec63fd84cee1cfb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -120,7 +199,7 @@
             }
           },
           {
-            "id": "0d91ac8488ea3adb",
+            "id": "7c7b6eb3b1205951",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -135,7 +214,7 @@
             }
           },
           {
-            "id": "5b198c702f706979",
+            "id": "3827dd0b36ef99ff",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -174,11 +253,20 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "062dba2dba8f40f7",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
-    "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
-    "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
-    "Papers/Reading_Notes/Pasted image 20250203111007.png",
-    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md"
+    "Excalidraw/Drawing 2025-04-09 23.12.41.excalidraw.md",
+    "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
+    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
+    "Notes/New Notes/Deserno (2015) – Fluid Lipid Membranes.md",
+    "Notes/New Notes/Metric Tensor Basics.md",
+    "Notes/New Notes/Untitled 6.md",
+    "Notes/New Notes/De-drift and MSD.md",
+    "Notes/New Notes/MSCA.md",
+    "Notes/New Notes/Pasted image 20250415141603.png",
+    "Notes/New Notes/Pasted image 20250415141326.png",
+    "Notes/New Notes/Pasted image 20250415141247.png",
+    "Notes/New Notes/Pasted image 20250415141152.png",
+    "Notes/New Notes/Deep Research.md"
   ]
 }

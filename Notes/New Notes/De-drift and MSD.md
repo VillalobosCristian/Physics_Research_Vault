@@ -18,6 +18,13 @@ means that the equilibrium state is maintained by the friction in the system.
 The same over all the particles, and therefore the displacement is given by:
 
 $$\mathbf{r}_{\mathrm{drift}}=\int_{0}^{t} \mathrm{d}t'\  \langle \mathbf{v}_i \rangle$$
+# brownian eq
+
+$\mathbf{r}_i(t) = \mathbf{r}_i(0) + \int_0^t \mathbf{v}_{\text{drift}}(\tau) \, d\tau + \sqrt{2D} \int_0^t \boldsymbol{\xi}_i(\tau) \, d\tau$
+
+
+
+
 
 ## MSD
 
