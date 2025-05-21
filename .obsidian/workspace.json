@@ -113,8 +113,7 @@
               "title": "Release Notes 1.8.10"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -267,7 +266,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "f2e5df31eaa871c2",
+  "active": "fbdc53ac391bfbbd",
   "lastOpenFiles": [
     "Excalidraw/Drawing 2025-04-09 23.12.41.excalidraw.md",
     "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
