@@ -128,7 +128,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -283,8 +283,10 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "b7a2610f71443659",
+  "active": "317d420951280360",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2025-04-09 23.12.41.excalidraw.md",
+    "Notes/New Notes/De-drift and MSD.md",
     "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Notes/New Notes/Metric Tensor Basics.md",
     "Notes/New Notes/Untitled 8.md",
@@ -292,12 +294,10 @@
     "Papers/Reading_Notes/gupta2021_The dynamic face of lipid membranes.md",
     "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
     "Notes/New Notes/Cooling by Heating.md",
-    "Excalidraw/Drawing 2025-04-09 23.12.41.excalidraw.md",
     "Notes/Calculations/Fourier Analysis Vesicles.md",
     "Notes/Calculations/Differentials on Surfaces.md",
     "Notes/New Notes/Brownian motion.md",
     "Papers/Reading_Notes/gao2025_Direct observation of colloidal quasicrystallization.md",
-    "Notes/New Notes/De-drift and MSD.md",
     "Notes/New Notes/Untitled 7.md",
     "Papers Tracker.md",
     "Notes/New Notes/Untitled 6.md",
