@@ -8,7 +8,7 @@ tags:
   - "#spherical-harmonics"
   - "#membrane-biophysics"
 ---
-The total energy of the system is given by the Helfrich model:
+ºThe total energy of the system is given by the Helfrich model:
 $$E=\frac{\kappa}{2}\int_A \mathrm{d}A\ (c_1+c_2)^2+\sigma A+pV$$
 where $\kappa$ is the bending rigidity, $c_1$ and $c_2$ are the local radii curvature, $\sigma$ is the [[Surface tension]], $A$ the total surface area, $p$ is the pressure difference inside the membrane, and $V$ is the interior volume of the vesicle. 
 
