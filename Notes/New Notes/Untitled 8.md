@@ -1,4 +1,3 @@
-# Key Equations Governing Colloidal Trapping on Gold Films
 
 ## Thermal Convection Forces
 
