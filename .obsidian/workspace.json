@@ -118,9 +118,21 @@
               "icon": "lucide-file",
               "title": "Giant Unilamellar Vesicles (GUVs)"
             }
+          },
+          {
+            "id": "c98443a547047236",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Lipids.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Lipids.excalidraw"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -273,10 +285,15 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "30a364ed05f1dbf6",
+  "active": "305d2af617600824",
   "lastOpenFiles": [
-    "Notes/New Notes/Untitled 9.md",
+    "Excalidraw/Lipids.excalidraw.md",
+    "Excalidraw/Drawing 2025-06-03 12.25.58.excalidraw.md",
+    "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
+    "Excalidraw/Drawing 2025-04-09 23.12.41.excalidraw.md",
+    "Excalidraw/Bilayer.excalidraw.md",
     "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
+    "Notes/New Notes/Untitled 9.md",
     "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
     "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
     "Papers/Reading_Notes/karal2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.md",
@@ -297,13 +314,8 @@
     "Notes/New Notes/Deep Research.md",
     "Notes/New Notes/Christoffel Symbols.md",
     "Notes/New Notes/Bending elasticity.md",
-    "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
     "Notes/New Notes/De-drift and MSD.md",
-    "Excalidraw/Drawing 2025-04-09 23.12.41.excalidraw.md",
     "Notes/New Notes/Metric Tensor Basics.md",
-    "Papers/Reading_Notes/gupta2021_The dynamic face of lipid membranes.md",
-    "Notes/Calculations/Helfrich model.md",
-    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
     "Notes/New Notes/Pasted image 20250429101350.png",
     "Notes/New Notes/Pasted image 20250415141603.png",
     "Notes/New Notes/Pasted image 20250415141326.png",
