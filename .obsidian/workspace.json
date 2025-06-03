@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Cooling by Heating.md",
+                "file": "Notes/New Notes/De-drift and MSD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cooling by Heating"
+              "title": "De-drift and MSD"
             }
           },
           {
@@ -92,6 +92,22 @@
             }
           },
           {
+            "id": "20940b345c62a684",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Papers/References/seifert1997_Configurations of fluid membranes and vesicles.pdf",
+                "page": 5,
+                "left": -327,
+                "top": 458,
+                "zoom": 1.25
+              },
+              "icon": "lucide-file-text",
+              "title": "seifert1997_Configurations of fluid membranes and vesicles"
+            }
+          },
+          {
             "id": "eba187dc39890744",
             "type": "leaf",
             "state": {
@@ -132,7 +148,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -285,8 +301,12 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "305d2af617600824",
+  "active": "452f3ef29e2d15de",
   "lastOpenFiles": [
+    "Notes/New Notes/Cooling by Heating.md",
+    "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
+    "Papers/References/seifert1997_Configurations of fluid membranes and vesicles.pdf",
+    "Papers/Reading_Notes/fessler2024_Autonomous Engulfment of Active Colloids by Giant Lipid Vesicles.md",
     "Excalidraw/Lipids.excalidraw.md",
     "Excalidraw/Drawing 2025-06-03 12.25.58.excalidraw.md",
     "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
@@ -294,7 +314,6 @@
     "Excalidraw/Bilayer.excalidraw.md",
     "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
     "Notes/New Notes/Untitled 9.md",
-    "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
     "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
     "Papers/Reading_Notes/karal2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.md",
     "Notes/New Notes/Untitled.md",
@@ -310,12 +329,9 @@
     "Notes/New Notes/MSCA.md",
     "Notes/New Notes/Fluctuation GUVS.md",
     "Notes/New Notes/Deserno (2015) – Fluid Lipid Membranes.md",
-    "Notes/New Notes/Cooling by Heating.md",
     "Notes/New Notes/Deep Research.md",
     "Notes/New Notes/Christoffel Symbols.md",
     "Notes/New Notes/Bending elasticity.md",
-    "Notes/New Notes/De-drift and MSD.md",
-    "Notes/New Notes/Metric Tensor Basics.md",
     "Notes/New Notes/Pasted image 20250429101350.png",
     "Notes/New Notes/Pasted image 20250415141603.png",
     "Notes/New Notes/Pasted image 20250415141326.png",

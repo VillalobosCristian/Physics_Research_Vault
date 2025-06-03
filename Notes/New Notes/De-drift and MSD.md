@@ -23,7 +23,7 @@ $$\mathbf{r}_{\mathrm{drift}}=\int_{0}^{t} \mathrm{d}t'\  \langle \mathbf{v}_i \
 $\mathbf{r}_i(t) = \mathbf{r}_i(0) + \int_0^t \mathbf{v}_{\text{drift}}(\tau) \, d\tau + \sqrt{2D} \int_0^t \boldsymbol{\xi}_i(\tau) \, d\tau$
 
 
-
+---
 
 
 ## MSD
