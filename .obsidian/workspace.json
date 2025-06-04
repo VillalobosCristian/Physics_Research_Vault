@@ -50,6 +50,20 @@
             }
           },
           {
+            "id": "638bce361660e142",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 10.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 10"
+            }
+          },
+          {
             "id": "53f07f3964c32a17",
             "type": "leaf",
             "state": {
@@ -148,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -301,8 +315,11 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "452f3ef29e2d15de",
+  "active": "638bce361660e142",
   "lastOpenFiles": [
+    "Notes/New Notes/Untitled 11.md",
+    "Notes/New Notes/Untitled 10.md",
+    "Notes/New Notes/De-drift and MSD.md",
     "Notes/New Notes/Cooling by Heating.md",
     "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
     "Papers/References/seifert1997_Configurations of fluid membranes and vesicles.pdf",
@@ -330,8 +347,6 @@
     "Notes/New Notes/Fluctuation GUVS.md",
     "Notes/New Notes/Deserno (2015) – Fluid Lipid Membranes.md",
     "Notes/New Notes/Deep Research.md",
-    "Notes/New Notes/Christoffel Symbols.md",
-    "Notes/New Notes/Bending elasticity.md",
     "Notes/New Notes/Pasted image 20250429101350.png",
     "Notes/New Notes/Pasted image 20250415141603.png",
     "Notes/New Notes/Pasted image 20250415141326.png",
