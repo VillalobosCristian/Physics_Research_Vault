@@ -41,40 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/De-drift and MSD.md",
+                "file": "Notes/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "De-drift and MSD"
-            }
-          },
-          {
-            "id": "638bce361660e142",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 10.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 10"
-            }
-          },
-          {
-            "id": "df0a9b953722bf3f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 12.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 12"
+              "title": "Untitled"
             }
           },
           {
@@ -176,7 +148,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -329,12 +301,13 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "df0a9b953722bf3f",
+  "active": "452f3ef29e2d15de",
   "lastOpenFiles": [
+    "Notes/New Notes/De-drift and MSD.md",
+    "Notes/Untitled.md",
     "Notes/New Notes/Untitled 10.md",
     "Notes/New Notes/Untitled 12.md",
     "Notes/New Notes/Untitled 11.md",
-    "Notes/New Notes/De-drift and MSD.md",
     "Notes/New Notes/Cooling by Heating.md",
     "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
     "Papers/References/seifert1997_Configurations of fluid membranes and vesicles.pdf",
@@ -360,7 +333,6 @@
     "Notes/New Notes/osmotic pressure.md",
     "Notes/New Notes/MSCA.md",
     "Notes/New Notes/Fluctuation GUVS.md",
-    "Notes/New Notes/Deserno (2015) – Fluid Lipid Membranes.md",
     "Notes/New Notes/Pasted image 20250429101350.png",
     "Notes/New Notes/Pasted image 20250415141603.png",
     "Notes/New Notes/Pasted image 20250415141326.png",
