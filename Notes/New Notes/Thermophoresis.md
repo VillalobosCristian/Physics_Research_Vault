@@ -3,4 +3,4 @@ Typically is assumed that particle velocity $v$ is linear with the temperature g
 
 $$v = - D_{\mathrm{T}}\nabla T$$ where $D_{\mathrm{T}}=S_{\mathrm{T}}D$, is the thermophoretic mobility, with $S_{T}$ the [[Soret coefficient]], and $D$ the [[Diffusion coefficient]]. 
 
-For small temperature gradients, the thermophoretic movement of the particles 
+For small temperature gradients, the thermophoretic movement of the particles was argued to be a result of local equilibration driven by the thermal fluctuation of the particles. 
