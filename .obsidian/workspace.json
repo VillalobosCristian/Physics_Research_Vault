@@ -4,7 +4,27 @@
     "type": "split",
     "children": [
       {
-        "id": "1a6e17aac5cee6ad",
+        "id": "2e2b5330430f4d13",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd4ef5f7f3bee71b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Literature Cooling by Heating.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Literature Cooling by Heating"
+            }
+          }
+        ]
+      },
+      {
+        "id": "43978a2201655805",
         "type": "tabs",
         "children": [
           {
@@ -13,142 +33,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Bending elasticity.md",
+                "file": "Notes/New Notes/Untitled 8.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bending elasticity"
-            }
-          },
-          {
-            "id": "7925467db55ebc1c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Christoffel Symbols.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Christoffel Symbols"
-            }
-          },
-          {
-            "id": "452f3ef29e2d15de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "53f07f3964c32a17",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Deserno (2015) – Fluid Lipid Membranes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Deserno (2015) – Fluid Lipid Membranes"
-            }
-          },
-          {
-            "id": "222f87ed8a232c64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Fluctuation GUVS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Fluctuation GUVS"
-            }
-          },
-          {
-            "id": "305d2af617600824",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "seifert1997_Configurations of fluid membranes and vesicles"
-            }
-          },
-          {
-            "id": "20940b345c62a684",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Papers/References/seifert1997_Configurations of fluid membranes and vesicles.pdf",
-                "page": 5,
-                "left": -327,
-                "top": 458,
-                "zoom": 1.25
-              },
-              "icon": "lucide-file-text",
-              "title": "seifert1997_Configurations of fluid membranes and vesicles"
-            }
-          },
-          {
-            "id": "eba187dc39890744",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "seifert1997_Configurations of fluid membranes and vesicles"
-            }
-          },
-          {
-            "id": "30a364ed05f1dbf6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Giant Unilamellar Vesicles (GUVs)"
-            }
-          },
-          {
-            "id": "c98443a547047236",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Lipids.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Lipids.excalidraw"
+              "title": "Untitled 8"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -301,38 +194,42 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "452f3ef29e2d15de",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
-    "Notes/New Notes/De-drift and MSD.md",
-    "Notes/Untitled.md",
-    "Notes/New Notes/Untitled 10.md",
-    "Notes/New Notes/Untitled 12.md",
-    "Notes/New Notes/Untitled 11.md",
-    "Notes/New Notes/Cooling by Heating.md",
+    "Excalidraw/Cooling_by_heating.excalidraw.md",
+    "Notes/Literature Cooling by Heating.md",
+    "Notes/New Notes/Untitled 8.md",
+    "Notes/New Notes/Untitled.md",
+    "Excalidraw/Lipids.excalidraw.md",
+    "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
     "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
+    "Notes/New Notes/Bending elasticity.md",
+    "Notes/New Notes/Untitled 11.md",
+    "Notes/New Notes/Untitled 12.md",
+    "Notes/New Notes/Untitled 10.md",
+    "Notes/New Notes/Untitled 9.md",
+    "Notes/New Notes/Christoffel Symbols.md",
+    "Notes/New Notes/Untitled 5.md",
+    "Notes/New Notes/Untitled 4.md",
+    "Notes/New Notes/Untitled 7.md",
+    "Notes/New Notes/Test deep research dopc.md",
+    "Notes/New Notes/Untitled 3.md",
+    "Notes/New Notes/Untitled 2.md",
+    "Notes/New Notes/Untitled 1.md",
+    "Papers/References/ramírez-ramírez, sarabia-alonso2023_Formation and manipulation of 2D colloidal crystals driven by convective currents and electrostatic.pdf",
+    "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
+    "Papers/References/duhr, braun2005_Two-dimensional colloidal crystals formed by thermophoresis and convection.pdf",
+    "Papers/References/di leonardo, ianni2009_Colloidal Attraction Induced by a Temperature Gradient.pdf",
+    "Notes/New Notes/De-drift and MSD.md",
+    "Notes/New Notes/Cooling by Heating.md",
     "Papers/References/seifert1997_Configurations of fluid membranes and vesicles.pdf",
     "Papers/Reading_Notes/fessler2024_Autonomous Engulfment of Active Colloids by Giant Lipid Vesicles.md",
-    "Excalidraw/Lipids.excalidraw.md",
     "Excalidraw/Drawing 2025-06-03 12.25.58.excalidraw.md",
     "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
-    "Excalidraw/Drawing 2025-04-09 23.12.41.excalidraw.md",
     "Excalidraw/Bilayer.excalidraw.md",
-    "Projects/Membrane_Study/Giant Unilamellar Vesicles (GUVs).md",
-    "Notes/New Notes/Untitled 9.md",
-    "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
-    "Papers/Reading_Notes/karal2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.md",
-    "Notes/New Notes/Untitled.md",
-    "Notes/New Notes/Untitled 1.md",
-    "Notes/New Notes/Untitled 2.md",
-    "Notes/New Notes/Untitled 6.md",
-    "Notes/New Notes/Untitled 8.md",
-    "Notes/Ideas.md",
     "Notes/New Notes/Pasted image 20250318132123.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
     "Notes/New Notes/Pasted image 20241218215221.png",
-    "Notes/New Notes/osmotic pressure.md",
-    "Notes/New Notes/MSCA.md",
-    "Notes/New Notes/Fluctuation GUVS.md",
     "Notes/New Notes/Pasted image 20250429101350.png",
     "Notes/New Notes/Pasted image 20250415141603.png",
     "Notes/New Notes/Pasted image 20250415141326.png",
