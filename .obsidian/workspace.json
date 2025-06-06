@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "navier",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -194,7 +195,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "bd4ef5f7f3bee71b",
+  "active": "b90818a21ccb468e",
   "lastOpenFiles": [
     "Notes/Calculations/Marangoni Flow.md",
     "Notes/New Notes/Thermophoresis.md",
