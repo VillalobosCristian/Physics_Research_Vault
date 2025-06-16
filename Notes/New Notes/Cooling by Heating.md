@@ -16,4 +16,4 @@ To-do.
 
 The Rayleigh number $\mathrm{Ra}$ determines whether buoyancy driven natural convection occurs. 
 Is defined as: 
-$$ \mathrm{Ra}?frac{}{}
+$$ \mathrm{Ra}=\frac{g\beta \Delta T L^3}{v\alpha}$$ 
