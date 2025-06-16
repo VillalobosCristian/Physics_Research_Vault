@@ -16,4 +16,21 @@ To-do.
 
 The Rayleigh number $\mathrm{Ra}$ determines whether buoyancy driven natural convection occurs. 
 Is defined as: 
-$$ \mathrm{Ra}=\frac{g\beta \Delta T L^3}{v\alpha}$$ 
+$$Ra = \frac{g\beta\Delta T L^3}{\nu\alpha}$$
+
+Where:
+
+- $g$ = gravitational acceleration 
+- $\beta$ = thermal expansion coefficient of the fluid (~$2.1 \times 10^{-4}$ K⁻¹ for water)
+- $\Delta T$ = temperature difference across the gap
+- $L$ = characteristic length (gap height in this case)
+- $\nu$ = kinematic viscosity (~$0.89 \times 10^{-6}$ m²/s for water)
+- $\alpha$ = thermal diffusivity (~$1.43 \times 10^{-7}$ m²/s for water)
+
+**Physical meaning**: Ra represents the ratio of buoyancy forces to viscous forces. When:
+
+- $Ra < Ra_{critical}$ (~1708): Viscous forces dominate, heat transfer is by conduction only
+- $Ra > Ra_{critical}$: Buoyancy forces overcome viscosity, causing convective flows
+
+**For 120 μm gap * Assuming similar $\Delta T$, the Ra scales with $L^3$:
+
