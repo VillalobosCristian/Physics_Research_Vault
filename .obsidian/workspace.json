@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "2e2b5330430f4d13",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "bd4ef5f7f3bee71b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Cooling_by_heating.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Cooling_by_heating.excalidraw"
-            }
-          }
-        ]
-      },
-      {
         "id": "43978a2201655805",
         "type": "tabs",
         "children": [
@@ -192,13 +174,13 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "bd4ef5f7f3bee71b",
+  "active": "43a4a9d04bbe79c6",
   "lastOpenFiles": [
+    "Excalidraw/Cooling_by_heating.excalidraw.md",
     "Notes/New Notes/Cooling by Heating.md",
     "Notes/New Notes/Thermophoresis.md",
     "Notes/Calculations/Marangoni Flow.md",
     "Notes/Literature Cooling by Heating.md",
-    "Excalidraw/Cooling_by_heating.excalidraw.md",
     "Notes/New Notes/Untitled 8.md",
     "Notes/New Notes/Untitled.md",
     "Excalidraw/Lipids.excalidraw.md",
