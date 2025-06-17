@@ -27,10 +27,5 @@ Where:
 - $\nu$ = kinematic viscosity (~$0.89 \times 10^{-6}$ m²/s for water)
 - $\alpha$ = thermal diffusivity (~$1.43 \times 10^{-7}$ m²/s for water)
 
-**Physical meaning**: Ra represents the ratio of buoyancy forces to viscous forces. When:
-
-- $Ra < Ra_{critical}$ (~1708): Viscous forces dominate, heat transfer is by conduction only
-- $Ra > Ra_{critical}$: Buoyancy forces overcome viscosity, causing convective flows
-
-**For 120 μm gap * Assuming similar $\Delta T$, the Ra scales with $L^3$:
+![[Pasted image 20250617135811.png]]
 
