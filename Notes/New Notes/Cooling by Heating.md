@@ -38,4 +38,4 @@ $$\mathbf{F}_{th}+\mathbf{F}_{drag}+\mathbf{F}_{grav}+\mathbf{F}_{lub}+\mathbf{F
 ## Drag force
 The drag force experienced by a particle over a wall is: 
 
-$$\mathbf{F}_{\mathrm{drag}}=-6\pi\eta R f_{||}{(\delta/a)}$$
+$$\mathbf{F}_{\mathrm{drag}}=-6\pi\eta R f_{||}{(\delta/a)}(\mathbf{u}-\mathbf{v})$$
