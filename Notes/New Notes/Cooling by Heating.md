@@ -29,3 +29,9 @@ Where:
 
 ![[Pasted image 20250617135811.png]]
 
+
+## Forces on the particle 
+
+The forces acting on the particle are: 
+
+$$\mathbf{F}_{th}+\mathbf{F}_{drag}+\mathbf{F}_{grav}+\mathbf{F}_{lub}+\mathbf{F}_{DLVO}=0$$
