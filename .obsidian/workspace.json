@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "Untitled"
             }
+          },
+          {
+            "id": "901ccb0240ed3021",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 1"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -189,10 +203,11 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "4fedbe9adb25c6b0",
+  "active": "901ccb0240ed3021",
   "lastOpenFiles": [
-    "Notes/New Notes/Cooling by Heating.md",
     "Notes/New Notes/Untitled.md",
+    "Notes/New Notes/Untitled 1.md",
+    "Notes/New Notes/Cooling by Heating.md",
     "Notes/New Notes/Pasted image 20250617135811.png",
     "Notes/New Notes/Pasted image 20250617135345.png",
     "Notes/New Notes/Untitled 8.md",
@@ -215,7 +230,6 @@
     "Notes/New Notes/Test deep research dopc.md",
     "Notes/New Notes/Untitled 3.md",
     "Notes/New Notes/Untitled 2.md",
-    "Notes/New Notes/Untitled 1.md",
     "Papers/References/ramírez-ramírez, sarabia-alonso2023_Formation and manipulation of 2D colloidal crystals driven by convective currents and electrostatic.pdf",
     "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
     "Papers/References/duhr, braun2005_Two-dimensional colloidal crystals formed by thermophoresis and convection.pdf",
