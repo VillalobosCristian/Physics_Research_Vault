@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"Papers/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -203,7 +203,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "901ccb0240ed3021",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
     "Notes/Calculations/Fourier Analysis Vesicles.md",
     "Notes/New Notes/Untitled 1.md",
