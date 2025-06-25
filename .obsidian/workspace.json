@@ -25,10 +25,22 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/Drawing 2025-06-25 15.02.24.excalidraw.md"
+                "file": "Excalidraw/Cooling_by_heating.excalidraw.md"
               },
               "icon": "excalidraw-icon",
-              "title": "Drawing 2025-06-25 15.02.24.excalidraw"
+              "title": "Cooling_by_heating.excalidraw"
+            }
+          },
+          {
+            "id": "372903f52eed8708",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-06-25 22.32.17.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-06-25 22.32.17.excalidraw"
             }
           },
           {
@@ -72,7 +84,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -225,16 +237,18 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "9e0191810849c51a",
+  "active": "372903f52eed8708",
   "lastOpenFiles": [
-    "Excalidraw/Pasted Image 20250625154320_791.png",
-    "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
     "Excalidraw/Drawing 2025-06-25 15.02.24.excalidraw.md",
     "Excalidraw/Pasted Image 20250625154502_626.png",
+    "Excalidraw/Drawing 2025-06-25 22.32.17.excalidraw.md",
+    "Excalidraw/Cooling_by_heating.excalidraw.md",
+    "Excalidraw/Bilayer.excalidraw.md",
+    "Excalidraw/Pasted Image 20250625154320_791.png",
+    "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
     "Excalidraw/Spherical_Coordinates.excalidraw.md",
     "Excalidraw/Lipids.excalidraw.md",
     "Notes/New Notes/Cooling by Heating.md",
-    "Excalidraw/Bilayer.excalidraw.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers 1.pdf.sb-e4f5fff6-v1jwIW",
     "Notes/New Notes/Untitled 2.md",
     "Notes/Calculations/Helfrich model.md",
@@ -245,7 +259,6 @@
     "Notes/New Notes/Pasted image 20250617135811.png",
     "Notes/New Notes/Pasted image 20250617135345.png",
     "Notes/New Notes/Untitled 8.md",
-    "Excalidraw/Cooling_by_heating.excalidraw.md",
     "Notes/New Notes/Thermophoresis.md",
     "Notes/Calculations/Marangoni Flow.md",
     "Notes/Literature Cooling by Heating.md",
@@ -257,7 +270,6 @@
     "Notes/New Notes/Untitled 10.md",
     "Notes/New Notes/Untitled 9.md",
     "Notes/New Notes/Christoffel Symbols.md",
-    "Notes/New Notes/Untitled 5.md",
     "Papers/References/ramírez-ramírez, sarabia-alonso2023_Formation and manipulation of 2D colloidal crystals driven by convective currents and electrostatic.pdf",
     "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
     "Papers/References/duhr, braun2005_Two-dimensional colloidal crystals formed by thermophoresis and convection.pdf",
