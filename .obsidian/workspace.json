@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "9e0191810849c51a",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-06-25 15.02.24.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-06-25 15.02.24.excalidraw"
+            }
+          },
+          {
             "id": "4fedbe9adb25c6b0",
             "type": "leaf",
             "state": {
@@ -59,7 +71,8 @@
               "title": "Bilayer.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -212,8 +225,10 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "ceb676fe8f38d5f7",
+  "active": "9e0191810849c51a",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
+    "Excalidraw/Drawing 2025-06-25 15.02.24.excalidraw.md",
     "Excalidraw/Spherical_Coordinates.excalidraw.md",
     "Excalidraw/Lipids.excalidraw.md",
     "Notes/New Notes/Cooling by Heating.md",
@@ -242,8 +257,6 @@
     "Notes/New Notes/Christoffel Symbols.md",
     "Notes/New Notes/Untitled 5.md",
     "Notes/New Notes/Untitled 4.md",
-    "Notes/New Notes/Untitled 7.md",
-    "Notes/New Notes/Test deep research dopc.md",
     "Papers/References/ramírez-ramírez, sarabia-alonso2023_Formation and manipulation of 2D colloidal crystals driven by convective currents and electrostatic.pdf",
     "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
     "Papers/References/duhr, braun2005_Two-dimensional colloidal crystals formed by thermophoresis and convection.pdf",
