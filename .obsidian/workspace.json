@@ -11,14 +11,12 @@
             "id": "ceb676fe8f38d5f7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Notes/New Notes/Cooling by Heating.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "Cooling by Heating"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-04-22 11.08.20.excalidraw"
             }
           },
           {
@@ -214,13 +212,13 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "2e4dafdd9433423c",
+  "active": "ceb676fe8f38d5f7",
   "lastOpenFiles": [
+    "Excalidraw/Spherical_Coordinates.excalidraw.md",
+    "Excalidraw/Lipids.excalidraw.md",
     "Notes/New Notes/Cooling by Heating.md",
     "Excalidraw/Bilayer.excalidraw.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers 1.pdf.sb-e4f5fff6-v1jwIW",
-    "Excalidraw/Spherical_Coordinates.excalidraw.md",
-    "Excalidraw/Lipids.excalidraw.md",
     "Notes/New Notes/Untitled 2.md",
     "Notes/Calculations/Helfrich model.md",
     "Papers/References/deserno_Fluid lipid membranes – a primer 1.pdf.sb-e4f5fff6-GdoWdS",
