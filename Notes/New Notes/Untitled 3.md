@@ -179,11 +179,40 @@ _"Most importantly, we've shown that we can use controlled optical heating to ac
 
 _"Looking ahead, this platform will allow us to systematically study how external fields - whether thermal, chemical, or mechanical - can be used to control membrane shape and function. This is a stepping stone toward truly controllable synthetic cells."_
 
-## **🎯 Closing Tips:**
 
-- **End with enthusiasm** about future possibilities
-- **Thank your collaborators**
-- **Open for questions** with confidence
-- **Highlight the broader impact** of being able to control membrane behavior
+---
 
-Your presentation tells a complete story from fundamental physics to practical applications - excellent work!
+
+Ah yes, let me correct that! Here's the revised commentary for slides 13-14:
+
+## **🔵 Slide 13: Temperature induced fluctuations - Particle experiments**
+
+_"To characterize our temperature control system, we use particles as probes. Here you can see the same experimental setup but now with particles dispersed in the solution."_
+
+_"Under green light illumination, we see relatively normal particle behavior - they remain dispersed and show typical Brownian motion."_
+
+_"But under blue light, something remarkable happens. The particles begin to show very different behavior - they start to organize and move in coordinated ways. This tells us that the blue light is creating significant temperature gradients and possibly thermophoretic forces."_
+
+---
+
+## **📏 Slide 14: Characterizing the setup - Particle diffusion**
+
+_"To quantify these temperature effects, we track individual particle trajectories and measure their diffusion coefficients. Since diffusion is directly related to temperature through the Einstein relation D ∝ T/η, this gives us a direct measure of local temperature changes."_
+
+_"The left panel shows a field of particles that we track over time. The middle panel shows the mean squared displacement plots - the slope gives us the diffusion coefficient. And on the right, we see how diffusion varies with optical power."_
+
+_"Notice the clear differences between the blue and orange data points - this confirms that different wavelengths and powers create measurable changes in local temperature and particle dynamics."_
+
+_"But what's really exciting is what happens when we look at longer timescales under blue light..."_
+
+---
+
+## **💙 Slide 15: Blue light effects - 2D Crystal Formation**
+
+_"Here's the remarkable result: under sustained blue light illumination, the particles spontaneously organize into highly ordered 2D crystalline structures!"_
+
+_"You can see the dramatic transition from the disordered state at t=0 to the organized crystal structure. This isn't just heating - the optical forces and thermophoretic effects are creating conditions that favor crystallization."_
+
+_"This demonstrates that our optical heating system can create complex, non-equilibrium conditions that drive fascinating self-organization processes. It's a beautiful example of how controlled energy input can create emergent order from disorder."_
+
+This flow works much better - using particles to characterize the temperature effects, then showing the dramatic crystallization as evidence of the complex physics at play!
