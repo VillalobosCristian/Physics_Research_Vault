@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Lipid Bilayer Structure.md",
+                "file": "Projects/Frontier of Life/Postdoc Project.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lipid Bilayer Structure"
+              "title": "Postdoc Project"
             }
           }
         ]
@@ -174,8 +174,17 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "05a4462ff098f46b",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
+    "Projects/Frontier of Life",
+    "Notes/Lipid Vesicles/Giant Unilamellar Vesicles (GUVs).md",
+    "Projects/Membrane_Study/Eukaryogenesis.md",
+    "Notes/New Notes/Lipid Bilayer Structure.md",
+    "Notes/Ideas.md",
+    "Notes/Literature Cooling by Heating.md",
+    "Notes/Lipid Vesicles",
+    "Notes/Untitled",
+    "Excalidraw/Bilayer.excalidraw.md",
     "Notes/New Notes/Gauss Bonnet theorem.md",
     "Notes/New Notes/Biomembranes and Giant Vesicles.md",
     "Notes/New Notes/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
@@ -183,7 +192,6 @@
     "Notes/New Notes/Deep Research test.md",
     "Notes/Calculations/Marangoni Flow.md",
     "Notes/Calculations/Differentials on Surfaces.md",
-    "Excalidraw/Bilayer.excalidraw.md",
     "Excalidraw/Bilayer.excalidraw 1.md",
     "Notes/New Notes/Untitled 3.md",
     "Notes/Ideas/Work Plan 1.md",
@@ -201,12 +209,6 @@
     "Excalidraw/Drawing 2025-06-03 12.25.58.excalidraw.md",
     "Excalidraw/Spherical_Coordinates.excalidraw.md",
     "Data/Protocols/Pasted image 20250220094708.png",
-    "Data/Codes/Edge Detection.md",
-    "Data/Codes/Drift Correction and MSD Analysis.md",
-    "Clippings/Perplexity GUV search.md",
-    "Clippings/Claude.md",
-    "Notes/New Notes/Untitled.md",
-    "Templates/Paper_Notes.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers 1.pdf.sb-e4f5fff6-v1jwIW",
     "Papers/References/deserno_Fluid lipid membranes – a primer 1.pdf.sb-e4f5fff6-GdoWdS",
     "Notes/New Notes/Pasted image 20250617135811.png",
@@ -215,7 +217,6 @@
     "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
     "Papers/References/duhr, braun2005_Two-dimensional colloidal crystals formed by thermophoresis and convection.pdf",
     "Papers/References/di leonardo, ianni2009_Colloidal Attraction Induced by a Temperature Gradient.pdf",
-    "Papers/References/seifert1997_Configurations of fluid membranes and vesicles.pdf",
     "Notes/New Notes/Pasted image 20250318132123.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
     "Notes/New Notes/Pasted image 20241218215221.png",

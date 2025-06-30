@@ -1,1 +1,0 @@
-Evolution of eukaryotic cells from prokaryotic ancestors.

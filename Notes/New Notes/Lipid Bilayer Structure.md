@@ -17,7 +17,7 @@ A lipid bilayer is composed of amphiphilic lipid molecules arranged so that thei
 
 
 
-![[[[Bilayer.excalidraw]]|800]]
+![[Bilayer.excalidraw|600]]|800]]
 
 Because of the two tails the hydrophobicity is strong, therefore there is not exchange between the bilayer and the bulk. 
 For example of [[Micelles]], the hydrophobicity is not that strong and the number of monomers can fluctuate by exchange with the bulk. 
@@ -40,7 +40,7 @@ In the case of the bilayer the number of molecules in the interface is fixed so 
 ## Surface free energy
 
 $$F_s=\frac{1}{2}\kappa_s\left(\frac{A-A_0}{A_0}\right)$$
-![[[[Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw]]|800]]
+![[Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw|600]]
  Doing this, has a cost of $F_s$. 
 
 ## Bending
