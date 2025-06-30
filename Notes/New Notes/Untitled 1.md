@@ -6,7 +6,7 @@ The interaction between DOPC (1,2-dioleoyl-sn-glycero-3-phosphocholine) giant un
 
 DOPC vesicles serve as excellent model systems for studying large particle interactions due to their well-characterized biophysical properties and physiological relevance. The **bending rigidity of DOPC membranes ranges from 15-25 kBT** (6.2-10.3 × 10⁻²⁰ J), with experimental values typically around 18.3 ± 1.5 kBT at 25°C. This moderate flexibility allows significant membrane deformations necessary for large particle engulfment while maintaining membrane integrity.
 
-The **area compressibility modulus (KA) of 240-290 mN/m** determines how much membrane area can be recruited during particle wrapping. For micrometer-scale particles, this parameter becomes critical because successful engulfment requires substantial membrane area consumption. The **surface tension typically ranges from 15-300 kBT/μm²** depending on vesicle preparation conditions, with flaccid vesicles (σ ~ 15 kBT/μm²) showing dramatically different uptake behavior compared to tense vesicles (σ ~ 300 kBT/μm²).
+The **area compressibility modulus (KA) of 240-290 mN/m** determines how much membrane area can be recruited during particle wrapping. For micrometer-scale particles, this parameter becomes critical because successful engulfment requires substantial membrane area consumption. The **[[Surface tension]] typically ranges from 15-300 kBT/μm²** depending on vesicle preparation conditions, with flaccid vesicles (σ ~ 15 kBT/μm²) showing dramatically different uptake behavior compared to tense vesicles (σ ~ 300 kBT/μm²).
 
 DOPC's liquid-disordered phase state at physiological temperatures (melting temperature -17°C) ensures membrane fluidity essential for particle interactions. The **lateral diffusion coefficient of ~10⁻⁸ cm²/s** at 37°C allows rapid lipid reorganization during particle contact, while the membrane thickness of 3.6-4.1 nm provides a stable bilayer structure that can withstand the mechanical stresses of large particle engulfment.
 
@@ -44,7 +44,7 @@ The transition to micrometer-scale particles fundamentally alters the relative i
 
 ## Theoretical frameworks predict size-dependent interaction regimes
 
-The **Helfrich model provides fundamental theoretical foundation** for understanding membrane-particle interactions, with bending energy E_bend = ∫ κ/2 (2H - H₀)² dA determining membrane deformation costs. For typical DOPC membranes (κ ≈ 1.5×10⁻²⁰ J), critical particle sizes scale as r_crit = √(2κ/w), yielding values around 8 nm for moderate adhesion strengths. However, this classical result applies primarily to nanoscale particles.
+The **[[Helfrich model]] provides fundamental theoretical foundation** for understanding membrane-particle interactions, with bending energy E_bend = ∫ κ/2 (2H - H₀)² dA determining membrane deformation costs. For typical DOPC membranes (κ ≈ 1.5×10⁻²⁰ J), critical particle sizes scale as r_crit = √(2κ/w), yielding values around 8 nm for moderate adhesion strengths. However, this classical result applies primarily to nanoscale particles.
 
 **Extended theoretical frameworks** for large particles incorporate membrane tension effects through the total free energy expression ΔF = E_adhesion + E_bending + E_tension. For particles ≥1 μm, the tension term σ × ΔA dominates, creating phase diagrams with three distinct regimes: no wrapping, partial wrapping, and complete wrapping. The **critical adhesion strength** becomes w_crit ≈ σ + κ/r², emphasizing the importance of low membrane tension for successful large particle uptake.
 

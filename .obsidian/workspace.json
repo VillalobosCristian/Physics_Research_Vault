@@ -96,9 +96,19 @@
               "icon": "excalidraw-icon",
               "title": "Bilayer.excalidraw"
             }
+          },
+          {
+            "id": "05a4462ff098f46b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -130,7 +140,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"Papers/\" ",
+                "query": "tag:#membrane-biophysics",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -251,10 +261,10 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "4b28e5e3bf184d4e",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-06-25 22.32.17.excalidraw.md",
     "Notes/New Notes/Untitled 3.md",
+    "Excalidraw/Drawing 2025-06-25 22.32.17.excalidraw.md",
     "Excalidraw/Drawing 2025-06-25 15.02.24.excalidraw.md",
     "Excalidraw/Cooling_by_heating.excalidraw.md",
     "Excalidraw/Pasted Image 20250625154502_626.png",

@@ -14,7 +14,7 @@
     
 5. **Thermophoretic force**: $$F_{\text{th}} = -6\pi\eta r S_T k_B T \nabla T$$ where S_T is the Soret coefficient and ∇T is temperature gradient.
     
-6. **Soret coefficient** (empirical dependence on salt concentration): $$S_T(c) = S_T^{\infty} - \frac{S_T^{\infty} - S_T^0}{1 + (c/c_0)^p}$$ where c is salt concentration and c₀ is characteristic concentration where thermophoresis effect is halved.
+6. **Soret coefficient** (empirical dependence on salt concentration): $$S_T(c) = S_T^{\infty} - \frac{S_T^{\infty} - S_T^0}{1 + (c/c_0)^p}$$ where c is salt concentration and c₀ is characteristic concentration where [[Thermophoresis]] effect is halved.
     
 
 ## Heat Generation and Distribution
@@ -32,11 +32,11 @@
     
 11. **Particle distribution** in the trap (Boltzmann statistics): $$n(r) = n_0 \exp\left(-\frac{U(r)}{k_B T}\right)$$ where U(r) is the effective potential energy.
     
-12. **Trapping potential** from thermophoresis: $$U(r) \approx -k_B T S_T \Delta T \exp\left(-\frac{r^2}{2\sigma^2}\right)$$ where σ is related to the laser spot size.
+12. **Trapping potential** from [[Thermophoresis]]: $$U(r) \approx -k_B T S_T \Delta T \exp\left(-\frac{r^2}{2\sigma^2}\right)$$ where σ is related to the laser spot size.
     
 13. **Time-dependent particle accumulation**: $$N(t) = N_{\text{max}}(1 - e^{-t/\tau})$$ where τ is characteristic trapping time, matching the exponential growth observed in the experiments.
     
 14. **Critical salt concentration** for trap quenching: $$c_{\text{crit}} \approx 10^{-4} \text{ mol}$$ when |F_th| ≈ F_drag, at which point the trap becomes unstable.
     
 
-These equations collectively describe the physics of how plasmonic heating creates temperature gradients that drive both thermophoresis and convection, leading to stable trapping when thermophoretic forces exceed convective drag forces.
+These equations collectively describe the physics of how plasmonic heating creates temperature gradients that drive both [[Thermophoresis]] and convection, leading to stable trapping when thermophoretic forces exceed convective drag forces.

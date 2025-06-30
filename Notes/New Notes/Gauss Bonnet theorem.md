@@ -3,7 +3,7 @@ $$
 \text{Differential geometry} \qquad\qquad\qquad\qquad \text{Topology} \\
 \boxed{\begin{array}{c}
 \text{Local descriptions} \\
-\text{Gaussian curvature} \\
+\text{[[Gaussian curvature]]} \\
 \text{geodesic curvature}
 \end{array}} 
 \xrightarrow{\text{Aggregate}}

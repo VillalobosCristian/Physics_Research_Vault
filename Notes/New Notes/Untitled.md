@@ -18,7 +18,7 @@ Gradient in spherical coordinates: $$\nabla = \hat{r}\frac{\partial}{\partial r}
 
 The dyadic product: $\mathbf{a}\mathbf{b} = a_i b_j \hat{e}_i\hat{e}_j$
 
-In index notation: $(\mathbf{a}\mathbf{b})_{ij} = a_i b_j$
+In [[Index notation]]: $(\mathbf{a}\mathbf{b})_{ij} = a_i b_j$
 
 The identity tensor: $\mathbb{I} = \delta_{ij}\hat{e}_i\hat{e}_j$
 
@@ -28,7 +28,7 @@ For a position vector $\mathbf{r}$: $$\hat{r}\hat{r} = \frac{r_i r_j}{r^2}\hat{e
 
 ### 2.1 Starting Equations
 
-The Stokes equations in index notation: $$\eta \frac{\partial^2 u_i}{\partial x_j \partial x_j} - \frac{\partial p}{\partial x_i} = f_i$$ $$\frac{\partial u_i}{\partial x_i} = 0$$
+The Stokes equations in [[Index notation]]: $$\eta \frac{\partial^2 u_i}{\partial x_j \partial x_j} - \frac{\partial p}{\partial x_i} = f_i$$ $$\frac{\partial u_i}{\partial x_i} = 0$$
 
 Taking divergence of the first equation: $$\eta \frac{\partial^2}{\partial x_j \partial x_j}\left(\frac{\partial u_i}{\partial x_i}\right) - \frac{\partial^2 p}{\partial x_i \partial x_i} = \frac{\partial f_i}{\partial x_i}$$
 
@@ -153,7 +153,7 @@ This gives: $U_T = \frac{2b}{3}|\nabla T_{\infty}|$
 
 For a sphere moving with velocity $\mathbf{U}$ in viscous fluid: $$\mathbf{F} = 6\pi\eta a\mathbf{U}$$
 
-For thermophoresis: $$\mathbf{F}_{\text{thermo}} = 6\pi\eta a\mathbf{U}_T = 6\pi\eta a\frac{2b}{3}|\nabla T_{\infty}|\hat{z}$$
+For [[Thermophoresis]]: $$\mathbf{F}_{\text{thermo}} = 6\pi\eta a\mathbf{U}_T = 6\pi\eta a\frac{2b}{3}|\nabla T_{\infty}|\hat{z}$$
 
 To keep particle stationary: $$\mathbf{F}_{\text{external}} = -\mathbf{F}_{\text{thermo}} = -4\pi\eta ab|\nabla T_{\infty}|\hat{z}$$
 

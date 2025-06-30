@@ -7,7 +7,7 @@ tags:
   - "#molecular-diffusion"
 ---
 A lipid bilayer is composed of amphiphilic lipid molecules arranged so that their hydrophobic tails face inward and hydrophilic heads face the aqueous environment. This [[self-assembled]] structure is the basis of all biological membranes.
-![[Lipids.excalidraw]]
+![[[[Lipids.excalidraw]]]]
 
 
 **Key Parameters:**
@@ -17,7 +17,7 @@ A lipid bilayer is composed of amphiphilic lipid molecules arranged so that thei
 
 
 
-![[Bilayer.excalidraw|800]]
+![[[[Bilayer.excalidraw]]|800]]
 
 Because of the two tails the hydrophobicity is strong, therefore there is not exchange between the bilayer and the bulk. 
 For example of [[Micelles]], the hydrophobicity is not that strong and the number of monomers can fluctuate by exchange with the bulk. 

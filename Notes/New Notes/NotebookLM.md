@@ -1,14 +1,14 @@
 # Briefing Document: Lipid Vesicle Dynamics and Properties
 
-This briefing document synthesizes key themes and important ideas from the provided sources regarding the dynamics, properties, and behavior of lipid vesicles, particularly giant unilamellar vesicles (GUVs), and their interactions with nanoparticles and external fields.
+This briefing document synthesizes key themes and important [[Ideas]] from the provided sources regarding the dynamics, properties, and behavior of lipid vesicles, particularly giant unilamellar vesicles (GUVs), and their interactions with nanoparticles and external fields.
 
 ## 1. Membrane Elasticity and Bending Rigidity
 
 A central theme across multiple sources is the elastic nature of lipid membranes, primarily characterized by their bending rigidity ($\kappa$ or $K_{ben}$). This parameter governs the energy cost associated with membrane deformations and plays a crucial role in vesicle shape fluctuations, particle wrapping, and stability.
 
-- **Helfrich Theory:** The Helfrich Hamiltonian is frequently mentioned as the fundamental theoretical framework for understanding membrane elasticity. It considers the bending energy proportional to the integral of the squared mean curvature ($H$) over the membrane area: $E_{bend} = \int \frac{1}{2}\kappa (2H - c_0)^2 dA$, where $c_0$ is the spontaneous curvature (Deserno, 2015; Deserno, Fluid Lipid Membranes – a primer; Helfrich, 1973).
+- **Helfrich Theory:** The Helfrich Hamiltonian is frequently mentioned as the fundamental theoretical framework for understanding membrane elasticity. It considers the bending energy proportional to the integral of the squared mean curvature ($H$) over the membrane area: $E_{bend} = \int \frac{1}{2}\kappa (2H - c_0)^2 dA$, where $c_0$ is the [[Spontaneous curvature]] (Deserno, 2015; Deserno, Fluid Lipid Membranes – a primer; Helfrich, 1973).
 - **Bending Modulus Measurement:** Several techniques are used to experimentally determine the bending modulus, including:
-- **Shape Fluctuation Analysis (Flickering):** By analyzing the thermal fluctuations of nearly spherical vesicles, particularly the amplitudes of different spherical harmonic modes, the bending rigidity can be extracted (Bivas, 2010; Bouvrais, 2012; Genova & Vitkova, 2013; Pécréaux & Döbereiner, 2004; Seifert, 1997). The mean square amplitudes of these fluctuations are inversely proportional to the bending rigidity (Genova & Vitkova, 2013): "$\langle∣∣u^{m}_{l} (t) ∣∣^{2}\rangle = \frac{kT}{k_c} \frac{1}{(l − 1)(l + 2)[l(l + 1) + σ ]}$".
+- **Shape Fluctuation Analysis (Flickering):** By analyzing the [[Thermal fluctuations]] of nearly spherical vesicles, particularly the amplitudes of different spherical harmonic modes, the bending rigidity can be extracted (Bivas, 2010; Bouvrais, 2012; Genova & Vitkova, 2013; Pécréaux & Döbereiner, 2004; Seifert, 1997). The mean square amplitudes of these fluctuations are inversely proportional to the bending rigidity (Genova & Vitkova, 2013): "$\langle∣∣u^{m}_{l} (t) ∣∣^{2}\rangle = \frac{kT}{k_c} \frac{1}{(l − 1)(l + 2)[l(l + 1) + σ ]}$".
 - **Contour Analysis:** Refined analysis of vesicle contours can also yield the bending modulus (Pécréaux & Döbereiner, 2004).
 - **Molecular Dynamics (MD) Simulations:** MD can be used to calculate elastic parameters, including the bending modulus, by examining membrane deformations and stresses at the molecular level (Pinigin, 2022).
 - **Factors Affecting Bending Rigidity:** The bending rigidity is not a constant and can be influenced by several factors:
@@ -19,11 +19,11 @@ A central theme across multiple sources is the elastic nature of lipid membranes
 
 ## 2. Vesicle Shape and Fluctuations
 
-The shape of lipid vesicles is determined by a complex interplay of elastic energies (bending, stretching), surface tension, osmotic pressure, and thermal fluctuations.
+The shape of lipid vesicles is determined by a complex interplay of elastic energies (bending, stretching), [[Surface tension]], [[osmotic pressure]], and [[Thermal fluctuations]].
 
 - **Thermal Shape Fluctuations:** Lipid vesicles exhibit continuous shape fluctuations driven by thermal energy. These fluctuations can be decomposed into spherical harmonics, and their amplitudes provide information about the membrane's elastic properties (Bivas, 2010; Bouvrais, 2012; Genova & Vitkova, 2013; Seifert, 1997; Wennerström & Sparr, 2022). "For small deviations from the sphere, the instantaneous vesicle shape $R(\theta, \phi)$ can be described by an expansion in spherical harmonics $Y_{l}^{m}(\theta, \phi)$ with associated coefficients $a_{lm}$" (Wennerström & Sparr, 2022).
 - **Reduced Volume:** The reduced volume ($v = \frac{3V}{4\pi R^3_0}$, where $V$ is the volume and $R_0$ is the radius of a sphere with the same area) is a key parameter determining the equilibrium shape of a vesicle. Different values of reduced volume lead to various shapes, such as spheres, ellipsoids (prolate and oblate), and stomatocytes (Seifert, 1997; Bahrami & Raatz, 2014). Figure 6a in Bahrami & Raatz (2014) shows the "Minimum bending energy $E_{be}$ of vesicle as a function of the reduced volume $v$."
-- **Shape Transitions:** Vesicles can undergo shape transitions in response to changes in external conditions like osmotic pressure or the presence of interacting particles (Seifert, 1997; Bahrami & Raatz, 2014).
+- **Shape Transitions:** Vesicles can undergo shape transitions in response to changes in external conditions like [[osmotic pressure]] or the presence of interacting particles (Seifert, 1997; Bahrami & Raatz, 2014).
 
 ## 3. Nanoparticle Wrapping and Internalization
 
@@ -57,7 +57,7 @@ A more advanced theoretical perspective involves the use of differential geometr
 
 - **Geometric Description of Surfaces:** Membranes can be mathematically described using parametrizations and geometric quantities such as the metric tensor and curvature tensor (Deserno, 2015; Seifert, 1999).
 - **Stress Tensor:** A stress tensor can be defined that measures the forces per unit length transmitted within the membrane (Deserno, 2015).
-- **Gauss-Bonnet Theorem:** This theorem relates the integral of the Gaussian curvature over a surface to its topology and boundary properties (Deserno, 2015).
+- **Gauss-Bonnet Theorem:** This theorem relates the integral of the [[Gaussian curvature]] over a surface to its topology and boundary properties (Deserno, 2015).
 
 ## 7. Electrostatic Interactions
 
@@ -90,7 +90,7 @@ The provided sources offer a comprehensive overview of the multifaceted nature o
 - **2004:** Pécréaux and Döbereiner refine the contour analysis of giant unilamellar vesicles (GUVs) to determine bending moduli from shape fluctuations.
 - **2010:**Bivas publishes a study on the shape fluctuations of nearly spherical lipid vesicles and emulsion droplets, focusing on hydrodynamic aspects and autocorrelations of shape fluctuation modes.
 - Morales-Penningston and Wu review GUV preparation and imaging techniques, highlighting potential artifacts and methods to minimize them.
-- **2012:** Bouvrais provides a detailed overview of bending rigidities of lipid bilayers, including theoretical models and experimental measurements using flickering spectroscopy. Yao et al. study the effect of Gaussian curvature modulus on the shape of pored membranes.
+- **2012:** Bouvrais provides a detailed overview of bending rigidities of lipid bilayers, including theoretical models and experimental measurements using flickering spectroscopy. Yao et al. study the effect of [[Gaussian curvature]] modulus on the shape of pored membranes.
 - **2013:**Mirigian and Muthukumar investigate the kinetics of nanoparticle wrapping by a vesicle, focusing on the free energy landscape and uptake rate.
 - Genova and Vitkova discuss the registration and analysis of shape fluctuations of nearly spherical lipid vesicles.
 - Pinigin reviews approaches for determining elastic parameters of lipid membranes using Molecular Dynamics simulations, referencing the work of Hamm and Kozlov (HK).
@@ -100,8 +100,8 @@ The provided sources offer a comprehensive overview of the multifaceted nature o
 - **2020:**Karal and Ahmed study the electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.
 - **2021:** Gupta and Ashkar review the dynamic face of lipid membranes, including in-plane dynamics and their timescales.
 - **2022:**Kotsifaki and Nic Chormaic review the role of temperature-induced effects generated by plasmonic nanostructures on particle delivery, noting studies on nanoparticle interactions with lipid bilayers.
-- Wennerström and Sparr discuss thermal fluctuations and osmotic stability of lipid vesicles.
-- **2024:** Marque et al. investigate the Brownian motion of a single microparticle partially engulfed by a giant lipid vesicle, including zeta potential measurements of particles and vesicles.
+- Wennerström and Sparr discuss [[Thermal fluctuations]] and osmotic stability of lipid vesicles.
+- **2024:** Marque et al. investigate the [[Brownian motion]] of a single microparticle partially engulfed by a giant lipid vesicle, including zeta potential measurements of particles and vesicles.
 
 **Cast of Characters (Principal People Mentioned):**
 
@@ -114,7 +114,7 @@ The provided sources offer a comprehensive overview of the multifaceted nature o
 - **Bivas, Isak:** Physicist who studied the shape fluctuations and hydrodynamics of nearly spherical lipid vesicles and emulsion droplets.
 - **Morales-Penningston, N. F., Wu, G.:** Authors who reviewed experimental techniques for preparing and imaging GUVs, focusing on minimizing artifacts.
 - **Bouvrais, Hélène:** Researcher who provided a detailed analysis of bending rigidities of lipid bilayers, linking theory and experiments.
-- **Yao, Z.:** Researcher who studied the influence of the Gaussian curvature modulus on the shape of membranes with pores.
+- **Yao, Z.:** Researcher who studied the influence of the [[Gaussian curvature]] modulus on the shape of membranes with pores.
 - **Mirigian, S., Muthukumar, M.:** Scientists who investigated the kinetics of particle wrapping by vesicles, considering energetic and kinetic barriers.
 - **Genova, J., Vitkova, V.:** Authors who focused on the methods for registering and analyzing the shape fluctuations of lipid vesicles.
 - **Hamm, M., Kozlov, M. M.:** Researchers who developed a theoretical framework (HK model) for lipid monolayers, often used in Molecular Dynamics simulations to determine elastic properties.
@@ -126,5 +126,5 @@ The provided sources offer a comprehensive overview of the multifaceted nature o
 - **Karal, Mohammad Abu Sayem, Ahmed, Sk. Monirul:** Authors who experimentally investigated the effects of electrostatic interactions on the size distribution and bending modulus of GUVs.
 - **Gupta, A., Ashkar, A.:** Authors who reviewed the dynamic aspects of lipid membranes, including lateral motions and their timescales.
 - **Kotsifaki, D. G., Nic Chormaic, S.:** Authors who reviewed the impact of temperature effects from plasmonic nanostructures on particle delivery to lipid bilayers.
-- **Wennerström, H., Sparr, E.:** Scientists who examined the role of thermal fluctuations in the osmotic stability of lipid vesicles.
-- **Marque, V.:** Lead author of a study on the Brownian motion of microparticles partially engulfed by vesicles, contributing experimental data on zeta potentials.
+- **Wennerström, H., Sparr, E.:** Scientists who examined the role of [[Thermal fluctuations]] in the osmotic stability of lipid vesicles.
+- **Marque, V.:** Lead author of a study on the [[Brownian motion]] of microparticles partially engulfed by vesicles, contributing experimental data on zeta potentials.

@@ -4,7 +4,7 @@ Cells are dynamic systems where membranes actively drive essential life processe
 
 ## Cells as active systems challenging the passive container paradigm
 
-The traditional view of cells as passive containers has been fundamentally overturned by evidence showing cells as **active, dynamic systems** where membrane-cytoskeleton coupling generates forces necessary for life processes. Living cell membranes exhibit both thermal fluctuations (passive) and active fluctuations (ATP-dependent), with **active membrane fluctuations differing significantly from thermal equilibrium** in both spatial and temporal patterns.
+The traditional view of cells as passive containers has been fundamentally overturned by evidence showing cells as **active, dynamic systems** where membrane-cytoskeleton coupling generates forces necessary for life processes. Living cell membranes exhibit both [[Thermal fluctuations]] (passive) and active fluctuations (ATP-dependent), with **active membrane fluctuations differing significantly from thermal equilibrium** in both spatial and temporal patterns.
 
 Quantitative measurements reveal membrane fluctuations with amplitudes of 4-8 nm in adherent cells, while red blood cell membrane flickering demonstrates active forces of approximately 5×10⁻³ pN acting over 0.1 second timescales. Recent research using minimal synthetic cells shows that active cytoskeletal networks of microtubules and molecular motors can drive large-scale membrane deformations, creating "life-like morphing abilities" with traveling membrane deformations that set temporal scales distinctly different from passive membranes.
 
@@ -20,7 +20,7 @@ Advanced measurement techniques including digital holographic microscopy, super-
 
 ## Lipid bilayer properties enabling membrane flexibility and dynamics
 
-The remarkable flexibility of biological membranes emerges from **fundamental lipid bilayer properties** governed by well-established physical principles. The Helfrich-Canham model describes membrane bending energy through key parameters: bending rigidity κ (typically 10-50 kBT), area compressibility modulus KA (100-300 mN/m), and surface tension σ (typically <1 mN/m).
+The remarkable flexibility of biological membranes emerges from **fundamental lipid bilayer properties** governed by well-established physical principles. The Helfrich-Canham model describes membrane bending energy through key parameters: bending rigidity κ (typically 10-50 kBT), area compressibility modulus KA (100-300 mN/m), and [[Surface tension]] σ (typically <1 mN/m).
 
 **Lipid composition dramatically affects membrane mechanical properties** through several mechanisms. Cholesterol universally increases bending rigidity, showing a 3-fold increase at 50 mol% concentration, while creating scale-dependent mechanical properties that challenge previous models. Recent studies reveal non-additive behavior in mixed lipid systems, with longer chains increasing bending rigidity (scaling approximately as d²) and unsaturated chains reducing membrane thickness and rigidity.
 
@@ -62,7 +62,7 @@ Giant Unilamellar Vesicles serve as **essential model systems bridging molecula
 
 Recent advances include the development of **native membrane reconstitution methods** that successfully assemble GUVs from biological membranes while retaining integral membrane proteins with functional activity. Giant plasma membrane vesicles (GPMVs) now provide intermediate complexity models retaining native lipid composition and membrane proteins, bridging simplified GUV models and full cellular complexity.
 
-**Quantitative GUV studies enable precise measurement** of fundamental parameters including bending rigidity (κ), membrane tension (σ), and spontaneous curvature, with direct validation of theoretical models through controlled experimentation. These measurements scale appropriately to cellular membrane properties, with GUV mechanical properties directly translating to cellular values.
+**Quantitative GUV studies enable precise measurement** of fundamental parameters including bending rigidity (κ), membrane tension (σ), and [[Spontaneous curvature]], with direct validation of theoretical models through controlled experimentation. These measurements scale appropriately to cellular membrane properties, with GUV mechanical properties directly translating to cellular values.
 
 The integration of advanced microscopy techniques including 3D STED imaging, fluorescence lifetime imaging (FLIM), and scanning fluorescence correlation spectroscopy has revolutionized GUV-based membrane research. **Computational analysis methods** now achieve sub-pixel resolution (10 nm accuracy) with statistical analysis using spherical harmonics decomposition to separate bending rigidity-dominated from tension-dominated fluctuation modes.
 

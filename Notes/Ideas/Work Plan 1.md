@@ -7,6 +7,6 @@
 
 - I would like also study the behavior of PS particles around the vesicles, and see the effect of local heating when used coated and uncoated glass. 
 
-Mixing the ps particles in the suspension with vesicles it will be a good test to study the thermal fluctuation, both from vesicle shape and brownian motion.
+Mixing the ps particles in the suspension with vesicles it will be a good test to study the thermal fluctuation, both from vesicle shape and [[Brownian motion]].
 
 - Changes in the behavior of particles close to the vesicle membrane it would be nice to see. 
