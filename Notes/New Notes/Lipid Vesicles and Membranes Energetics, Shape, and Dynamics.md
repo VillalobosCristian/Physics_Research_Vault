@@ -17,4 +17,3 @@
 **8. What are Giant Unilamellar Vesicles (GUVs), and why are they important for studying membrane properties?** Giant Unilamellar Vesicles (GUVs) are large, single-bilayer vesicles, typically ranging in size from a few to hundreds of micrometers. Their large size makes them amenable to direct observation using optical microscopy techniques, allowing for detailed studies of membrane shape, fluctuations, and interactions. GUVs are widely used as model systems to investigate fundamental properties of lipid bilayers, such as bending rigidity, membrane tension, permeability, and the behavior of embedded proteins or interacting particles. They can be prepared using various methods, including gentle hydration and electroformation.
 
 
-![[Pasted image 20250318132123.png]]

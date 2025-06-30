@@ -11,12 +11,14 @@
             "id": "05a4462ff098f46b",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Bilayer.excalidraw 1.md"
+                "file": "Notes/New Notes/Lipid Bilayer Structure.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Bilayer.excalidraw 1"
+              "icon": "lucide-file",
+              "title": "Lipid Bilayer Structure"
             }
           }
         ]
@@ -174,14 +176,19 @@
   },
   "active": "05a4462ff098f46b",
   "lastOpenFiles": [
+    "Notes/New Notes/Gauss Bonnet theorem.md",
     "Notes/New Notes/Biomembranes and Giant Vesicles.md",
-    "Excalidraw/Bilayer.excalidraw 1.md",
+    "Notes/New Notes/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
+    "Notes/New Notes/Deep Research.md",
+    "Notes/New Notes/Deep Research test.md",
+    "Notes/Calculations/Marangoni Flow.md",
     "Notes/Calculations/Differentials on Surfaces.md",
+    "Excalidraw/Bilayer.excalidraw.md",
+    "Excalidraw/Bilayer.excalidraw 1.md",
     "Notes/New Notes/Untitled 3.md",
     "Notes/Ideas/Work Plan 1.md",
     "Notes/Ideas/Model_F.pdf",
     "Notes/Ideas/Derivation_Helfrich_free.pdf",
-    "Notes/Calculations/Marangoni Flow.md",
     "Notes/Calculations/Helfrich model.md",
     "Notes/Calculations/Fourier Analysis Vesicles.md",
     "Excalidraw/Drawing 2025-04-22 11.08.20.excalidraw.md",
@@ -198,13 +205,8 @@
     "Data/Codes/Drift Correction and MSD Analysis.md",
     "Clippings/Perplexity GUV search.md",
     "Clippings/Claude.md",
-    "Excalidraw/Bilayer.excalidraw.md",
     "Notes/New Notes/Untitled.md",
     "Templates/Paper_Notes.md",
-    "Projects/Postdoc Project.md",
-    "Dashboard.md",
-    "Papers Tracker.md",
-    "Notes Tracker.md",
     "Papers/References/bouvrais2012_Bending Rigidities of Lipid Bilayers 1.pdf.sb-e4f5fff6-v1jwIW",
     "Papers/References/deserno_Fluid lipid membranes – a primer 1.pdf.sb-e4f5fff6-GdoWdS",
     "Notes/New Notes/Pasted image 20250617135811.png",

@@ -24,7 +24,7 @@ For example of [[Micelles]], the hydrophobicity is not that strong and the numbe
 
 The bilayer also have steric repulsions, which make that exist a prefer distance between each other.
 
-![[[[Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw]]]]
+![[Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw]]]]
 The order within the biological membrane is a fluid-like, meaning that the lipid molecules can diffuse in the $2-D$ plane of the membrane.
 
 ### Interfacial Tension
