@@ -55,10 +55,10 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/Drawing 2025-07-09 13.45.35.excalidraw.md"
+                "file": "Excalidraw/Unsaturated_Lipid.excalidraw.md"
               },
               "icon": "excalidraw-icon",
-              "title": "Drawing 2025-07-09 13.45.35.excalidraw"
+              "title": "Unsaturated_Lipid.excalidraw"
             }
           },
           {
@@ -75,8 +75,7 @@
               "title": "Untitled 3"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -229,12 +228,13 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "3c3e52d39f6a993a",
+  "active": "05a4462ff098f46b",
   "lastOpenFiles": [
-    "Notes/Lipid Vesicles/DOPC.md",
-    "Excalidraw/Drawing 2025-07-09 13.45.35.excalidraw.md",
-    "Notes/New Notes/Liquid-disorder-Ld.md",
+    "Projects/MSCA-Proposal-2025/Ideas_draft_writtings.md",
     "Projects/MSCA-Proposal-2025/03-Proposal-Sections/Work Packages.md",
+    "Notes/Lipid Vesicles/DOPC.md",
+    "Excalidraw/Unsaturated_Lipid.excalidraw.md",
+    "Notes/New Notes/Liquid-disorder-Ld.md",
     "Notes/New Notes/DPPC.md",
     "Projects/MSCA-Proposal-2025/01-Planning/MSCA.md",
     "Notes/Lipid Vesicles/Giant Unilamellar Vesicles (GUVs).md",
@@ -265,7 +265,6 @@
     "Notes/Ideas/Model_F.pdf",
     "Notes/Ideas/Derivation_Helfrich_free.pdf",
     "Notes/Calculations/Helfrich model.md",
-    "Notes/Calculations/Fourier Analysis Vesicles.md",
     "Excalidraw/Pasted Image 20250625154502_626.png",
     "Excalidraw/Pasted Image 20250625154320_791.png",
     "Data/Protocols/Pasted image 20250220094708.png",
