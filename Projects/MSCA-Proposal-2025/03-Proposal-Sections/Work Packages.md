@@ -4,4 +4,6 @@ From a physics point of view, GUVs are a ideal system to study different physica
 
 We usually use the following lipids:
 
-[[DOPC]] (1,2-dioleoyl-sn-glycero-3-phosphocholine): unsaturated lipid 
+[[DOPC]] (1,2-dioleoyl-sn-glycero-3-phosphocholine): [[unsaturated lipid]] that promote a disorder phase ([[Liquid-disorder-Ld]]). 
+
+[[DPPC]] 
