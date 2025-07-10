@@ -11,14 +11,12 @@
             "id": "05a4462ff098f46b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Projects/MSCA-Proposal-2025/03-Proposal-Sections/Work Packages.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Cooling_by_heating.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "Work Packages"
+              "icon": "excalidraw-icon",
+              "title": "Cooling_by_heating.excalidraw"
             }
           },
           {
@@ -230,8 +228,8 @@
   },
   "active": "05a4462ff098f46b",
   "lastOpenFiles": [
-    "Projects/MSCA-Proposal-2025/Ideas_draft_writtings.md",
     "Projects/MSCA-Proposal-2025/03-Proposal-Sections/Work Packages.md",
+    "Projects/MSCA-Proposal-2025/Ideas_draft_writtings.md",
     "Notes/Lipid Vesicles/DOPC.md",
     "Excalidraw/Unsaturated_Lipid.excalidraw.md",
     "Notes/New Notes/Liquid-disorder-Ld.md",
