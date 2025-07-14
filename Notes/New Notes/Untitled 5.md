@@ -1,1 +1,1 @@
-"Experimental trajectory data, analysis code, and simulation scripts are available at [Zenodo DOI]. Raw video data (10-30GB per video) is available upon reasonable request due to size constraints. Representative images and processed trajectory data are included in the repository."
+Experimental trajectory data, analysis code, and simulation scripts are  available at [Zenodo DOI]. Representative experimental videos are provided  in the Supplemental Material. Complete raw video datasets are available  upon reasonable request due to size constraints.
