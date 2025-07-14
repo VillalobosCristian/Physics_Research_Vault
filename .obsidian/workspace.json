@@ -20,6 +20,20 @@
             }
           },
           {
+            "id": "ae1a4d0ed404db9a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 5.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 5"
+            }
+          },
+          {
             "id": "91e5b86bac2fd29e",
             "type": "leaf",
             "state": {
@@ -73,7 +87,8 @@
               "title": "Untitled 3"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -226,9 +241,10 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "1ed02eadae89d093",
+  "active": "ae1a4d0ed404db9a",
   "lastOpenFiles": [
     "Excalidraw/Cooling_by_heating.excalidraw.md",
+    "Notes/New Notes/Untitled 5.md",
     "Projects/MSCA-Proposal-2025/03-Proposal-Sections/Work Packages.md",
     "Projects/MSCA-Proposal-2025/Ideas_draft_writtings.md",
     "Notes/Lipid Vesicles/DOPC.md",
@@ -260,7 +276,6 @@
     "Notes/Calculations/Marangoni Flow.md",
     "Notes/Calculations/Differentials on Surfaces.md",
     "Excalidraw/Bilayer.excalidraw 1.md",
-    "Notes/Ideas/Work Plan 1.md",
     "Notes/Ideas/Model_F.pdf",
     "Notes/Ideas/Derivation_Helfrich_free.pdf",
     "Excalidraw/Pasted Image 20250625154502_626.png",
