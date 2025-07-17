@@ -100,9 +100,19 @@
               "icon": "lucide-file",
               "title": "Untitled 3"
             }
+          },
+          {
+            "id": "01fda99b9ac8093f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -255,8 +265,9 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "3a0add3c7741e6b7",
+  "active": "01fda99b9ac8093f",
   "lastOpenFiles": [
+    "Notes/New Notes/Seminar Petia.md",
     "Notes/New Notes/Pasted image 20250717164545.png",
     "Notes/New Notes/Pasted image 20250717163629.png",
     "Notes/New Notes/Pasted image 20250717162820.png",
@@ -267,9 +278,7 @@
     "Notes/New Notes/Pasted image 20250717161804.png",
     "Notes/New Notes/Pasted image 20250717161240.png",
     "Notes/New Notes/Pasted image 20250717161000.png",
-    "Notes/New Notes/Pasted image 20250717160839.png",
     "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
-    "Notes/New Notes/Seminar Petia.md",
     "Notes/New Notes/Deep Research test.md",
     "Notes/New Notes/Biomembranes and Giant Vesicles.md",
     "Notes/New Notes/DPPC.md",
