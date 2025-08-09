@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/MSCA-Proposal-2025/01-Planning/Abstract.md",
+                "file": "Projects/MSCA-Proposal-2025/01-Planning/State of the Art.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Abstract"
+              "title": "State of the Art"
             }
           },
           {
@@ -267,8 +267,9 @@
   },
   "active": "3a0add3c7741e6b7",
   "lastOpenFiles": [
-    "Notes/New Notes/Seminar Petia.md",
     "Projects/MSCA-Proposal-2025/01-Planning/Abstract.md",
+    "Projects/MSCA-Proposal-2025/01-Planning/State of the Art.md",
+    "Notes/New Notes/Seminar Petia.md",
     "Notes/New Notes/Pasted image 20250717164545.png",
     "Notes/New Notes/Pasted image 20250717163629.png",
     "Notes/New Notes/Pasted image 20250717162820.png",
@@ -311,7 +312,6 @@
     "Excalidraw/Bilayer.excalidraw.md",
     "Notes/New Notes/Gauss Bonnet theorem.md",
     "Notes/New Notes/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
-    "Notes/New Notes/Deep Research.md",
     "Notes/Ideas/Model_F.pdf"
   ]
 }
