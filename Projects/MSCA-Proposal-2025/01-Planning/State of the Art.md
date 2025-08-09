@@ -1,7 +1,9 @@
 
 
 
-The emergence of life from non living matter represents one of the mysteries of science. The notion of that simple forces, such as thermal gradients, may have
+The emergence of life from non living matter represents one of the mysteries of science. The notion of that simple forces, such as thermal gradients, may have induce the necesasry interactions to create the first cells. 
+
+Living cells display different kind of behaviors, they move, change shape, and exchance material with the environment. 
 
 
 Recent interest in understanding the very beginning of life, and how prebiotic systems with environmental changes (T, pH, pressure, etc) and interactions amongst themselves and other inorganic systems, lead to the first minimal living system before eukaryotic cells [REF]. Understanding the minimal elements to build protocells and engineering these systems ‘in vitro’ allows for fundamental understanding of the beginning of life, but also has important implications in developing microscopic materials  [REF Laura, animated matter Roadmap].
