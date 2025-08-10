@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/MSCA-Proposal-2025/01-Planning/State of the Art.md",
+                "file": "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "State of the Art"
+              "title": "Interaction particles vesicles"
             }
           },
           {
@@ -267,8 +267,12 @@
   },
   "active": "3a0add3c7741e6b7",
   "lastOpenFiles": [
-    "Projects/MSCA-Proposal-2025/01-Planning/Abstract.md",
+    "Papers/References/muñoz-basagoiti, wassermair2025_Non-reciprocal interactions reshape cells in a model for symbiosis.pdf",
+    "Papers/References/muñoz-basagoiti, frey2025_A tutorial for mesoscale computer simulations of lipid membranes tether pulling, tubulation and flu.pdf",
+    "Projects/MSCA-Proposal-2025/03-Proposal-Sections/Work Packages.md",
+    "Projects/MSCA-Proposal-2025/Ideas_draft_writtings.md",
     "Projects/MSCA-Proposal-2025/01-Planning/State of the Art.md",
+    "Projects/MSCA-Proposal-2025/01-Planning/Abstract.md",
     "Notes/New Notes/Seminar Petia.md",
     "Notes/New Notes/Pasted image 20250717164545.png",
     "Notes/New Notes/Pasted image 20250717163629.png",
@@ -290,8 +294,6 @@
     "Papers/References/PhysRevFluids.9.124202-2.pdf",
     "Papers/References/fränzl, cichos2022_Hydrodynamic manipulation of nano-objects by optically induced thermo-osmotic flows.pdf",
     "Excalidraw/Cooling_by_heating.excalidraw.md",
-    "Projects/MSCA-Proposal-2025/03-Proposal-Sections/Work Packages.md",
-    "Projects/MSCA-Proposal-2025/Ideas_draft_writtings.md",
     "Excalidraw/Unsaturated_Lipid.excalidraw.md",
     "Notes/New Notes/Liquid-disorder-Ld.md",
     "Projects/MSCA-Proposal-2025/01-Planning/MSCA.md",
@@ -310,8 +312,6 @@
     "Notes/Lipid Vesicles",
     "Notes/Untitled",
     "Excalidraw/Bilayer.excalidraw.md",
-    "Notes/New Notes/Gauss Bonnet theorem.md",
-    "Notes/New Notes/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
-    "Notes/Ideas/Model_F.pdf"
+    "Notes/New Notes/Gauss Bonnet theorem.md"
   ]
 }
