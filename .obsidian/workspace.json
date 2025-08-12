@@ -76,6 +76,20 @@
             }
           },
           {
+            "id": "5d27b8922fd0f74b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 9.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 9"
+            }
+          },
+          {
             "id": "91e5b86bac2fd29e",
             "type": "leaf",
             "state": {
@@ -140,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -293,10 +307,11 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "949c937fa9cb5b32",
+  "active": "5d27b8922fd0f74b",
   "lastOpenFiles": [
-    "Notes/New Notes/Untitled 6.md",
     "Notes/New Notes/Untitled 7.md",
+    "Notes/New Notes/Untitled 9.md",
+    "Notes/New Notes/Untitled 6.md",
     "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
     "Papers/References/muñoz-basagoiti, wassermair2025_Non-reciprocal interactions reshape cells in a model for symbiosis.pdf",
     "Papers/References/muñoz-basagoiti, frey2025_A tutorial for mesoscale computer simulations of lipid membranes tether pulling, tubulation and flu.pdf",
@@ -339,7 +354,6 @@
     "Notes/New Notes/Lipid Bilayer Structure.md",
     "Notes/Ideas.md",
     "Notes/Literature Cooling by Heating.md",
-    "Notes/Lipid Vesicles",
-    "Excalidraw/Bilayer.excalidraw.md"
+    "Notes/Lipid Vesicles"
   ]
 }
