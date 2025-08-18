@@ -104,6 +104,20 @@
             }
           },
           {
+            "id": "893c92d6de33756f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 12.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 12"
+            }
+          },
+          {
             "id": "5d27b8922fd0f74b",
             "type": "leaf",
             "state": {
@@ -182,7 +196,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -335,10 +349,11 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "037a9c0bb44c0229",
+  "active": "893c92d6de33756f",
   "lastOpenFiles": [
-    "Notes/New Notes/Untitled 10.md",
     "Notes/New Notes/Untitled 11.md",
+    "Notes/New Notes/Untitled 12.md",
+    "Notes/New Notes/Untitled 10.md",
     "Notes/New Notes/Untitled 7.md",
     "Notes/New Notes/Untitled 9.md",
     "Notes/New Notes/Untitled 6.md",
@@ -381,7 +396,6 @@
     "Projects/MSCA-Proposal-2025",
     "Projects/Frontier of Life",
     "Projects/Membrane_Study/Eukaryogenesis.md",
-    "Notes/New Notes/Lipid Bilayer Structure.md",
     "Notes/Lipid Vesicles"
   ]
 }
