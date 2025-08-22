@@ -132,6 +132,18 @@
             }
           },
           {
+            "id": "5e7b9553f9e670a4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.10"
+            }
+          },
+          {
             "id": "5d27b8922fd0f74b",
             "type": "leaf",
             "state": {
@@ -210,7 +222,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -346,6 +358,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -363,7 +376,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "82fdf27f0ee1a10f",
+  "active": "5e7b9553f9e670a4",
   "lastOpenFiles": [
     "Notes/New Notes/Untitled 12.md",
     "Notes/New Notes/Untitled 13.md",
