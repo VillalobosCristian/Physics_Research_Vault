@@ -220,9 +220,19 @@
               "icon": "lucide-file",
               "title": "New tab"
             }
+          },
+          {
+            "id": "27345033b5e66042",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 16
       }
     ],
     "direction": "vertical"
@@ -376,14 +386,14 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "037a9c0bb44c0229",
+  "active": "27345033b5e66042",
   "lastOpenFiles": [
+    "Notes/New Notes/Untitled 11.md",
     "Notes/New Notes/Untitled 10.md",
     "Notes/New Notes/Untitled 7.md",
     "Notes/New Notes/Untitled 6.md",
     "Notes/New Notes/Untitled 12.md",
     "Notes/New Notes/Untitled 13.md",
-    "Notes/New Notes/Untitled 11.md",
     "Notes/New Notes/Untitled 9.md",
     "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
     "Papers/References/muñoz-basagoiti, wassermair2025_Non-reciprocal interactions reshape cells in a model for symbiosis.pdf",
