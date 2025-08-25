@@ -236,7 +236,7 @@
             }
           }
         ],
-        "currentTab": 16
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -390,17 +390,21 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "27345033b5e66042",
+  "active": "e95f212282656d33",
   "lastOpenFiles": [
-    "Notes/New Notes/Untitled 14.md",
+    "Excalidraw/Unsaturated_Lipid.excalidraw.md",
+    "Notes/Lipid Vesicles/DOPC.md",
+    "Notes/New Notes/DPPC.md",
+    "Notes/New Notes/Untitled 9.md",
+    "Notes/New Notes/Untitled 13.md",
+    "Notes/New Notes/Untitled 12.md",
     "Notes/New Notes/Untitled 11.md",
     "Notes/New Notes/Untitled 10.md",
     "Notes/New Notes/Untitled 7.md",
     "Notes/New Notes/Untitled 6.md",
-    "Notes/New Notes/Untitled 12.md",
-    "Notes/New Notes/Untitled 13.md",
-    "Notes/New Notes/Untitled 9.md",
     "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
+    "Excalidraw/Cooling_by_heating.excalidraw.md",
+    "Notes/New Notes/Untitled 14.md",
     "Papers/References/muñoz-basagoiti, wassermair2025_Non-reciprocal interactions reshape cells in a model for symbiosis.pdf",
     "Papers/References/muñoz-basagoiti, frey2025_A tutorial for mesoscale computer simulations of lipid membranes tether pulling, tubulation and flu.pdf",
     "Projects/MSCA-Proposal-2025/03-Proposal-Sections/Work Packages.md",
@@ -420,14 +424,10 @@
     "Notes/New Notes/Pasted image 20250717161000.png",
     "Notes/New Notes/Deep Research test.md",
     "Notes/New Notes/Biomembranes and Giant Vesicles.md",
-    "Notes/New Notes/DPPC.md",
     "Notes/Lipid Vesicles/Giant Unilamellar Vesicles (GUVs).md",
-    "Notes/Lipid Vesicles/DOPC.md",
     "Notes/New Notes/Untitled 5.md",
     "Papers/References/PhysRevFluids.9.124202-2.pdf",
     "Papers/References/fränzl, cichos2022_Hydrodynamic manipulation of nano-objects by optically induced thermo-osmotic flows.pdf",
-    "Excalidraw/Cooling_by_heating.excalidraw.md",
-    "Excalidraw/Unsaturated_Lipid.excalidraw.md",
     "Notes/New Notes/Liquid-disorder-Ld.md",
     "Projects/MSCA-Proposal-2025/01-Planning/MSCA.md",
     "Notes/New Notes/Untitled 4.md",
