@@ -225,10 +225,14 @@
             "id": "27345033b5e66042",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 14.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Untitled 14"
             }
           }
         ],
@@ -388,6 +392,7 @@
   },
   "active": "27345033b5e66042",
   "lastOpenFiles": [
+    "Notes/New Notes/Untitled 14.md",
     "Notes/New Notes/Untitled 11.md",
     "Notes/New Notes/Untitled 10.md",
     "Notes/New Notes/Untitled 7.md",
@@ -427,7 +432,6 @@
     "Projects/MSCA-Proposal-2025/01-Planning/MSCA.md",
     "Notes/New Notes/Untitled 4.md",
     "Notes/New Notes/Untitled 3.md",
-    "Projects/Frontier of Life/Postdoc Project.md",
     "Projects/MSCA-Proposal-2025/03-Proposal-Sections",
     "Projects/MSCA-Proposal-2025/02-Literature-Review",
     "Projects/MSCA-Proposal-2025/01-Planning",
