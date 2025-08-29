@@ -248,9 +248,21 @@
               "icon": "lucide-file",
               "title": "MSCA questions"
             }
+          },
+          {
+            "id": "b2daa6b095b0e3d1",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.12"
+            }
           }
         ],
-        "currentTab": 17
+        "currentTab": 18
       }
     ],
     "direction": "vertical"
@@ -404,7 +416,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "761ba2b726f538b8",
+  "active": "b2daa6b095b0e3d1",
   "lastOpenFiles": [
     "Notes/New Notes/Untitled 14.md",
     "Notes/New Notes/MSCA questions.md",
