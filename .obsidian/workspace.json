@@ -260,9 +260,21 @@
               "icon": "lucide-book-up",
               "title": "Release Notes 1.9.12"
             }
+          },
+          {
+            "id": "b2e633e054ac9711",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-08-29 11.49.05.excalidraw"
+            }
           }
         ],
-        "currentTab": 18
+        "currentTab": 19
       }
     ],
     "direction": "vertical"
@@ -416,8 +428,9 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "b2daa6b095b0e3d1",
+  "active": "b2e633e054ac9711",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Notes/New Notes/Untitled 14.md",
     "Notes/New Notes/MSCA questions.md",
     "Notes/New Notes/Untitled 3.md",
@@ -457,7 +470,6 @@
     "Papers/References/PhysRevFluids.9.124202-2.pdf",
     "Papers/References/fränzl, cichos2022_Hydrodynamic manipulation of nano-objects by optically induced thermo-osmotic flows.pdf",
     "Notes/New Notes/Liquid-disorder-Ld.md",
-    "Projects/MSCA-Proposal-2025/01-Planning/MSCA.md",
     "Projects/MSCA-Proposal-2025/03-Proposal-Sections",
     "Projects/MSCA-Proposal-2025/02-Literature-Review",
     "Projects/MSCA-Proposal-2025/01-Planning",
