@@ -277,14 +277,13 @@
             "id": "b8afccce8a35cde1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "Notes/New Notes/Untitled 16.md",
-                "mode": "source",
-                "source": false
+                "file": "Notes/New Notes/Untitled 1.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "Untitled 16"
+              "icon": "lucide-table",
+              "title": "Untitled 1"
             }
           },
           {
@@ -346,7 +345,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "pasted",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -471,8 +470,10 @@
   },
   "active": "b8afccce8a35cde1",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
+    "Notes/New Notes/Untitled.base",
+    "Notes/New Notes/Untitled 1.base",
     "Notes/New Notes/Untitled 16.md",
+    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Notes/New Notes/Pasted image 20250829124328.png",
     "Notes/New Notes/Untitled 15.md",
     "Notes/New Notes/Untitled 14.md",
@@ -508,14 +509,12 @@
     "Notes/New Notes/Pasted image 20250717161240.png",
     "Notes/New Notes/Deep Research test.md",
     "Notes/New Notes/Biomembranes and Giant Vesicles.md",
-    "Notes/Lipid Vesicles/Giant Unilamellar Vesicles (GUVs).md",
     "Papers/References/PhysRevFluids.9.124202-2.pdf",
     "Papers/References/fränzl, cichos2022_Hydrodynamic manipulation of nano-objects by optically induced thermo-osmotic flows.pdf",
     "Projects/MSCA-Proposal-2025/03-Proposal-Sections",
     "Projects/MSCA-Proposal-2025/02-Literature-Review",
     "Projects/MSCA-Proposal-2025/01-Planning",
     "Projects/MSCA-Proposal-2025",
-    "Projects/Frontier of Life",
-    "Notes/Lipid Vesicles"
+    "Projects/Frontier of Life"
   ]
 }
