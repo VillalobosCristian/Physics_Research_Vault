@@ -288,6 +288,20 @@
             }
           },
           {
+            "id": "021e666af6c8aa71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 18.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 18"
+            }
+          },
+          {
             "id": "b8afccce8a35cde1",
             "type": "leaf",
             "state": {
@@ -327,7 +341,7 @@
             }
           }
         ],
-        "currentTab": 20
+        "currentTab": 21
       }
     ],
     "direction": "vertical"
@@ -482,10 +496,11 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "a7b0f5791af50e46",
+  "active": "021e666af6c8aa71",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Notes/New Notes/Untitled 17.md",
+    "Notes/New Notes/Untitled 18.md",
+    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Excalidraw/Pasted Image 20250903112205_414.png",
     "Papers/References/~$istian_Villalobos_Concha_CV copy.docx",
     "Papers/References/Cristian_Villalobos_Concha_CV copy.docx",
@@ -528,7 +543,6 @@
     "Notes/New Notes/Pasted image 20250717162237.png",
     "Notes/New Notes/Pasted image 20250717161937.png",
     "Notes/New Notes/Pasted image 20250717161804.png",
-    "Notes/New Notes/Deep Research test.md",
-    "Notes/New Notes/Biomembranes and Giant Vesicles.md"
+    "Notes/New Notes/Deep Research test.md"
   ]
 }
