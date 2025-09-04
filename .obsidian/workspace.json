@@ -316,6 +316,20 @@
             }
           },
           {
+            "id": "bc9c64faba09de84",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/New Notes/Untitled 20.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 20"
+            }
+          },
+          {
             "id": "b8afccce8a35cde1",
             "type": "leaf",
             "state": {
@@ -355,7 +369,7 @@
             }
           }
         ],
-        "currentTab": 22
+        "currentTab": 23
       }
     ],
     "direction": "vertical"
@@ -510,11 +524,12 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "faaf9153c8a42d8e",
+  "active": "bc9c64faba09de84",
   "lastOpenFiles": [
+    "Notes/New Notes/Untitled 19.md",
+    "Notes/New Notes/Untitled 20.md",
     "Notes/New Notes/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",
     "Notes/New Notes/Untitled 18.md",
-    "Notes/New Notes/Untitled 19.md",
     "Notes/New Notes/Untitled 17.md",
     "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Excalidraw/Pasted Image 20250903112205_414.png",
@@ -556,7 +571,6 @@
     "Notes/New Notes/Pasted image 20250717162706.png",
     "Notes/New Notes/Pasted image 20250717162453.png",
     "Notes/New Notes/Pasted image 20250717162237.png",
-    "Notes/New Notes/Pasted image 20250717161937.png",
-    "Notes/New Notes/Pasted image 20250717161804.png"
+    "Notes/New Notes/Pasted image 20250717161937.png"
   ]
 }
