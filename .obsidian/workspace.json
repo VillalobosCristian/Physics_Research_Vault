@@ -4,358 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "7717bf0ba9f476d0",
+        "id": "2a16b605d51a8bed",
         "type": "tabs",
         "children": [
           {
-            "id": "05a4462ff098f46b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Cooling_by_heating.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Cooling_by_heating.excalidraw"
-            }
-          },
-          {
-            "id": "ae1a4d0ed404db9a",
+            "id": "1d2a6f47d355272e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
+                "file": "Notes Tracker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Interaction particles vesicles"
-            }
-          },
-          {
-            "id": "3a0add3c7741e6b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Interaction particles vesicles"
-            }
-          },
-          {
-            "id": "1a051b76a7f66206",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 6.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 6"
-            }
-          },
-          {
-            "id": "949c937fa9cb5b32",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 7.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 7"
-            }
-          },
-          {
-            "id": "3e31dfb6e2fc9975",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 10.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 10"
-            }
-          },
-          {
-            "id": "037a9c0bb44c0229",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 11.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 11"
-            }
-          },
-          {
-            "id": "893c92d6de33756f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 12.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 12"
-            }
-          },
-          {
-            "id": "82fdf27f0ee1a10f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 13.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 13"
-            }
-          },
-          {
-            "id": "5e7b9553f9e670a4",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.10"
-            }
-          },
-          {
-            "id": "5d27b8922fd0f74b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 9.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 9"
-            }
-          },
-          {
-            "id": "91e5b86bac2fd29e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/DPPC.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DPPC"
-            }
-          },
-          {
-            "id": "2a275bbdd39f9e8b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Lipid Vesicles/DOPC.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DOPC"
-            }
-          },
-          {
-            "id": "3c3e52d39f6a993a",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Unsaturated_Lipid.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Unsaturated_Lipid.excalidraw"
-            }
-          },
-          {
-            "id": "e95f212282656d33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 3.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 3"
-            }
-          },
-          {
-            "id": "01fda99b9ac8093f",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "27345033b5e66042",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 14.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 14"
-            }
-          },
-          {
-            "id": "761ba2b726f538b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/MSCA questions.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MSCA questions"
-            }
-          },
-          {
-            "id": "b2daa6b095b0e3d1",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.12"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.12"
-            }
-          },
-          {
-            "id": "b2e633e054ac9711",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-08-29 11.49.05.excalidraw"
-            }
-          },
-          {
-            "id": "a7b0f5791af50e46",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 17.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 17"
-            }
-          },
-          {
-            "id": "021e666af6c8aa71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 18.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 18"
-            }
-          },
-          {
-            "id": "faaf9153c8a42d8e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/msca sub.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "msca sub"
-            }
-          },
-          {
-            "id": "b8afccce8a35cde1",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "Notes/New Notes/Untitled 1.base",
-                "viewName": "Table"
-              },
-              "icon": "lucide-table",
-              "title": "Untitled 1"
-            }
-          },
-          {
-            "id": "8f784738d4b45870",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/New Notes/Untitled 15.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 15"
-            }
-          },
-          {
-            "id": "d571bbd61b39db8d",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Notes/New Notes/Pasted image 20250829124328.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250829124328"
+              "title": "Notes Tracker"
             }
           }
-        ],
-        "currentTab": 22
+        ]
       }
     ],
     "direction": "vertical"
@@ -509,9 +175,21 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "07a89a5c30172928",
+  "active": "1d2a6f47d355272e",
   "lastOpenFiles": [
-    "Projects/Untitled",
+    "Notes/New Notes/Pasted image 20250829124328.png",
+    "Excalidraw/Cooling_by_heating.excalidraw.md",
+    "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
+    "Notes/New Notes/DPPC.md",
+    "Notes/Lipid Vesicles/DOPC.md",
+    "Excalidraw/Unsaturated_Lipid.excalidraw.md",
+    "Notes/New Notes/MSCA questions.md",
+    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
+    "Templates/Theory_Note.md",
+    "Dashboard.md",
+    "Notes Tracker.md",
+    "Notes/New Notes/msca sub.md",
+    "Projects/Cooling by heating",
     "Notes/New Notes/Untitled 2.base",
     "Notes/New Notes/Untitled/Untitled.md",
     "Notes/New Notes/Untitled/Untitled.base",
@@ -528,29 +206,16 @@
     "Notes/New Notes/Untitled/Untitled 9.md",
     "Notes/New Notes/Untitled/Untitled 8.md",
     "Notes/New Notes/Untitled/Untitled 7.md",
-    "Notes/New Notes/Untitled/Untitled 6.md",
-    "Notes/New Notes/Untitled/Untitled 5.md",
-    "Notes/New Notes/Untitled/Untitled 4.md",
-    "Notes/New Notes/Untitled/Untitled 3.md",
-    "Notes/New Notes/Untitled/Untitled 2.md",
     "Notes/New Notes/Untitled/Untitled 2.base",
-    "Notes/New Notes/Untitled/Untitled 1.md",
     "Notes/New Notes/Untitled/Untitled 1.base",
     "Notes/New Notes/Untitled",
     "Notes/New Notes/untitled folder",
-    "Notes/New Notes/msca sub.md",
     "Notes/New Notes/Pasted image 20250909165151.png",
-    "Notes/New Notes/Untitled 20.md",
     "Notes/New Notes/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",
-    "Notes/New Notes/Untitled 18.md",
-    "Notes/New Notes/Untitled 17.md",
-    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Excalidraw/Pasted Image 20250903112205_414.png",
     "Papers/References/~$istian_Villalobos_Concha_CV copy.docx",
     "Papers/References/Cristian_Villalobos_Concha_CV copy.docx",
     "Papers/References/~$istian_Villalobos_Concha_CV.docx",
-    "Papers/References/Cristian_Villalobos_Concha_CV.docx",
-    "Notes/New Notes/Pasted image 20250829124328.png",
     "Notes/New Notes/Pasted image 20250717164545.png",
     "Notes/New Notes/Pasted image 20250717163629.png",
     "Notes/New Notes/Pasted image 20250717162820.png",
