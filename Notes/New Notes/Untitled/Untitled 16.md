@@ -1,5 +1,0 @@
-**:: In WP2 we stablish the physics, we characterize the thermophysical reponse of adhered GUVs under steady-state illumination, quantifying: (i) temperature field distribution (\grad T(r), sims), (ii) induced thermo-slip flows v_s ~\grad T at the substrate, (iii) resulting in a flow field v(r,z), and drift velocity in functioin of adhesion strenght. It would be cool to have a state equation like: given the power input P, we predic the temperature gradient, the flow, and the forces acting in the vesicles.**
-
-The key insight: crawling IS deformation. Each heating pulse triggers a shape change (front lifts → membrane extends → rear pulls forward) that translates to displacement. No fancy thing needed just controlled sequences of the shape transformations characterized in WP2.
-
-**The central principle: crawling emerges from the interplay between localized membrane deformations and adhesion dynamics, all driven by our simple optothermal platform.**
