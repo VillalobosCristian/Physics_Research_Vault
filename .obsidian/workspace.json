@@ -305,14 +305,13 @@
             "id": "faaf9153c8a42d8e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "Notes/New Notes/msca sub.md",
-                "mode": "source",
-                "source": false
+                "file": "Notes/New Notes/Untitled 2.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "msca sub"
+              "icon": "lucide-table",
+              "title": "Untitled 2"
             }
           },
           {
@@ -408,8 +407,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -510,11 +508,12 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "faaf9153c8a42d8e",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
+    "Notes/New Notes/msca sub.md",
+    "Notes/New Notes/Untitled 2.base",
     "Notes/New Notes/Pasted image 20250909165151.png",
     "Notes/New Notes/Untitled 20.md",
-    "Notes/New Notes/msca sub.md",
     "Notes/New Notes/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",
     "Notes/New Notes/Untitled 18.md",
     "Notes/New Notes/Untitled 17.md",
@@ -547,7 +546,6 @@
     "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
     "Excalidraw/Cooling_by_heating.excalidraw.md",
     "Papers/References/muñoz-basagoiti, wassermair2025_Non-reciprocal interactions reshape cells in a model for symbiosis.pdf",
-    "Papers/References/muñoz-basagoiti, frey2025_A tutorial for mesoscale computer simulations of lipid membranes tether pulling, tubulation and flu.pdf",
     "Projects/MSCA-Proposal-2025/03-Proposal-Sections/Work Packages.md",
     "Projects/MSCA-Proposal-2025/Ideas_draft_writtings.md",
     "Projects/MSCA-Proposal-2025/01-Planning/State of the Art.md",
@@ -556,7 +554,6 @@
     "Notes/New Notes/Pasted image 20250717162820.png",
     "Notes/New Notes/Pasted image 20250717162706.png",
     "Notes/New Notes/Pasted image 20250717162453.png",
-    "Notes/New Notes/Pasted image 20250717162237.png",
-    "Notes/New Notes/Pasted image 20250717161937.png"
+    "Notes/New Notes/Pasted image 20250717162237.png"
   ]
 }
