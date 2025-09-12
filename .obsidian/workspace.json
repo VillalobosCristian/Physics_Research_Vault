@@ -29,12 +29,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Surface tension.md",
+                "file": "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Surface tension"
+              "title": "bouvrais2012_Bending Rigidities of Lipid Bilayers"
             }
           },
           {
@@ -46,7 +46,7 @@
                 "file": "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
                 "page": 1,
                 "left": -260,
-                "top": 466,
+                "top": 435,
                 "zoom": 1.25
               },
               "icon": "lucide-file-text",
@@ -54,7 +54,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -208,7 +208,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "9e0c5bff996bff27",
+  "active": "9976784c06a56be7",
   "lastOpenFiles": [
     "Notes/New Notes/Surface tension.md",
     "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
