@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes Tracker.md",
-                "mode": "preview",
+                "file": "Projects/Cooling by heating/To-DO.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notes Tracker"
+              "title": "To-DO"
             }
           }
         ]
@@ -177,6 +177,8 @@
   },
   "active": "1d2a6f47d355272e",
   "lastOpenFiles": [
+    "Notes Tracker.md",
+    "Projects/Cooling by heating/To-DO.md",
     "Notes/New Notes/Pasted image 20250829124328.png",
     "Excalidraw/Cooling_by_heating.excalidraw.md",
     "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
@@ -187,7 +189,6 @@
     "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Templates/Theory_Note.md",
     "Dashboard.md",
-    "Notes Tracker.md",
     "Notes/New Notes/msca sub.md",
     "Projects/Cooling by heating",
     "Notes/New Notes/Untitled 2.base",
