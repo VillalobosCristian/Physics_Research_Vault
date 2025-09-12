@@ -1,4 +1,4 @@
-
+# Experiments to date
 
 ## Power Series Analysis
 | Power | 20x Experiments | 60x Experiments | Notes |
@@ -10,8 +10,8 @@
 | PW100 | spots_5, spots_17, spots_19 | spots_3, spots_7, spots_22 | High power |
 
 ## Experimental Conditions
-- **Particles**: PS microspheres
+- **Particles**: PS microspheres (2 $\mu$m)
 - **Medium**: MilliQ water
 - **Substrate**: 3nm Cr + 10nm Au on glass
-- **Heating**: White light, diaphragm-controlled
+- **Heating**: diaphragm-controlled,blue light
 - **Analysis**: TrackMate particle tracking
