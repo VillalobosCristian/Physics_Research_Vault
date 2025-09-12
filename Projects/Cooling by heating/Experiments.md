@@ -1,13 +1,13 @@
 # Experiments to date
 
 ## Power Series Analysis
-| Power | 20x Experiments | 60x Experiments | Notes |
-|-------|-----------------|-----------------|--------|
-| PW20  | - | spots_24 | Low power regime |
-| PW30  | spots_9 | Au10nmCr3nm_LC_spots_6 | Transition region |
-| PW50  | spots_16, spots_26 | - | Medium power |
-| PW60  | spots_10 | - | Crystal regime |  
-| PW100 | spots_5, spots_17, spots_19 | spots_3, spots_7, spots_22 | High power |
+| Power | 20x Experiments | 60x Experiments | Notes |     |
+| ----- | --------------- | --------------- | ----- | --- |
+| PW20  |                 |                 |       |     |
+| PW30  |                 |                 |       |     |
+| PW50  |                 |                 |       |     |
+| PW60  |                 |                 |       |     |
+| PW100 |                 |                 |       |     |
 
 ## Experimental Conditions
 - **Particles**: PS microspheres (2 $\mu$m)
