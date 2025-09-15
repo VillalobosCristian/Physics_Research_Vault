@@ -39,4 +39,5 @@
 - [ ] Prepare set of slides - repeat some of the experiments done to see if something weird is happening
 - [ ] Do the to-do exp
 - [ ] Try 10x and 40x and choose
-- [ ] 
+### Soft Matter conference
+- [ ] Presentation, etc
