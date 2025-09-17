@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Cooling by heating/Experiments.md",
+                "file": "Projects/Cooling by heating/Summary of results-code-physics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Experiments"
+              "title": "Summary of results-code-physics"
             }
           }
         ]
@@ -177,6 +177,8 @@
   },
   "active": "9e0c5bff996bff27",
   "lastOpenFiles": [
+    "Projects/Cooling by heating/Experiments.md",
+    "Projects/Cooling by heating/Summary of results-code-physics.md",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
     "Notes Tracker.md",
     "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
@@ -189,7 +191,6 @@
     "Notes/New Notes/Pasted image 20250829124328.png",
     "Notes/New Notes/Spontaneous curvature.md",
     "Notes/Calculations/Fourier Analysis Vesicles.md",
-    "Projects/Cooling by heating/Experiments.md",
     "Projects/Cooling by heating/Planning Paper Crystal formation.md",
     "Excalidraw/Cooling_by_heating.excalidraw.md",
     "Projects/MSCA-Proposal-2025/02-Literature-Review/Interaction particles vesicles.md",
@@ -221,7 +222,6 @@
     "Papers/References/Cristian_Villalobos_Concha_CV copy.docx",
     "Notes/New Notes/Pasted image 20250717164545.png",
     "Notes/New Notes/Pasted image 20250717163629.png",
-    "Notes/New Notes/Pasted image 20250717162820.png",
-    "Notes/New Notes/Pasted image 20250717162706.png"
+    "Notes/New Notes/Pasted image 20250717162820.png"
   ]
 }
