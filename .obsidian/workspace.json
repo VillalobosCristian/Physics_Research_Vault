@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Cooling by heating/Summary of results-code-physics.md",
+                "file": "Projects/Cooling by heating/Experiments.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Summary of results-code-physics"
+              "title": "Experiments"
             }
           }
         ]
@@ -177,8 +177,8 @@
   },
   "active": "9e0c5bff996bff27",
   "lastOpenFiles": [
-    "Projects/Cooling by heating/Experiments.md",
     "Projects/Cooling by heating/Summary of results-code-physics.md",
+    "Projects/Cooling by heating/Experiments.md",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
     "Notes Tracker.md",
     "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",

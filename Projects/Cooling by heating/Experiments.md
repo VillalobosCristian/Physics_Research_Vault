@@ -8,7 +8,7 @@
 | PW30  | DONEx2          | Done            |     |     |
 | PW60  | DONE            | to-do           |     |     |
 | PW100 | DONE X 6        | Done x 6        |     |     |
-| PW50  | DONE            | To-do           |     |     |
+| PW50  | DONE            | Done            |     |     |
 |       |                 |                 |     |     |
 
 ## Experimental Conditions
