@@ -31,7 +31,7 @@
 
 ### Everyday plan
 
-- [ ] "Persistence" of the merge events
+- [ ] "[[Persistence code]]" of the merge events
 - [ ] Kinetics
 - [ ] Crystal structure (study too)
 
