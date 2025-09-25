@@ -56,4 +56,6 @@ gap_count = 0; % Reset gap counter when connected
 
 ```
 
-Until now the code has focused on, "i"
+Until now the code has focused on, "is this particle connected to any neighbor?"
+I'll try to tackle the problem of: "which specific cluster does particle $i$ belong to, and how that cluster evolve over time?"
+
