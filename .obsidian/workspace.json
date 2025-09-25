@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -218,10 +218,10 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "8757e3432403628f",
+  "active": "bee04319cdb76df3",
   "lastOpenFiles": [
-    "Notes/New Notes/Fokker-Planck equation.md",
     "Notes/New Notes/Calculating thermal averages.md",
+    "Notes/New Notes/Fokker-Planck equation.md",
     "Notes/New Notes/Persistence code.md",
     "Projects/Cooling by heating/Experiments.md",
     "Projects/Cooling by heating/Summary of results-code-physics.md",

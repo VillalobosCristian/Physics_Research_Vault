@@ -56,3 +56,4 @@ gap_count = 0; % Reset gap counter when connected
 
 ```
 
+Until now the code has focused on, "i"
