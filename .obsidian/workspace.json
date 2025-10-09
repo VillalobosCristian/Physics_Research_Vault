@@ -106,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -260,10 +260,10 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "8cf194869aeec8e4",
+  "active": "bee04319cdb76df3",
   "lastOpenFiles": [
-    "Projects/Cooling by heating/Summary of results-code-physics.md",
     "Notes/New Notes/Radial Distribution Function.md",
+    "Projects/Cooling by heating/Summary of results-code-physics.md",
     "Papers/References/bregulla, würger2016_Thermo-Osmotic Flow in Thin Films.pdf",
     "Papers/References/würger2016_Hydrodynamic Boundary Effects on Thermophoresis of Confined Colloids.pdf",
     "Papers/References/tsuji, takita2025_Slip-flow theory for thermo-osmosis based on a kinetic model with near-wall potential.pdf",

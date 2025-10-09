@@ -10,3 +10,5 @@ Those flows will drive the the motion of a particle, but thermoosmosis and therm
 
 - Thermophoresis: A fluid flow slides along the surface
 - Thermophoresis: A particle move in a still fluid due to interfacial effects
+---
+
