@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Persistence code.md",
+                "file": "Projects/Cooling by heating/Report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Persistence code"
+              "title": "Report"
             }
           },
           {
@@ -220,9 +220,10 @@
   },
   "active": "bee04319cdb76df3",
   "lastOpenFiles": [
+    "Notes/New Notes/Persistence code.md",
+    "Projects/Cooling by heating/Report.md",
     "Notes/New Notes/Calculating thermal averages.md",
     "Notes/New Notes/Fokker-Planck equation.md",
-    "Notes/New Notes/Persistence code.md",
     "Projects/Cooling by heating/Experiments.md",
     "Projects/Cooling by heating/Summary of results-code-physics.md",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
@@ -253,7 +254,6 @@
     "Notes/New Notes/Untitled/Untitled.base",
     "Notes/New Notes/Untitled/Untitled 20.md",
     "Notes/New Notes/Untitled/Untitled 18.md",
-    "Notes/New Notes/Untitled/Untitled 17.md",
     "Notes/New Notes/Untitled/Untitled 2.base",
     "Notes/New Notes/Untitled/Untitled 1.base",
     "Notes/New Notes/Untitled",
