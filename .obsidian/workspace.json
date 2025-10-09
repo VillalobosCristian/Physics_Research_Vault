@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Cooling by heating/Experiments.md",
+                "file": "Notes/New Notes/Persistence code.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Experiments"
+              "title": "Persistence code"
             }
           },
           {
@@ -262,17 +262,17 @@
   },
   "active": "bee04319cdb76df3",
   "lastOpenFiles": [
-    "Projects/Cooling by heating/Pasted image 20251009110402.png",
     "Notes/New Notes/Radial Distribution Function.md",
+    "Notes/New Notes/Persistence code.md",
+    "Projects/Cooling by heating/Experiments.md",
     "Projects/Cooling by heating/Summary of results-code-physics.md",
+    "Projects/Cooling by heating/Pasted image 20251009110402.png",
     "Papers/References/bregulla, würger2016_Thermo-Osmotic Flow in Thin Films.pdf",
     "Papers/References/würger2016_Hydrodynamic Boundary Effects on Thermophoresis of Confined Colloids.pdf",
     "Papers/References/tsuji, takita2025_Slip-flow theory for thermo-osmosis based on a kinetic model with near-wall potential.pdf",
     "Notes/New Notes/Thermoosmosis.md",
     "Notes/New Notes/Convection flows.md",
-    "Projects/Cooling by heating/Experiments.md",
     "Projects/Cooling by heating/Report.md",
-    "Notes/New Notes/Persistence code.md",
     "Notes/New Notes/Calculating thermal averages.md",
     "Notes/New Notes/Fokker-Planck equation.md",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
@@ -306,7 +306,6 @@
     "Notes/New Notes/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",
     "Excalidraw/Pasted Image 20250903112205_414.png",
     "Notes/New Notes/Pasted image 20250717164545.png",
-    "Notes/New Notes/Pasted image 20250717163629.png",
-    "Notes/New Notes/Pasted image 20250717162820.png"
+    "Notes/New Notes/Pasted image 20250717163629.png"
   ]
 }
