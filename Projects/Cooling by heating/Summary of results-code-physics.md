@@ -12,3 +12,8 @@ Those flows will drive the the motion of a particle, but thermoosmosis and therm
 - Thermophoresis: A particle move in a still fluid due to interfacial effects
 ---
 
+# Particle in thermal gradient
+
+![[Pasted image 20251009110402.png]]
+
+In (b) the boundary layer approximation, 
