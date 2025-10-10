@@ -117,8 +117,7 @@
               "title": "Fokker-Planck equation"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -272,11 +271,11 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "bee04319cdb76df3",
+  "active": "9e0c5bff996bff27",
   "lastOpenFiles": [
+    "Projects/Cooling by heating/Summary of results-code-physics.md",
     "Notes/New Notes/Radial Distribution Function.md",
     "Notes/New Notes/Thermoosmosis.md",
-    "Projects/Cooling by heating/Summary of results-code-physics.md",
     "Notes/New Notes/Convection flows.md",
     "Notes/New Notes/Calculating thermal averages.md",
     "Notes/New Notes/Fokker-Planck equation.md",
