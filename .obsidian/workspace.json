@@ -11,14 +11,12 @@
             "id": "9e0c5bff996bff27",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Notes/New Notes/Persistence code.md",
-                "mode": "source",
-                "source": false
+                "file": "Projects/Cooling by heating/Pasted image 20250915095050.png"
               },
-              "icon": "lucide-file",
-              "title": "Persistence code"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250915095050"
             }
           },
           {
@@ -273,15 +271,15 @@
   },
   "active": "9e0c5bff996bff27",
   "lastOpenFiles": [
+    "Projects/Cooling by heating/Pasted image 20251009110402.png",
     "Projects/Cooling by heating/Summary of results-code-physics.md",
+    "Notes/New Notes/Persistence code.md",
     "Notes/New Notes/Radial Distribution Function.md",
     "Notes/New Notes/Thermoosmosis.md",
     "Notes/New Notes/Convection flows.md",
     "Notes/New Notes/Calculating thermal averages.md",
     "Notes/New Notes/Fokker-Planck equation.md",
-    "Notes/New Notes/Persistence code.md",
     "Projects/Cooling by heating/Experiments.md",
-    "Projects/Cooling by heating/Pasted image 20251009110402.png",
     "Papers/References/bregulla, würger2016_Thermo-Osmotic Flow in Thin Films.pdf",
     "Papers/References/würger2016_Hydrodynamic Boundary Effects on Thermophoresis of Confined Colloids.pdf",
     "Papers/References/tsuji, takita2025_Slip-flow theory for thermo-osmosis based on a kinetic model with near-wall potential.pdf",
