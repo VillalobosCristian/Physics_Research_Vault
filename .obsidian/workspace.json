@@ -118,7 +118,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -272,7 +272,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "bebdb06d890a586d",
+  "active": "bee04319cdb76df3",
   "lastOpenFiles": [
     "Notes/New Notes/Radial Distribution Function.md",
     "Notes/New Notes/Thermoosmosis.md",
