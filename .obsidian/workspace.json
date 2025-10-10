@@ -36,6 +36,18 @@
             }
           },
           {
+            "id": "bebdb06d890a586d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
+            }
+          },
+          {
             "id": "8cf194869aeec8e4",
             "type": "leaf",
             "state": {
@@ -106,7 +118,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -260,7 +272,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "bee04319cdb76df3",
+  "active": "bebdb06d890a586d",
   "lastOpenFiles": [
     "Notes/New Notes/Radial Distribution Function.md",
     "Notes/New Notes/Thermoosmosis.md",
