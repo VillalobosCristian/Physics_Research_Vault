@@ -16,36 +16,11 @@
    - This is close enough to the paper's 9.4
 
 Result: 100 mL of 20 mM buffer, pH 9.6
+For 10 mL of 10 mM rhodamine B stock: 
+1. Weigh: 47.9 mg rhodamine B
+2. Transfer to 10 mL volumetric flask 
+3. Add ~8 mL Milli-Q water 4. Dissolve completely (vortex or stir 5-10 min)
 
-```
-Materials:
-□ 1 capsule Sigma C3041
-□ ~150 mL Milli-Q water
-□ 2.4 mg Rhodamine B (98+%)
-□ 0.2 μm syringe filter
-□ Amber bottle or aluminum foil
+To use it:
 
-Steps:
-1. Dissolve capsule in 40 mL water → add to 100 mL
-   → 20 mM buffer pH 9.6
-   
-2. Dissolve 2.4 mg rhodamine B in 50 mL buffer
-   → 0.1 mM rhodamine solution
-   
-3. Filter and store at 4°C in dark
-```
-
-**Output:**
-- 100 mL buffer (20 mM, pH 9.6) - enough for several batches
-- 50 mL rhodamine solution (0.1 mM) - ready for calibration + experiments
-
----
-
-## Final Checklist Before Calibration
-```
-□ Buffer prepared: 20 mM, pH measured = 9.6 ± 0.1
-□ Rhodamine solution: 0.1 mM, clear magenta color
-□ Solution filtered through 0.2 μm
-□ Stored in dark at 4°C
-□ Label includes: concentration, pH, date
-□ Brought to room temperature before use
+500 $\mu L$ of the stock at 10 mM in 45mL of buffer at 50mM
