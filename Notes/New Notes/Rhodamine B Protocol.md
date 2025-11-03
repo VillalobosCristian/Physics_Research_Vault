@@ -1,4 +1,4 @@
-1. Empty contents of 1 capsule into beaker
+c1. Empty contents of 1 capsule into beaker
 
 2. Add 40 mL Milli-Q water and dissolve
    - Stir until completely dissolved (<5 min)
