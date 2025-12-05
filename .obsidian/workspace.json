@@ -50,6 +50,18 @@
             }
           },
           {
+            "id": "7bcedea82dacf39e",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.3"
+            }
+          },
+          {
             "id": "8757e3432403628f",
             "type": "leaf",
             "state": {
@@ -64,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -218,7 +230,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "8b2547576732713b",
+  "active": "7bcedea82dacf39e",
   "lastOpenFiles": [
     "Projects/Cooling by heating/Summary of results-code-physics.md",
     "Notes/New Notes/Rhodamine B Protocol.md",
