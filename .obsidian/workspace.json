@@ -90,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -244,7 +244,7 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "e4af5b8532221c2d",
+  "active": "7bcedea82dacf39e",
   "lastOpenFiles": [
     "Notes/New Notes/Untitled.md",
     "Projects/Cooling by heating/Summary of results-code-physics.md",
