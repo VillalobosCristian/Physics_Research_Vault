@@ -17,5 +17,5 @@ Where the first two modes represents
 $$l=0, \ \text{Spherically symmetrical mode}$$
 $$l=1, \ \text{Translation without shape change}$$
 $$l\geq 2, \ \text{Shape changes}$$
-## Experimental point of view
+
 
