@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Reading_Notes/imai2022_From vesicles toward protocells and minimal cells.md",
+                "file": "Papers/Reading_Notes/gupta2021_The dynamic face of lipid membranes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "imai2022_From vesicles toward protocells and minimal cells"
+              "title": "gupta2021_The dynamic face of lipid membranes"
             }
           },
           {
@@ -246,13 +246,25 @@
   },
   "active": "8b2547576732713b",
   "lastOpenFiles": [
+    "Papers/Reading_Notes/meleard2011_Advantages of statistical analysis of giant vesicle flickering for bending elasticity measurements.md",
+    "Papers/Reading_Notes/fessler2024_Autonomous Engulfment of Active Colloids by Giant Lipid Vesicles.md",
+    "Papers/Reading_Notes/gao2025_Direct observation of colloidal quasicrystallization.md",
+    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
+    "Papers/Reading_Notes/Pasted image 20250203111007.png",
+    "Papers/Reading_Notes/morales-penningston2010_GUV preparation and imaging_ Minimizing artifacts.md",
+    "Papers/Reading_Notes/vanderwel2017_Microparticle Assembly Pathways on Lipid Membranes.md",
+    "Papers/Reading_Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
+    "Papers/Reading_Notes/karal2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.md",
+    "Papers/Reading_Notes/faizi2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.md",
+    "Papers/Reading_Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
+    "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
+    "Papers/Reading_Notes/imai2022_From vesicles toward protocells and minimal cells.md",
     "Papers/Reading_Notes/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.md",
     "Notes/New Notes/Rhodamine B Protocol.md",
     "Notes/New Notes/Untitled.md",
     "Notes Tracker.md",
     "Papers Tracker.md",
     "Projects/Cooling by heating/Summary of results-code-physics.md",
-    "Papers/Reading_Notes/meleard2011_Advantages of statistical analysis of giant vesicle flickering for bending elasticity measurements.md",
     "Papers/Reading_Notes/gupta2021_The dynamic face of lipid membranes.md",
     "Notes/Lipid Vesicles/Giant Unilamellar Vesicles (GUVs).md",
     "Notes/Lipid Vesicles/DOPC.md",
@@ -261,26 +273,15 @@
     "Notes/Calculations/Fourier Analysis Vesicles.md",
     "Notes/Calculations/Helfrich model.md",
     "Notes/New Notes/Thermoosmosis.md",
-    "Projects/Cooling by heating/Experiments.md",
-    "Projects/Cooling by heating/Report.md",
-    "Notes/New Notes/Convection flows.md",
-    "Notes/New Notes/Radial Distribution Function.md",
-    "Notes/New Notes/Calculating thermal averages.md",
-    "Notes/New Notes/Fokker-Planck equation.md",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
     "Projects/Cooling by heating/Pasted image 20251009110402.png",
-    "Notes/New Notes/Persistence code.md",
     "Papers/References/bregulla, würger2016_Thermo-Osmotic Flow in Thin Films.pdf",
     "Papers/References/würger2016_Hydrodynamic Boundary Effects on Thermophoresis of Confined Colloids.pdf",
     "Papers/References/tsuji, takita2025_Slip-flow theory for thermo-osmosis based on a kinetic model with near-wall potential.pdf",
     "Papers/References/weinert, braun2008_Observation of Slip Flow in Thermophoresis.pdf",
-    "Papers/Reading_Notes/bouvrais2012_Bending Rigidities of Lipid Bilayers.md",
-    "Notes/New Notes/Surface tension.md",
-    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Notes/New Notes/Pasted image 20250717161240.png",
     "Notes/New Notes/Pasted image 20250717162237.png",
     "Notes/New Notes/Pasted image 20250829124328.png",
-    "Notes/New Notes/Spontaneous curvature.md",
     "Projects/Cooling by heating",
     "Notes/New Notes/Untitled 2.base",
     "Notes/New Notes/Untitled/Untitled.base",
@@ -290,7 +291,6 @@
     "Notes/New Notes/Pasted image 20250909165151.png",
     "Notes/New Notes/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",
     "Excalidraw/Pasted Image 20250903112205_414.png",
-    "Notes/New Notes/Pasted image 20250717164545.png",
-    "Notes/New Notes/Pasted image 20250717163629.png"
+    "Notes/New Notes/Pasted image 20250717164545.png"
   ]
 }
