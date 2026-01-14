@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/New Notes/Rhodamine B Protocol.md",
+                "file": "Notes/New Notes/summation convention.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Rhodamine B Protocol"
+              "title": "summation convention"
             }
           },
           {
@@ -246,6 +246,19 @@
   },
   "active": "8b2547576732713b",
   "lastOpenFiles": [
+    "Notes/New Notes/Pasted image 20241223133932.png",
+    "Notes/New Notes/Gauss map.md",
+    "Notes/New Notes/Bending elasticity.md",
+    "Notes/New Notes/Pasted image 20241218215221.png",
+    "Notes/Calculations/Fourier Analysis Vesicles.md",
+    "Excalidraw/Lipids.excalidraw.md",
+    "Excalidraw/Bilayer.excalidraw.md",
+    "Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
+    "Excalidraw/Pasted Image 20250903112205_414.png",
+    "Data/Protocols/Hydratation Method.md",
+    "Notes/Calculations/Helfrich model.md",
+    "Data/Protocols/Protocol GUVs.md",
+    "Notes/New Notes/Rhodamine B Protocol.md",
     "Papers/Reading_Notes/gupta2021_The dynamic face of lipid membranes.md",
     "Papers/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019) 2.pdf",
     "Papers/Reading_Notes/meleard2011_Advantages of statistical analysis of giant vesicle flickering for bending elasticity measurements.md",
@@ -262,17 +275,7 @@
     "Papers/Reading_Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
     "Papers/Reading_Notes/imai2022_From vesicles toward protocells and minimal cells.md",
     "Papers/Reading_Notes/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.md",
-    "Notes/New Notes/Rhodamine B Protocol.md",
     "Notes/New Notes/Untitled.md",
-    "Notes Tracker.md",
-    "Papers Tracker.md",
-    "Projects/Cooling by heating/Summary of results-code-physics.md",
-    "Notes/Lipid Vesicles/Giant Unilamellar Vesicles (GUVs).md",
-    "Notes/Lipid Vesicles/DOPC.md",
-    "Notes/Calculations/Differentials on Surfaces.md",
-    "Notes/Calculations/Marangoni Flow.md",
-    "Notes/Calculations/Fourier Analysis Vesicles.md",
-    "Notes/Calculations/Helfrich model.md",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
     "Projects/Cooling by heating/Pasted image 20251009110402.png",
     "Papers/References/bregulla, würger2016_Thermo-Osmotic Flow in Thin Films.pdf",
@@ -288,8 +291,6 @@
     "Notes/New Notes/Untitled/Untitled 2.base",
     "Notes/New Notes/Untitled/Untitled 1.base",
     "Notes/New Notes/Pasted image 20250909165151.png",
-    "Notes/New Notes/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",
-    "Excalidraw/Pasted Image 20250903112205_414.png",
-    "Notes/New Notes/Pasted image 20250717164545.png"
+    "Notes/New Notes/WhatsApp Image 2025-07-11 at 15.43.40.jpeg"
   ]
 }
