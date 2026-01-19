@@ -1,4 +1,4 @@
-# 🔬 GUV Research Hub
+# 🔬 GUV Research
 
 > A comprehensive map of Giant Unilamellar Vesicle research concepts and literature for writing.
 
