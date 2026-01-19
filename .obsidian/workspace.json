@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Paper_Notes.md",
+                "file": "00-Dashboard/Papers MOC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Paper_Notes"
+              "title": "Papers MOC"
             }
           },
           {
@@ -244,8 +244,11 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "07a89a5c30172928",
+  "active": "8b2547576732713b",
   "lastOpenFiles": [
+    "02-Literature/Reading-Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
+    "00-Dashboard/Papers MOC.md",
+    "Templates/Paper_Notes.md",
     "02-Literature/References/sunol, zia2023_Confined Brownian suspensions Equilibrium diffusion, thermodynamics, and rheology.pdf",
     "02-Literature/References/glassinger, raphael2006_Influence of Thermally Driven Surface Undulations on Tethers Formed from Bilayer Membranes.pdf",
     "02-Literature/References/helfrich1973_Elastic Properties of Lipid Bilayers Theory and Possible Experiments 1.pdf",
@@ -256,14 +259,12 @@
     "02-Literature/References/imai, sakuma2022_From vesicles toward protocells and minimal cells.pdf",
     "02-Literature/References/nair, bajaj2023_Advances in giant unilamellar vesicle preparation techniques and applications.pdf",
     "02-Literature/References/bassereau, sorre2014_Bending lipid membranes Experiments after W. Helfrich's model 1.pdf",
-    "02-Literature/References/genova, vitkova2013_Registration and analysis of the shape fluctuations of nearly spherical lipid vesicles 1.pdf",
     "Templates/Theory_Note.md",
     "Templates/Experiment_Log.md",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
     "00-Dashboard/Papers Tracker.md",
     "00-Dashboard/Dashboard.md",
     "00-Dashboard/Concepts MOC.md",
-    "00-Dashboard/Papers MOC.md",
     "Notes/New Notes/Fitted_MSD.png",
     "Notes/New Notes/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
     "Notes/New Notes/Cosas mecánica estadísitca.md",
@@ -286,7 +287,6 @@
     "Notes/New Notes/Gauss map.md",
     "Notes/New Notes/Bending elasticity.md",
     "Notes/New Notes/Pasted image 20241218215221.png",
-    "Notes/Calculations/Fourier Analysis Vesicles.md",
     "Excalidraw/Pasted Image 20250903112205_414.png",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
     "Projects/Cooling by heating/Pasted image 20251009110402.png",
