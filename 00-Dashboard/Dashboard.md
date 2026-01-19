@@ -4,10 +4,11 @@
 
 | Area | Link |
 |------|------|
+| 🔬 **GUV Research** | [[00-Dashboard/GUV Research Hub\|GUV Research Hub]] ⭐ |
 | 📚 **Literature** | [[02-Literature/Reading-Notes\|Reading Notes]] |
 | 🔬 **Projects** | [[01-Projects\|Active Projects]] |
 | 🧠 **Concepts** | [[00-Dashboard/Concepts MOC\|Concepts Map]] |
-| 📊 **Papers** | [[00-Dashboard/Papers Tracker\|Papers Tracker]] |
+| 📊 **Papers** | [[00-Dashboard/Papers MOC\|Papers Map]] |
 | 🧪 **Protocols** | [[04-Data/Protocols\|Lab Protocols]] |
 
 ---
