@@ -1,39 +1,50 @@
 ---
-experiment_id: "EXP{{date:YYYYMMDD}}"
-date: {{date}}
-status: [planned/in-progress/completed]
+experiment_id: "EXP<% tp.date.now("YYYYMMDD") %>"
+title: "<% tp.file.title %>"
+date: <% tp.date.now("YYYY-MM-DD") %>
+status: "planned"
 related_theory: []
+tags:
+  - "#experiment-log"
 ---
 
-# {{title}}
+# <% tp.file.title %>
 
 ## Objective
-[Clear statement of experimental goal]
+<% tp.file.cursor(1) %>
+*Clear statement of experimental goal*
 
 ## Experimental Parameters
-- Parameter 1: [value] [units]
-- Parameter 2: [value] [units]
+
+| Parameter | Value | Units |
+|-----------|-------|-------|
+| | | |
+| | | |
 
 ## Setup
-[Detailed description of experimental setup]
+*Detailed description of experimental setup*
 
 ## Procedure
 1. Step 1
 2. Step 2
+3. Step 3
 
 ## Data Collection
+
 | Run # | Parameter | Value | Notes |
 |-------|-----------|-------|-------|
-| 1     |           |       |       |
-| 2     |           |       |       |
+| 1 | | | |
+| 2 | | | |
 
 ## Results
+
 ### Raw Data
-[Location of raw data files]
+*Location of raw data files:*
+-
 
 ### Preliminary Analysis
 $$
-% Any relevant calculations
+
 $$
 
 ### Observations
@@ -43,3 +54,6 @@ $$
 ## Next Steps
 - [ ] Action item 1
 - [ ] Action item 2
+
+## Related Notes
+- [[]]

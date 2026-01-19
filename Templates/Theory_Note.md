@@ -1,14 +1,17 @@
 ---
-title: "{{title}}"
-date: {{date}}
-status: [initial/revised/final]
+title: "<% tp.file.title %>"
+date: <% tp.date.now("YYYY-MM-DD") %>
+status: "initial"
 related_papers: []
+tags:
+  - "#theory-note"
 ---
 
-# {{title}}
+# <% tp.file.title %>
 
 ## Problem Statement
-[Clear statement of what we're trying to calculate]
+<% tp.file.cursor(1) %>
+*Clear statement of what we're trying to calculate or understand*
 
 ## Assumptions and Approximations
 - Assumption 1 and justification
@@ -17,13 +20,18 @@ related_papers: []
 ## Key Equations
 Starting point:
 $$
-% Initial equations
+
 $$
 
 ## Derivation
-Step 1:
+**Step 1:**
 $$
-% Step-by-step derivation
+
+$$
+
+**Step 2:**
+$$
+
 $$
 
 ## Results and Implications
@@ -36,5 +44,8 @@ $$
 - [ ] Question 2
 
 ## Numerical Checks
-- Limiting cases
-- Order of magnitude estimates
+- Limiting cases:
+- Order of magnitude estimates:
+
+## Related Notes
+- [[]]

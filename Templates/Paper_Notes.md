@@ -1,47 +1,43 @@
 ---
-title: "{{title}}"
-authors: 
-date_read: {{date}}
-key_topics: []
-related_projects: []
----
----
 title: "<% tp.file.title %>"
-authors: 
+authors:
+citekey:
+year:
+journal:
 date_read: <% tp.date.now("YYYY-MM-DD") %>
+status: "reading"
 key_topics: []
 related_projects: []
-citekey: 
-year: 
-journal: 
-status: "reading"
-last_updated: <% tp.date.now("YYYY-MM-DD") %>
+tags:
+  - "#literature-note"
 ---
 
 # <% tp.file.title %>
 
-## Key Findings
+## Summary
 <% tp.file.cursor(1) %>
-- 
-- 
+*One paragraph summary of the paper's main contribution*
+
+## Key Findings
+-
+-
+-
 
 ## Important Equations
-<% tp.file.cursor(2) %>
 $$
 
 $$
 
 ## Physical Scales
-### Length Scales
-- 
 
-### Time Scales
-- 
-
-### Energy Scales
-- 
+| Type | Value | Description |
+|------|-------|-------------|
+| Length | | |
+| Time | | |
+| Energy | | |
 
 ## Methodology
+
 ### Theoretical Approach
 - Key assumptions:
 - Mathematical framework:
@@ -58,19 +54,20 @@ $$
 - Limitations:
 
 ## Relevance to My Research
+
 ### Direct Applications
-- 
+-
 
 ### Questions Raised
-- [ ] 
-- [ ] 
+- [ ]
+- [ ]
 
 ### Future Directions
-- [ ] 
+- [ ]
 
 ## References to Check
-Cited papers relevant to my work:
-- 
+*Cited papers relevant to my work:*
+-
 
 ## Notes History
 - Created: <% tp.date.now("YYYY-MM-DD") %>
