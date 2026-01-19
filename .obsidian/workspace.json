@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-Dashboard/Papers MOC.md",
+                "file": "00-Dashboard/Papers Tracker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Papers MOC"
+              "title": "Papers Tracker"
             }
           },
           {
@@ -244,9 +244,15 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "8b2547576732713b",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
     "02-Literature/DELETE_DUPLICATES.md",
+    "00-Dashboard/Papers Tracker.md",
+    "01-Projects/MSCA.md",
+    "01-Projects/Cooling by Heating.md",
+    "01-Projects/MSCA questions.md",
+    "01-Projects/msca sub.md",
+    "00-Dashboard/Papers MOC.md",
     "02-Literature/References/Vector- A Surprising Story of Space, Time, and Mathematical -- Robyn Arianrhod -- 1, 2024 -- University of Chicago Press -- 9780226821115 -- c4bc42c99324d4894258614de9675570 -- Anna’s Arch.pdf",
     "02-Literature/References/Gabriel Lugo - Differential Geometry in Physics-University of North Carolina at Wilmington (2022).pdf",
     "02-Literature/References/schamberger, ziege2023_Curvature in Biological Systems Its Quantification, Emergence, and Implications across the Scales.pdf",
@@ -258,12 +264,10 @@
     "02-Literature/References/monzel, sengupta2016_Measuring shape fluctuations in biological membranes 2.pdf",
     "02-Literature/References/faizi, reeves2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.pdf",
     "02-Literature/Reading-Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
-    "00-Dashboard/Papers MOC.md",
     "Templates/Paper_Notes.md",
     "Templates/Theory_Note.md",
     "Templates/Experiment_Log.md",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
-    "00-Dashboard/Papers Tracker.md",
     "00-Dashboard/Dashboard.md",
     "00-Dashboard/Concepts MOC.md",
     "Notes/New Notes/Fitted_MSD.png",
@@ -280,12 +284,8 @@
     "Notes/New Notes/Maxwell distribution.md",
     "Notes/New Notes/Index notation.md",
     "Notes/New Notes/Gaussian curvature.md",
-    "Notes/New Notes/Differentials on Surfaces.md",
-    "Notes/New Notes/Christoffel Symbols.md",
     "Notes/New Notes/pdf_maxwell 1.png",
-    "Notes/New Notes/summation convention.md",
     "Notes/New Notes/Pasted image 20241223133932.png",
-    "Notes/New Notes/Gauss map.md",
     "Notes/New Notes/Pasted image 20241218215221.png",
     "Excalidraw/Pasted Image 20250903112205_414.png",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
