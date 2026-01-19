@@ -39,16 +39,14 @@
             "id": "8b2547576732713b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "02-Literature/References/schamberger, ziege2023_Curvature in Biological Systems Its Quantification, Emergence, and Implications across the Scales.pdf",
-                "page": 11,
-                "left": -8,
-                "top": 617,
-                "zoom": 1.9012189303785139
+                "file": "00-Dashboard/Concepts MOC.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "schamberger, ziege2023_Curvature in Biological Systems Its Quantification, Emergence, and Implications across the Scales"
+              "icon": "lucide-file",
+              "title": "Concepts MOC"
             }
           },
           {
@@ -246,8 +244,10 @@
       "ai-tagger:Generate tags!": false
     }
   },
-  "active": "07a89a5c30172928",
+  "active": "8b2547576732713b",
   "lastOpenFiles": [
+    "00-Dashboard/Papers Tracker.md",
+    "02-Literature/References/schamberger, ziege2023_Curvature in Biological Systems Its Quantification, Emergence, and Implications across the Scales.pdf",
     "03-Concepts/Membrane-Physics/Tubulation.md",
     "03-Concepts/Membrane-Physics/Active fluctuations.md",
     "03-Concepts/Membrane-Physics/Contour analysis.md",
@@ -265,7 +265,6 @@
     "00-Dashboard/Papers MOC.md",
     "00-Dashboard/GUV Research Hub.md",
     "Notes Tracker.md",
-    "00-Dashboard/Papers Tracker.md",
     "02-Literature/DELETE_DUPLICATES.md",
     "01-Projects/MSCA.md",
     "01-Projects/Cooling by Heating.md",
@@ -273,7 +272,6 @@
     "01-Projects/msca sub.md",
     "02-Literature/References/Vector- A Surprising Story of Space, Time, and Mathematical -- Robyn Arianrhod -- 1, 2024 -- University of Chicago Press -- 9780226821115 -- c4bc42c99324d4894258614de9675570 -- Anna’s Arch.pdf",
     "02-Literature/References/Gabriel Lugo - Differential Geometry in Physics-University of North Carolina at Wilmington (2022).pdf",
-    "02-Literature/References/schamberger, ziege2023_Curvature in Biological Systems Its Quantification, Emergence, and Implications across the Scales.pdf",
     "02-Literature/References/2017-curves.pdf",
     "02-Literature/References/milner, safran1987_Dynamical fluctuations of droplet microemulsions and vesicles.pdf",
     "02-Literature/References/zhong-can, helfrich1989_Bending energy of vesicle membranes General expressions for the first, second, and third variation.pdf",
@@ -283,7 +281,6 @@
     "02-Literature/References/faizi, reeves2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.pdf",
     "02-Literature/Reading-Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
     "Templates/Paper_Notes.md",
-    "Templates/Theory_Note.md",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
     "Notes/New Notes/Fitted_MSD.png",
     "Notes/New Notes/pdf_maxwell 1.png",
