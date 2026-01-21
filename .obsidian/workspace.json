@@ -52,8 +52,21 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
+          },
+          {
+            "id": "b714f315a15713ff",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "2a16b605d51a8bed",
@@ -291,12 +304,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-git:Open Git source control": false,
-      "tags-overview:Tags overview": false,
-      "obisidian-note-linker:Note Linker": false,
-      "ai-tagger:Generate tags!": false
+      "tags-overview:Tags overview": false
     }
   },
-  "active": "3980c180b6d4f488",
+  "active": "b714f315a15713ff",
   "lastOpenFiles": [
     "02-Literature/Reading-Notes/morales-penningston2010_GUV preparation and imaging_ Minimizing artifacts.md",
     "05-Resources/Excalidraw/Drawing 2026-01-20 12.33.11.excalidraw.md",
