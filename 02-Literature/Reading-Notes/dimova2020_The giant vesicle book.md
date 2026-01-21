@@ -10,3 +10,10 @@ year: 2020
 
 
 
+> ([[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=111&selection=8,0,9,1&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.111]])
+> The vesicle volume is determine by the osmotic conditions and the temperature. 
+> ([[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=111&selection=17,7,25,1&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.111]])
+> Osmotic defation is limited by the attractive intermolecular forces that start to become important when different membrane segments come into close proximity.
+> ([[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=111&selection=31,30,39,34&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.111]])
+>  On the other hand, osmotic infation is limited by the available membrane area. Indeed, for a given membrane area A and the corresponding vesicle size
+
