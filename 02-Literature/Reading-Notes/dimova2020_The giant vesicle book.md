@@ -24,3 +24,5 @@ therefore $V\leq 4/3\pi (A/4\pi)^{3/2}$
 > For"constant temperature and lipid composition, the area A of the vesicle membrane is primarily determined by the number of lipid molecules within the membrane.
 > ([[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=111&selection=122,38,124,61&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.111]])
 > ndeed, in the absence of external forces or constraints, the lipids attain a certain molecular area corresponding to their optimal packing density
+> ([[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=111&selection=145,0,167,6&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.111]])
+> For"giant unilamellar vesicles, one can directly measure the vesicle volume V and the membrane area A. It"is therefore rather natural from an experimental point of view to regard V and A as basic geometric parameters that determine the vesicle shape.
