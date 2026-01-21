@@ -40,4 +40,5 @@ therefore $V\leq 4/3\pi (A/4\pi)^{3/2}$
 > Shape transformations can also be induced by temperature changes reflecting the different thermal expansivities of the lipid bilayer and the aqueous solution.
 
 > ([[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=104&selection=128,16,133,21&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.104]])
-> we #nd that an increase in temperature generates excess area of the membrane and reduces the volume-to-area ratio of the vesicle.
+> we find that an increase in temperature generates excess area of the membrane and reduces the volume-to-area ratio of the vesicle.
+![[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=104&rect=39,542,295,755&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.104]]

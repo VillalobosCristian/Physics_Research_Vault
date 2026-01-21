@@ -4,32 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "ed2bd01a85e54377",
-        "type": "tabs",
-        "dimension": 60.52104208416834,
-        "children": [
-          {
-            "id": "40721d8387740135",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
-                "page": 103,
-                "left": 3,
-                "top": 77,
-                "zoom": 1.63
-              },
-              "icon": "lucide-file-text",
-              "title": "Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019)"
-            }
-          }
-        ]
-      },
-      {
         "id": "2a16b605d51a8bed",
         "type": "tabs",
-        "dimension": 39.478957915831664,
         "children": [
           {
             "id": "8757e3432403628f",
@@ -44,8 +20,25 @@
               "icon": "lucide-file",
               "title": "dimova2020_The giant vesicle book"
             }
+          },
+          {
+            "id": "b8ac00f0346fbf76",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
+                "page": 103,
+                "left": -286,
+                "top": 216,
+                "zoom": 1.25
+              },
+              "icon": "lucide-file-text",
+              "title": "Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019)"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,7 +96,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 314.5,
+    "collapsed": true
   },
   "right": {
     "id": "9237d53ae6b7e125",
@@ -198,10 +192,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "b90818a21ccb468e",
+  "active": "b8ac00f0346fbf76",
   "lastOpenFiles": [
-    "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
     "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
+    "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
     "00-Dashboard/GUV Research Hub.md",
     "05-Resources/Clippings/Deep Research.md",
     "02-Literature/Reading-Notes/ginot2018_Aggregation-fragmentation and individual dynamics of active clusters.md",
