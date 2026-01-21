@@ -39,14 +39,16 @@
             "id": "8b2547576732713b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "02-Literature/Reading-Notes/ginot2018_Aggregation-fragmentation and individual dynamics of active clusters.md",
-                "mode": "source",
-                "source": false
+                "file": "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
+                "page": 1,
+                "left": -8,
+                "top": 814,
+                "zoom": 1.96958474890109
               },
-              "icon": "lucide-file",
-              "title": "ginot2018_Aggregation-fragmentation and individual dynamics of active clusters"
+              "icon": "lucide-file-text",
+              "title": "Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019)"
             }
           },
           {
@@ -109,7 +111,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -244,6 +246,10 @@
   },
   "active": "8b2547576732713b",
   "lastOpenFiles": [
+    "00-Dashboard/GUV Research Hub.md",
+    "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
+    "05-Resources/Clippings/Deep Research.md",
+    "02-Literature/Reading-Notes/ginot2018_Aggregation-fragmentation and individual dynamics of active clusters.md",
     "02-Literature/References/anderson_Colloid Transport by Interfacial Forces.pdf",
     "02-Literature/Reading-Notes/anderson_Colloid Transport by Interfacial Forces.md",
     "02-Literature/Reading-Notes/morales-penningston2010_GUV preparation and imaging_ Minimizing artifacts.md",
@@ -259,9 +265,7 @@
     "02-Literature/Reading-Notes/Study Guide Lipid Membranes and Vesicles.md",
     "02-Literature/References/Vector- A Surprising Story of Space, Time, and Mathematical -- Robyn Arianrhod -- 1, 2024 -- University of Chicago Press -- 9780226821115 -- c4bc42c99324d4894258614de9675570 -- Anna’s Arch.pdf",
     "02-Literature/References/diwe, kumar2025_Rotational dynamics of bound pairs of bacteria-induced membrane tubes.pdf",
-    "02-Literature/Reading-Notes/ginot2018_Aggregation-fragmentation and individual dynamics of active clusters.md",
     "02-Literature/References/aoki, schroder2015_Bioadhesive giant vesicles for monitoring hydroperoxidation in lipid membranes.pdf",
-    "00-Dashboard/GUV Research Hub.md",
     "00-Dashboard/Concepts MOC.md",
     "00-Dashboard/Papers Tracker.md",
     "02-Literature/References/schamberger, ziege2023_Curvature in Biological Systems Its Quantification, Emergence, and Implications across the Scales.pdf",
@@ -274,7 +278,6 @@
     "03-Concepts/Membrane-Physics/Mean curvature.md",
     "03-Concepts/Membrane-Physics/Vesicle shapes.md",
     "03-Concepts/Membrane-Physics/Membrane wrapping.md",
-    "03-Concepts/Membrane-Physics/Fluctuation spectroscopy.md",
     "02-Literature/References/Gabriel Lugo - Differential Geometry in Physics-University of North Carolina at Wilmington (2022).pdf",
     "02-Literature/References/2017-curves.pdf",
     "02-Literature/References/milner, safran1987_Dynamical fluctuations of droplet microemulsions and vesicles.pdf",

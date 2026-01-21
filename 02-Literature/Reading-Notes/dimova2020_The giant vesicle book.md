@@ -1,0 +1,12 @@
+---
+title: The giant vesicle book
+authors: Rumiana Dimova, Carlos M. Marques
+year: 2020
+---
+
+# Abstract 
+"Giant vesicles are being widely used as a model membrane system, both for basic biological systems and for their promising applications in the development of smart materials, in particular for drug delivery, as well as use in driving new technologies for the cosmetics industry. This practical manual gives the reader a toolbox for starting work with giant vesicles, including expert's tips on proper preparation methods, measurement, and characterization methods. The contents build from a simple model to use of vesicles as advanced membrane and cell system models. It also includes fundamentals for understanding vesicle structure, properties and behavior. Key Features - Provides a complete summary of the field, covering fundamental concepts, practical methods, core theory, and the most promising applications. - Emphasizes clarity of presentation with instructive illustrations and exemplary data. - Covers different preparation methods for simple to more complex membrane models. - Discusses the main techniques for characterization and measurement of membrane properties. - Includes handy tables with data and structures for ready reference"
+
+
+
+
