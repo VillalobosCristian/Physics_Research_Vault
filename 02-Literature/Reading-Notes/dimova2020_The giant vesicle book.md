@@ -31,7 +31,7 @@ therefore $V\leq 4/3\pi (A/4\pi)^{3/2}$
 > ([[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=104&selection=9,7,16,1&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.104]])
 > In"addition, at any given temperature, each lipid molecule tries to occupy a certain optimal area within the membrane. Furthermore, when exposed to external forces or constraints, lipid bilayers hardly change their area before they rupture. 
 > ([[Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf#page=104&selection=19,15,37,30&color=yellow|Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019), p.104]])
-> during isothermal shape transformations arising, e.g., from osmotic de%ation and in%ation. !e"latter processes change the vesicle volume for #xed membrane area. In"general, the volume of a vesicle can become arbitrarily small but cannot exceed the volume of a sphere.
+> during isothermal shape transformations arising, e.g., from osmotic defation and inflation. !e"latter processes change the vesicle volume for flxed membrane area. In"general, the volume of a vesicle can become arbitrarily small but cannot exceed the volume of a sphere.
 
 
 # Temperature changes
