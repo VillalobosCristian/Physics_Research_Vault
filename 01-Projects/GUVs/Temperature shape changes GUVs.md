@@ -17,3 +17,6 @@ $$\nu = \frac{6\sqrt{\pi}V}{A^{3/2}}$$
 
 ![[montage_5x2.png]]
 
+A typical observation of a DOPC vesicle while heating. Before heating the vesicle is showing thermal fluctuation and has a quasi-spherical shape. When light is turned on, we can see that some small buds are created outward the vesicle and a strong shape change after some time (need to add correct time stamps) an inward bud appear and looks like a inner vesicle inside of a apparent spherical vesicle. Then light is turned off this inner bud/vesicle merge with the membrane and strong shape changes appear , recovering a similar shape to the initial at thermal equilibrium, and the process repeat again when light is turned on.
+
+The fact that the vesicle look spherical can m
