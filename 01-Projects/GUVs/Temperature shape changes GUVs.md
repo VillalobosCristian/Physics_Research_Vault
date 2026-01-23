@@ -8,4 +8,10 @@ Here, for the GUV the approach is a little bit different, but the same idea, we 
 
 
 From [[dimova2020_The giant vesicle book]] vesicle shape changes are usually done by osmotic deflation or temperature changes.
-In the case of temperature changes with the assumption that the membrane area is mainly constant. 
+In the case of temperature changes with the assumption that the membrane area is mainly constant.  
+A common parameter is the [[reduce volume]] defined by 
+$$\nu = \frac{6\sqrt{\pi}V}{A^{3/2}}$$
+- $\nu = 1$ means perfect spherical vesicle, maximum volume for a given area.
+- $\nu < 1$ means deflated vesicle, it must store the extra area somehow (non-spherical shape, ondulations, etc).
+
+
