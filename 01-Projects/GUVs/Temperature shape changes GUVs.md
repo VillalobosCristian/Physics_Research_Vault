@@ -7,4 +7,5 @@ We want to use the experimental system we used in our work [[villalobos-concha_O
 Here, for the GUV the approach is a little bit different, but the same idea, we observed that putting vesicles in this system without closing the diaphragm will induce strong shape changes in DOPC vesicle, and. even phase transition for DPPC vesicle.  We want to study if this fast induced heating create different behavior than slow ramp heating from other systems. 
 
 
-
+From [[dimova2020_The giant vesicle book]] vesicle shape changes are usually done by osmotic deflation or temperature changes.
+In the case of temperature changes we have 
