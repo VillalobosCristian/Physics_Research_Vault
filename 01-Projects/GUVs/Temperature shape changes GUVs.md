@@ -28,4 +28,5 @@ To measure experimentally the value of $\nu$  from $2-D$ images we need to assum
 
 How I look what is happening is: 
 - Membrane area respond very fast to temperature change: when $T$ increases, the membrane wants to increase its area by $A(T)\approx A_0(1+\alpha_A\Delta T)$
+- Volume responds slowly: The initial water volume also expand $V(T)=V_0(1+\alpha_V\Delta T)+\Delta V_{\mathrm{perm}}(t)$, and by water permeation or osmotic gradients.
 - 

@@ -54,8 +54,25 @@
               "icon": "lucide-file",
               "title": "dimova2020_The giant vesicle book"
             }
+          },
+          {
+            "id": "89bab1d007896fdb",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
+                "page": 104,
+                "left": -17,
+                "top": 455,
+                "zoom": 0.8768115942028988
+              },
+              "icon": "lucide-file-text",
+              "title": "Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019)"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -209,15 +226,15 @@
   },
   "active": "060dc2ab568c12ea",
   "lastOpenFiles": [
+    "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
+    "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
+    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "01-Projects/GUVs/montage_5x2.png",
     "02-Literature/Reading-Notes/villalobos-concha_Optothermal assembly and manipulation of colloids via non-coherent light.md",
-    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "00-Dashboard/Dashboard.md",
     "01-Projects/GUVs",
     "00-Dashboard/GUV Research Hub.md",
     "01-Projects/Cooling-by-Heating/msca sub.md",
-    "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
-    "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "02-Literature/References/käs, sackmann1991_Shape transitions and shape stability of giant phospholipid vesicles in pure water induced by area-t.pdf",
     "05-Resources/Clippings/Deep Research.md",
     "02-Literature/Reading-Notes/ginot2018_Aggregation-fragmentation and individual dynamics of active clusters.md",
@@ -253,7 +270,6 @@
     "Excalidraw/Pasted Image 20250903112205_414.png",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
     "Projects/Cooling by heating/Pasted image 20251009110402.png",
-    "Notes/New Notes/Pasted image 20250717161240.png",
-    "Notes/New Notes/Pasted image 20250717162237.png"
+    "Notes/New Notes/Pasted image 20250717161240.png"
   ]
 }
