@@ -36,4 +36,6 @@ For small changes from the initial values of $A$ and $V$. we can write $V(t,\Del
 
 $$\frac{\nu(t)}{\nu}=\frac{1+\epsilon_V}{(1+\epsilon_A)^{3/2}}$$
 at first order
-$$
+$$\frac{\nu(t)}{\nu}\approx 1+\epsilon_V-\frac{3}{2}\epsilon_A$$
+
+$$\frac{\Delta \nu(t)}{\nu} \approx \frac{\Delta V(t)}{V} - \frac{3}{2}\frac{\Delta A(t)}{A}$$ 
