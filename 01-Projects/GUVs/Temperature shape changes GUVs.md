@@ -32,5 +32,8 @@ How I look what is happening is:
 
 So in this case the reduce volume in time can be written as: 
 $$\frac{\nu(t,\Delta T)}{\nu}=\frac{V(t,\Delta T)}{V}\left(\frac{A}{ A(t,\Delta T)}\right)^{3/2}$$
-at first order it can be written as:
-$$\frac{\Delta \nu}{\nu}\approx \frac{\Delta V}{V}-\frac{3\Delta A}{2A}$$
+For small changes from the initial values of $A$ and $V$. we can write $V(t,\Delta T)=V(1+\epsilon_V(t))$ and $A(t,\Delta T)=A(1+\epsilon_A)$. Therefore:
+
+$$\frac{\nu(t)}{\nu}=\frac{1+\epsilon_V}{(1+\epsilon_A)^{3/2}}$$
+at first order
+$$
