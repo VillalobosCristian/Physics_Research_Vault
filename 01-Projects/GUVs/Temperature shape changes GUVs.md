@@ -45,4 +45,5 @@ Then when permeation came in to the game the vesicle will increase the volume an
 
 From the images what we can do is to extract the countours in each frame, and determine the symmetry axis using [[principal component analysis]] and do the surface revolution integral. 
 
-So [[principal component analysis|PCA]] 
+So [[principal component analysis|PCA]] finds the direction in the plane along the contour which the contour points have the largest spread (first principal component ) and the perpendicular direction with the smaller spread (second and so on..).
+
