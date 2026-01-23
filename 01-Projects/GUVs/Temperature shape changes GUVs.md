@@ -19,4 +19,7 @@ $$\nu = \frac{6\sqrt{\pi}V}{A^{3/2}}$$
 
 A typical observation of a DOPC vesicle while heating. Before heating the vesicle is showing thermal fluctuation and has a quasi-spherical shape. When light is turned on, we can see that some small buds are created outward the vesicle and a strong shape change after some time (need to add correct time stamps) an inward bud appear and looks like a inner vesicle inside of a apparent spherical vesicle. Then light is turned off this inner bud/vesicle merge with the membrane and strong shape changes appear , recovering a similar shape to the initial at thermal equilibrium, and the process repeat again when light is turned on.
 
-The fact that the vesicle look spherical can m
+The fact that the vesicle look spherical can mean:
+- Inflation: water comes in (osmotic and temperature effects), the volume $V$ increase at almost constant $A$, almost because, the temperature change create a area increase. This will increase the value of $\nu$. 
+- Since the excess of area is stored in thermal fluctuation, when increasing the temperature, the change in volume and area increase the tension too, making the vesicle more spherical. 
+To measure experimentally the value of $\nu$  from $2-D$ images we need to assume that the shape of the deformed vesicle has an symmetry axis, the task is to choose the correct symmetry axis to perform 
