@@ -31,4 +31,6 @@ How I look what is happening is:
 - Volume responds slowly: The initial water volume also expand almost immediately  $V(T)=V_0(1+\alpha_V\Delta T)+\Delta V_{\mathrm{perm}}(t)$, while if there any permeation it would be in a slower time scale. 
 
 So in this case the reduce volume in time can be written as: 
-$$\frac{\nu(t)}{\nu}\approx \frac{V(t)}{V}\left(\frac{A_0}{ A(t)}\right)^{3/2}$$ 
+$$\frac{\nu(t,\Delta T)}{\nu}=\frac{V(t,\Delta T)}{V}\left(\frac{A}{ A(t,\Delta T)}\right)^{3/2}$$
+at first order it can be written as:
+$$\frac{\Delta \nu}{\nu}\approx \frac{\Delta V}{V}-\frac{3\Delta A}{2A}$$
