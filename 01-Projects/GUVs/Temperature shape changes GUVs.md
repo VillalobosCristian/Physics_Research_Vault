@@ -8,4 +8,4 @@ Here, for the GUV the approach is a little bit different, but the same idea, we 
 
 
 From [[dimova2020_The giant vesicle book]] vesicle shape changes are usually done by osmotic deflation or temperature changes.
-In the case of temperature changes we have 
+In the case of temperature changes with the assumption that the membrane area is mainly constant. 
