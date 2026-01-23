@@ -22,4 +22,10 @@ A typical observation of a DOPC vesicle while heating. Before heating the vesicl
 The fact that the vesicle look spherical can mean:
 - Inflation: water comes in (osmotic and temperature effects), the volume $V$ increase at almost constant $A$, almost because, the temperature change create a area increase. This will increase the value of $\nu$. 
 - Since the excess of area is stored in thermal fluctuation, when increasing the temperature, the change in volume and area increase the tension too, making the vesicle more spherical. 
-To measure experimentally the value of $\nu$  from $2-D$ images we need to assume that the shape of the deformed vesicle has an symmetry axis, the task is to choose the correct symmetry axis to perform 
+To measure experimentally the value of $\nu$  from $2-D$ images we need to assume that the shape of the deformed vesicle has an symmetry axis, the task is to choose the correct symmetry axis and compute $V(t)$ and $A(t)$ from surface revolution. 
+
+### What is happening?
+
+How I look what is happening is: 
+- Membrane area respond very fast to temperature change: when $T$ increases, the membrane wants to increase its area by $A(T)\approx A_0(1+\alpha_A\Delta T)$
+- 
