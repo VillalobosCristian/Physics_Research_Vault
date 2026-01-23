@@ -15,3 +15,5 @@ $$\nu = \frac{6\sqrt{\pi}V}{A^{3/2}}$$
 - $\nu < 1$ means deflated vesicle, it must store the extra area somehow (non-spherical shape, ondulations, etc).
 
 
+![[montage_5x2.png]]
+
