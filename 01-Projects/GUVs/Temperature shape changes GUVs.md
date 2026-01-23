@@ -40,5 +40,7 @@ $$\frac{\nu(t)}{\nu}\approx 1+\epsilon_V-\frac{3}{2}\epsilon_A$$
 
 $$\frac{\Delta \nu(t)}{\nu} \approx \frac{\Delta V(t)}{V} - \frac{3}{2}\frac{\Delta A(t)}{A}$$ At short times, before permation matters, we have
 $$\frac{\Delta \nu}{\nu} \approx \alpha_V\Delta T - \frac{3}{2}\alpha_A\Delta T$$
-So if $\alpha_A$ dominates, $\nu$ can **drop** immediately after heating even if it later rises as water permeates.
-Then when permation came in to the game
+So if $\alpha_A$ dominates, $\nu$ can **drop** immediately after heating even if it later rises as water permeates. 
+Then when permeation came in to the game the vesicle will increase the volume and increase tension increasing the value of $\nu$ even surprassing the initial value at thermal equilibrium.
+
+From the images what we can do is to extract the countours in each frame, and determine the symmetry axis using [[principal component analysis]] and do the surface revolution integral. 
