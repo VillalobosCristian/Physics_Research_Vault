@@ -44,3 +44,5 @@ So if $\alpha_A$ dominates, $\nu$ can **drop** immediately after heating even if
 Then when permeation came in to the game the vesicle will increase the volume and increase tension increasing the value of $\nu$ even surprassing the initial value at thermal equilibrium.
 
 From the images what we can do is to extract the countours in each frame, and determine the symmetry axis using [[principal component analysis]] and do the surface revolution integral. 
+
+So [[principal component analysis|PCA]] 
