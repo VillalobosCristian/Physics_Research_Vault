@@ -47,3 +47,6 @@ From the images what we can do is to extract the countours in each frame, and de
 
 So [[principal component analysis|PCA]] finds the direction in the plane along the contour which the contour points have the largest spread (first principal component ) and the perpendicular direction with the smaller spread (second and so on..).
 
+## Steps
+First we detect the contour as usual, here is a quasi-spherical vesicle just before turning light on
+![[export_fig_out.png]]

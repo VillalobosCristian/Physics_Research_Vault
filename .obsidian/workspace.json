@@ -62,8 +62,10 @@
               "type": "pdf",
               "state": {
                 "file": "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
-                "page": 1,
-                "zoom": 1
+                "page": 105,
+                "left": -15,
+                "top": 238,
+                "zoom": 1.002415458937198
               },
               "icon": "lucide-file-text",
               "title": "Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019)"
@@ -225,8 +227,9 @@
   "active": "060dc2ab568c12ea",
   "lastOpenFiles": [
     "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
-    "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
+    "01-Projects/GUVs/export_fig_out.png",
+    "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/GUVs/montage_5x2.png",
     "02-Literature/Reading-Notes/villalobos-concha_Optothermal assembly and manipulation of colloids via non-coherent light.md",
     "00-Dashboard/Dashboard.md",
@@ -267,7 +270,6 @@
     "Notes/New Notes/Pasted image 20241218215221.png",
     "Excalidraw/Pasted Image 20250903112205_414.png",
     "Projects/Cooling by heating/Pasted image 20250915095050.png",
-    "Projects/Cooling by heating/Pasted image 20251009110402.png",
-    "Notes/New Notes/Pasted image 20250717161240.png"
+    "Projects/Cooling by heating/Pasted image 20251009110402.png"
   ]
 }
