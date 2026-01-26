@@ -57,4 +57,8 @@ From this contours we can compute the PCA from the contour, for a almost spheric
 ![[Pasted image 20260126095548.png]]
 For the deformed one, with no clear symmetry axis we have something like 
 ![[Pasted image 20260126095757.png]]
-From this, we can now compute the reduced volume. 
+From this, we can now compute the reduced volume. To do that we can compute the volume as:
+
+$$V=\pi \int r(z)^2 dz$$
+and the area 
+$$A=2\pi \int r(z)\sqrt{1+\left(\frac{}{}\right)}
