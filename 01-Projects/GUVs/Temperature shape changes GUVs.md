@@ -53,5 +53,7 @@ First we detect the contour as usual, here is a quasi-spherical vesicle just bef
 ![[export_fig_out.png]]
 The deformed one, after turning light on
 ![[export_fig_out 1.png]]
-From this contours we can compute the PCA from the contour
-![[Pasted image 20260126095110.png]]
+From this contours we can compute the PCA from the contour, for a almost spherical circle we could should expect the usual cartesian basis, since the contour is not 100% symmetric is not the case.
+![[Pasted image 20260126095548.png]]
+For the deformed one, with no clear symmetry axis we have something like 
+![[Pasted image 20260126095757.png]]
