@@ -57,3 +57,4 @@ From this contours we can compute the PCA from the contour, for a almost spheric
 ![[Pasted image 20260126095548.png]]
 For the deformed one, with no clear symmetry axis we have something like 
 ![[Pasted image 20260126095757.png]]
+From this, we can now compute the reduced volume. 
