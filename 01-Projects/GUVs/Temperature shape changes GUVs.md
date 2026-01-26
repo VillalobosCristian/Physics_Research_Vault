@@ -61,4 +61,4 @@ From this, we can now compute the reduced volume. To do that we can compute the 
 
 $$V=\pi \int r(z)^2 dz$$
 and the area 
-$$A=2\pi \int r(z)\sqrt{1+\left(\frac{}{}\right)}
+$$A=2\pi \int r(z)\sqrt{1+\left(\frac{dr}{dz}\right)^2}dz$$
