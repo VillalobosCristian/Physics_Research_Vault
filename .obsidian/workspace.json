@@ -62,9 +62,9 @@
               "type": "pdf",
               "state": {
                 "file": "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
-                "page": 105,
+                "page": 107,
                 "left": -15,
-                "top": 238,
+                "top": 173,
                 "zoom": 1.002415458937198
               },
               "icon": "lucide-file-text",
@@ -224,10 +224,12 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "060dc2ab568c12ea",
+  "active": "89bab1d007896fdb",
   "lastOpenFiles": [
-    "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
+    "01-Projects/GUVs/Pasted image 20260126095110.png",
+    "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
+    "01-Projects/GUVs/export_fig_out 1.png",
     "01-Projects/GUVs/export_fig_out.png",
     "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/GUVs/montage_5x2.png",
@@ -268,8 +270,6 @@
     "Notes/New Notes/pdf_maxwell 1.png",
     "Notes/New Notes/Pasted image 20241223133932.png",
     "Notes/New Notes/Pasted image 20241218215221.png",
-    "Excalidraw/Pasted Image 20250903112205_414.png",
-    "Projects/Cooling by heating/Pasted image 20250915095050.png",
-    "Projects/Cooling by heating/Pasted image 20251009110402.png"
+    "Excalidraw/Pasted Image 20250903112205_414.png"
   ]
 }
