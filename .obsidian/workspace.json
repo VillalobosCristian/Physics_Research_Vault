@@ -6,7 +6,7 @@
       {
         "id": "9a1e7c4e98fce88c",
         "type": "tabs",
-        "dimension": 62.30859835100118,
+        "dimension": 54.12249705535924,
         "children": [
           {
             "id": "060dc2ab568c12ea",
@@ -41,7 +41,7 @@
       {
         "id": "2a16b605d51a8bed",
         "type": "tabs",
-        "dimension": 37.69140164899882,
+        "dimension": 45.87750294464075,
         "children": [
           {
             "id": "8757e3432403628f",
@@ -64,10 +64,10 @@
               "type": "pdf",
               "state": {
                 "file": "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
-                "page": 118,
-                "left": -21,
-                "top": 138,
-                "zoom": 0.7065217391304349
+                "page": 120,
+                "left": -18,
+                "top": 672,
+                "zoom": 0.8743961352657005
               },
               "icon": "lucide-file-text",
               "title": "Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019)"
