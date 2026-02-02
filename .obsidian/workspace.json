@@ -25,14 +25,14 @@
             "id": "89bab1d007896fdb",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
-                "page": 1,
-                "zoom": 1
+                "file": "01-Projects/GUVs/Temperature shape changes GUVs.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019)"
+              "icon": "lucide-file",
+              "title": "Temperature shape changes GUVs"
             }
           }
         ],
@@ -190,9 +190,10 @@
   },
   "active": "89bab1d007896fdb",
   "lastOpenFiles": [
+    "01-Projects/GUVs/Pasted image 20260202092223.png",
+    "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
     "02-Literature/Reading-Notes/villalobos-concha_Optothermal assembly and manipulation of colloids via non-coherent light.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
-    "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
     "01-Projects/GUVs/Pasted image 20260126095757.png",
     "01-Projects/GUVs/Pasted image 20260126095548.png",
     "01-Projects/GUVs/Pasted image 20260126095430.png",
