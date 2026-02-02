@@ -66,3 +66,4 @@ $$A=2\pi \int r(z)\sqrt{1+\left(\frac{dr}{dz}\right)^2}dz$$
 
 ## Shape change analysis
 
+![[Pasted image 20260202092223.png]]
