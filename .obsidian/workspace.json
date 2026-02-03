@@ -34,6 +34,18 @@
               "icon": "lucide-file",
               "title": "Temperature shape changes GUVs"
             }
+          },
+          {
+            "id": "4f3d89d2fb3dd1c0",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "01-Projects/GUVs/Pasted image 20260202092223.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260202092223"
+            }
           }
         ],
         "currentTab": 1
@@ -191,9 +203,9 @@
   "active": "89bab1d007896fdb",
   "lastOpenFiles": [
     "01-Projects/GUVs/Pasted image 20260202092223.png",
+    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
     "02-Literature/Reading-Notes/villalobos-concha_Optothermal assembly and manipulation of colloids via non-coherent light.md",
-    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "01-Projects/GUVs/Pasted image 20260126095757.png",
     "01-Projects/GUVs/Pasted image 20260126095548.png",
     "01-Projects/GUVs/Pasted image 20260126095430.png",
@@ -234,7 +246,6 @@
     "03-Concepts/Membrane-Physics/Membrane-mediated interactions.md",
     "02-Literature/References/Gabriel Lugo - Differential Geometry in Physics-University of North Carolina at Wilmington (2022).pdf",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
-    "Notes/New Notes/Fitted_MSD.png",
-    "Notes/New Notes/pdf_maxwell 1.png"
+    "Notes/New Notes/Fitted_MSD.png"
   ]
 }
