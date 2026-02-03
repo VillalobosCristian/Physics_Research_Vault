@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-Projects/GUVs/Temperature shape changes GUVs.md",
+                "file": "03-Concepts/Membrane-Physics/Fourier Analysis Vesicles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Temperature shape changes GUVs"
+              "title": "Fourier Analysis Vesicles"
             }
           },
           {
@@ -214,9 +214,20 @@
   },
   "active": "89bab1d007896fdb",
   "lastOpenFiles": [
+    "03-Concepts/Membrane-Physics/Fluctuation spectroscopy.md",
+    "03-Concepts/Membrane-Physics/Mean curvature.md",
+    "03-Concepts/Membrane-Physics/Membrane-mediated interactions.md",
+    "03-Concepts/Membrane-Physics/Micelles.md",
+    "03-Concepts/Membrane-Physics/Membrane wrapping.md",
+    "03-Concepts/Membrane-Physics/Membrane fluctuation spectrum.md",
+    "03-Concepts/Membrane-Physics/Fourier Analysis Vesicles.md",
+    "03-Concepts/Membrane-Physics/Giant Unilamellar Vesicles (GUVs).md",
+    "03-Concepts/Membrane-Physics/Gaussian curvature modulus.md",
+    "03-Concepts/Membrane-Physics/Helfrich free energy.md",
+    "03-Concepts/Membrane-Physics/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
+    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "01-Projects/GUVs/Pasted image 20260202092223.png",
     "01-Projects/GUVs/export_fig_out.png",
-    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
     "02-Literature/Reading-Notes/villalobos-concha_Optothermal assembly and manipulation of colloids via non-coherent light.md",
     "01-Projects/GUVs/Pasted image 20260126095757.png",
@@ -242,20 +253,10 @@
     "02-Literature/Reading-Notes/imai2022_From vesicles toward protocells and minimal cells.md",
     "02-Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
     "02-Literature/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
-    "02-Literature/Reading-Notes/vanderwel2017_Microparticle Assembly Pathways on Lipid Membranes.md",
-    "02-Literature/Reading-Notes/karal2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.md",
-    "02-Literature/Reading-Notes/fessler2024_Autonomous Engulfment of Active Colloids by Giant Lipid Vesicles.md",
-    "02-Literature/Reading-Notes/Study Guide Lipid Membranes and Vesicles.md",
     "02-Literature/References/Vector- A Surprising Story of Space, Time, and Mathematical -- Robyn Arianrhod -- 1, 2024 -- University of Chicago Press -- 9780226821115 -- c4bc42c99324d4894258614de9675570 -- Anna’s Arch.pdf",
     "02-Literature/References/diwe, kumar2025_Rotational dynamics of bound pairs of bacteria-induced membrane tubes.pdf",
     "02-Literature/References/aoki, schroder2015_Bioadhesive giant vesicles for monitoring hydroperoxidation in lipid membranes.pdf",
-    "00-Dashboard/Concepts MOC.md",
-    "00-Dashboard/Papers Tracker.md",
     "02-Literature/References/schamberger, ziege2023_Curvature in Biological Systems Its Quantification, Emergence, and Implications across the Scales.pdf",
-    "03-Concepts/Membrane-Physics/Tubulation.md",
-    "03-Concepts/Membrane-Physics/Active fluctuations.md",
-    "03-Concepts/Membrane-Physics/Contour analysis.md",
-    "03-Concepts/Membrane-Physics/Membrane-mediated interactions.md",
     "02-Literature/References/Gabriel Lugo - Differential Geometry in Physics-University of North Carolina at Wilmington (2022).pdf",
     "Papers/Reading_Notes/Pasted image 20250203111007.png",
     "Notes/New Notes/Fitted_MSD.png"
