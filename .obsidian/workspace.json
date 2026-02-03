@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-Concepts/Membrane-Physics/Fourier Analysis Vesicles.md",
+                "file": "01-Projects/GUVs/Temperature shape changes GUVs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fourier Analysis Vesicles"
+              "title": "Temperature shape changes GUVs"
             }
           },
           {
@@ -214,18 +214,19 @@
   },
   "active": "89bab1d007896fdb",
   "lastOpenFiles": [
-    "03-Concepts/Membrane-Physics/Fluctuation spectroscopy.md",
-    "03-Concepts/Membrane-Physics/Mean curvature.md",
-    "03-Concepts/Membrane-Physics/Membrane-mediated interactions.md",
-    "03-Concepts/Membrane-Physics/Micelles.md",
-    "03-Concepts/Membrane-Physics/Membrane wrapping.md",
-    "03-Concepts/Membrane-Physics/Membrane fluctuation spectrum.md",
     "03-Concepts/Membrane-Physics/Fourier Analysis Vesicles.md",
-    "03-Concepts/Membrane-Physics/Giant Unilamellar Vesicles (GUVs).md",
-    "03-Concepts/Membrane-Physics/Gaussian curvature modulus.md",
-    "03-Concepts/Membrane-Physics/Helfrich free energy.md",
-    "03-Concepts/Membrane-Physics/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
+    "03-Concepts/Membrane-Physics/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
+    "03-Concepts/Membrane-Physics/Giant Unilamellar Vesicles (GUVs).md",
+    "03-Concepts/Membrane-Physics/Helfrich free energy.md",
+    "03-Concepts/Membrane-Physics/Gaussian curvature modulus.md",
+    "03-Concepts/Membrane-Physics/Membrane fluctuation spectrum.md",
+    "03-Concepts/Membrane-Physics/Membrane wrapping.md",
+    "03-Concepts/Membrane-Physics/Mean curvature.md",
+    "03-Concepts/Membrane-Physics/Micelles.md",
+    "03-Concepts/Membrane-Physics/Membrane-mediated interactions.md",
+    "03-Concepts/Membrane-Physics/Fluctuation spectroscopy.md",
+    "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/GUVs/Pasted image 20260202092223.png",
     "01-Projects/GUVs/export_fig_out.png",
     "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
@@ -235,7 +236,6 @@
     "01-Projects/GUVs/Pasted image 20260126095430.png",
     "01-Projects/GUVs/Pasted image 20260126095110.png",
     "01-Projects/GUVs/export_fig_out 1.png",
-    "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/GUVs/montage_5x2.png",
     "00-Dashboard/Dashboard.md",
     "01-Projects/GUVs",
