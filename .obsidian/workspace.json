@@ -36,6 +36,18 @@
             }
           },
           {
+            "id": "2f903aec546682e4",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "01-Projects/GUVs/montage_5x2.png"
+              },
+              "icon": "lucide-image",
+              "title": "montage_5x2"
+            }
+          },
+          {
             "id": "5edf01294bfbded6",
             "type": "leaf",
             "state": {
@@ -214,8 +226,9 @@
   },
   "active": "89bab1d007896fdb",
   "lastOpenFiles": [
-    "03-Concepts/Membrane-Physics/Fourier Analysis Vesicles.md",
+    "01-Projects/GUVs/montage_5x2.png",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
+    "03-Concepts/Membrane-Physics/Fourier Analysis Vesicles.md",
     "03-Concepts/Membrane-Physics/Fluctuations and Particle interactions of giant unilamellar vesicles.md",
     "03-Concepts/Membrane-Physics/Giant Unilamellar Vesicles (GUVs).md",
     "03-Concepts/Membrane-Physics/Helfrich free energy.md",
@@ -236,7 +249,6 @@
     "01-Projects/GUVs/Pasted image 20260126095430.png",
     "01-Projects/GUVs/Pasted image 20260126095110.png",
     "01-Projects/GUVs/export_fig_out 1.png",
-    "01-Projects/GUVs/montage_5x2.png",
     "00-Dashboard/Dashboard.md",
     "01-Projects/GUVs",
     "00-Dashboard/GUV Research Hub.md",
@@ -251,7 +263,6 @@
     "02-Literature/Reading-Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
     "02-Literature/Reading-Notes/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.md",
     "02-Literature/Reading-Notes/imai2022_From vesicles toward protocells and minimal cells.md",
-    "02-Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
     "02-Literature/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
     "02-Literature/References/Vector- A Surprising Story of Space, Time, and Mathematical -- Robyn Arianrhod -- 1, 2024 -- University of Chicago Press -- 9780226821115 -- c4bc42c99324d4894258614de9675570 -- Anna’s Arch.pdf",
     "02-Literature/References/diwe, kumar2025_Rotational dynamics of bound pairs of bacteria-induced membrane tubes.pdf",
