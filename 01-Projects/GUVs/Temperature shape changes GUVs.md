@@ -75,6 +75,27 @@ Vesicles at equilibrium are axially symmetric around one axis due to energy mini
 
 The problem is that for the instant of heating, invaginations and bud are not axially symmetric making the estimation of the reduced volume inconsistent, nevertheless we can use as another estimator. 
 
+Then we rotate it so the symmetry axis align with the $y$ axis. 
+````
+x_rot = x_centered * cos(-theta_pca) - y_centered * sin(-theta_pca);
+y_rot = x_centered * sin(-theta_pca) + y_centered * cos(-theta_pca); 
+````
+Then we compute $r(y)$, for each $y$ the radius...
+Volume computed using disk method 
+````
+dy = diff(y_profile);
+r_mid = (r_profile(1:end-1) + r_profile(2:end)) / 2;  % Midpoint
+volume_um3 = sum(pi * r_mid.^2 .* dy);  % Riemann sum 
+````
+
+And surface area 
+````
+dr = diff(r_profile);
+ds = sqrt(dr.^2 + dy.^2);  % Arc length element
+r_mid_area = (r_profile(1:end-1) + r_profile(2:end)) / 2;
+area_um2 = sum(2 * pi * r_mid_area .* ds);
+````
+
 ## Shape change analysis
 
 ![[Pasted image 20260202092223.png]]
