@@ -84,7 +84,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -236,7 +236,7 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "6d25c3b4caa2b1e4",
+  "active": "89bab1d007896fdb",
   "lastOpenFiles": [
     "01-Projects/GUVs/montage_5x2.png",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
