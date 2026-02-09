@@ -101,3 +101,9 @@ area_um2 = sum(2 * pi * r_mid_area .* ds);
 
 ![[Pasted image 20260202092223.png]]
 ## Detection of heating events
+
+
+
+
+## Fourier Analysis 
+![[Pasted image 20260209142906.png]]
