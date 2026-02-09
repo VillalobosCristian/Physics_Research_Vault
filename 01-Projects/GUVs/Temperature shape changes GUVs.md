@@ -69,7 +69,12 @@ $$A=2\pi \int r(z)\sqrt{1+\left(\frac{dr}{dz}\right)^2}dz$$
 principal_component = coeff(:, 1);  % Major axis direction
 theta_pca = atan2(principal_component(2), principal_component(1));
 ````
-The major axis is the first principal component, which is the direction of maximum variance, for an ellipse for example is equivalent to
+The major axis is the first principal component, which is the direction of maximum variance, for an ellipse for example is equivalent to the major axis. 
+
+Vesicles at equilibrium are axially symmetric around one axis due to energy minimization, so the key assumption is that vesicle will have rotational symmetry around this axis. 
+
+The problem is that for the instant of heating, invaginations and bud are not axially symmetric making the estimation of the reduced volume inconsistent, nevertheless we can use as another estimator. 
+
 ## Shape change analysis
 
 ![[Pasted image 20260202092223.png]]
