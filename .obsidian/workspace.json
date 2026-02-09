@@ -36,6 +36,18 @@
             }
           },
           {
+            "id": "6d25c3b4caa2b1e4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
+            }
+          },
+          {
             "id": "2f903aec546682e4",
             "type": "leaf",
             "state": {
@@ -72,7 +84,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -224,7 +236,7 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "89bab1d007896fdb",
+  "active": "6d25c3b4caa2b1e4",
   "lastOpenFiles": [
     "01-Projects/GUVs/montage_5x2.png",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
