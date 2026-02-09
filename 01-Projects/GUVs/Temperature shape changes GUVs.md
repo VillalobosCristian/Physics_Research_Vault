@@ -74,6 +74,7 @@ The major axis is the first principal component, which is the direction of maxim
 Vesicles at equilibrium are axially symmetric around one axis due to energy minimization, so the key assumption is that vesicle will have rotational symmetry around this axis. 
 
 The problem is that for the instant of heating, invaginations and bud are not axially symmetric making the estimation of the reduced volume inconsistent, nevertheless we can use as another estimator. 
+![[Pasted image 20260209133324.png]]
 
 Then we rotate it so the symmetry axis align with the $y$ axis. 
 ````
