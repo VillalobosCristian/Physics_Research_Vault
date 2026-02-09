@@ -47,6 +47,8 @@ From the images what we can do is to extract the countours in each frame, and de
 
 So [[principal component analysis|PCA]] finds the direction in the plane along the contour which the contour points have the largest spread (first principal component ) and the perpendicular direction with the smaller spread (second and so on..).
 
+
+
 ## Steps
 First we detect the contour as usual, here is a quasi-spherical vesicle just before turning light on.
 
@@ -63,7 +65,11 @@ $$V=\pi \int r(z)^2 dz$$
 and the area 
 $$A=2\pi \int r(z)\sqrt{1+\left(\frac{dr}{dz}\right)^2}dz$$
 
-
+````[coeff, ~, latent] = pca([x_centered, y_centered]);
+principal_component = coeff(:, 1);  % Major axis direction
+theta_pca = atan2(principal_component(2), principal_component(1));
+````
+The major axis is the first principal component, which is the direction of maximum variance, for an ellipse for example is equivalent to
 ## Shape change analysis
 
 ![[Pasted image 20260202092223.png]]
