@@ -102,7 +102,7 @@ area_um2 = sum(2 * pi * r_mid_area .* ds);
 ![[Pasted image 20260202092223.png]]
 ## Detection of heating events
 
-For now, basically is detecting the drift rate, $d\Delta x/dt$, high drift = heating, it can fail if the vesicle is adhered or is moving a little, i also need to combine with shape changes, since when light is turned on the sha
+For now, basically is detecting the drift rate, $d\Delta x/dt$, high drift = heating, it can fail if the vesicle is adhered or is moving a little, i also need to combine with shape changes, since when light is turned on the shape change is very fast, it deform, then spherical again and still drift, so the big shape change is only at the beginning. 
 
 
 ## Fourier Analysis 
