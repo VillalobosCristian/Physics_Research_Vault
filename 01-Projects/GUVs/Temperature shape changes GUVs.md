@@ -113,3 +113,4 @@ One observable that can measure is the roughness, which at difference of circula
 
 $$\mathrm{Roughness}=\frac{\sigma(r)}{\bar{r}}$$
 this tell more about local deformations of the membrane. 
+
