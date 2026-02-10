@@ -111,4 +111,5 @@ For now, basically is detecting the drift rate, $d\Delta x/dt$, high drift = hea
 
 One observable that can measure is the roughness, which at difference of circularity measure how much the vesicle wiggles around of a mean radius value 
 
-$$\mathrm{Roughness}=\frac{\sigma}{}
+$$\mathrm{Roughness}=\frac{\sigma(r)}{\bar{r}}$$
+this tell more about local deformations of the membrane. 
