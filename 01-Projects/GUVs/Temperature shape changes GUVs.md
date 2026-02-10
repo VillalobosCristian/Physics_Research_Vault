@@ -131,3 +131,12 @@ Roughness:    0.02 0.02 0.03 0.04 0.05 0.04 0.03 0.02 0.02 0.02
 Threshold:    0.029 (constant)
 Raw mask:       0    0    1    1    1    1    1    0    0    0
                           ↑ exceeds threshold ↑
+
+Denoise the Mask
+```matlab
+shape_change_smooth_sig = smoothdata(double(shape_change_raw), 'gaussian', 15) > 0.5;
+```
+- Raw mask can flicker: true-false-true-false
+- Smoothing removes brief spikes (noise)
+- Window = 15 frames (about 0.5 seconds)
+Threshold at 0.5: if >50% of nearby frames are "true", keep it
