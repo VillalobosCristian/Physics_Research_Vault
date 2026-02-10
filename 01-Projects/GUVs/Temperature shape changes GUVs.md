@@ -139,4 +139,11 @@ shape_change_smooth_sig = smoothdata(double(shape_change_raw), 'gaussian', 15) >
 - Raw mask can flicker: true-false-true-false
 - Smoothing removes brief spikes (noise)
 - Window = 15 frames (about 0.5 seconds)
-Threshold at 0.5: if >50% of nearby frames are "true", keep it
+Threshold at 0.5: if >50% of nearby frames are "true", keep it and we found the boundaries by taking diff between 0 and the denoised mask == 1 means start and -1 means end. 
+We filter short events (less than 10 frames).
+min_shape_duration = 10;
+durations_shape = shape_ends - shape_starts + 1;
+mask_valid = durations_shape >= min_shape_duration;
+shape_zones = [shape_starts(mask_valid), shape_ends(mask_valid)];
+
+I also filter the min shape gap, how many frames between shape changes to make it only one, let's say 30 frames. Gap < 30 frames (1 second) → same deformation
