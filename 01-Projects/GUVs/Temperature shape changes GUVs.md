@@ -119,18 +119,15 @@ Now for detect the event of heating, we use the first 500 frames to define what 
 Typical roughness at that interval computed using median. and the std, so normally the fluctuation around that value will be given by 3$\sigma$ + median, so that will be the threshold. 
 
 Then a raw detection mask, so basically when the smoothed roughness>rougness_threshold and smooth this vector to avoid flickering and i say that if this smooth threshold at 0.5: if >50% of nearby frames are "true", keep it.
-shape_starts = find(diff([0; shape_change_smooth_sig]) == 1);
-shape_ends = find(diff([shape_change_smooth_sig; 0]) == -1);
+shape_change_raw = roughness_smooth > roughness_threshold;
 
+**What this creates:**
+- Boolean array (true/false for each frame)
+- `true` = roughness is high (potential shape change)
+- `false` = roughness is normal
 
-**What `diff()` does:**
-- Calculates difference between consecutive frames
-- 0→1 transition = event **starts**
-- 1→0 transition = event **ends**
-
-**Example:**
-
-Mask:   [0 0 0 1 1 1 1 0 0 0 1 1 0 0]
-Diff:   [  0 0 1 0 0 0 -1 0 0 1 0 -1 0]
-           ↑           ↑       ↑     ↑
-        start       end    start  end
+Frame:          1    2    3    4    5    6    7    8    9   10
+Roughness:    0.02 0.02 0.03 0.04 0.05 0.04 0.03 0.02 0.02 0.02
+Threshold:    0.029 (constant)
+Raw mask:       0    0    1    1    1    1    1    0    0    0
+                          ↑ exceeds threshold ↑
