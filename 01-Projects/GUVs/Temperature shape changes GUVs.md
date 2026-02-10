@@ -115,3 +115,6 @@ $$\mathrm{Roughness}=\frac{\sigma(r)}{\bar{r}}$$
 this tell more about local deformations of the membrane. 
 
 Now for detect the event of heating, we use the first 500 frames to define what is light off(heating off), this is part of the recording protocol, once the vesicle is found the recording start with an unperturbed, no previous heated vesicle that is in thermal equilibrium at T ambient. Usually I'll record 1000 frames of that, then heating for 500-1000 frames. 
+
+Typical roughness at that interval computed using median. and the std, so normally the fluctuation around that value will be given by 3$\sigma$ + median, so that will be the threshold. 
+
