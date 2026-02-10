@@ -118,4 +118,4 @@ Now for detect the event of heating, we use the first 500 frames to define what 
 
 Typical roughness at that interval computed using median. and the std, so normally the fluctuation around that value will be given by 3$\sigma$ + median, so that will be the threshold. 
 
-Then a raw detection mask, so basically when the smoothed roughness>rougness_threshold. 
+Then a raw detection mask, so basically when the smoothed roughness>rougness_threshold and smooth this vector to avoid flickering. 
