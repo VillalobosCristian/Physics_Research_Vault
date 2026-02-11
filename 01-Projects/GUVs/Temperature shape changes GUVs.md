@@ -148,6 +148,7 @@ durations_shape = shape_ends - shape_starts + 1;
 mask_valid = durations_shape >= min_shape_duration;
 shape_zones = [shape_starts(mask_valid), shape_ends(mask_valid)];
 
+
 I also filter the min shape gap, how many frames between shape changes to make it only one, let's say 30 frames. Gap < 30 frames (1 second) → same deformation ([[mergin_shapes]])
 
 
