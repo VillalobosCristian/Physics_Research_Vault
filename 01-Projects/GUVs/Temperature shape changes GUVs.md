@@ -136,6 +136,8 @@ Denoise the Mask
 ```matlab
 shape_change_smooth_sig = smoothdata(double(shape_change_raw), 'gaussian', 15) > 0.5;
 ```
+
+
 - Raw mask can flicker: true-false-true-false
 - Smoothing removes brief spikes (noise)
 - Window = 15 frames (about 0.5 seconds)
@@ -150,3 +152,4 @@ I also filter the min shape gap, how many frames between shape changes to make i
 
 
 --- 
+
