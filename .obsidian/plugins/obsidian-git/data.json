@@ -1,6 +1,6 @@
 {
   "commitMessage": "{{date}}",
-  "autoCommitMessage": "{{files}}",
+  "autoCommitMessage": "{{numFiles}}",
   "commitMessageScript": "",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 1,
