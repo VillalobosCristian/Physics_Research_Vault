@@ -98,7 +98,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -250,10 +250,11 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "89bab1d007896fdb",
+  "active": "a0a8291e2d52b734",
   "lastOpenFiles": [
-    "mergin_shapes.md",
+    "Untitled.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
+    "mergin_shapes.md",
     "01-Projects/GUVs/Pasted image 20260209142906.png",
     "01-Projects/GUVs/Pasted image 20260209133324.png",
     "01-Projects/GUVs/montage_5x2.png",
@@ -291,7 +292,6 @@
     "05-Resources/Excalidraw/Drawing 2026-01-20 12.33.11.excalidraw.md",
     "02-Literature/Reading-Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
     "02-Literature/Reading-Notes/faizi2020_Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy.md",
-    "02-Literature/Reading-Notes/imai2022_From vesicles toward protocells and minimal cells.md",
     "02-Literature/References/morales-penningston, wu2010_GUV preparation and imaging Minimizing artifacts.pdf",
     "02-Literature/References/Vector- A Surprising Story of Space, Time, and Mathematical -- Robyn Arianrhod -- 1, 2024 -- University of Chicago Press -- 9780226821115 -- c4bc42c99324d4894258614de9675570 -- Anna’s Arch.pdf",
     "02-Literature/References/diwe, kumar2025_Rotational dynamics of bound pairs of bacteria-induced membrane tubes.pdf",
