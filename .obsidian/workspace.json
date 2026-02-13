@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Temperature-Dependent Membrane Permeability.md",
+                "file": "01-Projects/GUVs/Temperature shape changes GUVs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MOC - Temperature-Dependent Membrane Permeability"
+              "title": "Temperature shape changes GUVs"
             }
           },
           {
@@ -253,13 +253,16 @@
   "active": "89bab1d007896fdb",
   "lastOpenFiles": [
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Temperature-Dependent Membrane Permeability.md",
+    "00-Dashboard/Concepts MOC.md",
+    "00-Dashboard/GUV Research Hub.md",
+    "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Publication Strategy and Gap Analysis.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Analysis Methods for Vesicle Fluctuations.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Vesicle Shape Deformations.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Optothermal Vesicle Manipulation.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Temperature-Dependent Membrane Permeability.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/fränzl2022_Hydrodynamic manipulation by optically induced thermo-osmotic flows.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/wennerström2025_Coupling between membrane bending and stretching.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/villalobos-concha_Optothermal assembly via non-coherent light.md",
@@ -275,10 +278,7 @@
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/nalupurackal2022_Hydro-thermophoretic trap for microparticles near gold substrate.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/hill2018_Opto-Thermophoretic Attraction Trapping and Manipulation of Lipid Vesicles.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/leirer2009_Thermodynamic relaxation drives expulsion in GUVs.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/wennerström2022_Thermal fluctuations and osmotic stability of lipid vesicles.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review",
-    "mergin_shapes.md",
-    "Untitled.md",
     "01-Projects/GUVs/Pasted image 20260209142906.png",
     "01-Projects/GUVs/Pasted image 20260209133324.png",
     "01-Projects/GUVs/montage_5x2.png",
