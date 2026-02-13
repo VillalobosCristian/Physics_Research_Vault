@@ -576,6 +576,30 @@ if size(shape_zones, 1) > 1
     shape_zones = merged_shape;
 end
 
+% --- Filter: only keep events near or after heating onset ---
+% Spurious roughness spikes before any heating are likely noise/drift
+if shape_require_heating && num_cycles > 0 && size(shape_zones, 1) > 0
+    first_heating_frame = heatingCycles(1).onset;
+    % Allow events that start within 2 s BEFORE heating (thermal lag)
+    margin_frames = round(2.0 * fps);
+    earliest_valid = max(1, first_heating_frame - margin_frames);
+
+    keep = false(size(shape_zones, 1), 1);
+    for k = 1:size(shape_zones, 1)
+        % Keep event if it overlaps with the valid window
+        if shape_zones(k, 2) >= earliest_valid
+            keep(k) = true;
+        end
+    end
+
+    n_removed = sum(~keep);
+    if n_removed > 0
+        fprintf('Filtered %d pre-heating roughness events (before t=%.1f s)\n', ...
+            n_removed, time_s(earliest_valid));
+    end
+    shape_zones = shape_zones(keep, :);
+end
+
 shape_change_mask = false(numFrames, 1);
 for i = 1:size(shape_zones, 1)
     shape_change_mask(shape_zones(i, 1):shape_zones(i, 2)) = true;
