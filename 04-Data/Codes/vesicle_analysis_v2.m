@@ -848,56 +848,84 @@ end
 % Approximate with sigma_bar ~ 0 for initial estimate:
 %   tau_n ~ (4*eta*R^3) / (kappa * (n-1)*(n+2) * n*(n+1))
 %
-% Correction factor for each mode:
-%   C_n = tau_n / tau_m * (1 - tau_n/tau_m * (1 - exp(-tau_m/tau_n)))
-% where tau_m = exposure time
+% Correction factor (Pecreaux 2004, Eq. 11):
+%   C_n = (tau_m/tau_n) / [1 - (tau_n/tau_m)*(1 - exp(-tau_m/tau_n))]
+% where tau_m = exposure time.
+%
+% IMPORTANT: When tau_n << tau_m (high modes), the correction diverges.
+% These modes are irrecoverably averaged — we cap the correction and
+% restrict kappa fitting to modes where the correction is moderate.
 
 R_m   = R_mean_um * 1e-6;  % Radius in meters
 kappa_est = 20 * kBT;      % Initial estimate for DOPC
 
 tau_n_est = zeros(nPhysModes, 1);
-integration_correction = zeros(nPhysModes, 1);
+integration_correction = ones(nPhysModes, 1);
+
+max_correction_factor = 10;  % Cap: modes needing >10x are unreliable
 
 for i = 1:nPhysModes
     n = physical_modes(i);
     tau_n_est(i) = (4 * eta_water * R_m^3) / ...
         (kappa_est * (n-1)*(n+2) * n*(n+1));
 
-    ratio = tau_exposure / tau_n_est(i);
+    ratio = tau_exposure / tau_n_est(i);  % tau_m / tau_n
     if ratio < 0.01
-        % Small exposure: negligible correction
+        % Exposure much shorter than relaxation: no correction needed
         integration_correction(i) = 1.0;
+    elseif ratio > 50
+        % Mode is hopelessly averaged — cap at max
+        integration_correction(i) = max_correction_factor;
     else
-        % Full correction (Pecreaux 2004, Eq. 11)
-        integration_correction(i) = ratio / (1 - (1/ratio) * (1 - exp(-ratio)));
+        % Full correction
+        C = ratio / (1 - (1/ratio) * (1 - exp(-ratio)));
+        integration_correction(i) = min(C, max_correction_factor);
     end
+end
+
+% Determine the highest reliable mode (where correction < max_correction)
+reliable_mode_mask = integration_correction < max_correction_factor;
+if any(reliable_mode_mask)
+    max_reliable_mode = max(physical_modes(reliable_mode_mask));
+else
+    max_reliable_mode = physical_modes(end);
 end
 
 fprintf('Integration time corrections:\n');
 fprintf('  Mode n=2:  tau_n = %.1f ms, correction = %.3f\n', ...
     tau_n_est(1)*1e3, integration_correction(1));
-fprintf('  Mode n=10: tau_n = %.1f ms, correction = %.3f\n', ...
-    tau_n_est(9)*1e3, integration_correction(9));
-fprintf('  Mode n=20: tau_n = %.1f ms, correction = %.3f\n', ...
-    tau_n_est(19)*1e3, integration_correction(19));
+idx_n10 = find(physical_modes == 10, 1);
+if ~isempty(idx_n10)
+    fprintf('  Mode n=10: tau_n = %.1f ms, correction = %.3f\n', ...
+        tau_n_est(idx_n10)*1e3, integration_correction(idx_n10));
+end
+idx_n20 = find(physical_modes == 20, 1);
+if ~isempty(idx_n20)
+    fprintf('  Mode n=20: tau_n = %.2f ms, correction = %.1f (CAPPED)\n', ...
+        tau_n_est(idx_n20)*1e3, integration_correction(idx_n20));
+end
+fprintf('  Highest reliable mode: n = %d (correction < %dx)\n', ...
+    max_reliable_mode, max_correction_factor);
 
 % Apply integration time correction (per mode, broadcast across frames)
 amp_sq_corrected = amp_sq_raw .* integration_correction';
 
 % --- White noise floor estimation (Genova 2013) ---
-% Estimate from high modes (n > 25) where physical signal is negligible
-high_mode_idx = physical_modes > 25;
+% Estimate from RAW (uncorrected) high modes, not corrected ones
+% (corrected high modes have inflated noise from the large correction factor)
+high_mode_idx = physical_modes > 20;
 if sum(high_mode_idx) >= 3
-    noise_floor = median(mean(amp_sq_corrected(:, high_mode_idx), 1));
-    fprintf('White noise floor: %.2e (from modes n > 25)\n', noise_floor);
+    noise_floor = median(mean(amp_sq_raw(:, high_mode_idx), 1));
+    fprintf('White noise floor: %.2e (from raw modes n > 20)\n', noise_floor);
 else
     noise_floor = 0;
     fprintf('Not enough high modes to estimate noise floor\n');
 end
 
-% Subtract noise floor
-amp_sq_denoised = amp_sq_corrected - noise_floor;
-amp_sq_denoised(amp_sq_denoised < 0) = 0;  % Enforce non-negative
+% Subtract noise floor from RAW, then apply correction to the denoised signal
+amp_sq_denoised_raw = amp_sq_raw - noise_floor;
+amp_sq_denoised_raw(amp_sq_denoised_raw < 0) = 0;
+amp_sq_denoised = amp_sq_denoised_raw .* integration_correction';
 
 % --- Average spectra per regime ---
 spectrum_regime1 = mean(amp_sq_denoised(mask_no_heating, :), 1)';
@@ -1060,16 +1088,16 @@ h2 = loglog(physical_modes, spectrum_regime2, 's-', 'Color', col_shape_change, .
 h3 = loglog(physical_modes, spectrum_regime3, 'd-', 'Color', col_heating_steady, ...
     'MarkerSize', 8, 'MarkerFaceColor', col_heating_steady, 'LineWidth', 2);
 
-% Helfrich fit overlay
-if fit_success_1
-    n_plot = linspace(2, nFourierModes+1, 200)';
-    s_fit_plot = helfrich_spectrum(p_fit1, n_plot);
-    h_fit1 = loglog(n_plot, s_fit_plot, '-', 'Color', [0.3 0.3 0.3], 'LineWidth', 2.5);
-end
-if fit_success_3
-    s_fit3_plot = helfrich_spectrum(p_fit3, n_plot);
-    h_fit3 = loglog(n_plot, s_fit3_plot, '-', 'Color', [0.9 0.5 0.1], 'LineWidth', 2.5);
-end
+% % Helfrich fit overlay
+% if fit_success_1
+%     n_plot = linspace(2, nFourierModes+1, 200)';
+%     s_fit_plot = helfrich_spectrum(p_fit1, n_plot);
+%     h_fit1 = loglog(n_plot, s_fit_plot, '-', 'Color', [0.3 0.3 0.3], 'LineWidth', 2.5);
+% end
+% if fit_success_3
+%     s_fit3_plot = helfrich_spectrum(p_fit3, n_plot);
+%     h_fit3 = loglog(n_plot, s_fit3_plot, '-', 'Color', [0.9 0.5 0.1], 'LineWidth', 2.5);
+% end
 
 % Reference power laws
 n_ref = [2, nFourierModes+1]';
