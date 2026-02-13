@@ -55,10 +55,11 @@ heating_merge_gap_s      = 10.0;      % Merge events closer than this [s]
 heating_baseline_frames  = 100;       % Frames for baseline estimation
 
 % --- Shape change detection ---
-roughness_sigma_threshold = 2.0;      % n-sigma above baseline
+roughness_sigma_threshold = 3.0;      % n-sigma above baseline (3σ avoids false positives)
 roughness_baseline_frames = 200;      % Frames for baseline estimation
 shape_min_duration_s      = 3.0;      % Minimum event duration [s]
 shape_merge_gap_s         = 1.0;      % Merge gap [s]
+shape_require_heating     = true;     % Only flag events near/after heating onset
 
 % --- Fourier analysis ---
 nFourierModes       = 30;             % Max Fourier mode
@@ -946,130 +947,96 @@ fprintf('\n=== Bending Rigidity Fitting ===\n');
 % Helfrich fluctuation spectrum for quasi-spherical vesicle (Faizi 2020):
 %   <|u_n|^2> = kBT / [ kappa * (n-1)*(n+2) * ((n-1)*(n+2) + sigma_bar) ]
 %
-% where sigma_bar = sigma * R^2 / kappa is the dimensionless tension
+% where sigma_bar = sigma * R^2 / kappa is the dimensionless tension.
 %
-% In log-log space, this gives:
-%   - n^{-4} at high n (bending dominated, sigma_bar << n^2)
-%   - n^{-2} at low n  (tension dominated, sigma_bar >> 1)
+% REPARAMETERIZATION for numerical stability:
+%   Let kappa_hat = kappa / kBT  (dimensionless, ~20 for DOPC)
+%   Then: <|u_n|^2> = 1 / [ kappa_hat * (n-1)*(n+2) * ((n-1)*(n+2) + sigma_bar) ]
 %
-% Fit parameters: kappa [J], sigma_bar [dimensionless]
-% Then: sigma [N/m] = kappa * sigma_bar / R^2
+% Fit parameters: kappa_hat [dimensionless], sigma_bar [dimensionless]
+% Both are O(1)-O(100), so the optimizer works well.
 
-% --- Fitting function ---
-helfrich_spectrum = @(params, n) kBT ./ ...
+% --- Fitting function (dimensionless kappa_hat) ---
+helfrich_spectrum_hat = @(params, n) 1 ./ ...
     (params(1) .* (n-1).*(n+2) .* ((n-1).*(n+2) + params(2)));
-% params(1) = kappa [J], params(2) = sigma_bar [dimensionless]
+% params(1) = kappa_hat = kappa/kBT, params(2) = sigma_bar
+
+% Also define the physical version for plotting:
+helfrich_spectrum = @(kappa_kBT, sigma_bar, n) 1 ./ ...
+    (kappa_kBT .* (n-1).*(n+2) .* ((n-1).*(n+2) + sigma_bar));
+
+% --- Restrict fitting range to reliable modes ---
+% Upper limit: min of user setting and highest reliable mode from
+% integration time analysis
+fit_mode_max_actual = min(fit_mode_max, max_reliable_mode);
+fprintf('Fitting mode range: n = %d to %d (max reliable: %d)\n', ...
+    fit_mode_min, fit_mode_max_actual, max_reliable_mode);
+
+fit_idx = (physical_modes >= fit_mode_min) & (physical_modes <= fit_mode_max_actual);
+
+% --- Helper function to fit one regime ---
+fit_helfrich = @(spectrum_data) fit_helfrich_regime(spectrum_data, ...
+    fit_idx, physical_modes, helfrich_spectrum_hat, ...
+    R_m, kBT, optical_projection_factor);
 
 % --- Fit regime 1 (no heating baseline) ---
-fit_idx = (physical_modes >= fit_mode_min) & (physical_modes <= fit_mode_max);
-n_fit   = physical_modes(fit_idx);
-s_fit   = spectrum_regime1(fit_idx);
+[fit_result_1, fit_success_1] = fit_helfrich(spectrum_regime1);
 
-% Remove zero or negative values (from noise subtraction)
-valid = s_fit > 0;
-n_fit = n_fit(valid);
-s_fit = s_fit(valid);
+if fit_success_1
+    kappa_kBT_1           = fit_result_1.kappa_kBT;
+    kappa_corrected_kBT_1 = fit_result_1.kappa_corrected_kBT;
+    sigma_bar_1           = fit_result_1.sigma_bar;
+    sigma_Nm_1            = fit_result_1.sigma_Nm;
+    p_fit1                = [fit_result_1.kappa_kBT, fit_result_1.sigma_bar];
 
-if length(n_fit) >= 4
-    % Log-space fitting for better conditioning
-    log_spectrum_fun = @(params, n) log(helfrich_spectrum(params, n));
-
-    % Initial guess: kappa ~ 20 kBT, sigma_bar ~ 10
-    p0 = [20 * kBT, 10];
-    lb = [1 * kBT, 0];
-    ub = [100 * kBT, 1000];
-
-    opts = optimoptions('lsqcurvefit', 'Display', 'off', ...
-        'MaxIterations', 1000, 'FunctionTolerance', 1e-12);
-
-    try
-        [p_fit1, resnorm1] = lsqcurvefit(log_spectrum_fun, p0, n_fit, log(s_fit), ...
-            log(lb), log(ub), opts);
-        % Correct: fit was done in log space with log bounds, extract actual params
-        % Actually lsqcurvefit bounds apply to parameters, not to log.
-        % Redo properly:
-        cost_fn = @(p) log(helfrich_spectrum(p, n_fit)) - log(s_fit);
-        [p_fit1, resnorm1] = lsqnonlin(cost_fn, p0, lb, ub, opts);
-
-        kappa_raw_1    = p_fit1(1);
-        sigma_bar_1    = p_fit1(2);
-        kappa_kBT_1    = kappa_raw_1 / kBT;
-        sigma_Nm_1     = kappa_raw_1 * sigma_bar_1 / (R_m^2);
-
-        % Apply optical projection correction (Rautu 2017)
-        kappa_corrected_1 = kappa_raw_1 * optical_projection_factor;
-        kappa_corrected_kBT_1 = kappa_corrected_1 / kBT;
-
-        fprintf('--- Regime 1 (No Heating) ---\n');
-        fprintf('  kappa (raw)       = %.1f kBT  (%.2e J)\n', kappa_kBT_1, kappa_raw_1);
-        fprintf('  kappa (corrected) = %.1f kBT  (%.2e J) [x%.1f projection]\n', ...
-            kappa_corrected_kBT_1, kappa_corrected_1, optical_projection_factor);
-        fprintf('  sigma_bar         = %.1f\n', sigma_bar_1);
-        fprintf('  sigma             = %.2e N/m\n', sigma_Nm_1);
-        fprintf('  Literature DOPC:    20-27 kBT (Faizi 2020, Rautu 2017)\n');
-
-        fit_success_1 = true;
-    catch ME
-        fprintf('Regime 1 fit failed: %s\n', ME.message);
-        fit_success_1 = false;
-        kappa_kBT_1 = NaN;
-        kappa_corrected_kBT_1 = NaN;
-        sigma_bar_1 = NaN;
-        sigma_Nm_1 = NaN;
-    end
+    fprintf('--- Regime 1 (No Heating) ---\n');
+    fprintf('  kappa (raw)       = %.1f kBT  (%.2e J)\n', ...
+        kappa_kBT_1, kappa_kBT_1 * kBT);
+    fprintf('  kappa (corrected) = %.1f kBT  [x%.1f projection, Rautu 2017]\n', ...
+        kappa_corrected_kBT_1, optical_projection_factor);
+    fprintf('  sigma_bar         = %.1f\n', sigma_bar_1);
+    fprintf('  sigma             = %.2e N/m\n', sigma_Nm_1);
+    fprintf('  Literature DOPC:    20-27 kBT (Faizi 2020, Rautu 2017)\n');
 else
-    fprintf('Not enough valid modes for regime 1 fit\n');
-    fit_success_1 = false;
-    kappa_kBT_1 = NaN;
+    kappa_kBT_1 = NaN; kappa_corrected_kBT_1 = NaN;
+    sigma_bar_1 = NaN; sigma_Nm_1 = NaN;
+    fprintf('Regime 1 fit FAILED\n');
 end
 
 % --- Fit regime 3 (heating steady state) ---
 if sum(mask_heating_steady) > 50
-    s_fit3 = spectrum_regime3(fit_idx);
-    n_fit3 = physical_modes(fit_idx);
-    valid3 = s_fit3 > 0;
-    n_fit3 = n_fit3(valid3);
-    s_fit3 = s_fit3(valid3);
+    [fit_result_3, fit_success_3] = fit_helfrich(spectrum_regime3);
+else
+    fit_success_3 = false;
+    fprintf('Not enough regime 3 frames for fitting\n');
+end
 
-    if length(n_fit3) >= 4
-        try
-            cost_fn3 = @(p) log(helfrich_spectrum(p, n_fit3)) - log(s_fit3);
-            [p_fit3, resnorm3] = lsqnonlin(cost_fn3, p0, lb, ub, opts);
+if fit_success_3
+    kappa_kBT_3           = fit_result_3.kappa_kBT;
+    kappa_corrected_kBT_3 = fit_result_3.kappa_corrected_kBT;
+    sigma_bar_3           = fit_result_3.sigma_bar;
+    sigma_Nm_3            = fit_result_3.sigma_Nm;
+    p_fit3                = [fit_result_3.kappa_kBT, fit_result_3.sigma_bar];
 
-            kappa_raw_3    = p_fit3(1);
-            sigma_bar_3    = p_fit3(2);
-            kappa_kBT_3    = kappa_raw_3 / kBT;
-            sigma_Nm_3     = kappa_raw_3 * sigma_bar_3 / (R_m^2);
-            kappa_corrected_3 = kappa_raw_3 * optical_projection_factor;
-            kappa_corrected_kBT_3 = kappa_corrected_3 / kBT;
+    fprintf('\n--- Regime 3 (Heating Steady) ---\n');
+    fprintf('  kappa (raw)       = %.1f kBT\n', kappa_kBT_3);
+    fprintf('  kappa (corrected) = %.1f kBT\n', kappa_corrected_kBT_3);
+    fprintf('  sigma_bar         = %.1f\n', sigma_bar_3);
+    fprintf('  sigma             = %.2e N/m\n', sigma_Nm_3);
 
-            fprintf('\n--- Regime 3 (Heating Steady) ---\n');
-            fprintf('  kappa (raw)       = %.1f kBT  (%.2e J)\n', kappa_kBT_3, kappa_raw_3);
-            fprintf('  kappa (corrected) = %.1f kBT  (%.2e J)\n', ...
-                kappa_corrected_kBT_3, kappa_corrected_3);
-            fprintf('  sigma_bar         = %.1f\n', sigma_bar_3);
-            fprintf('  sigma             = %.2e N/m\n', sigma_Nm_3);
-
-            delta_kappa = kappa_corrected_kBT_3 - kappa_corrected_kBT_1;
-            fprintf('  Delta kappa (heated - baseline) = %.1f kBT\n', delta_kappa);
-            if delta_kappa < 0
-                fprintf('  -> Membrane SOFTENS during heating (consistent with Wennerstrom 2025)\n');
-            end
-
-            fit_success_3 = true;
-        catch ME
-            fprintf('Regime 3 fit failed: %s\n', ME.message);
-            fit_success_3 = false;
-            kappa_kBT_3 = NaN;
+    if fit_success_1
+        delta_kappa = kappa_corrected_kBT_3 - kappa_corrected_kBT_1;
+        fprintf('  Delta kappa (heated - baseline) = %.1f kBT\n', delta_kappa);
+        if delta_kappa < 0
+            fprintf('  -> Membrane SOFTENS during heating (Wennerstrom 2025)\n');
         end
-    else
-        fit_success_3 = false;
-        kappa_kBT_3 = NaN;
     end
 else
-    fprintf('Not enough regime 3 frames for fitting\n');
-    fit_success_3 = false;
-    kappa_kBT_3 = NaN;
+    kappa_kBT_3 = NaN; kappa_corrected_kBT_3 = NaN;
+    sigma_bar_3 = NaN; sigma_Nm_3 = NaN;
+    if sum(mask_heating_steady) > 50
+        fprintf('Regime 3 fit FAILED\n');
+    end
 end
 
 %% Fourier Spectra Visualization (corrected)
@@ -1080,6 +1047,7 @@ col_heating_steady = [1 0.6 0.2];
 figure('Name', 'Fourier Spectra by Regime (Corrected)', ...
     'Position', [100 100 1200 800], 'Color', 'white');
 
+% --- Left panel: spectra + fits ---
 subplot(1,2,1);
 h1 = loglog(physical_modes, spectrum_regime1, 'o-', 'Color', col_no_heating, ...
     'MarkerSize', 8, 'MarkerFaceColor', col_no_heating, 'LineWidth', 2); hold on;
@@ -1088,16 +1056,22 @@ h2 = loglog(physical_modes, spectrum_regime2, 's-', 'Color', col_shape_change, .
 h3 = loglog(physical_modes, spectrum_regime3, 'd-', 'Color', col_heating_steady, ...
     'MarkerSize', 8, 'MarkerFaceColor', col_heating_steady, 'LineWidth', 2);
 
-% % Helfrich fit overlay
-% if fit_success_1
-%     n_plot = linspace(2, nFourierModes+1, 200)';
-%     s_fit_plot = helfrich_spectrum(p_fit1, n_plot);
-%     h_fit1 = loglog(n_plot, s_fit_plot, '-', 'Color', [0.3 0.3 0.3], 'LineWidth', 2.5);
-% end
-% if fit_success_3
-%     s_fit3_plot = helfrich_spectrum(p_fit3, n_plot);
-%     h_fit3 = loglog(n_plot, s_fit3_plot, '-', 'Color', [0.9 0.5 0.1], 'LineWidth', 2.5);
-% end
+% Helfrich fit overlay (n_plot defined outside conditionals to avoid scope issues)
+n_plot = linspace(2, nFourierModes+1, 200)';
+h_fit1 = gobjects(0); h_fit3 = gobjects(0);  % Initialize as empty graphics
+
+if fit_success_1
+    s_fit_plot = helfrich_spectrum(p_fit1(1), p_fit1(2), n_plot);
+    h_fit1 = loglog(n_plot, s_fit_plot, '-', 'Color', [0.3 0.3 0.3], 'LineWidth', 2.5);
+end
+if fit_success_3
+    s_fit3_plot = helfrich_spectrum(p_fit3(1), p_fit3(2), n_plot);
+    h_fit3 = loglog(n_plot, s_fit3_plot, '-', 'Color', [0.9 0.5 0.1], 'LineWidth', 2.5);
+end
+
+% Mark fit range
+xline(fit_mode_min, 'k:', 'LineWidth', 0.8, 'Alpha', 0.5);
+xline(fit_mode_max_actual, 'k:', 'LineWidth', 0.8, 'Alpha', 0.5);
 
 % Reference power laws
 n_ref = [2, nFourierModes+1]';
@@ -1111,24 +1085,21 @@ h_r2 = loglog(n_ref, ref_n2, 'k--',  'LineWidth', 1.5);
 h_r3 = loglog(n_ref, ref_n3, 'k:',   'LineWidth', 1.5);
 h_r4 = loglog(n_ref, ref_n4, 'k-.',  'LineWidth', 1.5);
 
-if noise_floor > 0
-    yline(noise_floor, 'm:', 'LineWidth', 1.5);
-end
-
 xlabel('Mode $n$', 'Interpreter', 'latex', 'FontSize', 20);
 ylabel('$\langle |u_n|^2 \rangle$', 'Interpreter', 'latex', 'FontSize', 20);
 grid on; set(gca, 'FontSize', 18, 'TickLabelInterpreter', 'latex');
 xlim([2 nFourierModes+1]);
 
+% Build legend dynamically
 leg_entries = {h1, h2, h3};
 leg_labels  = {'No heating', 'Shape change', 'Heating steady'};
-if fit_success_1
+if fit_success_1 && ~isempty(h_fit1)
     leg_entries{end+1} = h_fit1;
-    leg_labels{end+1}  = sprintf('Fit: $\\kappa=%.1f\\,k_BT$', kappa_kBT_1);
+    leg_labels{end+1}  = sprintf('Fit R1: $\\kappa=%.1f\\,k_BT$', kappa_kBT_1);
 end
-if fit_success_3
+if fit_success_3 && ~isempty(h_fit3)
     leg_entries{end+1} = h_fit3;
-    leg_labels{end+1}  = sprintf('Fit: $\\kappa=%.1f\\,k_BT$', kappa_kBT_3);
+    leg_labels{end+1}  = sprintf('Fit R3: $\\kappa=%.1f\\,k_BT$', kappa_kBT_3);
 end
 leg_entries = [leg_entries, {h_r2, h_r3, h_r4}];
 leg_labels  = [leg_labels, {'$n^{-2}$ (tension)', '$n^{-3}$ (mixed)', '$n^{-4}$ (bending)'}];
@@ -1136,7 +1107,7 @@ legend([leg_entries{:}], leg_labels, 'Interpreter', 'latex', 'FontSize', 12, 'Lo
 
 title('Corrected Spectra', 'Interpreter', 'latex', 'FontSize', 18);
 
-% Right panel: raw vs corrected comparison
+% --- Right panel: raw vs corrected comparison ---
 subplot(1,2,2);
 loglog(physical_modes, spectrum_raw_regime1, 'o--', 'Color', [0.7 0.7 0.9], ...
     'MarkerSize', 6, 'LineWidth', 1.5, 'DisplayName', 'Raw'); hold on;
@@ -1146,6 +1117,9 @@ loglog(physical_modes, spectrum_regime1, 'o-', 'Color', col_no_heating, ...
 if noise_floor > 0
     yline(noise_floor, 'm:', 'LineWidth', 1.5, 'DisplayName', 'Noise floor');
 end
+% Show max reliable mode
+xline(max_reliable_mode, 'r--', 'LineWidth', 1.5, 'DisplayName', ...
+    sprintf('Max reliable (n=%d)', max_reliable_mode));
 xlabel('Mode $n$', 'Interpreter', 'latex', 'FontSize', 20);
 ylabel('$\langle |u_n|^2 \rangle$', 'Interpreter', 'latex', 'FontSize', 20);
 legend('Interpreter', 'latex', 'FontSize', 14, 'Location', 'southwest');
@@ -1496,3 +1470,125 @@ fprintf('║   [x] Non-Gaussian kurtosis check (Sciortino 2025) ║\n');
 fprintf('╚══════════════════════════════════════════════════════╝\n');
 
 fprintf('\n=== Analysis Complete ===\n');
+
+%% ═══════════════════════════════════════════════════════════════
+%% LOCAL FUNCTIONS
+%% ═══════════════════════════════════════════════════════════════
+
+function [result, success] = fit_helfrich_regime(spectrum_data, fit_idx, ...
+    physical_modes, helfrich_model_hat, R_m, kBT, projection_factor)
+% FIT_HELFRICH_REGIME  Fit Helfrich fluctuation spectrum to one regime.
+%
+%   [result, success] = fit_helfrich_regime(spectrum_data, fit_idx,
+%       physical_modes, helfrich_model_hat, R_m, kBT, projection_factor)
+%
+%   INPUTS:
+%     spectrum_data     - Column vector of <|u_n|^2> for each physical mode
+%     fit_idx           - Logical mask of which modes to fit
+%     physical_modes    - Vector of mode numbers (e.g. [2, 3, ..., N])
+%     helfrich_model_hat - Function handle @(params, n) returning
+%                         dimensionless spectrum with params = [kappa_hat, sigma_bar]
+%     R_m               - Mean vesicle radius in meters
+%     kBT               - Thermal energy in Joules
+%     projection_factor - Optical projection correction factor (~1.4)
+%
+%   OUTPUTS:
+%     result  - Struct with fields: kappa_kBT, kappa_corrected_kBT,
+%               sigma_bar, sigma_Nm, residual_norm
+%     success - Boolean flag
+
+    result  = struct('kappa_kBT', NaN, 'kappa_corrected_kBT', NaN, ...
+                     'sigma_bar', NaN, 'sigma_Nm', NaN, 'residual_norm', NaN);
+    success = false;
+
+    % Extract fitting data
+    n_fit = physical_modes(fit_idx);
+    s_fit = spectrum_data(fit_idx);
+
+    % Remove zero or negative values (can occur after noise subtraction)
+    valid = s_fit > 0 & isfinite(s_fit);
+    n_fit = n_fit(valid);
+    s_fit = s_fit(valid);
+
+    if length(n_fit) < 3
+        fprintf('  Fit skipped: only %d valid data points\n', length(n_fit));
+        return;
+    end
+
+    % --- Initial guesses ---
+    % kappa_hat ~ 20 (DOPC), sigma_bar ~ 10
+    p0 = [20, 10];
+
+    % --- Bounds (dimensionless, both O(1)-O(100)) ---
+    lb = [1,   0.01];   % kappa_hat >= 1 kBT, sigma_bar >= 0.01
+    ub = [200, 5000];   % kappa_hat <= 200 kBT, sigma_bar <= 5000
+
+    % --- Optimizer settings ---
+    opts = optimoptions('lsqcurvefit', ...
+        'Display',          'off', ...
+        'MaxFunctionEvaluations', 2000, ...
+        'MaxIterations',    500, ...
+        'FunctionTolerance', 1e-12, ...
+        'StepTolerance',    1e-10, ...
+        'TypicalX',         [20, 10]);
+
+    % --- Fit in log-space for better conditioning ---
+    log_model = @(params, n) log(helfrich_model_hat(params, n));
+    log_data  = log(s_fit);
+
+    try
+        [p_opt, resnorm, ~, exitflag] = lsqcurvefit( ...
+            log_model, p0, n_fit, log_data, lb, ub, opts);
+
+        if exitflag <= 0
+            % Try different initial conditions
+            p0_alt = [10, 1;  40, 50;  5, 100;  30, 5];
+            for k = 1:size(p0_alt, 1)
+                [p_try, rn_try, ~, ef_try] = lsqcurvefit( ...
+                    log_model, p0_alt(k,:), n_fit, log_data, lb, ub, opts);
+                if ef_try > 0 && rn_try < resnorm
+                    p_opt    = p_try;
+                    resnorm  = rn_try;
+                    exitflag = ef_try;
+                end
+            end
+        end
+
+        if exitflag <= 0
+            fprintf('  Fit did not converge (exitflag = %d)\n', exitflag);
+            return;
+        end
+
+        % --- Check if solution hit bounds ---
+        at_bound = false;
+        bound_msg = '';
+        if abs(p_opt(1) - lb(1)) < 0.1 || abs(p_opt(1) - ub(1)) < 1
+            at_bound = true;
+            bound_msg = [bound_msg, sprintf('kappa_hat=%.1f ', p_opt(1))];
+        end
+        if abs(p_opt(2) - lb(2)) < 0.01 || abs(p_opt(2) - ub(2)) < 10
+            at_bound = true;
+            bound_msg = [bound_msg, sprintf('sigma_bar=%.1f ', p_opt(2))];
+        end
+        if at_bound
+            fprintf('  WARNING: Fit hit bounds for: %s\n', bound_msg);
+        end
+
+        % --- Convert to physical units ---
+        kappa_kBT     = p_opt(1);                              % dimensionless
+        kappa_corr    = kappa_kBT * projection_factor;         % projection-corrected
+        sigma_bar     = p_opt(2);                              % dimensionless
+        sigma_Nm      = sigma_bar * kappa_kBT * kBT / R_m^2;  % sigma = sigma_bar * kappa / R^2
+
+        % --- Populate result ---
+        result.kappa_kBT           = kappa_kBT;
+        result.kappa_corrected_kBT = kappa_corr;
+        result.sigma_bar           = sigma_bar;
+        result.sigma_Nm            = sigma_Nm;
+        result.residual_norm       = resnorm;
+        success = true;
+
+    catch ME
+        fprintf('  Fit failed: %s\n', ME.message);
+    end
+end
