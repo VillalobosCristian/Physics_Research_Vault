@@ -26,6 +26,13 @@ tags:
 - [[Quantitative Comparison - My Findings vs Literature]] — Side-by-side comparison tables
 - [[Publication Strategy and Gap Analysis]] — Journal targets, missing experiments, paper framing
 
+## Deep Dives & Protocols (Phase 2, 2026-02-16)
+
+- [[Protocol - Temperature Calibration Methods]] — Step-by-step protocols for Rhodamine B, Brownian thermometry, and Laurdan GP
+- [[Deep Dive - DOPC Permeability Dynamics]] — P_f(T) compilation, pore formation timescales, rate-dependence hypothesis, calcein assay protocol
+- [[Deep Dive - Fourier Analysis Validation and Best Practices]] — Mode range selection, correction limitations, when to trust results
+- [[Quantitative Reference - DOPC Mechanical Properties and Controls]] — Definitive property tables for DOPC, POPC, DPPC, DOPC+Chol
+
 ## Individual Paper Notes
 
 ### Membrane Permeability & Thermal Effects
@@ -56,14 +63,23 @@ tags:
 
 | Parameter | Value | Source |
 |-----------|-------|--------|
-| DOPC $\kappa$ | $20$–$27\,k_BT$ | Faizi 2020, Rautu 2017 |
+| DOPC $\kappa$ (raw) | $19$–$23\,k_BT$ | Faizi 2020 |
+| DOPC $\kappa$ (projection-corrected) | $27 \pm 1\,k_BT$ | Rautu 2017 |
+| DOPC $d\kappa/dT$ | $\sim -0.15$ to $-0.2\,k_BT$/°C | CMU Lipid Group |
+| DOPC $K_A$ | $230 \pm 10$ mN/m | Evans & Rawicz 1990 |
+| DOPC $P_f$ | $42 \pm 6\,\mu$m/s | Olbrich 2000 |
+| DOPC $\alpha_A$ | $0.0029$/°C | Kučerka 2011 |
+| DOPC edge tension | $27.7$ pN | AFM |
+| DOPC area per lipid (30°C) | $72.4$ Å$^2$ | Kučerka 2011 |
 | DOPC tension (free) | $\sim 3 \times 10^{-7}$ N/m | Faizi 2020 |
-| DOPC area expansion | $\sim 0.5\%$/°C | Rørvig-Lund 2015 |
-| Water permeability (POPC) | $\sim 16\,\mu$m/s | Wennerström 2022 |
+| POPC $\kappa$ | $25.5 \pm 2.6\,k_BT$ | Multiple |
+| POPC $P_f$ | $\sim 16\,\mu$m/s | Wennerström 2022 |
 | DOPC Soret coefficient | $-0.2$ to $-0.4$ K$^{-1}$ | Hill 2018 |
 | Thermo-osmotic slip (Au) | $\sim 10^{-10}$ m$^2$s$^{-1}$K$^{-1}$ | Fränzl 2022 |
 | Substrate $\Delta T$ (our setup) | $5$–$8$ K | Villalobos-Concha |
 | Phase transition expulsion $\tau$ | $4$–$5$ s | Leirer 2009 |
+| Pore resealing (osmotic stress) | $0.3$–$0.5$ s | Karatekin 2003 |
+| RhB thermometry sensitivity | $1.6$–$3.4\%$/°C | Ross 2001 |
 
 ## Connection to Existing Vault Notes
 
@@ -76,4 +92,5 @@ tags:
 - [[Budding]] — Shape transition concept
 
 ---
-*This review covers $\sim 40$ papers from the References folder, with detailed notes on the 17 most relevant to the optothermal GUV project.*
+*Phase 1 (2026-02-13): Initial review of $\sim 40$ papers, 16 detailed notes, 4 MOCs, publication strategy.*
+*Phase 2 (2026-02-16): Deep dives on temperature calibration, permeability dynamics, Fourier analysis validation, and quantitative property compilation.*

@@ -87,26 +87,27 @@ tags:
 17. Gueguen et al. (2017) — fluctuation tension theory
 18. Döbereiner & Gompper (2003) — advanced flicker spectroscopy
 
-## 5. Gap Analysis — Missing Experiments
+## 5. Gap Analysis — Missing Experiments (Updated 2026-02-16)
 
 ### Critical (must have for publication):
-- [ ] **Temperature calibration:** Direct measurement of $\Delta T$ in the GUV environment (fluorescent thermometry or Brownian motion analysis)
-- [ ] **Power dependence:** Systematic variation of blue light intensity → deformation amplitude
-- [ ] **Statistics:** $N \geq 10$–$15$ vesicles with complete heating cycle data
-- [ ] **Bending rigidity in each regime:** Measure $\kappa$ before, during, and after heating
+- [ ] **Temperature calibration** ⭐⭐⭐: Direct measurement of $\Delta T$ using Rhodamine B thermometry (50 μM in glucose solution, 1.6–3.4%/°C sensitivity). See [[Protocol - Temperature Calibration Methods]]. Estimated effort: 1–2 weeks.
+- [ ] **Power dependence:** Systematic variation of blue light intensity → deformation amplitude. At least 3–5 power levels. Estimated effort: 1 week.
+- [ ] **Statistics:** $N \geq 10$–$15$ vesicles with complete heating cycle data. Estimated effort: 2–3 weeks.
+- [ ] **Bending rigidity in each regime:** Measure $\kappa$ before and after heating. Literature DOPC: $20$–$27\,k_BT$. Expected $\Delta\kappa \approx -1$ to $-2\,k_BT$ for $\Delta T = 5$–$10$ K. Estimated effort: included in statistics.
 
 ### Important (strengthens paper significantly):
-- [ ] **Concentration dependence:** Vary sucrose/glucose concentration to test osmotic mechanism
-- [ ] **Lipid composition:** Test POPC, DPPC (gel phase), or cholesterol-containing membranes
-- [ ] **Fluorescent permeability assay:** Encapsulate dye and measure leakage during heating
-- [ ] **Reduced volume validation:** Compare 2D-projected $v$ with confocal 3D reconstruction for a few vesicles
-- [ ] **Reversibility over multiple cycles:** Show shape changes are reproducible over 5+ cycles
+- [ ] **Fluorescent permeability assay** ⭐⭐: Encapsulate calcein (25 mM, self-quenching) in GUVs, monitor fluorescence drop during heating. See [[Deep Dive - DOPC Permeability Dynamics]] for protocol. This directly tests the transient-pore hypothesis. Estimated effort: 2 weeks.
+- [ ] **Lipid composition controls:** Test POPC ($P_f \approx 16\,\mu$m/s, lower than DOPC) and DOPC + 30% cholesterol ($\kappa \approx 35$–$50\,k_BT$, $P_f$ reduced 50%). See [[Quantitative Reference - DOPC Mechanical Properties and Controls]]. If deformation is abolished with cholesterol → supports permeability mechanism. Estimated effort: 2–3 weeks.
+- [ ] **Concentration dependence:** Vary sucrose/glucose concentration (100–400 mOsm) to test osmotic mechanism. Estimated effort: 1 week.
+- [ ] **Reduced volume validation:** Compare 2D-projected $v$ with confocal 3D reconstruction for a few representative vesicles. Estimated effort: 2–3 days with confocal access.
+- [ ] **Reversibility over multiple cycles:** Show shape changes are reproducible over 5+ on/off cycles. Estimated effort: 1–2 days per vesicle.
 
 ### Desirable (for highest impact):
-- [ ] **Theoretical model:** Develop coupled thermal-osmotic-mechanical model
-- [ ] **Simulations:** Phase-field or Surface Evolver simulation of the shape trajectory
-- [ ] **Time-resolved spectral analysis:** Measure $\kappa(t)$ and $\sigma(t)$ during the transient
-- [ ] **Comparison with electropermeabilization:** Test whether electric field produces similar dynamics
+- [ ] **Phase diagram trajectory:** Plot $(v(t), \Delta a(t))$ on Seifert-Lipowsky diagram. Requires estimating $\Delta a$ from 2D data. Non-equilibrium trajectories are poorly characterized in literature — this would be novel. See Seifert et al. 1991.
+- [ ] **Time-resolved $\kappa(t)$ and $\sigma(t)$:** Sliding window (100 frames $\approx 2$ s) Fourier analysis. Track spectral crossover mode $n^* = \sqrt{\bar\sigma}$ evolution. Requires careful attention to statistical requirements ($\geq 200$ frames per window preferred). See [[Deep Dive - Fourier Analysis Validation and Best Practices]].
+- [ ] **Theoretical model:** Coupled thermal-osmotic-mechanical model incorporating $P_f(T)$, $\alpha_A(T)$, $\kappa(T)$, and pore nucleation kinetics.
+- [ ] **Brownian thermometry cross-check:** Independent temperature measurement using particle tracking (Method B in [[Protocol - Temperature Calibration Methods]]).
+- [ ] **DPPC phase transition comparison:** Heat DPPC GUVs above $T_m = 41°$C and compare deformation dynamics with DOPC. This separates phase-transition-driven from fluid-phase mechanisms.
 
 ## 6. Analysis Improvements Recommended
 
