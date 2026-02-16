@@ -12,13 +12,13 @@ tags:
 
 ## 1. Deformation Amplitudes
 
-| Parameter | My Value | Literature Value | Reference | Agreement |
-|-----------|----------|-----------------|-----------|-----------|
-| Reduced volume (baseline) | $v_0 \approx 0.95$–$0.98$ | $v = 0.95$–$1.0$ (floppy vesicles) | Käs & Sackmann 1991 | Good |
-| Reduced volume (peak deformation) | $v \approx 0.69$ | $v \approx 0.75$–$0.85$ (stomatocytes) | Seifert & Lipowsky 1995 | **My value is lower** — deeper invagination |
-| Volume loss (transient) | $5$–$30\%$ | $6$–$25\%$ (thermal transitions) | Käs 1991, Leirer 2009 | Consistent |
-| Roughness (baseline) | $\sim 0.004$ | $\Delta R/R \sim 0.01$–$0.02$ (thermal) | Sciortino et al. 2025 | Similar order |
-| Roughness (peak) | $\sim 0.026$ ($6\times$ baseline) | $\Delta R/R \sim 0.2$ ($10\times$ for active) | Sciortino et al. 2025 | Comparable enhancement factor |
+| Parameter                         | My Value                          | Literature Value                              | Reference               | Agreement                                   |
+| --------------------------------- | --------------------------------- | --------------------------------------------- | ----------------------- | ------------------------------------------- |
+| Reduced volume (baseline)         | $v_0 \approx 0.95$–$0.98$         | $v = 0.95$–$1.0$ (floppy vesicles)            | Käs & Sackmann 1991     | Good                                        |
+| Reduced volume (peak deformation) | $v \approx 0.69$                  | $v \approx 0.75$–$0.85$ (stomatocytes)        | Seifert & Lipowsky 1995 | **My value is lower** — deeper invagination |
+| Volume loss (transient)           | $5$–$30\%$                        | $6$–$25\%$ (thermal transitions)              | Käs 1991, Leirer 2009   | Consistent                                  |
+| Roughness (baseline)              | $\sim 0.004$                      | $\Delta R/R \sim 0.01$–$0.02$ (thermal)       | Sciortino et al. 2025   | Similar order                               |
+| Roughness (peak)                  | $\sim 0.026$ ($6\times$ baseline) | $\Delta R/R \sim 0.2$ ($10\times$ for active) | Sciortino et al. 2025   | Comparable enhancement factor               |
 
 ## 2. Timescales
 
