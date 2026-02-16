@@ -22,14 +22,14 @@ tags:
 
 ## 2. Timescales
 
-| Process | My Value | Literature Value | Reference | Agreement |
-|---------|----------|-----------------|-----------|-----------|
-| Permeability spike | $\sim 2.7$ s | $\tau \approx 4$–$5$ s (phase transition) | Leirer et al. 2009 | **Same order** |
-| Osmotic recovery | $\sim 10$ s | $\sim 6$ min ($10\%$/min) | Wennerström et al. 2022 | **My value is much faster** |
-| Gold/substrate heating | $< 1$ s | ms timescale | Tsuji et al. 2024 | Consistent |
-| Volume efflux rate | $\Delta v/\Delta t \approx -0.02$ s$^{-1}$ | Not directly reported | — | **Novel measurement** |
-| Active deformation timescale | — | $2.5$–$10$ s | Sciortino et al. 2025 | Brackets my values |
-| Lipid mixing (post-fusion) | — | $\sim 10$ s | Rørvig-Lund et al. 2015 | Comparable to my recovery |
+| Process                      | My Value                                   | Literature Value                          | Reference               | Agreement                   |
+| ---------------------------- | ------------------------------------------ | ----------------------------------------- | ----------------------- | --------------------------- |
+| Permeability spike           | $\sim 2.7$ s                               | $\tau \approx 4$–$5$ s (phase transition) | Leirer et al. 2009      | **Same order**              |
+| Osmotic recovery             | $\sim 10$ s                                | $\sim 6$ min ($10\%$/min)                 | Wennerström et al. 2022 | **My value is much faster** |
+| Gold/substrate heating       | $< 1$ s                                    | ms timescale                              | Tsuji et al. 2024       | Consistent                  |
+| Volume efflux rate           | $\Delta v/\Delta t \approx -0.02$ s$^{-1}$ | Not directly reported                     | —                       | **Novel measurement**       |
+| Active deformation timescale | —                                          | $2.5$–$10$ s                              | Sciortino et al. 2025   | Brackets my values          |
+| Lipid mixing (post-fusion)   | —                                          | $\sim 10$ s                               | Rørvig-Lund et al. 2015 | Comparable to my recovery   |
 
 ## 3. Temperature and Heating Parameters
 
