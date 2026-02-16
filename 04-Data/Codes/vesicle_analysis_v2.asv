@@ -751,171 +751,97 @@ for i = 1:num_cycles
     heatingCycles(i).v_change = heatingCycles(i).v_post - heatingCycles(i).v_pre;
 end
 
-%% ═══════════════════════════════════════════════════════════════
-%% FOURIER SPECTRA BY TEMPORAL SEGMENTS
-%% ═══════════════════════════════════════════════════════════════
+%% ═══════════════════════════════════════
+%% FOURIER SPECTRA BY REGIME
+%% ═══════════════════════════════════════
 
-fprintf('\n=== Fourier Spectra Analysis (Temporal Segments) ===\n');
 
 nFourierModes = 30;
 
 % Extract radii from all frames
+allRadii_inner = zeros(numFrames, length(angles));
 allRadii_mid = zeros(numFrames, length(angles));
+allRadii_outer = zeros(numFrames, length(angles));
 
 for iF = 1:numFrames
+    allRadii_inner(iF, :) = allContours(iF).r_inner_smooth(:)';
     allRadii_mid(iF, :) = allContours(iF).r_midline_smooth(:)';
+    allRadii_outer(iF, :) = allContours(iF).r_outer_smooth(:)';
 end
 
 % Compute Fourier modes
+amp_sq_inner = zeros(numFrames, nFourierModes);
 amp_sq_mid = zeros(numFrames, nFourierModes);
+amp_sq_outer = zeros(numFrames, nFourierModes);
 
 for iF = 1:numFrames
+    % Inner
+    r = allRadii_inner(iF, :)';
+    r_fluct = r - mean(r);
+    u_n = fft(r_fluct) / length(r_fluct);
+    amp_sq_inner(iF, :) = abs(u_n(2:nFourierModes+1)).^2 * pixel_size_um^2;
+    
+    % Midline
     r = allRadii_mid(iF, :)';
     r_fluct = r - mean(r);
     u_n = fft(r_fluct) / length(r_fluct);
     amp_sq_mid(iF, :) = abs(u_n(2:nFourierModes+1)).^2 * pixel_size_um^2;
+    
+    % Outer
+    r = allRadii_outer(iF, :)';
+    r_fluct = r - mean(r);
+    u_n = fft(r_fluct) / length(r_fluct);
+    amp_sq_outer(iF, :) = abs(u_n(2:nFourierModes+1)).^2 * pixel_size_um^2;
 end
 
 modes = (1:nFourierModes)';
 
-% Define temporal segments based on heating cycles
-temporalSegments = struct('id',{},'type',{},'start',{},'end',{}, ...
-    'duration',{},'spectrum',{},'label',{});
+% Average spectra for each regime (using midline)
+spectrum_mid_regime1 = mean(amp_sq_mid(mask_no_heating, :), 1)';
+spectrum_mid_regime2 = mean(amp_sq_mid(mask_shape_change, :), 1)';
+spectrum_mid_regime3 = mean(amp_sq_mid(mask_heating_steady, :), 1)';
 
-segment_count = 0;
+fprintf('Frames per regime:\n');
+fprintf('  No heating:     %d\n', sum(mask_no_heating));
+fprintf('  Shape change:   %d\n', sum(mask_shape_change));
+fprintf('  Heating steady: %d\n', sum(mask_heating_steady));
 
-if num_cycles == 0
-    % No heating detected - single segment
-    segment_count = 1;
-    temporalSegments(1).id = 1;
-    temporalSegments(1).type = 'no_heating';
-    temporalSegments(1).start = 1;
-    temporalSegments(1).end = numFrames;
-    temporalSegments(1).duration = numFrames;
-    temporalSegments(1).spectrum = mean(amp_sq_mid, 1)';
-    temporalSegments(1).label = 'No heating';
-else
-    % Multiple segments interleaved with heating cycles
-    
-    % Segment 1: Before first heating
-    if heatingCycles(1).onset > 1
-        segment_count = segment_count + 1;
-        temporalSegments(segment_count).id = segment_count;
-        temporalSegments(segment_count).type = 'no_heating';
-        temporalSegments(segment_count).start = 1;
-        temporalSegments(segment_count).end = heatingCycles(1).onset - 1;
-        temporalSegments(segment_count).duration = heatingCycles(1).onset - 1;
-        idx = 1:(heatingCycles(1).onset-1);
-        temporalSegments(segment_count).spectrum = mean(amp_sq_mid(idx, :), 1)';
-        temporalSegments(segment_count).label = 'No heating 1';
-    end
-    
-    % Loop through heating cycles
-    for i = 1:num_cycles
-        % Heating segment
-        segment_count = segment_count + 1;
-        temporalSegments(segment_count).id = segment_count;
-        temporalSegments(segment_count).type = 'heating';
-        temporalSegments(segment_count).start = heatingCycles(i).onset;
-        temporalSegments(segment_count).end = heatingCycles(i).offset;
-        temporalSegments(segment_count).duration = heatingCycles(i).duration;
-        idx = heatingCycles(i).onset:heatingCycles(i).offset;
-        temporalSegments(segment_count).spectrum = mean(amp_sq_mid(idx, :), 1)';
-        temporalSegments(segment_count).label = sprintf('Heating %d', i);
-        
-        % No heating segment after this cycle (if not last cycle)
-        if i < num_cycles
-            gap_start = heatingCycles(i).offset + 1;
-            gap_end = heatingCycles(i+1).onset - 1;
-            
-            if gap_end >= gap_start
-                segment_count = segment_count + 1;
-                temporalSegments(segment_count).id = segment_count;
-                temporalSegments(segment_count).type = 'no_heating';
-                temporalSegments(segment_count).start = gap_start;
-                temporalSegments(segment_count).end = gap_end;
-                temporalSegments(segment_count).duration = gap_end - gap_start + 1;
-                idx = gap_start:gap_end;
-                temporalSegments(segment_count).spectrum = mean(amp_sq_mid(idx, :), 1)';
-                temporalSegments(segment_count).label = sprintf('No heating %d', i+1);
-            end
-        end
-    end
-    
-    % Final segment: After last heating
-    if heatingCycles(end).offset < numFrames
-        segment_count = segment_count + 1;
-        temporalSegments(segment_count).id = segment_count;
-        temporalSegments(segment_count).type = 'no_heating';
-        temporalSegments(segment_count).start = heatingCycles(end).offset + 1;
-        temporalSegments(segment_count).end = numFrames;
-        temporalSegments(segment_count).duration = numFrames - heatingCycles(end).offset;
-        idx = (heatingCycles(end).offset+1):numFrames;
-        temporalSegments(segment_count).spectrum = mean(amp_sq_mid(idx, :), 1)';
-        temporalSegments(segment_count).label = sprintf('No heating %d', num_cycles+1);
-    end
-end
+% Define colors for regimes
+col_no_heating = [0.7 0.7 0.7];
+col_shape_change = [0.9 0.3 0.3];
+col_heating_steady = [1 0.6 0.2];
 
-fprintf('Temporal segments identified: %d\n', segment_count);
-for i = 1:segment_count
-    fprintf('  Segment %d: %s (frames %d-%d, %d frames)\n', ...
-        i, temporalSegments(i).label, temporalSegments(i).start, ...
-        temporalSegments(i).end, temporalSegments(i).duration);
-end
+%% Fourier Spectra Visualization
 
-%% Fourier Spectra Visualization (Temporal Segments)
+figure('Name', 'Fourier Spectra by Regime', 'Position', [100 100 900 700], 'Color', 'white');
 
-figure('Name', 'Fourier Spectra by Temporal Segments', 'Position', [100 100 900 700], 'Color', 'white');
-
-% Generate colors: warm for heating, cool for no heating
-cmap_heating = hot(num_cycles+2);
-cmap_no_heating = cool(num_cycles+3);
-
-hold on;
-handles = [];
-labels = {};
-
-for i = 1:segment_count
-    if strcmp(temporalSegments(i).type, 'heating')
-        % Heating segments: warm colors (red/orange/yellow)
-        heating_idx = sum(strcmp({temporalSegments(1:i).type}, 'heating'));
-        col = cmap_heating(heating_idx+1, :);
-        marker = 'd';
-        linewidth = 2.5;
-    else
-        % No heating segments: cool colors (blue/cyan)
-        no_heat_idx = sum(strcmp({temporalSegments(1:i).type}, 'no_heating'));
-        col = cmap_no_heating(no_heat_idx+1, :);
-        marker = 'o';
-        linewidth = 2;
-    end
-    
-    h = loglog(modes, temporalSegments(i).spectrum, [marker '-'], ...
-        'Color', col, 'MarkerSize', 7, 'MarkerFaceColor', col, ...
-        'LineWidth', linewidth);
-    
-    handles(end+1) = h;
-    labels{end+1} = temporalSegments(i).label;
-end
+h1 = loglog(modes, spectrum_mid_regime1, 'o-', 'Color', col_no_heating, ...
+    'MarkerSize', 8, 'MarkerFaceColor', col_no_heating, 'LineWidth', 2); hold on;
+h2 = loglog(modes, spectrum_mid_regime2, 's-', 'Color', col_shape_change, ...
+    'MarkerSize', 8, 'MarkerFaceColor', col_shape_change, 'LineWidth', 2);
+h3 = loglog(modes, spectrum_mid_regime3, 'd-', 'Color', col_heating_steady, ...
+    'MarkerSize', 8, 'MarkerFaceColor', col_heating_steady, 'LineWidth', 2);
 
 % Reference lines
 n0 = 10;
-S0 = temporalSegments(1).spectrum(n0);
+S0 = spectrum_mid_regime1(n0);
 ref_n = [2, nFourierModes]';
+
 ref_tension = S0 * (ref_n/n0).^(-2);
 ref_bending = S0 * (ref_n/n0).^(-4);
 ref_mixed = S0 * (ref_n/n0).^(-3);
 
-h_ref1 = loglog(ref_n, ref_tension, 'k--', 'LineWidth', 2);
-h_ref2 = loglog(ref_n, ref_mixed, 'k:', 'LineWidth', 2);
-h_ref3 = loglog(ref_n, ref_bending, 'k-.', 'LineWidth', 2);
+h4 = loglog(ref_n, ref_tension, 'k--', 'LineWidth', 2);
+h5 = loglog(ref_n, ref_mixed, 'k:', 'LineWidth', 2);
+h6 = loglog(ref_n, ref_bending, 'k-.', 'LineWidth', 2);
 
 xlabel('Mode $n$', 'Interpreter', 'latex', 'FontSize', 20);
 ylabel('$\langle |u_n|^2 \rangle$ ($\mu$m$^2$)', 'Interpreter', 'latex', 'FontSize', 20);
 
-legend([handles, h_ref1, h_ref2, h_ref3], ...
-    [labels, {'$n^{-2}$ (tension)', '$n^{-3}$ (mixed)', '$n^{-4}$ (bending)'}], ...
-    'Interpreter', 'latex', 'FontSize', 11, 'Location', 'southwest', 'NumColumns', 2);
+legend([h1, h2, h3, h4, h5, h6], ...
+    {'No heating', 'Shape change', 'Heating steady', ...
+     '$n^{-2}$ (tension)', '$n^{-3}$ (mixed)', '$n^{-4}$ (bending)'}, ...
+    'Interpreter', 'latex', 'FontSize', 14, 'Location', 'southwest');
 grid on;
 set(gca, 'FontSize', 18, 'TickLabelInterpreter', 'latex');
 xlim([1 nFourierModes]);
@@ -935,7 +861,7 @@ plot(frameNumbers, circularity_smooth, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); 
 % Heating: orange line
 for i = 1:num_cycles
     idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, circularity_smooth(idx), '-', 'Color', col_heating, 'LineWidth', 3);
+    plot(idx, circularity_smooth(idx), '-', 'Color', col_heating_steady, 'LineWidth', 3);
 end
 
 % Shape change: color-coded by type
@@ -961,7 +887,7 @@ plot(frameNumbers, radius_midline_mean, 'Color', [0.7 0.7 0.7], 'LineWidth', 1);
 % Heating: orange line
 for i = 1:num_cycles
     idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, radius_midline_mean(idx), '-', 'Color', col_heating, 'LineWidth', 3);
+    plot(idx, radius_midline_mean(idx), '-', 'Color', col_heating_steady, 'LineWidth', 3);
 end
 
 % Shape change: color-coded by type
@@ -987,7 +913,7 @@ plot(frameNumbers, drift_smooth, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); hold o
 % Heating: orange line
 for i = 1:num_cycles
     idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, drift_smooth(idx), '-', 'Color', col_heating, 'LineWidth', 3);
+    plot(idx, drift_smooth(idx), '-', 'Color', col_heating_steady, 'LineWidth', 3);
 end
 
 % Shape change: color-coded by type
@@ -1014,7 +940,7 @@ yline(0, 'k:', 'LineWidth', 1);
 % Heating: orange line
 for i = 1:num_cycles
     idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, drift_rate_smooth(idx), '-', 'Color', col_heating, 'LineWidth', 3);
+    plot(idx, drift_rate_smooth(idx), '-', 'Color', col_heating_steady, 'LineWidth', 3);
 end
 
 % Shape change: color-coded by type
@@ -1040,7 +966,7 @@ plot(frameNumbers, roughness_smooth, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); ho
 % Heating: orange line
 for i = 1:num_cycles
     idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, roughness_smooth(idx), '-', 'Color', col_heating, 'LineWidth', 3);
+    plot(idx, roughness_smooth(idx), '-', 'Color', col_heating_steady, 'LineWidth', 3);
 end
 
 % Shape change: color-coded by type
@@ -1153,10 +1079,11 @@ analysisResults.shapeEvents = shapeEvents;
 analysisResults.shapeEvents_zones = shape_zones;
 analysisResults.shapeEvents_change_threshold = change_threshold;
 
-% Temporal segments and Fourier spectra
-analysisResults.temporalSegments = temporalSegments;
+% Fourier spectra
 analysisResults.fourier.modes = modes;
-analysisResults.fourier.segment_count = segment_count;
+analysisResults.fourier.spectrum_regime1 = spectrum_mid_regime1;
+analysisResults.fourier.spectrum_regime2 = spectrum_mid_regime2;
+analysisResults.fourier.spectrum_regime3 = spectrum_mid_regime3;
 
 % Metadata
 analysisResults.metadata.numFrames = numFrames;
@@ -1180,3 +1107,5 @@ fprintf('  Deformation events (roughness increase): %d\n', n_increase);
 fprintf('  Tensing events (roughness decrease):     %d\n', n_decrease);
 
 fprintf('\n=== Analysis Complete ===\n');
+
+
