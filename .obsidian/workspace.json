@@ -97,8 +97,7 @@
               "title": "Pasted image 20260202092223"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -250,8 +249,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "89bab1d007896fdb",
+  "active": "8757e3432403628f",
   "lastOpenFiles": [
+    "mergin_shapes.md",
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Publication Strategy and Gap Analysis.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/pécréaux2004_Refined contour analysis of GUVs.md",
@@ -270,13 +271,11 @@
     "03-Concepts/Differential-Geometry/Differentials on Surfaces.md",
     "03-Concepts/Differential-Geometry/Index notation.md",
     "Weekly-Prompt_2026-02-16.md",
-    "mergin_shapes.md",
     "Notes Tracker.md",
     "04-Data/Codes/vesicle_analysis_v2.m",
     "00-Dashboard/Concepts MOC.md",
     "00-Dashboard/GUV Research Hub.md",
     "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Optothermal Vesicle Manipulation.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/fränzl2022_Hydrodynamic manipulation by optically induced thermo-osmotic flows.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/wennerström2025_Coupling between membrane bending and stretching.md",
