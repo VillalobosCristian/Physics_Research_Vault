@@ -917,7 +917,7 @@ legend([handles, h_ref1, h_ref2, h_ref3], ...
     [labels, {'$n^{-2}$ (tension)', '$n^{-3}$ (mixed)', '$n^{-4}$ (bending)'}], ...
     'Interpreter', 'latex', 'FontSize', 11, 'Location', 'southwest', 'NumColumns', 2);
 grid on;
-set(gca, 'FontSize', 18, 'TickLabelInterpreter', 'latex');
+set(gca, 'FontSize', 18, 'TickLabelInterpreter', 'latex','xscale','log','yscale','log');
 xlim([1 nFourierModes]);
 
 %% ═══════════════════════════════════════
@@ -1166,17 +1166,17 @@ analysisResults.metadata.detection_method = 'change-based (Option 1)';
 
 % Save to file
 save('analysisResults_changeDetection.mat', 'analysisResults', '-v7.3');
-
-fprintf('✓ Analysis results saved to: analysisResults_changeDetection.mat\n');
-fprintf('\nSummary of representative frames:\n');
-fprintf('  Regime 1 (No heating):     %d frames selected\n', length(regime1_representative));
-fprintf('  Regime 2 (Shape change):   %d frames selected\n', length(regime2_representative));
-fprintf('  Regime 3 (Heating steady): %d frames selected\n', length(regime3_representative));
-
-fprintf('\nShape event classification:\n');
-n_increase = sum(strcmp({shapeEvents.type}, 'increase'));
-n_decrease = sum(strcmp({shapeEvents.type}, 'decrease'));
-fprintf('  Deformation events (roughness increase): %d\n', n_increase);
-fprintf('  Tensing events (roughness decrease):     %d\n', n_decrease);
-
-fprintf('\n=== Analysis Complete ===\n');
+% 
+% fprintf('✓ Analysis results saved to: analysisResults_changeDetection.mat\n');
+% fprintf('\nSummary of representative frames:\n');
+% fprintf('  Regime 1 (No heating):     %d frames selected\n', length(regime1_representative));
+% fprintf('  Regime 2 (Shape change):   %d frames selected\n', length(regime2_representative));
+% fprintf('  Regime 3 (Heating steady): %d frames selected\n', length(regime3_representative));
+% 
+% fprintf('\nShape event classification:\n');
+% n_increase = sum(strcmp({shapeEvents.type}, 'increase'));
+% n_decrease = sum(strcmp({shapeEvents.type}, 'decrease'));
+% fprintf('  Deformation events (roughness increase): %d\n', n_increase);
+% fprintf('  Tensing events (roughness decrease):     %d\n', n_decrease);
+% 
+% fprintf('\n=== Analysis Complete ===\n');
