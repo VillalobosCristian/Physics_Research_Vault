@@ -1,1182 +1,522 @@
 clearvars; clc; close all;
 
-%% Load Data
+%% Load
 
-% Load batch processing results
-S = load('contourExtraction_hybrid_fixed.mat', 'allContours', 'angles');
+S           = load('contourExtraction_hybrid_fixed.mat', 'allContours', 'angles');
 allContours = S.allContours;
-angles = S.angles;
-numFrames = length(allContours);
+angles      = S.angles;
+numFrames   = length(allContours);
+frameNumbers = 1:numFrames;
 
-%% Basic Metrics - Circularity
+%% Basic Metrics
 
-circularity = zeros(numFrames, 1);
-area = zeros(numFrames, 1);
-perimeter = zeros(numFrames, 1);
+circularity = zeros(numFrames,1);
+area        = zeros(numFrames,1);
+perimeter   = zeros(numFrames,1);
 
 for iFrame = 1:numFrames
     x = [allContours(iFrame).x_midline; allContours(iFrame).x_midline(1)];
     y = [allContours(iFrame).y_midline; allContours(iFrame).y_midline(1)];
-    
-    area(iFrame) = polyarea(x, y);
-    
-    dx = diff(x);
-    dy = diff(y);
-    perimeter(iFrame) = sum(sqrt(dx.^2 + dy.^2));
-    
-    % Circularity: C = 4π*A / P^2
-    circularity(iFrame) = 4 * pi * area(iFrame) / (perimeter(iFrame)^2);
+    dx = diff(x); dy = diff(y);
+    area(iFrame)        = polyarea(x,y);
+    perimeter(iFrame)   = sum(sqrt(dx.^2+dy.^2));
+    circularity(iFrame) = 4*pi*area(iFrame)/perimeter(iFrame)^2;
 end
 
-%% Basic Metrics - Drift
-
-xCM = zeros(numFrames, 1);
-yCM = zeros(numFrames, 1);
-
+xCM = zeros(numFrames,1); yCM = zeros(numFrames,1);
 for iFrame = 1:numFrames
-    % Extract contour coordinates
-    x = allContours(iFrame).x_midline;
-    y = allContours(iFrame).y_midline;
-    
-    % Center of mass using contour vertices (not area centroid)
-    % This is the geometric center of the contour points
-    xCM(iFrame) = mean(x);
-    yCM(iFrame) = mean(y);
+    xCM(iFrame) = mean(allContours(iFrame).x_midline);
+    yCM(iFrame) = mean(allContours(iFrame).y_midline);
 end
-
-% Compute drift from first frame
-drift_x = xCM - xCM(1);
-drift_y = yCM - yCM(1);
+drift_x         = xCM - xCM(1);
+drift_y         = yCM - yCM(1);
 drift_magnitude = sqrt(drift_x.^2 + drift_y.^2);
-total_drift = drift_magnitude(end);
-
-%% Basic Metrics - Radius
-
-radius_inner_mean = zeros(numFrames, 1);
-radius_midline_mean = zeros(numFrames, 1);
-radius_outer_mean = zeros(numFrames, 1);
-
-for iFrame = 1:numFrames
-    radius_inner_mean(iFrame) = mean(allContours(iFrame).r_inner_smooth);
-    radius_midline_mean(iFrame) = mean(allContours(iFrame).r_midline_smooth);
-    radius_outer_mean(iFrame) = mean(allContours(iFrame).r_outer_smooth);
-end
-
-% Compute radius changes from initial frame
-delta_radius_inner = radius_inner_mean - radius_inner_mean(1);
-delta_radius_midline = radius_midline_mean - radius_midline_mean(1);
-delta_radius_outer = radius_outer_mean - radius_outer_mean(1);
-
-frameNumbers = 1:numFrames;
-
-%% Basic Metrics Visualization
-
-hFig = figure('Name', 'Shape Metrics Time Series', ...
-    'Units', 'normalized', 'Position', [0.1 0.05 0.8 0.9], 'Color', 'white');
-
-subplot(2, 3, 1);
-plot(frameNumbers, circularity, 'b-', 'LineWidth', 1.5);
-hold on;
-yline(mean(circularity), 'r--', 'LineWidth', 1.5);
-xlabel('Frame Number', 'Interpreter', 'latex', 'FontSize', 20);
-ylabel('Circularity', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 20, 'TickLabelInterpreter', 'latex');
-ylim([min(circularity)*0.995, max(circularity)*1.005]);
-legend({'Circularity', sprintf('Mean = %.4f', mean(circularity))}, ...
-    'Location', 'best', 'Interpreter', 'latex', 'FontSize', 16);
-
-subplot(2, 3, 2);
-plot(frameNumbers, drift_magnitude, 'k-', 'LineWidth', 1.5);
-hold on;
-xlabel('Frame Number', 'Interpreter', 'latex', 'FontSize', 20);
-ylabel('Drift Magnitude (px)', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 20, 'TickLabelInterpreter', 'latex');
-legend({sprintf('Drift (total = %.2f px)', total_drift)}, ...
-    'Location', 'best', 'Interpreter', 'latex', 'FontSize', 16);
-
-subplot(2, 3, 3);
-plot(frameNumbers, drift_x, 'r-', 'LineWidth', 1.5, 'DisplayName', '$\Delta x$');
-hold on;
-plot(frameNumbers, drift_y, 'b-', 'LineWidth', 1.5, 'DisplayName', '$\Delta y$');
-xlabel('Frame Number', 'Interpreter', 'latex', 'FontSize', 20);
-ylabel('Drift (px)', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 20, 'TickLabelInterpreter', 'latex');
-legend('Interpreter', 'latex', 'Location', 'best', 'FontSize', 16);
-yline(0, 'k--', 'LineWidth', 0.5);
-
-subplot(2, 3, 4);
-plot(frameNumbers, radius_inner_mean, 'g-', 'LineWidth', 1.5, 'DisplayName', 'Inner');
-hold on;
-plot(frameNumbers, radius_midline_mean, 'r-', 'LineWidth', 1.5, 'DisplayName', 'Midline');
-plot(frameNumbers, radius_outer_mean, 'm-', 'LineWidth', 1.5, 'DisplayName', 'Outer');
-xlabel('Frame Number', 'Interpreter', 'latex', 'FontSize', 20);
-ylabel('Mean Radius (px)', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 20, 'TickLabelInterpreter', 'latex');
-legend('Interpreter', 'latex', 'Location', 'best', 'FontSize', 16);
-yline(mean(radius_inner_mean), 'g--', 'LineWidth', 1, 'Alpha', 0.5);
-yline(mean(radius_midline_mean), 'r--', 'LineWidth', 1, 'Alpha', 0.5);
-yline(mean(radius_outer_mean), 'm--', 'LineWidth', 1, 'Alpha', 0.5);
-
-subplot(2, 3, 5);
-plot(frameNumbers, delta_radius_inner, 'g-', 'LineWidth', 1.5, 'DisplayName', '$\Delta R_{\mathrm{inner}}$');
-hold on;
-plot(frameNumbers, delta_radius_midline, 'r-', 'LineWidth', 1.5, 'DisplayName', '$\Delta R_{\mathrm{midline}}$');
-plot(frameNumbers, delta_radius_outer, 'm-', 'LineWidth', 1.5, 'DisplayName', '$\Delta R_{\mathrm{outer}}$');
-xlabel('Frame Number', 'Interpreter', 'latex', 'FontSize', 20);
-ylabel('$\Delta R$ from initial (px)', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 20, 'TickLabelInterpreter', 'latex');
-legend('Interpreter', 'latex', 'Location', 'best', 'FontSize', 16);
-yline(0, 'k--', 'LineWidth', 0.5);
-
-subplot(2,3,6);
-yyaxis left
-plot(frameNumbers, circularity, 'b-', 'LineWidth', 1);
-ylabel('Circularity', 'Color', 'b', 'Interpreter', 'latex', 'FontSize', 20);
-yyaxis right
-plot(frameNumbers, radius_midline_mean, 'r-', 'LineWidth', 1);
-ylabel('Radius (px)', 'Color', 'r', 'Interpreter', 'latex', 'FontSize', 20);
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 20); 
-set(gca, 'FontSize', 20, 'TickLabelInterpreter', 'latex');
-grid on;
-
-%% Smoothing Signals
-
-smooth_window = 50; 
-circularity_smooth = smoothdata(circularity, 'gaussian', smooth_window);
-radius_smooth = smoothdata(radius_midline_mean, 'gaussian', smooth_window);
-drift_smooth = smoothdata(drift_magnitude, 'gaussian', 100);
-drift_rate = gradient(drift_smooth);
-drift_rate_smooth = smoothdata(drift_rate, 'gaussian', 30);
-dCirc_dt = gradient(circularity_smooth);
-dRad_dt = gradient(radius_smooth);
-
-%% Smoothed Signals Visualization
-
-figure('Name', 'Smoothed Signals & Drift Rate', 'Position', [100 100 1800 900], 'Color', 'white');
-
-subplot(3,2,1);
-plot(frameNumbers, circularity, 'Color', [0.7 0.7 0.7], 'LineWidth', 0.5); hold on;
-plot(frameNumbers, circularity_smooth, 'b-', 'LineWidth', 2.5);
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-ylabel('Circularity', 'Interpreter', 'latex', 'FontSize', 16);
-legend({'Raw', 'Smoothed'}, 'Interpreter', 'latex', 'FontSize', 14);
-grid on; set(gca, 'FontSize', 14, 'TickLabelInterpreter', 'latex');
-
-subplot(3,2,2);
-plot(frameNumbers, radius_midline_mean, 'Color', [0.7 0.7 0.7], 'LineWidth', 0.5); hold on;
-plot(frameNumbers, radius_smooth, 'r-', 'LineWidth', 2.5);
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-ylabel('Radius (px)', 'Interpreter', 'latex', 'FontSize', 16);
-legend({'Raw', 'Smoothed'}, 'Interpreter', 'latex', 'FontSize', 14);
-grid on; set(gca, 'FontSize', 14, 'TickLabelInterpreter', 'latex');
-
-subplot(3,2,3);
-plot(frameNumbers, drift_magnitude, 'k-', 'LineWidth', 1); hold on;
-plot(frameNumbers, drift_smooth, 'Color', [0.8 0.2 0.2], 'LineWidth', 3);
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-ylabel('Drift (px)', 'Interpreter', 'latex', 'FontSize', 16);
-legend({'Raw', 'Smoothed'}, 'Interpreter', 'latex', 'FontSize', 14, 'Location', 'northwest');
-grid on; set(gca, 'FontSize', 14, 'TickLabelInterpreter', 'latex');
-
-subplot(3,2,4);
-plot(frameNumbers, drift_rate_smooth, 'k-', 'LineWidth', 2); hold on;
-yline(0, 'r--', 'LineWidth', 1.5);
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-ylabel('Drift Rate (px/frame)', 'Interpreter', 'latex', 'FontSize', 16);
-grid on; set(gca, 'FontSize', 14, 'TickLabelInterpreter', 'latex');
-
-[drift_peaks, drift_peak_locs] = findpeaks(drift_rate_smooth, 'MinPeakHeight', 0.1, 'MinPeakDistance', 200);
-plot(drift_peak_locs, drift_peaks, 'r^', 'MarkerSize', 12, 'LineWidth', 2, 'MarkerFaceColor', 'r');
-
-if ~isempty(drift_peak_locs)
-    legend({'Drift rate', 'Zero', sprintf('%d peaks found', length(drift_peak_locs))}, ...
-        'Interpreter', 'latex', 'FontSize', 14);
-    fprintf('Found %d major drift rate peaks (potential heating OFF points)\n', length(drift_peak_locs));
-    for i = 1:length(drift_peak_locs)
-        fprintf('  Peak %d: frame %d, rate = %.3f px/frame\n', i, drift_peak_locs(i), drift_peaks(i));
-    end
-end
-
-subplot(3,2,5);
-plot(frameNumbers, dCirc_dt, 'b-', 'LineWidth', 1.5);
-yline(0, 'k--', 'LineWidth', 1);
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-ylabel('dC/dt', 'Interpreter', 'latex', 'FontSize', 16);
-grid on; set(gca, 'FontSize', 14, 'TickLabelInterpreter', 'latex');
-
-%% ═══════════════════════════════════════
-%% HEATING DETECTION (Drift-based)
-%% ═══════════════════════════════════════
-
-fprintf('\n=== Heating Detection ===\n');
-
-baseline_drift_rate = median(drift_rate);
-noise_level = std(drift_rate(1:min(100, numel(drift_rate))));
-
-% 3-sigma threshold for heating
-threshold_active = max(baseline_drift_rate + 3*noise_level, 0.03);
-
-fprintf('Drift rate baseline: %.4f px/frame\n', baseline_drift_rate);
-fprintf('Noise level: %.4f px/frame\n', noise_level);
-fprintf('Heating threshold: %.4f px/frame (3-sigma)\n', threshold_active);
-
-active_heating = (drift_rate) > threshold_active;
-active_heating_smooth = smoothdata(double(active_heating), 'gaussian', 20) > 0.5;
-
-heat_starts = find(diff([0; active_heating_smooth]) == 1);
-heat_ends = find(diff([active_heating_smooth; 0]) == -1);
-
-% Filtering criteria
-min_duration = 100;      % frames
-min_total_drift = 10;    % pixels
-
-durations = heat_ends - heat_starts + 1;
-total_drift_cycles = drift_magnitude(heat_ends) - drift_magnitude(heat_starts);
-
-mask = (durations >= min_duration) & (total_drift_cycles >= min_total_drift);
-valid_zones = [heat_starts(mask), heat_ends(mask)];
-
-% Merge nearby events
-merge_gap = 300;  % frames
-
-if size(valid_zones, 1) > 1
-    merged = valid_zones(1, :);
-    for k = 2:size(valid_zones, 1)
-        gap = valid_zones(k, 1) - merged(end, 2);
-        if gap < merge_gap
-            merged(end, 2) = valid_zones(k, 2);
-        else
-            merged = [merged; valid_zones(k, :)];
-        end
-    end
-    valid_zones = merged;
-end
-
-num_cycles = size(valid_zones, 1);
-
-fprintf('Heating cycles detected: %d\n', num_cycles);
-
-% Build heatingCycles struct
-heatingCycles = struct('id',{},'onset',{},'offset',{},'duration',{}, ...
-    'drift_start',{},'drift_end',{},'drift_total',{}, ...
-    'drift_rate_mean',{},'drift_rate_max',{}, ...
-    'circ_pre',{},'circ_post',{},'circ_change',{}, ...
-    'rad_pre',{},'rad_post',{},'rad_change',{});
-
-for i = 1:num_cycles
-    onset = valid_zones(i, 1);
-    offset = valid_zones(i, 2);
-    
-    % Drift stats
-    drift_start = drift_magnitude(onset);
-    drift_end = drift_magnitude(offset);
-    
-    % Drift rate stats in-zone
-    dr_seg = drift_rate(onset:offset);
-    
-    % Pre/post windows
-    pre_idx = max(1, onset-50) : onset-1;
-    post_idx = offset+1 : min(numFrames, offset+50);
-    
-    % If pre/post windows empty, return NaN
-    if isempty(pre_idx)
-        circ_pre = NaN; 
-        rad_pre = NaN;
-    else
-        circ_pre = mean(circularity_smooth(pre_idx));
-        rad_pre = mean(radius_smooth(pre_idx));
-    end
-    
-    if isempty(post_idx)
-        circ_post = NaN; 
-        rad_post = NaN;
-    else
-        circ_post = mean(circularity_smooth(post_idx));
-        rad_post = mean(radius_smooth(post_idx));
-    end
-    
-    heatingCycles(i).id = i;
-    heatingCycles(i).onset = onset;
-    heatingCycles(i).offset = offset;
-    heatingCycles(i).duration = offset - onset + 1;
-    
-    heatingCycles(i).drift_start = drift_start;
-    heatingCycles(i).drift_end = drift_end;
-    heatingCycles(i).drift_total = drift_end - drift_start;
-    heatingCycles(i).drift_rate_mean = mean(dr_seg);
-    heatingCycles(i).drift_rate_max = max(dr_seg);
-    
-    heatingCycles(i).circ_pre = circ_pre;
-    heatingCycles(i).circ_post = circ_post;
-    heatingCycles(i).circ_change = circ_post - circ_pre;
-    
-    heatingCycles(i).rad_pre = rad_pre;
-    heatingCycles(i).rad_post = rad_post;
-    heatingCycles(i).rad_change = rad_post - rad_pre;
-    
-    fprintf('  Cycle %d: frames %d-%d (duration: %d frames, drift: %.1f px)\n', ...
-        i, onset, offset, heatingCycles(i).duration, heatingCycles(i).drift_total);
-end
-
-% Build heating mask
-heating_mask = false(numFrames, 1);
-for i = 1:num_cycles
-    heating_mask(heatingCycles(i).onset:heatingCycles(i).offset) = true;
-end
-
-%% Heating Cycles Visualization
-
-col_heating = [1 0.6 0.2];      % Orange for heating zones
-colors_cycle = [0.9 0.3 0.3; 0.3 0.3 0.9; 0.3 0.8 0.3; 0.8 0.3 0.8];
-
-fig1 = figure('Name', 'Heating Cycle Analysis - Main Timeline', ...
-    'Position', [50 50 1900 1100], 'Color', 'white');
-
-ax1 = subplot(5,1,1);
-plot(frameNumbers, circularity, 'Color', [0.75 0.75 0.75], 'LineWidth', 0.5); hold on;
-plot(frameNumbers, circularity_smooth, 'Color', [0.5 0.5 0.5], 'LineWidth', 2.5);
-
-for i = 1:num_cycles
-    col = colors_cycle(mod(i-1,4)+1, :);
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, circularity_smooth(idx), 'Color', col, 'LineWidth', 3.5);
-end
-
-ylabel('Circularity', 'Interpreter', 'latex', 'FontSize', 20);
-grid on; 
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-
-legend_entries = {'Raw', 'No heating'};
-for i = 1:num_cycles
-    legend_entries{end+1} = sprintf('Heating %d', i);
-end
-legend(legend_entries, 'Interpreter', 'latex', 'FontSize', 14, 'Location', 'southwest');
-
-ax2 = subplot(5,1,2);
-plot(frameNumbers, radius_inner_mean, 'Color', [0.7 0.7 0.7], 'LineWidth', 1.5); hold on;
-plot(frameNumbers, radius_midline_mean, 'Color', [0.5 0.5 0.5], 'LineWidth', 2);
-plot(frameNumbers, radius_outer_mean, 'Color', [0.7 0.7 0.7], 'LineWidth', 1.5);
-
-for i = 1:num_cycles
-    col = colors_cycle(mod(i-1,4)+1, :);
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, radius_midline_mean(idx), 'Color', col, 'LineWidth', 3.5);
-end
-
-ylabel('Radius (px)', 'Interpreter', 'latex', 'FontSize', 20);
-legend({'Inner', 'Midline', 'Outer'}, ...
-    'Interpreter', 'latex', 'FontSize', 14, 'Location', 'northeast');
-grid on; 
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-
-ax3 = subplot(5,1,3);
-plot(frameNumbers, drift_magnitude, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); hold on;
-plot(frameNumbers, drift_smooth, 'Color', [0.5 0.5 0.5], 'LineWidth', 2.5);
-
-for i = 1:num_cycles
-    col = colors_cycle(mod(i-1,4)+1, :);
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, drift_smooth(idx), 'Color', col, 'LineWidth', 4);
-    
-    plot(heatingCycles(i).onset, drift_magnitude(heatingCycles(i).onset), 'go', ...
-        'MarkerSize', 16, 'LineWidth', 3, 'MarkerFaceColor', 'g');
-    
-    plot(heatingCycles(i).offset, drift_magnitude(heatingCycles(i).offset), 'bs', ...
-        'MarkerSize', 16, 'LineWidth', 3, 'MarkerFaceColor', 'b');
-end
-
-ylabel('Drift (px)', 'Interpreter', 'latex', 'FontSize', 20);
-legend({'Raw', 'Smoothed'}, ...
-    'Interpreter', 'latex', 'FontSize', 14, 'Location', 'northwest');
-grid on; 
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-
-ax4 = subplot(5,1,4);
-plot(frameNumbers, drift_rate, 'Color', [0.5 0.5 0.5], 'LineWidth', 2); hold on;
-
-for i = 1:num_cycles
-    col = colors_cycle(mod(i-1,4)+1, :);
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, drift_rate(idx), 'Color', col, 'LineWidth', 3.5);
-end
-
-yline(threshold_active, 'r--', 'LineWidth', 2.5, 'FontSize', 14, 'LabelHorizontalAlignment', 'left');
-yline(0, 'k:', 'LineWidth', 1);
-ylabel('Drift Rate (px/frame)', 'Interpreter', 'latex', 'FontSize', 20);
-grid on; 
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-
-ax5 = subplot(5,1,5);
-plot(frameNumbers, drift_magnitude, 'Color', [0.5 0.5 0.5], 'LineWidth', 1.5); hold on;
-
-for i = 1:num_cycles
-    col = colors_cycle(mod(i-1,4)+1, :);
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, drift_magnitude(idx), 'Color', col, 'LineWidth', 4);
-end
-
-ylabel('Drift (px)', 'Interpreter', 'latex', 'FontSize', 20);
-xlabel('Frame Number', 'Interpreter', 'latex', 'FontSize', 20);
-grid on; 
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-ylim([0 max(drift_magnitude)*1.1]);
-
-linkaxes([ax1, ax2, ax3, ax4, ax5], 'x');
-
-%% ═══════════════════════════════════════════════════════════════
-%% SHAPE-CHANGE DETECTION (OPTION 1: Roughness Change-Based)
-%% ═══════════════════════════════════════════════════════════════
-
-fprintf('\n=== Shape-Change Detection (Change-Based) ===\n');
-
-% Compute roughness for each frame
-roughness = zeros(numFrames, 1);
+total_drift     = drift_magnitude(end);
+
+radius_inner_mean   = zeros(numFrames,1);
+radius_midline_mean = zeros(numFrames,1);
+radius_outer_mean   = zeros(numFrames,1);
+roughness           = zeros(numFrames,1);
 
 for iFrame = 1:numFrames
     r = allContours(iFrame).r_midline_smooth;
-    roughness(iFrame) = std(r) / mean(r);
+    radius_inner_mean(iFrame)   = mean(allContours(iFrame).r_inner_smooth);
+    radius_midline_mean(iFrame) = mean(r);
+    radius_outer_mean(iFrame)   = mean(allContours(iFrame).r_outer_smooth);
+    roughness(iFrame)           = std(r)/mean(r);
 end
 
-% Smooth to remove noise
-roughness_smooth = smoothdata(roughness, 'gaussian', smooth_window);
+delta_radius_inner    = radius_inner_mean    - radius_inner_mean(1);
+delta_radius_midline  = radius_midline_mean  - radius_midline_mean(1);
+delta_radius_outer    = radius_outer_mean    - radius_outer_mean(1);
 
-% OPTION 1: Detect CHANGES in roughness (either increase or decrease)
-roughness_change = abs(gradient(roughness_smooth));
+%% Smoothing
 
-% Set baseline from early frames
-baselineWindow = min(200, numFrames);
-roughness_baseline = median(roughness_smooth(1:baselineWindow));
-roughness_noise = std(roughness_smooth(1:baselineWindow));
+sw = 50;
+circularity_smooth  = smoothdata(circularity,         'gaussian', sw);
+radius_smooth       = smoothdata(radius_midline_mean, 'gaussian', sw);
+roughness_smooth    = smoothdata(roughness,           'gaussian', sw);
+drift_smooth        = smoothdata(drift_magnitude,     'gaussian', 100);
+drift_rate          = gradient(drift_smooth);
+drift_rate_smooth   = smoothdata(drift_rate,          'gaussian', 30);
+dCirc_dt            = gradient(circularity_smooth);
 
-% Baseline for changes
-change_baseline = median(roughness_change(1:baselineWindow));
-change_noise = std(roughness_change(1:baselineWindow));
+%% ── Drift Detection ──────────────────────────────────────────────────────────
 
-% 3-sigma threshold on changes (detects both increases and decreases)
-change_threshold = change_baseline + 3 * change_noise;
+fprintf('\n=== Drift Detection ===\n');
 
-fprintf('Roughness baseline: %.5f\n', roughness_baseline);
-fprintf('Roughness noise: %.5f\n', roughness_noise);
-fprintf('Change baseline: %.5f\n', change_baseline);
-fprintf('Change noise: %.5f\n', change_noise);
-fprintf('Change threshold: %.5f (3-sigma)\n', change_threshold);
+baseline_drift_rate = median(drift_rate);
+noise_level         = std(drift_rate(1:min(100,numFrames)));
+threshold_active    = max(baseline_drift_rate + 3*noise_level, 0.03);
 
-% Detect significant roughness changes
-shape_change_raw = roughness_change > change_threshold;
+fprintf('Drift rate baseline : %.4f px/frame\n', baseline_drift_rate);
+fprintf('Noise level         : %.4f px/frame\n', noise_level);
+fprintf('Heating threshold   : %.4f px/frame\n', threshold_active);
 
-% Denoise (smooth the binary mask)
-shape_change_smooth_sig = smoothdata(double(shape_change_raw), 'gaussian', 15) > 0.5;
+active_heating        = drift_rate > threshold_active;
+active_heating_smooth = smoothdata(double(active_heating),'gaussian',20) > 0.5;
 
-% Extract events (contiguous regions)
-shape_starts = find(diff([0; shape_change_smooth_sig]) == 1);
-shape_ends = find(diff([shape_change_smooth_sig; 0]) == -1);
+heat_starts = find(diff([0; active_heating_smooth]) ==  1);
+heat_ends   = find(diff([active_heating_smooth; 0]) == -1);
 
-% Filter short events
-min_shape_duration = 100;  % frames
+min_duration      = 100;
+min_total_drift   = 10;
+durations         = heat_ends - heat_starts + 1;
+total_drift_cyc   = drift_magnitude(heat_ends) - drift_magnitude(heat_starts);
+ok                = (durations >= min_duration) & (total_drift_cyc >= min_total_drift);
+zones_drift       = [heat_starts(ok), heat_ends(ok)];
 
-durations_shape = shape_ends - shape_starts + 1;
-mask_valid = durations_shape >= min_shape_duration;
-shape_zones = [shape_starts(mask_valid), shape_ends(mask_valid)];
-
-% Merge nearby events
-min_shape_gap = 30;  % frames
-
-if size(shape_zones, 1) > 1
-    merged_shape = shape_zones(1, :);
-    for k = 2:size(shape_zones, 1)
-        gap = shape_zones(k, 1) - merged_shape(end, 2);
-        if gap < min_shape_gap
-            merged_shape(end, 2) = shape_zones(k, 2);
+if size(zones_drift,1) > 1
+    merged = zones_drift(1,:);
+    for k = 2:size(zones_drift,1)
+        if zones_drift(k,1) - merged(end,2) < 300
+            merged(end,2) = zones_drift(k,2);
         else
-            merged_shape = [merged_shape; shape_zones(k, :)];
+            merged = [merged; zones_drift(k,:)]; %#ok<AGROW>
         end
     end
-    shape_zones = merged_shape;
+    zones_drift = merged;
 end
 
-% Build final shape change mask
-shape_change_mask = false(numFrames, 1);
-for i = 1:size(shape_zones, 1)
-    shape_change_mask(shape_zones(i, 1):shape_zones(i, 2)) = true;
+fprintf('Drift events detected: %d\n', size(zones_drift,1));
+for k = 1:size(zones_drift,1)
+    fprintf('  D%d: frames %d – %d\n', k, zones_drift(k,1), zones_drift(k,2));
 end
 
-num_shape_events = size(shape_zones, 1);
+% Build heating mask
+heating_mask = false(numFrames,1);
+for k = 1:size(zones_drift,1)
+    heating_mask(zones_drift(k,1):zones_drift(k,2)) = true;
+end
 
-fprintf('Shape-change events detected: %d\n', num_shape_events);
+%% ── Roughness / Shape-Change Detection ──────────────────────────────────────
 
-% Classify each event as increase or decrease
-shapeEvents = struct('id',{},'start',{},'end',{},'duration',{}, ...
-    'type',{},'rough_before',{},'rough_after',{},'rough_change',{});
+fprintf('\n=== Shape-Change Detection ===\n');
 
-for i = 1:num_shape_events
-    event_start = shape_zones(i,1);
-    event_end = shape_zones(i,2);
-    
-    % Look at roughness before and after the event
-    pre_window = max(1, event_start-30):event_start-1;
-    post_window = event_end+1:min(numFrames, event_end+30);
-    
-    if ~isempty(pre_window) && ~isempty(post_window)
-        rough_before = mean(roughness_smooth(pre_window));
-        rough_after = mean(roughness_smooth(post_window));
-        rough_change = rough_after - rough_before;
-        
-        % Classify as increase or decrease
-        if rough_change > 0
-            event_type = 'increase';  % Deformation
+% Baseline from first 500 frames (pre-heating protocol)
+initial_win  = min(500, numFrames);
+initial_mean = mean(roughness_smooth(1:initial_win));
+initial_std  = max(std(roughness_smooth(1:initial_win)), 0.001);
+range_hi     = initial_mean + 3*initial_std;
+range_lo     = initial_mean - 3*initial_std;
+
+fprintf('Roughness baseline  : %.5f\n', initial_mean);
+fprintf('Roughness range     : [%.5f, %.5f]\n', range_lo, range_hi);
+
+% Detect excursions outside baseline band, excluding drift zones
+outside        = (roughness_smooth < range_lo) | (roughness_smooth > range_hi);
+outside_clean  = smoothdata(double(outside & ~heating_mask),'gaussian',20) > 0.5;
+
+r_starts = find(diff([0; outside_clean]) ==  1);
+r_ends   = find(diff([outside_clean; 0]) == -1);
+
+zones_rough = [];
+for k = 1:length(r_starts)
+    if (r_ends(k) - r_starts(k) + 1) < 200, continue; end
+    zones_rough = [zones_rough; r_starts(k), r_ends(k)]; %#ok<AGROW>
+end
+
+% Merge nearby roughness events
+if size(zones_rough,1) > 1
+    merged_r = zones_rough(1,:);
+    for k = 2:size(zones_rough,1)
+        if zones_rough(k,1) - merged_r(end,2) < 100
+            merged_r(end,2) = zones_rough(k,2);
         else
-            event_type = 'decrease';  % Tensing
+            merged_r = [merged_r; zones_rough(k,:)]; %#ok<AGROW>
         end
-    else
-        rough_before = NaN;
-        rough_after = NaN;
-        rough_change = NaN;
-        event_type = 'unknown';
     end
-    
-    shapeEvents(i).id = i;
-    shapeEvents(i).start = event_start;
-    shapeEvents(i).end = event_end;
-    shapeEvents(i).duration = event_end - event_start + 1;
-    shapeEvents(i).type = event_type;
-    shapeEvents(i).rough_before = rough_before;
-    shapeEvents(i).rough_after = rough_after;
-    shapeEvents(i).rough_change = rough_change;
-    
-    fprintf('  Event %d: frames %d-%d (%d frames) - %s (Δrough = %+.5f)\n', ...
-        i, event_start, event_end, shapeEvents(i).duration, event_type, rough_change);
+    zones_rough = merged_r;
 end
 
-%% Roughness Visualization
-
-figure('Name', 'Roughness Analysis', 'Position', [100 100 1400 900], 'Color', 'white');
-
-% Panel 1: Raw roughness
-subplot(3, 1, 1);
-plot(frameNumbers, roughness, 'Color', [0.7 0.7 0.7], 'LineWidth', 0.5); hold on;
-plot(frameNumbers, roughness_smooth, 'b-', 'LineWidth', 2.5);
-yline(roughness_baseline, 'k:', 'LineWidth', 1.5, 'DisplayName', 'Baseline');
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-ylabel('Roughness $\sigma_r / \langle r \rangle$', 'Interpreter', 'latex', 'FontSize', 16);
-legend({'Raw', 'Smoothed', 'Baseline'}, 'Interpreter', 'latex', 'FontSize', 14);
-grid on;
-set(gca, 'FontSize', 14, 'TickLabelInterpreter', 'latex');
-title('Roughness Level', 'Interpreter', 'latex', 'FontSize', 16);
-
-% Panel 2: Roughness change (absolute)
-subplot(3, 1, 2);
-plot(frameNumbers, roughness_change, 'k-', 'LineWidth', 1.5); hold on;
-yline(change_threshold, 'r--', 'LineWidth', 2, 'DisplayName', 'Threshold');
-yline(change_baseline, 'b:', 'LineWidth', 1.5, 'DisplayName', 'Baseline');
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-ylabel('$|d(\mathrm{Roughness})/dt|$', 'Interpreter', 'latex', 'FontSize', 16);
-legend('Interpreter', 'latex', 'FontSize', 12);
-grid on;
-set(gca, 'FontSize', 14, 'TickLabelInterpreter', 'latex');
-title('Roughness Change Rate (detects both increases and decreases)', ...
-    'Interpreter', 'latex', 'FontSize', 16);
-
-% Panel 3: Detected events with classification
-subplot(3, 1, 3);
-plot(frameNumbers, roughness_smooth, 'Color', [0.7 0.7 0.7], 'LineWidth', 1.5); hold on;
-
-% Color code by event type
-col_increase = [0.9 0.3 0.3];  % Red for deformation (roughness increase)
-col_decrease = [0.3 0.3 0.9];  % Blue for tensing (roughness decrease)
-
-for i = 1:num_shape_events
-    idx = shape_zones(i, 1):shape_zones(i, 2);
-    
-    if strcmp(shapeEvents(i).type, 'increase')
-        plot(idx, roughness_smooth(idx), '-', 'Color', col_increase, 'LineWidth', 3);
-    elseif strcmp(shapeEvents(i).type, 'decrease')
-        plot(idx, roughness_smooth(idx), '-', 'Color', col_decrease, 'LineWidth', 3);
-    else
-        plot(idx, roughness_smooth(idx), 'k-', 'LineWidth', 3);
-    end
+num_shape_events = size(zones_rough,1);
+fprintf('Shape-change events: %d\n', num_shape_events);
+for k = 1:num_shape_events
+    fprintf('  S%d: frames %d – %d  (duration: %d frames)\n', ...
+        k, zones_rough(k,1), zones_rough(k,2), zones_rough(k,2)-zones_rough(k,1)+1);
 end
 
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-ylabel('Roughness', 'Interpreter', 'latex', 'FontSize', 16);
-legend({'Baseline', 'Deformation (rough$\uparrow$)', 'Tensing (rough$\downarrow$)'}, ...
-    'Interpreter', 'latex', 'FontSize', 12);
-grid on;
-set(gca, 'FontSize', 14, 'TickLabelInterpreter', 'latex');
-title('Detected Shape-Change Events (classified)', 'Interpreter', 'latex', 'FontSize', 16);
+% Build shape-change mask (excludes drift zones)
+shape_change_mask = false(numFrames,1);
+for k = 1:num_shape_events
+    shape_change_mask(zones_rough(k,1):zones_rough(k,2)) = true;
+end
 
-%% ═══════════════════════════════════════
-%% REGIME CLASSIFICATION
-%% ═══════════════════════════════════════
+%% ── Regime Classification ─────────────────────────────────────────────────
 
 fprintf('\n=== Regime Classification ===\n');
 
-% Initialize all frames as regime 1 (no heating)
-regime = ones(numFrames, 1);
+% Regime 1: no heating, roughness within baseline band
+% Regime 2: shape change (roughness outside band, not during drift)
+% Regime 3: active heating / drift
+regime = ones(numFrames,1);
+regime(heating_mask)      = 3;
+regime(shape_change_mask) = 2;   % overrides heating for shape-change frames
 
-% Set regime 3 where heating detected
-regime(heating_mask) = 3;
-
-% Override with regime 2 where shape change detected
-regime(shape_change_mask) = 2;
-
-% Create individual regime masks
-mask_no_heating = (regime == 1);
-mask_shape_change = (regime == 2);
+mask_no_heating     = (regime == 1);
+mask_shape_change   = (regime == 2);
 mask_heating_steady = (regime == 3);
 
-fprintf('Regime 1 (No heating):     %d frames (%.1f%%)\n', ...
-    sum(mask_no_heating), 100*sum(mask_no_heating)/numFrames);
-fprintf('Regime 2 (Shape change):   %d frames (%.1f%%)\n', ...
-    sum(mask_shape_change), 100*sum(mask_shape_change)/numFrames);
-fprintf('Regime 3 (Heating steady): %d frames (%.1f%%)\n', ...
+fprintf('Regime 1 (No heating):      %d frames (%.1f%%)\n', ...
+    sum(mask_no_heating),     100*sum(mask_no_heating)/numFrames);
+fprintf('Regime 2 (Shape change):    %d frames (%.1f%%)\n', ...
+    sum(mask_shape_change),   100*sum(mask_shape_change)/numFrames);
+fprintf('Regime 3 (Heating/drift):   %d frames (%.1f%%)\n', ...
     sum(mask_heating_steady), 100*sum(mask_heating_steady)/numFrames);
 
-%% ═══════════════════════════════════════
-%% REDUCED VOLUME ANALYSIS
-%% ═══════════════════════════════════════
+%% ── Heating Cycles Struct ─────────────────────────────────────────────────
+
+all_zones   = [zones_drift; zones_rough];
+all_origins = [repmat({'drift'},    size(zones_drift,1),1); ...
+               repmat({'roughness'},size(zones_rough, 1),1)];
+[~,si]      = sort(all_zones(:,1));
+all_zones   = all_zones(si,:);
+all_origins = all_origins(si);
+num_cycles  = size(all_zones,1);
+
+heatingCycles = struct('id',{},'onset',{},'offset',{},'duration',{}, ...
+    'origin',{},'drift_total',{},'rough_change',{},'circ_change',{}, ...
+    'rad_change',{},'v_pre',{},'v_post',{},'v_change',{});
+
+fprintf('\nFinal events:\n');
+colors_cycle = [0.9 0.3 0.3; 0.3 0.3 0.9; 0.3 0.8 0.3; 0.8 0.3 0.8];
+
+for i = 1:num_cycles
+    onset  = all_zones(i,1); offset = all_zones(i,2);
+    pre    = max(1,onset-50):onset-1;
+    post   = offset+1:min(numFrames,offset+50);
+
+    heatingCycles(i).id          = i;
+    heatingCycles(i).onset       = onset;
+    heatingCycles(i).offset      = offset;
+    heatingCycles(i).duration    = offset-onset+1;
+    heatingCycles(i).origin      = all_origins{i};
+    heatingCycles(i).drift_total = drift_magnitude(offset)-drift_magnitude(onset);
+    heatingCycles(i).rough_change= nanmean(roughness_smooth(post)) - nanmean(roughness_smooth(pre));
+    heatingCycles(i).circ_change = nanmean(circularity_smooth(post)) - nanmean(circularity_smooth(pre));
+    heatingCycles(i).rad_change  = nanmean(radius_smooth(post)) - nanmean(radius_smooth(pre));
+
+    fprintf('  Ev%d: %d-%d  [%s]  drift=%+.1fpx  drough=%+.5f\n', ...
+        i, onset, offset, all_origins{i}, ...
+        heatingCycles(i).drift_total, heatingCycles(i).rough_change);
+end
+
+ev_labels = arrayfun(@(i) sprintf('Ev%d (%s)', i, heatingCycles(i).origin), ...
+    1:num_cycles, 'UniformOutput', false);
+
+%% ── Figure 1: Overview (4 panels) ────────────────────────────────────────
+
+col_no_heating     = [0.6 0.6 0.6];
+col_shape_change   = [0.9 0.3 0.3];
+col_heating_steady = [1.0 0.6 0.2];
+
+fig1 = figure('Units','centimeters','Position',[3 3 24 28],'Color','w');
+tl1  = tiledlayout(fig1, 4, 1,'TileSpacing','compact','Padding','compact');
+
+% Circularity
+[~,ax] = quickPlot('Parent',nexttile(tl1),'Grid','on');
+plot(ax,frameNumbers,circularity_smooth,'Color',col_no_heating,'LineWidth',1.5);
+for i = 1:num_cycles
+    idx = heatingCycles(i).onset:heatingCycles(i).offset;
+    plot(ax,idx,circularity_smooth(idx),'Color',colors_cycle(mod(i-1,4)+1,:),'LineWidth',3);
+end
+ylabel(ax,'Circularity');
+legend(ax,[{'Baseline'}, ev_labels],'Interpreter','none','Box','off','FontSize',9,'Location','best');
+
+% Drift magnitude
+[~,ax] = quickPlot('Parent',nexttile(tl1),'Grid','on');
+plot(ax,frameNumbers,drift_magnitude,'Color',[0.85 0.85 0.85],'LineWidth',1);
+plot(ax,frameNumbers,drift_smooth,'Color',col_no_heating,'LineWidth',2);
+for i = 1:num_cycles
+    idx = heatingCycles(i).onset:heatingCycles(i).offset;
+    plot(ax,idx,drift_smooth(idx),'Color',colors_cycle(mod(i-1,4)+1,:),'LineWidth',3);
+end
+ylabel(ax,'Drift (px)');
+
+% Drift rate
+[~,ax] = quickPlot('Parent',nexttile(tl1),'Grid','on');
+plot(ax,frameNumbers,drift_rate_smooth,'Color',col_no_heating,'LineWidth',1.5);
+for i = 1:num_cycles
+    idx = heatingCycles(i).onset:heatingCycles(i).offset;
+    plot(ax,idx,drift_rate_smooth(idx),'Color',colors_cycle(mod(i-1,4)+1,:),'LineWidth',3);
+end
+yline(threshold_active,'r--','LineWidth',1.5,'Label',sprintf('thr=%.3f',threshold_active));
+yline(0,'k:','LineWidth',1);
+ylabel(ax,'Drift Rate (px/fr)');
+
+% Roughness
+[~,ax] = quickPlot('Parent',nexttile(tl1),'Grid','on');
+plot(ax,frameNumbers,roughness_smooth,'Color',col_no_heating,'LineWidth',1.5);
+for i = 1:num_cycles
+    idx = heatingCycles(i).onset:heatingCycles(i).offset;
+    plot(ax,idx,roughness_smooth(idx),'Color',colors_cycle(mod(i-1,4)+1,:),'LineWidth',3);
+end
+yline(range_hi,'r--','LineWidth',1.5,'Label',sprintf('hi=%.4f',range_hi));
+yline(range_lo,'b--','LineWidth',1.5,'Label',sprintf('lo=%.4f',range_lo));
+yline(initial_mean,'k:','LineWidth',1);
+ylabel(ax,'Roughness'); xlabel(ax,'Frame');
+
+savefigures_new(fig1,'fig1_overview');
+
+%% ── Reduced Volume + Fourier ──────────────────────────────────────────────
 
 pixels_per_micron = 11.5;
-pixel_size_um = 1 / pixels_per_micron;
+pixel_size_um     = 1/pixels_per_micron;
 
-reduced_volume = zeros(numFrames, 1);
-R0_values = zeros(numFrames, 1);
-R_ratio = zeros(numFrames, 1);
-asymmetry = zeros(numFrames, 1);
-volume_um3 = zeros(numFrames, 1);
-area_um2 = zeros(numFrames, 1);
-eccentricity = zeros(numFrames, 1);
+reduced_volume = zeros(numFrames,1);
+eccentricity   = zeros(numFrames,1);
+volume_um3     = zeros(numFrames,1);
+area_um2       = zeros(numFrames,1);
+R0_values      = zeros(numFrames,1);
+nFourierModes  = 30;
+amp_sq_mid     = zeros(numFrames,nFourierModes);
 
 for iFrame = 1:numFrames
     x_px = allContours(iFrame).x_midline;
     y_px = allContours(iFrame).y_midline;
-    
-    x_um = x_px * pixel_size_um;
-    y_um = y_px * pixel_size_um;
-    x_center = mean(x_um);
-    y_center = mean(y_um);
-    x_centered = x_um - x_center;
-    y_centered = y_um - y_center;
-    radius_mean = mean(sqrt(x_centered.^2 + y_centered.^2));
-    
-    X = [x_centered(:), y_centered(:)];
-    [coeff, ~, latent] = pca(X);
-    principal_component = coeff(:, 1);
-    lambda_major = latent(1);
-    lambda_minor = latent(2);
-    theta_pca = atan2(principal_component(2), principal_component(1));
-    eccentricity(iFrame) = 1 - sqrt(lambda_minor/lambda_major);
-    
-    x_rot = x_centered * cos(-theta_pca) - y_centered * sin(-theta_pca);
-    y_rot = x_centered * sin(-theta_pca) + y_centered * cos(-theta_pca);
-    
-    idx_right = x_rot >= 0;
-    x_right_half = x_rot(idx_right);
-    y_right_half = y_rot(idx_right);
-    
-    [y_profile, sort_idx] = sort(y_right_half);
-    r_profile = x_right_half(sort_idx);
-    
-    [y_unique, ~, ic] = uniquetol(y_profile, 1e-6);
-    r_unique = zeros(size(y_unique));
-    for i = 1:length(y_unique)
-        r_unique(i) = max(r_profile(ic == i));
-    end
-    y_profile = y_unique;
-    r_profile = r_unique;
-    
-    dy = diff(y_profile);
-    r_mid = (r_profile(1:end-1) + r_profile(2:end)) / 2;
-    volume_um3(iFrame) = sum(pi * r_mid.^2 .* dy);
-    
-    dr = diff(r_profile);
-    ds = sqrt(dr.^2 + dy.^2);
-    r_mid_area = (r_profile(1:end-1) + r_profile(2:end)) / 2;
-    area_um2(iFrame) = sum(2 * pi * r_mid_area .* ds);
-    
-    R0_values(iFrame) = sqrt(area_um2(iFrame) / (4 * pi));
-    V_sphere = (4/3) * pi * R0_values(iFrame)^3;
-    reduced_volume(iFrame) = volume_um3(iFrame) / V_sphere;
-    R_ratio(iFrame) = R0_values(iFrame) / radius_mean;
-    
-    idx_left = x_rot <= 0;
-    x_left_half = abs(x_rot(idx_left));
-    y_left_half = y_rot(idx_left);
-    
-    [y_left_sorted, sort_idx_l] = sort(y_left_half);
-    r_left_sorted = x_left_half(sort_idx_l);
-    
-    [y_left_unique, ~, ic_l] = uniquetol(y_left_sorted, 1e-6);
-    r_left_unique = zeros(size(y_left_unique));
-    for i = 1:length(y_left_unique)
-        r_left_unique(i) = max(r_left_sorted(ic_l == i));
-    end
-    
-    y_min_common = max(min(y_profile), min(y_left_unique));
-    y_max_common = min(max(y_profile), max(y_left_unique));
-    y_check = linspace(y_min_common, y_max_common, 100);
-    
-    r_right_check = interp1(y_profile, r_profile, y_check, 'pchip');
-    r_left_check = interp1(y_left_unique, r_left_unique, y_check, 'pchip');
-    asymmetry(iFrame) = std(r_right_check - r_left_check) / mean(r_right_check);
+    x_c  = x_px*pixel_size_um - mean(x_px*pixel_size_um);
+    y_c  = y_px*pixel_size_um - mean(y_px*pixel_size_um);
+
+    [coeff,~,latent]     = pca([x_c(:), y_c(:)]);
+    eccentricity(iFrame) = 1 - sqrt(latent(2)/latent(1));
+    th    = atan2(coeff(2,1),coeff(1,1));
+    x_rot = x_c*cos(-th) - y_c*sin(-th);
+    y_rot = x_c*sin(-th) + y_c*cos(-th);
+
+    % Right-half profile for axisymmetric volume
+    ir = x_rot >= 0;
+    [yp,si] = sort(y_rot(ir)); rp = x_rot(ir); rp = rp(si);
+    [yu,~,ic] = uniquetol(yp,1e-6);
+    ru = zeros(size(yu));
+    for k = 1:length(yu), ru(k) = max(rp(ic==k)); end
+    dy = diff(yu); rm = (ru(1:end-1)+ru(2:end))/2;
+    V  = sum(pi*rm.^2.*dy);
+    dr = diff(ru); ds = sqrt(dr.^2+dy.^2);
+    A  = sum(2*pi*rm.*ds);
+    R0 = sqrt(A/(4*pi));
+    rv = V/((4/3)*pi*R0^3);
+    if rv > 1 || rv <= 0, rv = NaN; end
+    volume_um3(iFrame)     = V;
+    area_um2(iFrame)       = A;
+    R0_values(iFrame)      = R0;
+    reduced_volume(iFrame) = rv;
+
+    % Fourier (factor of 2 for two-sided spectrum)
+    r       = allContours(iFrame).r_midline_smooth(:);
+    r_fluct = r - mean(r);
+    N       = length(r_fluct);
+    u_n     = fft(r_fluct)/N;
+    amp_sq_mid(iFrame,:) = 2*abs(u_n(2:nFourierModes+1)).^2 * pixel_size_um^2;
 end
 
-reduced_volume_smooth = smoothdata(reduced_volume, 'gaussian', smooth_window);
-delta_v = reduced_volume - reduced_volume(1);
+rv_smooth = smoothdata(reduced_volume,'gaussian',sw,'omitnan');
 
-% Update heatingCycles with reduced volume info
+% Update heatingCycles with reduced volume
 for i = 1:num_cycles
-    onset = heatingCycles(i).onset;
-    offset = heatingCycles(i).offset;
-    
-    pre_idx = max(1, onset-50) : onset-1;
-    post_idx = offset+1 : min(numFrames, offset+50);
-    
-    if isempty(pre_idx)
-        heatingCycles(i).v_pre = NaN;
-    else
-        heatingCycles(i).v_pre = mean(reduced_volume_smooth(pre_idx));
-    end
-    
-    if isempty(post_idx)
-        heatingCycles(i).v_post = NaN;
-    else
-        heatingCycles(i).v_post = mean(reduced_volume_smooth(post_idx));
-    end
-    
+    pre  = max(1,heatingCycles(i).onset-50):heatingCycles(i).onset-1;
+    post = heatingCycles(i).offset+1:min(numFrames,heatingCycles(i).offset+50);
+    heatingCycles(i).v_pre    = nanmean(rv_smooth(pre));
+    heatingCycles(i).v_post   = nanmean(rv_smooth(post));
     heatingCycles(i).v_change = heatingCycles(i).v_post - heatingCycles(i).v_pre;
 end
 
-%% ═══════════════════════════════════════════════════════════════
-%% FOURIER SPECTRA BY TEMPORAL SEGMENTS
-%% ═══════════════════════════════════════════════════════════════
-
-fprintf('\n=== Fourier Spectra Analysis (Temporal Segments) ===\n');
-
-nFourierModes = 30;
-
-% Extract radii from all frames
-allRadii_mid = zeros(numFrames, length(angles));
-
-for iF = 1:numFrames
-    allRadii_mid(iF, :) = allContours(iF).r_midline_smooth(:)';
-end
-
-% Compute Fourier modes
-amp_sq_mid = zeros(numFrames, nFourierModes);
-
-for iF = 1:numFrames
-    r = allRadii_mid(iF, :)';
-    r_fluct = r - mean(r);
-    u_n = fft(r_fluct) / length(r_fluct);
-    amp_sq_mid(iF, :) = abs(u_n(2:nFourierModes+1)).^2 * pixel_size_um^2;
-end
+%% ── Fourier spectra by regime ─────────────────────────────────────────────
+% Regime 1 (No heating) = pre-heating baseline + any post-event recovery
+% Regime 2 (Shape change) = roughness outside band, not during drift
+% Regime 3 (Heating/drift) = active drift frames
 
 modes = (1:nFourierModes)';
 
-% Define temporal segments based on heating cycles
-temporalSegments = struct('id',{},'type',{},'start',{},'end',{}, ...
-    'duration',{},'spectrum',{},'label',{});
+spectrum_regime1 = mean(amp_sq_mid(mask_no_heating,     :), 1)';
+spectrum_regime2 = mean(amp_sq_mid(mask_shape_change,   :), 1)';
+spectrum_regime3 = mean(amp_sq_mid(mask_heating_steady, :), 1)';
 
-segment_count = 0;
+% Suppress spectra with too few frames
+if sum(mask_no_heating)     < 5, spectrum_regime1 = NaN(nFourierModes,1); end
+if sum(mask_shape_change)   < 5, spectrum_regime2 = NaN(nFourierModes,1); end
+if sum(mask_heating_steady) < 5, spectrum_regime3 = NaN(nFourierModes,1); end
 
-if num_cycles == 0
-    % No heating detected - single segment
-    segment_count = 1;
-    temporalSegments(1).id = 1;
-    temporalSegments(1).type = 'no_heating';
-    temporalSegments(1).start = 1;
-    temporalSegments(1).end = numFrames;
-    temporalSegments(1).duration = numFrames;
-    temporalSegments(1).spectrum = mean(amp_sq_mid, 1)';
-    temporalSegments(1).label = 'No heating';
-else
-    % Multiple segments interleaved with heating cycles
-    
-    % Segment 1: Before first heating
-    if heatingCycles(1).onset > 1
-        segment_count = segment_count + 1;
-        temporalSegments(segment_count).id = segment_count;
-        temporalSegments(segment_count).type = 'no_heating';
-        temporalSegments(segment_count).start = 1;
-        temporalSegments(segment_count).end = heatingCycles(1).onset - 1;
-        temporalSegments(segment_count).duration = heatingCycles(1).onset - 1;
-        idx = 1:(heatingCycles(1).onset-1);
-        temporalSegments(segment_count).spectrum = mean(amp_sq_mid(idx, :), 1)';
-        temporalSegments(segment_count).label = 'No heating 1';
-    end
-    
-    % Loop through heating cycles
-    for i = 1:num_cycles
-        % Heating segment
-        segment_count = segment_count + 1;
-        temporalSegments(segment_count).id = segment_count;
-        temporalSegments(segment_count).type = 'heating';
-        temporalSegments(segment_count).start = heatingCycles(i).onset;
-        temporalSegments(segment_count).end = heatingCycles(i).offset;
-        temporalSegments(segment_count).duration = heatingCycles(i).duration;
-        idx = heatingCycles(i).onset:heatingCycles(i).offset;
-        temporalSegments(segment_count).spectrum = mean(amp_sq_mid(idx, :), 1)';
-        temporalSegments(segment_count).label = sprintf('Heating %d', i);
-        
-        % No heating segment after this cycle (if not last cycle)
-        if i < num_cycles
-            gap_start = heatingCycles(i).offset + 1;
-            gap_end = heatingCycles(i+1).onset - 1;
-            
-            if gap_end >= gap_start
-                segment_count = segment_count + 1;
-                temporalSegments(segment_count).id = segment_count;
-                temporalSegments(segment_count).type = 'no_heating';
-                temporalSegments(segment_count).start = gap_start;
-                temporalSegments(segment_count).end = gap_end;
-                temporalSegments(segment_count).duration = gap_end - gap_start + 1;
-                idx = gap_start:gap_end;
-                temporalSegments(segment_count).spectrum = mean(amp_sq_mid(idx, :), 1)';
-                temporalSegments(segment_count).label = sprintf('No heating %d', i+1);
-            end
-        end
-    end
-    
-    % Final segment: After last heating
-    if heatingCycles(end).offset < numFrames
-        segment_count = segment_count + 1;
-        temporalSegments(segment_count).id = segment_count;
-        temporalSegments(segment_count).type = 'no_heating';
-        temporalSegments(segment_count).start = heatingCycles(end).offset + 1;
-        temporalSegments(segment_count).end = numFrames;
-        temporalSegments(segment_count).duration = numFrames - heatingCycles(end).offset;
-        idx = (heatingCycles(end).offset+1):numFrames;
-        temporalSegments(segment_count).spectrum = mean(amp_sq_mid(idx, :), 1)';
-        temporalSegments(segment_count).label = sprintf('No heating %d', num_cycles+1);
-    end
+fprintf('\nFourier frame counts:\n');
+fprintf('  Regime 1 (No heating)   : %d frames\n', sum(mask_no_heating));
+fprintf('  Regime 2 (Shape change) : %d frames\n', sum(mask_shape_change));
+fprintf('  Regime 3 (Heating)      : %d frames\n', sum(mask_heating_steady));
+
+%% ── Figure 2: Fourier Spectra ────────────────────────────────────────────
+
+fig2 = figure('Units','centimeters','Position',[3 3 16 14],'Color','w');
+tl2  = tiledlayout(fig2,1,1,'TileSpacing','compact','Padding','compact');
+
+[~,ax] = quickPlot('Parent',nexttile(tl2),'Grid','off');
+set(ax,'XScale','log','YScale','log');
+
+h = gobjects(0); leg_labels = {};
+
+if ~all(isnan(spectrum_regime1))
+    h(end+1) = loglog(ax,modes,spectrum_regime1,'o-','Color',col_no_heating, ...
+        'MarkerFaceColor',col_no_heating,'LineWidth',2,'MarkerSize',6);
+    leg_labels{end+1} = 'No heating';
+end
+if ~all(isnan(spectrum_regime2))
+    h(end+1) = loglog(ax,modes,spectrum_regime2,'s-','Color',col_shape_change, ...
+        'MarkerFaceColor',col_shape_change,'LineWidth',2,'MarkerSize',6);
+    leg_labels{end+1} = 'Shape change';
+end
+if ~all(isnan(spectrum_regime3))
+    h(end+1) = loglog(ax,modes,spectrum_regime3,'d-','Color',col_heating_steady, ...
+        'MarkerFaceColor',col_heating_steady,'LineWidth',2,'MarkerSize',6);
+    leg_labels{end+1} = 'Heating';
 end
 
-fprintf('Temporal segments identified: %d\n', segment_count);
-for i = 1:segment_count
-    fprintf('  Segment %d: %s (frames %d-%d, %d frames)\n', ...
-        i, temporalSegments(i).label, temporalSegments(i).start, ...
-        temporalSegments(i).end, temporalSegments(i).duration);
+% Power-law references anchored to regime 1 (or first valid spectrum)
+ref_spec = spectrum_regime1;
+if all(isnan(ref_spec)), ref_spec = spectrum_regime2; end
+if ~all(isnan(ref_spec))
+    n0 = 10; S0 = ref_spec(n0); rn = [2; nFourierModes];
+    h4 = loglog(ax,rn,S0*(rn/n0).^(-4),'k-', 'LineWidth',1.5);
+    h3 = loglog(ax,rn,S0*(rn/n0).^(-3),'k:', 'LineWidth',1.5);
+    h2 = loglog(ax,rn,S0*(rn/n0).^(-2),'k--','LineWidth',1.5);
+    h = [h, h4, h3, h2];
+    leg_labels = [leg_labels, {'$n^{-4}$ (bending)','$n^{-3}$ (mixed)','$n^{-2}$ (tension)'}];
 end
 
-%% Fourier Spectra Visualization (Temporal Segments)
+xlabel(ax,'Mode $n$'); ylabel(ax,'$\langle|u_n|^2\rangle$ ($\mu$m$^2$)');
+xlim(ax,[1 nFourierModes]);
+legend(ax,h,leg_labels,'Interpreter','latex','Box','off','FontSize',10,'Location','southwest');
 
-figure('Name', 'Fourier Spectra by Temporal Segments', 'Position', [100 100 900 700], 'Color', 'white');
+savefigures_new(fig2,'fig2_fourier');
 
-% Generate colors: warm for heating, cool for no heating
-cmap_heating = hot(num_cycles+2);
-cmap_no_heating = cool(num_cycles+3);
+%% ── Figure 3: Full 5-panel Detection Overview ────────────────────────────
 
-hold on;
-handles = [];
-labels = {};
+fig3 = figure('Units','centimeters','Position',[3 3 30 28],'Color','w');
+tl3  = tiledlayout(fig3,5,1,'TileSpacing','compact','Padding','compact');
 
-for i = 1:segment_count
-    if strcmp(temporalSegments(i).type, 'heating')
-        % Heating segments: warm colors (red/orange/yellow)
-        heating_idx = sum(strcmp({temporalSegments(1:i).type}, 'heating'));
-        col = cmap_heating(heating_idx+1, :);
-        marker = 'd';
-        linewidth = 2.5;
-    else
-        % No heating segments: cool colors (blue/cyan)
-        no_heat_idx = sum(strcmp({temporalSegments(1:i).type}, 'no_heating'));
-        col = cmap_no_heating(no_heat_idx+1, :);
-        marker = 'o';
-        linewidth = 2;
+panel_data = { ...
+    circularity_smooth,  'Circularity'; ...
+    radius_midline_mean, 'Radius (px)'; ...
+    drift_smooth,        'Drift (px)'; ...
+    drift_rate_smooth,   'Drift Rate (px/fr)'; ...
+    roughness_smooth,    'Roughness'};
+
+for p = 1:5
+    [~,ax] = quickPlot('Parent',nexttile(tl3),'Grid','on');
+    sig = panel_data{p,1};
+
+    % Colour each regime
+    plot(ax,frameNumbers,sig,'Color',col_no_heating,'LineWidth',1.5);
+    for i = 1:num_shape_events
+        idx = zones_rough(i,1):zones_rough(i,2);
+        plot(ax,idx,sig(idx),'-','Color',col_shape_change,'LineWidth',3);
     end
-    
-    h = loglog(modes, temporalSegments(i).spectrum, [marker '-'], ...
-        'Color', col, 'MarkerSize', 7, 'MarkerFaceColor', col, ...
-        'LineWidth', linewidth);
-    
-    handles(end+1) = h;
-    labels{end+1} = temporalSegments(i).label;
-end
+    for k = 1:size(zones_drift,1)
+        idx = zones_drift(k,1):zones_drift(k,2);
+        plot(ax,idx,sig(idx),'-','Color',col_heating_steady,'LineWidth',3);
+    end
 
-% Reference lines
-n0 = 10;
-S0 = temporalSegments(1).spectrum(n0);
-ref_n = [2, nFourierModes]';
-ref_tension = S0 * (ref_n/n0).^(-2);
-ref_bending = S0 * (ref_n/n0).^(-4);
-ref_mixed = S0 * (ref_n/n0).^(-3);
+    ylabel(ax,panel_data{p,2});
 
-h_ref1 = loglog(ref_n, ref_tension, 'k--', 'LineWidth', 2);
-h_ref2 = loglog(ref_n, ref_mixed, 'k:', 'LineWidth', 2);
-h_ref3 = loglog(ref_n, ref_bending, 'k-.', 'LineWidth', 2);
-
-xlabel('Mode $n$', 'Interpreter', 'latex', 'FontSize', 20);
-ylabel('$\langle |u_n|^2 \rangle$ ($\mu$m$^2$)', 'Interpreter', 'latex', 'FontSize', 20);
-
-legend([handles, h_ref1, h_ref2, h_ref3], ...
-    [labels, {'$n^{-2}$ (tension)', '$n^{-3}$ (mixed)', '$n^{-4}$ (bending)'}], ...
-    'Interpreter', 'latex', 'FontSize', 11, 'Location', 'southwest', 'NumColumns', 2);
-grid on;
-set(gca, 'FontSize', 18, 'TickLabelInterpreter', 'latex','xscale','log','yscale','log');
-xlim([1 nFourierModes]);
-
-%% ═══════════════════════════════════════
-%% VISUALIZATIONS
-%% ═══════════════════════════════════════
-
-%% Detection Analysis - 5 Panel Figure
-
-figure('Name', 'Detection Analysis', 'Position', [50 50 1800 1000], 'Color', 'white');
-
-% Panel 1: Circularity
-ax1 = subplot(5, 1, 1);
-plot(frameNumbers, circularity_smooth, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); hold on;
-
-% Heating: orange line
-for i = 1:num_cycles
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, circularity_smooth(idx), '-', 'Color', col_heating, 'LineWidth', 3);
-end
-
-% Shape change: color-coded by type
-for i = 1:num_shape_events
-    idx = shape_zones(i, 1):shape_zones(i, 2);
-    if strcmp(shapeEvents(i).type, 'increase')
-        plot(idx, circularity_smooth(idx), 'o', 'Color', col_increase, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    elseif strcmp(shapeEvents(i).type, 'decrease')
-        plot(idx, circularity_smooth(idx), 's', 'Color', col_decrease, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
+    if p == 4
+        yline(threshold_active,'r--','LineWidth',1.5, ...
+            'Label',sprintf('thr=%.3f',threshold_active));
+        yline(0,'k:','LineWidth',1);
+    end
+    if p == 5
+        yline(range_hi,'r--','LineWidth',1.5,'Label',sprintf('hi=%.4f',range_hi));
+        yline(range_lo,'b--','LineWidth',1.5,'Label',sprintf('lo=%.4f',range_lo));
+        yline(initial_mean,'k:','LineWidth',1);
+        xlabel(ax,'Frame');
     end
 end
 
-ylabel('Circularity', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
+% Legend on first panel
+nexttile(tl3,1);
+legend({'No heating','Shape change','Heating / drift'}, ...
+    'Interpreter','none','Box','off','FontSize',10,'Location','best');
 
-% Panel 2: Radius
-ax2 = subplot(5, 1, 2);
-plot(frameNumbers, radius_midline_mean, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); hold on;
+savefigures_new(fig3,'fig3_detection');
 
-% Heating: orange line
-for i = 1:num_cycles
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, radius_midline_mean(idx), '-', 'Color', col_heating, 'LineWidth', 3);
-end
+%% ── Save ──────────────────────────────────────────────────────────────────
 
-% Shape change: color-coded by type
-for i = 1:num_shape_events
-    idx = shape_zones(i, 1):shape_zones(i, 2);
-    if strcmp(shapeEvents(i).type, 'increase')
-        plot(idx, radius_midline_mean(idx), 'o', 'Color', col_increase, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    elseif strcmp(shapeEvents(i).type, 'decrease')
-        plot(idx, radius_midline_mean(idx), 's', 'Color', col_decrease, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    end
-end
-
-ylabel('Radius (px)', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-
-% Panel 3: Drift
-ax3 = subplot(5, 1, 3);
-plot(frameNumbers, drift_smooth, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); hold on;
-
-% Heating: orange line
-for i = 1:num_cycles
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, drift_smooth(idx), '-', 'Color', col_heating, 'LineWidth', 3);
-end
-
-% Shape change: color-coded by type
-for i = 1:num_shape_events
-    idx = shape_zones(i, 1):shape_zones(i, 2);
-    if strcmp(shapeEvents(i).type, 'increase')
-        plot(idx, drift_smooth(idx), 'o', 'Color', col_increase, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    elseif strcmp(shapeEvents(i).type, 'decrease')
-        plot(idx, drift_smooth(idx), 's', 'Color', col_decrease, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    end
-end
-
-ylabel('Drift (px)', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-
-% Panel 4: Drift rate
-ax4 = subplot(5, 1, 4);
-plot(frameNumbers, drift_rate_smooth, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); hold on;
-yline(0, 'k:', 'LineWidth', 1);
-
-% Heating: orange line
-for i = 1:num_cycles
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, drift_rate_smooth(idx), '-', 'Color', col_heating, 'LineWidth', 3);
-end
-
-% Shape change: color-coded by type
-for i = 1:num_shape_events
-    idx = shape_zones(i, 1):shape_zones(i, 2);
-    if strcmp(shapeEvents(i).type, 'increase')
-        plot(idx, drift_rate_smooth(idx), 'o', 'Color', col_increase, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    elseif strcmp(shapeEvents(i).type, 'decrease')
-        plot(idx, drift_rate_smooth(idx), 's', 'Color', col_decrease, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    end
-end
-
-ylabel('Drift Rate', 'Interpreter', 'latex', 'FontSize', 20);
-grid on;
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-
-% Panel 5: Roughness
-ax5 = subplot(5, 1, 5);
-plot(frameNumbers, roughness_smooth, 'Color', [0.7 0.7 0.7], 'LineWidth', 1); hold on;
-
-% Heating: orange line
-for i = 1:num_cycles
-    idx = heatingCycles(i).onset:heatingCycles(i).offset;
-    plot(idx, roughness_smooth(idx), '-', 'Color', col_heating, 'LineWidth', 3);
-end
-
-% Shape change: color-coded by type
-for i = 1:num_shape_events
-    idx = shape_zones(i, 1):shape_zones(i, 2);
-    if strcmp(shapeEvents(i).type, 'increase')
-        plot(idx, roughness_smooth(idx), 'o', 'Color', col_increase, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    elseif strcmp(shapeEvents(i).type, 'decrease')
-        plot(idx, roughness_smooth(idx), 's', 'Color', col_decrease, ...
-            'MarkerSize', 4, 'LineWidth', 0.5);
-    end
-end
-
-ylabel('Roughness', 'Interpreter', 'latex', 'FontSize', 20);
-xlabel('Frame', 'Interpreter', 'latex', 'FontSize', 16);
-grid on;
-set(gca, 'FontSize', 16, 'TickLabelInterpreter', 'latex');
-
-% Add legend to first panel
-legend(ax1, {'Baseline', 'Heating', 'Deformation (rough$\uparrow$)', 'Tensing (rough$\downarrow$)'}, ...
-    'Interpreter', 'latex', 'FontSize', 14, 'Location', 'northeast');
-
-linkaxes([ax1, ax2, ax3, ax4, ax5], 'x');
-
-fprintf('\n=== Analysis Complete ===\n');
-
-%% ═══════════════════════════════════════════════════════════════
-%% SAVE ANALYSIS RESULTS
-%% ═══════════════════════════════════════════════════════════════
-
-fprintf('\n=== Saving Analysis Results ===\n');
-
-% Select representative frames for each regime
+% Representative frames per regime
 regime1_frames = find(mask_no_heating);
 regime2_frames = find(mask_shape_change);
 regime3_frames = find(mask_heating_steady);
 
-% For regime 1: select evenly spaced frames from baseline
-if length(regime1_frames) >= 6
-    step = floor(length(regime1_frames) / 6);
-    regime1_representative = regime1_frames(1:step:end);
-    regime1_representative = regime1_representative(1:min(6, length(regime1_representative)));
-else
-    regime1_representative = regime1_frames;
-end
+pick_rep = @(fr,n) fr(round(linspace(1,length(fr),min(n,length(fr)))));
+regime1_rep = pick_rep(regime1_frames,6);
+regime2_rep = pick_rep(regime2_frames,6);
+regime3_rep = pick_rep(regime3_frames,6);
 
-% For regime 2: select frames around peak roughness events
-if length(regime2_frames) >= 6
-    % Find peaks in roughness change within regime 2
-    rough_change_regime2 = roughness_change(regime2_frames);
-    [~, peak_locs] = findpeaks(rough_change_regime2, 'NPeaks', 6, 'SortStr', 'descend');
-    if length(peak_locs) >= 6
-        regime2_representative = regime2_frames(sort(peak_locs(1:6)));
-    else
-        % If not enough peaks, space evenly
-        step = floor(length(regime2_frames) / 6);
-        regime2_representative = regime2_frames(1:step:end);
-        regime2_representative = regime2_representative(1:min(6, length(regime2_representative)));
-    end
-else
-    regime2_representative = regime2_frames;
-end
-
-% For regime 3: select evenly spaced frames from steady heating
-if length(regime3_frames) >= 6
-    step = floor(length(regime3_frames) / 6);
-    regime3_representative = regime3_frames(1:step:end);
-    regime3_representative = regime3_representative(1:min(6, length(regime3_representative)));
-else
-    regime3_representative = regime3_frames;
-end
-
-% Create analysis results structure
 analysisResults = struct();
 
 % Regime masks
-analysisResults.masks.no_heating = mask_no_heating;
-analysisResults.masks.shape_change = mask_shape_change;
+analysisResults.masks.no_heating     = mask_no_heating;
+analysisResults.masks.shape_change   = mask_shape_change;
 analysisResults.masks.heating_steady = mask_heating_steady;
 
 % Representative frames
-analysisResults.representative_frames.regime1 = regime1_representative;
-analysisResults.representative_frames.regime2 = regime2_representative;
-analysisResults.representative_frames.regime3 = regime3_representative;
+analysisResults.representative_frames.regime1 = regime1_rep;
+analysisResults.representative_frames.regime2 = regime2_rep;
+analysisResults.representative_frames.regime3 = regime3_rep;
 
-% Regime labels
-analysisResults.labels.regime1 = 'No Heating (Baseline)';
-analysisResults.labels.regime2 = 'Shape Change (Deformation/Tensing)';
-analysisResults.labels.regime3 = 'Heating Steady State';
+% Labels & colors
+analysisResults.labels.regime1 = 'No Heating';
+analysisResults.labels.regime2 = 'Shape Change';
+analysisResults.labels.regime3 = 'Heating / Drift';
+analysisResults.colors.regime1 = col_no_heating;
+analysisResults.colors.regime2 = col_shape_change;
+analysisResults.colors.regime3 = col_heating_steady;
 
-% Regime colors
-analysisResults.colors.regime1 = [0.7 0.7 0.7];  % Gray
-analysisResults.colors.regime2 = [0.9 0.3 0.3];  % Red
-analysisResults.colors.regime3 = [1 0.6 0.2];    % Orange
+% Time series
+analysisResults.timeseries.circ           = circularity_smooth;
+analysisResults.timeseries.radius         = radius_midline_mean;
+analysisResults.timeseries.drift          = drift_smooth;
+analysisResults.timeseries.roughness      = roughness_smooth;
+analysisResults.timeseries.reduced_volume = rv_smooth;
 
-% Time series data
-analysisResults.timeseries.circularity = circularity_smooth;
-analysisResults.timeseries.radius = radius_midline_mean;
-analysisResults.timeseries.drift = drift_smooth;
-analysisResults.timeseries.roughness = roughness_smooth;
-analysisResults.timeseries.roughness_change = roughness_change;
-analysisResults.timeseries.reduced_volume = reduced_volume_smooth;
+% Events
+analysisResults.heatingCycles          = heatingCycles;
+analysisResults.shapeEvents.zones      = zones_rough;
+analysisResults.shapeEvents.range_hi   = range_hi;
+analysisResults.shapeEvents.range_lo   = range_lo;
+analysisResults.shapeEvents.baseline   = initial_mean;
+analysisResults.detection.thresh_drift = threshold_active;
 
-% Heating cycles info
-analysisResults.heatingCycles = heatingCycles;
-
-% Shape change events (with type classification)
-analysisResults.shapeEvents = shapeEvents;
-analysisResults.shapeEvents_zones = shape_zones;
-analysisResults.shapeEvents_change_threshold = change_threshold;
-
-% Temporal segments and Fourier spectra
-analysisResults.temporalSegments = temporalSegments;
-analysisResults.fourier.modes = modes;
-analysisResults.fourier.segment_count = segment_count;
+% Fourier
+analysisResults.fourier.modes          = modes;
+analysisResults.fourier.spectrum_no_heating     = spectrum_regime1;
+analysisResults.fourier.spectrum_shape_change   = spectrum_regime2;
+analysisResults.fourier.spectrum_heating        = spectrum_regime3;
 
 % Metadata
-analysisResults.metadata.numFrames = numFrames;
-analysisResults.metadata.pixels_per_micron = pixels_per_micron;
-analysisResults.metadata.analysisDate = datetime('now');
-analysisResults.metadata.detection_method = 'change-based (Option 1)';
+analysisResults.metadata.numFrames          = numFrames;
+analysisResults.metadata.pixels_per_micron  = pixels_per_micron;
+analysisResults.metadata.angles             = angles;
+analysisResults.metadata.date               = datetime('now');
 
-% Save to file
-save('analysisResults_changeDetection.mat', 'analysisResults', '-v7.3');
-% 
-% fprintf('✓ Analysis results saved to: analysisResults_changeDetection.mat\n');
-% fprintf('\nSummary of representative frames:\n');
-% fprintf('  Regime 1 (No heating):     %d frames selected\n', length(regime1_representative));
-% fprintf('  Regime 2 (Shape change):   %d frames selected\n', length(regime2_representative));
-% fprintf('  Regime 3 (Heating steady): %d frames selected\n', length(regime3_representative));
-% 
-% fprintf('\nShape event classification:\n');
-% n_increase = sum(strcmp({shapeEvents.type}, 'increase'));
-% n_decrease = sum(strcmp({shapeEvents.type}, 'decrease'));
-% fprintf('  Deformation events (roughness increase): %d\n', n_increase);
-% fprintf('  Tensing events (roughness decrease):     %d\n', n_decrease);
-% 
-% fprintf('\n=== Analysis Complete ===\n');
+save('analysisResults.mat','analysisResults','-v7.3');
+
+fprintf('\nSummary:\n');
+fprintf('  Regime 1 representative frames: %d\n', length(regime1_rep));
+fprintf('  Regime 2 representative frames: %d\n', length(regime2_rep));
+fprintf('  Regime 3 representative frames: %d\n', length(regime3_rep));
+fprintf('Done.\n');
