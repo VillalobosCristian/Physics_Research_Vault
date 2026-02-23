@@ -129,7 +129,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "chlamy",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -150,8 +150,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -250,7 +249,7 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "8757e3432403628f",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
     "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
