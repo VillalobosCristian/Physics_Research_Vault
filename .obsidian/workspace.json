@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mergin_shapes.md",
+                "file": "01-Projects/GUVs/GUVs simple analysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mergin_shapes"
+              "title": "GUVs simple analysis"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -202,8 +202,12 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "89bab1d007896fdb",
+  "active": "a0a8291e2d52b734",
   "lastOpenFiles": [
+    "mergin_shapes.md",
+    "01-Projects/GUVs/GUVs simple analysis.md",
+    "01-Projects/GUVs/Temperature shape changes GUVs.md",
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - Fourier Analysis Validation and Best Practices.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - DOPC Permeability Dynamics.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
     "00-Dashboard/Papers Tracker.md",
@@ -211,11 +215,9 @@
     "00-Dashboard/Papers MOC.md",
     "00-Dashboard/Concepts MOC.md",
     "00-Dashboard/GUV Research Hub.md",
-    "mergin_shapes.md",
     "01-Projects/GUVs/Pasted image 20260202092223.png",
     "01-Projects/GUVs/export_fig_out.png",
     "01-Projects/GUVs/montage_5x2.png",
-    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/Reading-Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
     "03-Concepts/Membrane-Physics/Helfrich free energy.md",
     "03-Concepts/Experimental-Methods/Radioactivity.md",
@@ -233,8 +235,6 @@
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Vesicle Shape Deformations.md",
     "04-Data/Codes/vesicle_analysis_v2.asv",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Temperature-Dependent Membrane Permeability.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/faizi2020_Fluctuation spectroscopy of GUVs phase contrast and confocal.md",
     "04-Data/Codes/vesicle_analysis_v2.m",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review",
     "01-Projects/GUVs/Pasted image 20260209142906.png",
