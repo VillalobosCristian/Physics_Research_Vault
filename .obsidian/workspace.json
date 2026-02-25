@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
+                "file": "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - Fourier Analysis Validation and Best Practices.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quantitative Comparison - My Findings vs Literature"
+              "title": "Deep Dive - Fourier Analysis Validation and Best Practices"
             }
           },
           {
@@ -204,21 +204,22 @@
   },
   "active": "89bab1d007896fdb",
   "lastOpenFiles": [
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - DOPC Permeability Dynamics.md",
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
+    "00-Dashboard/Papers Tracker.md",
+    "00-Dashboard/Dashboard.md",
+    "00-Dashboard/Papers MOC.md",
     "00-Dashboard/Concepts MOC.md",
     "00-Dashboard/GUV Research Hub.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
     "mergin_shapes.md",
     "01-Projects/GUVs/Pasted image 20260202092223.png",
     "01-Projects/GUVs/export_fig_out.png",
     "01-Projects/GUVs/montage_5x2.png",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/Reading-Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
-    "00-Dashboard/Papers MOC.md",
-    "00-Dashboard/Papers Tracker.md",
     "03-Concepts/Membrane-Physics/Helfrich free energy.md",
     "03-Concepts/Experimental-Methods/Radioactivity.md",
     "03-Concepts/Differential-Geometry/Metric Tensor Basics.md",
-    "00-Dashboard/Dashboard.md",
     "03-Concepts/Membrane-Physics/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
     "03-Concepts/Differential-Geometry/Gaussian curvature.md",
     "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
