@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -202,10 +202,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "a0a8291e2d52b734",
+  "active": "89bab1d007896fdb",
   "lastOpenFiles": [
-    "mergin_shapes.md",
     "01-Projects/GUVs/GUVs simple analysis.md",
+    "mergin_shapes.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - Fourier Analysis Validation and Best Practices.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - DOPC Permeability Dynamics.md",
