@@ -48,56 +48,9 @@
               "icon": "lucide-file",
               "title": "mergin_shapes"
             }
-          },
-          {
-            "id": "6d25c3b4caa2b1e4",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.7"
-            }
-          },
-          {
-            "id": "2f903aec546682e4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "01-Projects/GUVs/montage_5x2.png"
-              },
-              "icon": "lucide-image",
-              "title": "montage_5x2"
-            }
-          },
-          {
-            "id": "5edf01294bfbded6",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "01-Projects/GUVs/export_fig_out.png"
-              },
-              "icon": "lucide-image",
-              "title": "export_fig_out"
-            }
-          },
-          {
-            "id": "4f3d89d2fb3dd1c0",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "01-Projects/GUVs/Pasted image 20260202092223.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260202092223"
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -249,26 +202,29 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "8757e3432403628f",
+  "active": "89bab1d007896fdb",
   "lastOpenFiles": [
+    "00-Dashboard/Concepts MOC.md",
+    "00-Dashboard/GUV Research Hub.md",
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
+    "mergin_shapes.md",
+    "01-Projects/GUVs/Pasted image 20260202092223.png",
+    "01-Projects/GUVs/export_fig_out.png",
+    "01-Projects/GUVs/montage_5x2.png",
+    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/Reading-Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
     "00-Dashboard/Papers MOC.md",
     "00-Dashboard/Papers Tracker.md",
     "03-Concepts/Membrane-Physics/Helfrich free energy.md",
-    "00-Dashboard/GUV Research Hub.md",
     "03-Concepts/Experimental-Methods/Radioactivity.md",
-    "00-Dashboard/Concepts MOC.md",
     "03-Concepts/Differential-Geometry/Metric Tensor Basics.md",
     "00-Dashboard/Dashboard.md",
     "03-Concepts/Membrane-Physics/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
     "03-Concepts/Differential-Geometry/Gaussian curvature.md",
-    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/Untitled.md",
     "01-Projects/Chlamy-Vesicle-Interaction",
-    "mergin_shapes.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Publication Strategy and Gap Analysis.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/pécréaux2004_Refined contour analysis of GUVs.md",
@@ -278,14 +234,10 @@
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Temperature-Dependent Membrane Permeability.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/faizi2020_Fluctuation spectroscopy of GUVs phase contrast and confocal.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Analysis Methods for Vesicle Fluctuations.md",
     "04-Data/Codes/vesicle_analysis_v2.m",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review",
     "01-Projects/GUVs/Pasted image 20260209142906.png",
     "01-Projects/GUVs/Pasted image 20260209133324.png",
-    "01-Projects/GUVs/montage_5x2.png",
-    "01-Projects/GUVs/Pasted image 20260202092223.png",
-    "01-Projects/GUVs/export_fig_out.png",
     "02-Literature/References/Rumiana Dimova (Editor)_ Carlos Marques (Editor) - The Giant Vesicle Book-CRC Press (2019).pdf",
     "01-Projects/GUVs/Pasted image 20260126095757.png",
     "01-Projects/GUVs/Pasted image 20260126095548.png",
