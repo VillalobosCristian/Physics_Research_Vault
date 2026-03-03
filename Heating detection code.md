@@ -9,6 +9,7 @@ Since i change the way to store data from simple .mat variables to structures al
 
 ## Basic metric 
 
-Circularity: The ratio $C= 4\pi A/P^2$, is $1$ for a perfect circle.  And is c
+Circularity: The ratio $C= 4\pi A/P^2$, is $1$ for a perfect circle.  And is computed by closing the contour polygon and using polyarea+perimeter sum. 
+
 
 
