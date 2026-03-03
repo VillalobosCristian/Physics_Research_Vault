@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "aa823b715f11dfa6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Heating detection code.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Heating detection code"
+            }
+          },
+          {
             "id": "83f58ba7cb9060f3",
             "type": "leaf",
             "state": {
@@ -61,7 +75,8 @@
               "title": "GUVs simple analysis"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,11 +228,12 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "8757e3432403628f",
+  "active": "aa823b715f11dfa6",
   "lastOpenFiles": [
+    "Heating detection code.md",
+    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - Fourier Analysis Validation and Best Practices.md",
     "01-Projects/GUVs/GUVs simple analysis.md",
-    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "mergin_shapes.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - DOPC Permeability Dynamics.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
@@ -245,7 +261,6 @@
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/nalupurackal2022_Hydro-thermophoretic trap for microparticles near gold substrate.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Vesicle Shape Deformations.md",
     "04-Data/Codes/vesicle_analysis_v2.asv",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Temperature-Dependent Membrane Permeability.md",
     "04-Data/Codes/vesicle_analysis_v2.m",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review",
     "01-Projects/GUVs/Pasted image 20260209142906.png",
