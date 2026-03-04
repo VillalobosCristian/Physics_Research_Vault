@@ -75,8 +75,7 @@
               "title": "GUVs simple analysis"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -228,8 +227,9 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "aa823b715f11dfa6",
+  "active": "8757e3432403628f",
   "lastOpenFiles": [
+    "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "Heating detection code.md",
     "Untitled 1.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
@@ -252,7 +252,6 @@
     "03-Concepts/Differential-Geometry/Metric Tensor Basics.md",
     "03-Concepts/Membrane-Physics/Lipid Vesicles and Membranes Energetics, Shape, and Dynamics.md",
     "03-Concepts/Differential-Geometry/Gaussian curvature.md",
-    "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/Untitled.md",
     "01-Projects/Chlamy-Vesicle-Interaction",
