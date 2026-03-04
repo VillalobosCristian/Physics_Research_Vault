@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "15bc287daaee8184",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "bfd4bb986fd06e81",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 1"
-            }
-          }
-        ]
-      },
-      {
         "id": "2a16b605d51a8bed",
         "type": "tabs",
         "children": [
@@ -248,10 +228,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "bfd4bb986fd06e81",
+  "active": "aa823b715f11dfa6",
   "lastOpenFiles": [
-    "Heating detection code.md",
     "Untitled 1.md",
+    "Heating detection code.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - Fourier Analysis Validation and Best Practices.md",
     "01-Projects/GUVs/GUVs simple analysis.md",
