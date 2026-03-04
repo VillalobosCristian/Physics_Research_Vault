@@ -23,7 +23,7 @@ Heating events are identified purely from **drift rate** exceeding a threshold:
 
 $$\text{thr} = \max!\left(\tilde{\dot\Delta} + 3,\sigma_{\dot\Delta}^{(0)}, ; 0.03 \text{ px/fr}\right)$$
 
-where $\tilde{\cdot}$ is the median and $\sigma^{(0)}$ is estimated from the first 100 frames (assumed quiet). The `0.03` floor prevents false positives when baseline noise is very low.
+where $\tilde{\cdot}$ is the median. of $\dot{\Delta}(t)$ is its discrete time derivative $\sigma^{(0)}$ is estimated from the first 100 frames (assumed quiet). The `0.03` floor prevents false positives when baseline noise is very low.
 
 Binary mask → Gaussian-blurred → thresholded at 0.5 → rising/falling edges give `heat_starts/ends`. Short events ($<100$ fr) and low-drift events ($<10$ px total) are rejected. Adjacent events separated by $<300$ fr are merged.
 

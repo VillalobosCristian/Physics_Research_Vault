@@ -121,4 +121,7 @@ Load → Basic metrics → Smooth → Detect heating events
 5. **`heatingCycles.v_pre/v_post`** use a ±50-frame window — this is hardcoded and might overlap with the event itself for short pre/post periods.
     
 
-What aspects do you want to improve first?
+
+
+
+
