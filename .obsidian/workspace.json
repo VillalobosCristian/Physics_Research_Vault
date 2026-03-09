@@ -75,8 +75,7 @@
               "title": "Protocol - Temperature Calibration Methods"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -228,11 +227,11 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "a0a8291e2d52b734",
+  "active": "8757e3432403628f",
   "lastOpenFiles": [
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
     "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "Heating detection code.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Optothermal Vesicle Manipulation.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Analysis Methods for Vesicle Fluctuations.md",
     "01-Projects/Frontier-of-Life/Postdoc Project.md",
