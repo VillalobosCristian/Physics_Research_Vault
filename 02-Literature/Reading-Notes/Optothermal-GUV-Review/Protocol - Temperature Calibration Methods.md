@@ -338,3 +338,143 @@ Before implementing temperature measurement:
 
 **Last updated:** 2026-02-16
 **Status:** Active / In preparation for experiments
+Let me read the full transcript to make sure I have complete context before diving in.Good — I have full context. Let me walk through the code systematically, section by section, combining the implementation logic with the physics reasoning behind each design choice.
+
+---
+
+## Section 1 — Contour shape descriptors
+
+```matlab
+A = polyarea(xc, yc);
+P = sum(sqrt(dx.^2 + dy.^2));
+circularity = 4*pi*A / P^2;
+```
+
+**Circularity** is the isoperimetric ratio: it equals 1 for a perfect circle and drops toward 0 for elongated or irregular shapes. For a GUV in thermal equilibrium it fluctuates narrowly around ~0.98–0.99. During heating, if the membrane is strongly forced you see a sustained drop — the vesicle is transiently deformed. This is your most robust shape-change detector because it is a _global_ scalar that is insensitive to rigid-body motion.
+
+**Center of mass** uses the shoelace formula applied to the closed polygon — not just the centroid of pixels, which would be biased by the interior filling. This gives you the true geometric centroid of the enclosed area. The drift is then $\sqrt{(\Delta x_{CM})^2 + (\Delta y_{CM})^2}$ in pixels, accumulated from the first frame.
+
+**Roughness** is $\sigma_r / \langle r \rangle$: the coefficient of variation of the radial profile. This is what Pecreaux et al. call $\sigma_{\delta h}/R_0$ — it measures the RMS amplitude of all Fourier modes simultaneously. It is more sensitive to high-$q$ fluctuations (which dominate the sum) but also more susceptible to imaging noise.
+
+The important design choice here is that these three observables are **complementary in failure mode**: circularity is noise-resistant but slow (integrated signal); roughness is fast but noisy; drift rate catches translation without deformation. You need all three because different events trigger different combinations.
+
+---
+
+## Section 2 — Smoothing strategy
+
+```matlab
+sw = 50;
+circularity_smooth = smoothdata(circularity, 'gaussian', sw);
+drift_smooth = smoothdata(drift_magnitude, 'gaussian', 100);
+drift_rate = gradient(drift_smooth);
+drift_rate_smooth = smoothdata(drift_rate, 'gaussian', 30);
+```
+
+The window `sw=50` at 50 fps = 1 second. This is a deliberate choice: membrane fluctuations happen on timescales of 0.1–2 s (depending on mode), so a 1-second Gaussian smoothing window averages over individual fluctuation cycles and tracks only the _mean_ shape state. It suppresses the thermal noise in circularity/roughness without masking genuine shape changes that evolve over several seconds.
+
+The drift magnitude uses a longer window (100 frames = 2 s) because the cumulative drift is already a slow-moving signal. The `gradient` is taken _after_ smoothing because differentiating a noisy signal amplifies high frequencies — you smooth first, differentiate second, then smooth again. This is a well-known numerical trick to get a stable velocity estimate from position data.
+
+`drift_rate_smooth_s = drift_rate_smooth * fps` converts from px/frame to px/s for display only — all detection logic stays in px/frame units, which is correct.
+
+---
+
+## Section 3 — Threshold estimation from baseline
+
+```matlab
+baseline0_win = min(500, numFrames);
+mu0_drift_rate = median(drift_rate_smooth(baseline0_idx));
+sig0_drift_rate = max(std(drift_rate_smooth(baseline0_idx)), 0.005);
+thr_drift_rate = max(mu0_drift_rate + 3*sig0_drift_rate, 0.03);
+```
+
+This is a **data-driven 3-sigma threshold** estimated from the first `baseline0_win` frames. Several choices deserve attention:
+
+The `median` for the drift rate mean rather than `mean` — this is because the first few frames may have some transient as the vesicle settles into the field of view, and the median is more robust to those outliers.
+
+The `max(..., 0.005)` floor on `sig0` prevents division-by-zero and also guards against an unrealistically quiet baseline giving a threshold so tight that thermal fluctuations trigger false positives. The physical floors (0.005 for drift rate, 0.0005 for roughness and circularity) encode prior knowledge about the expected noise floor of your microscope.
+
+The second `max(mu0_drift_rate + 3*sig0_drift_rate, 0.03)` for drift rate does the same for the threshold itself: even if your baseline is extremely quiet, you require a minimum drift rate of 0.03 px/frame (= 1.5 px/s) to flag a heating event. This is important because for a perfectly still vesicle the 3-sigma threshold can be absurdly low.
+
+---
+
+## Section 4 — Event detection logic
+
+```matlab
+active_combined = active_drift | active_rough | active_circ;
+active_combined_smooth = smoothdata(double(active_combined), 'gaussian', 20) > 0.5;
+```
+
+The OR combination means any single sensor flagging is enough to mark a frame as active. The subsequent Gaussian smoothing at 20 frames followed by a 0.5 threshold effectively implements a **morphological closing** — it fills gaps between flags that are separated by less than ~20 frames, preventing the same heating event from being split into multiple spurious sub-events.
+
+The quality filter that follows:
+
+```matlab
+ok = (durations >= 100) & ((total_drift_cyc >= 10) | (rough_excursion > 2*sig0_roughness));
+```
+
+requires that an event lasts at least 2 seconds AND has either >10 px cumulative drift OR a roughness excursion exceeding 2σ. This removes false positives from momentary camera glitches or vesicle-object encounters. The choice of 10 px is system-specific — at 11.5 px/μm this is ~0.87 μm of total displacement, which is above thermal diffusion but well below a thermophoretic drift event.
+
+The **merging step** (gaps < 300 frames = 6 s) handles cases where a single physical heating event produces a brief quiet period mid-event, e.g., when the vesicle drifts out of the heating zone and then back in.
+
+---
+
+## Section 5 — Segment structure
+
+```matlab
+segments(end+1) = struct('label','Baseline 0','start',1,'stop',pre_heat_end,'type','baseline','index',0);
+```
+
+Every gap between events becomes a labeled segment of type `baseline`, `heating`, or `post_heat`. The `post_heat` segments are the scientifically most interesting because they tell you whether the membrane recovers its pre-heat state. The `z_rough_vs0` etc. in the `baselines` struct are z-scores relative to Baseline 0 — any sustained shift after heating is a potential evidence of irreversible membrane remodeling (e.g., lipid redistribution, partial pore formation, or area change).
+
+The `transient_skip = 50` (1 second) at the start of post-heat segments is important: immediately after the heat pulse the membrane is relaxing from a non-equilibrium state, and including these frames would contaminate both the roughness statistics and the Fourier spectrum with non-stationary data.
+
+---
+
+## Section 6 — Figure 3: the flickering heatmap
+
+```matlab
+w = w_scale * sig;   % w_scale = 5
+xv = [ri1.*cos(th(j1)), ri2.*cos(th(j2)), ro2.*cos(th(j2)), ro1.*cos(th(j1))]';
+```
+
+This is an annular patch visualization. For each angular bin $j$, you draw a quadrilateral whose inner and outer radii are $R_{mean}(\theta) \pm w_{scale} \cdot \sigma_{\delta h}(\theta)$. The color encodes $\sigma_{\delta h}$ directly. The `w_scale = 5` amplification factor is purely for visual contrast — without it, the fluctuation amplitude (~0.05–0.2 μm) would be invisible next to the mean radius (~10–20 μm).
+
+The physical content is $\sigma_{\delta h}(\theta) = \sqrt{\langle \delta h(\theta, t)^2 \rangle_t}$ — the RMS amplitude of radial fluctuations at each angular position, time-averaged over the segment. For an isotropic equilibrium vesicle this map should be angularly uniform (uniform ring width). Angular asymmetry during heating is your non-equilibrium signature, and this is exactly the figure that will resonate with the Šarić group: it is the direct spatial manifestation of the mode-coupling argument I described earlier.
+
+---
+
+## Section 7 — Figure 4: Fourier spectrum and ACF
+
+```matlab
+u_mat = (R_mat - mean(R_mat,1)) / R0;
+U = fft(u_mat(fi,:)) / N_th;
+spectrum(q) = 2 * mean(U_all);
+```
+
+The normalization chain: subtract the mean radius per frame (removes breathing mode), divide by $R_0$ (makes $u = \delta r / R_0$ dimensionless), FFT and divide by $N_\theta$ (proper DFT normalization so that Parseval holds), then multiply by 2 (fold two-sided spectrum). The result is $\langle |u_q|^2 \rangle$ in μm² (since $R_0$ is in μm), which connects directly to the Helfrich theory via the Pecreaux projection.
+
+The ACF is computed on the **real part of the Fourier coefficient** $c_q(t) = \text{Re}[\hat{u}_q(t)]$. For an isotropic vesicle $\langle \hat{u}_q \rangle = 0$ and the real and imaginary parts have the same statistics, so this is fine and gives you twice the statistics compared to using the complex coefficient directly.
+
+The `detrend` before `xcorr` is essential: any slow drift in the contour (e.g., focus drift, vesicle slowly drifting out of plane) appears as a low-frequency trend in $c_q(t)$ that, if not removed, creates a large positive bias at long lags and prevents the ACF from decaying to zero. After detrending, the `'normalized'` flag divides by the zero-lag value so $C_q(0) = 1$ by definition.
+
+---
+
+## Section 8 — Figure 5: PDF of $\sigma_{\delta h}$
+
+```matlab
+sig_c = sig - mean(sig);
+[f, xi] = ksdensity(sig_c, 'Bandwidth', 0.5*std(sig_c));
+f = f / trapz(xi, f);
+```
+
+Here `sig` is the angular vector $\sigma_{\delta h}(\theta_j)$, length $N_\theta$. Centering it removes the mean — you are plotting the _deviation_ of each angular position from the segment mean, which is the right quantity for comparing across segments because absolute amplitude differences between segments (due to different $R_0$ or fit state) don't conflate with the angular heterogeneity you care about.
+
+The kernel bandwidth $0.5\sigma$ is a half-normal rule-of-thumb (Silverman's rule gives $\approx 1.06 \sigma N^{-1/5}$, which for $N_\theta = 360$ gives ~0.15σ — your 0.5σ gives slightly oversmoothed curves, which is fine for a comparison figure). The `trapz` renormalization after is paranoia — `ksdensity` should already return a properly normalized density, but numerical integration over the returned grid can be slightly off.
+
+The physical interpretation: a narrow, symmetric PDF indicates a homogeneous isotropic membrane (all angles fluctuate equally). A broad or skewed PDF signals angular heterogeneity — the membrane has regions of higher and lower fluctuation amplitude. During heating this is expected to broaden asymmetrically because the heating zone is localized.
+
+---
+
+## Key variable to know for the meeting
+
+When someone asks "how many frames per condition?" — that's `fourier_segs(k).N_fr`. When they ask "what's the time resolution?" — `1/fps = 20` ms. When they ask "what's the slowest mode you can reliably measure?" — you need $N_\text{fr} \gg \tau_{q_\text{min}} \cdot \text{fps}$, i.e., for $q=4$ with $\tau \sim 5$ s you need $\gg 250$ frames, and you have `min_baseline_frames = 200` — so $q=4$ is marginal at best, $q \geq 6$ is reliable. That's an honest limitation worth flagging proactively.

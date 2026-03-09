@@ -76,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -228,13 +228,13 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "aa823b715f11dfa6",
+  "active": "a0a8291e2d52b734",
   "lastOpenFiles": [
+    "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "Heating detection code.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Optothermal Vesicle Manipulation.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Analysis Methods for Vesicle Fluctuations.md",
-    "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "01-Projects/Frontier-of-Life/Postdoc Project.md",
     "01-Projects/GUVs/GUVs simple analysis.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
