@@ -76,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -228,15 +228,16 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "a0a8291e2d52b734",
+  "active": "aa823b715f11dfa6",
   "lastOpenFiles": [
+    "Heating detection code.md",
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Optothermal Vesicle Manipulation.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Analysis Methods for Vesicle Fluctuations.md",
     "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "01-Projects/Frontier-of-Life/Postdoc Project.md",
     "01-Projects/GUVs/GUVs simple analysis.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
-    "Heating detection code.md",
     "Untitled 1.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/Deep Dive - Fourier Analysis Validation and Best Practices.md",
     "mergin_shapes.md",
@@ -259,7 +260,6 @@
     "02-Literature/Reading-Notes/dimova2020_The giant vesicle book.md",
     "01-Projects/Untitled.md",
     "01-Projects/Chlamy-Vesicle-Interaction",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Publication Strategy and Gap Analysis.md",
     "04-Data/Codes/vesicle_analysis_v2.asv",
     "04-Data/Codes/vesicle_analysis_v2.m",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review",
