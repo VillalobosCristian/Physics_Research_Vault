@@ -67,16 +67,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
+                "file": "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Protocol - Temperature Calibration Methods"
+              "title": "Chlamy-Vesicle interaction"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -228,8 +228,11 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "aa823b715f11dfa6",
+  "active": "a0a8291e2d52b734",
   "lastOpenFiles": [
+    "01-Projects/Cooling-by-Heating/Cooling by Heating.md",
+    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
+    "02-Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/wennerström2022_Thermal fluctuations and osmotic stability of lipid vesicles.md",
     "02-Literature/Reading-Notes/karal2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/fränzl2022_Hydrodynamic manipulation by optically induced thermo-osmotic flows.md",
@@ -246,10 +249,8 @@
     "01-Projects/Cooling-by-Heating/Report.md",
     "01-Projects/Cooling-by-Heating/msca sub.md",
     "01-Projects/Cooling-by-Heating/Experiments.md",
-    "01-Projects/Cooling-by-Heating/Cooling by Heating.md",
     "01-Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "Heating detection code.md",
-    "02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Optothermal Vesicle Manipulation.md",
     "02-Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Analysis Methods for Vesicle Fluctuations.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
@@ -260,7 +261,6 @@
     "00-Dashboard/Papers Tracker.md",
     "00-Dashboard/Dashboard.md",
     "00-Dashboard/Papers MOC.md",
-    "00-Dashboard/Concepts MOC.md",
     "01-Projects/GUVs/Pasted image 20260202092223.png",
     "01-Projects/GUVs/export_fig_out.png",
     "01-Projects/Chlamy-Vesicle-Interaction",
