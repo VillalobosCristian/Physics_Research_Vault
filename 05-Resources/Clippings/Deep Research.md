@@ -202,3 +202,102 @@ The biggest variable here is **when you start dripping**. You want the slide al
 The **desiccator time** is important and often underestimated. 1 hour is a minimum — if you have time, overnight desiccation gives more reproducible films because you're certain all chloroform is gone. Residual solvent changes how the film swells and directly affects lamellarity. If you're in a hurry, a gentle nitrogen purge in the desiccator before sealing speeds things up.
 
 One thing not in your protocol: do you desiccate under active vacuum or just in a closed desiccator with drying agent? Active vacuum pulls chloroform out much faster and more completely.
+Yes, this is a real concern and worth thinking carefully about in your specific setup.
+
+## The actual risk
+
+DOPC has two oleoyl chains with a single $\Delta9$ _cis_ double bond each — susceptible to oxidation, but not as fast as polyunsaturated lipids. The issue in your optothermal setup isn't primarily direct blue-light absorption by the lipid (DOPC doesn't absorb significantly in the visible), but two indirect pathways:
+
+**Reactive oxygen species from gold.** Plasmonic gold under illumination generates singlet oxygen $^1\text{O}_2$ and other ROS as a byproduct of the photothermal conversion, particularly at high fluence. These react with the double bonds very efficiently — $^1\text{O}_2$ + unsaturated lipid rate constants are on the order of $10^6$–$10^7$ M$^{-1}$s$^{-1}$.
+
+**Fluorescent dyes as photosensitizers.** If you're labeling membranes (DiO, Rhodamine-DPPE, etc.), these are efficient $^1\text{O}_2$ sensitizers. Even a small dye fraction under continuous illumination will drive oxidation much faster than bare DOPC alone.
+
+## What oxidized DOPC does to your measurements
+
+oxDOPC incorporates hydroxyl and hydroperoxide groups that increase headgroup hydration and reduce chain packing — the membrane becomes more permeable, $\kappa$ drops, and you can get spontaneous pore formation. For flickering spectroscopy this means your extracted $\kappa$ will drift downward over the course of an acquisition, and for the shape-change experiments the tension threshold will shift. Basically it contaminates every mechanical observable.
+
+## Practical mitigations
+
+- **Minimize illumination time** — only illuminate during actual acquisition, not during focusing or positioning. This is the most impactful step.
+- **Keep blue light intensity at the minimum** needed for the optothermal effect. Characterize the threshold power and don't exceed it unnecessarily.
+- **Work with unlabeled vesicles** for phase contrast when possible — remove the photosensitizer entirely.
+- **Include an antioxidant** in the external buffer: Trolox (water-soluble vitamin E analog, ~1 mM) is standard in single-molecule fluorescence for exactly this reason and is membrane-compatible. It won't affect the osmotic balance meaningfully at that concentration.
+- **Check for oxidation** as a routine control: image the same vesicle over your typical experiment duration without heating and track $R(t)$ or morphology — any systematic drift or sudden permeabilization events signal oxidative damage.
+
+The Trolox addition is probably the easiest win given you already have everything else optimized.
+
+Good — that's an important control that tells you two things:
+
+**The shape transformation is real and not a dye artifact.** Rhodamine at 0.1 mol% shouldn't significantly alter $\kappa$ or $\sigma$ of DOPC, but it's always reassuring to confirm the effect is dye-independent.
+
+**Oxidation via photosensitization is not the dominant mechanism** for the shape change itself — otherwise you'd see differences between labeled and unlabeled vesicles at equivalent illumination doses, since Rhodamine-DPPE is a much more efficient $^1\text{O}_2$ sensitizer than bare DOPC.
+
+The residual concern is subtler: even without dye, ROS from the gold substrate under illumination are still present. The shape transformation happens fast (it's thermal, driven by the $\Delta T$ at the substrate), while oxidative damage accumulates more slowly. So the effect you're observing is genuinely optothermal, but if you were to repeat heating cycles on the same vesicle multiple times or do long acquisitions, oxidative drift in the mechanical properties could still show up as a slow background effect — particularly relevant for the flickering spectroscopy where you're integrating over many frames.
+
+The practical upshot: for single-event shape transformation experiments you're probably fine. For extended flickering acquisitions on the same vesicle near the heated zone, Trolox in the buffer is still cheap insurance. At 1 mM it's osmotically negligible (~1 mOsm/kg) so it won't disturb your balance protocol.
+
+# GUV Preparation & Optothermal Experiment Protocol
+
+## DOPC Vesicles on Gold Substrate — Flickering Spectroscopy & Shape Transformation
+
+---
+
+## Part A — Lipid Film Preparation
+
+1. Cut glass slides with diamond tip. Handle only by edges from this point.
+2. Clean each slide $3\times$ with chloroform, then $1\times$ ethanol rinse. Air-dry fully.
+3. Prepare fresh lipid working solution: DOPC at 4 mM in chloroform. If using fluorescent label, add Rhodamine-DPPE at 0.1 mol%. Keep vial sealed on ice, use immediately.
+4. Spin coat: slide centered on vacuum chuck, spin at 1000 rpm (ramp 2 s). Once at full speed, drip 50 $\mu$L continuously from center with Hamilton syringe.
+5. Transfer coated slides immediately to desiccator under active vacuum. Desiccate **minimum 1 h, overnight preferred**. No residual chloroform allowed.
+
+---
+
+## Part B — Hydration & Internal Solution
+
+6. Prepare internal sucrose solution at **200 mM nominal** in ultrapure water. Record nominal concentration.
+7. Hydrate lipid film: add sucrose solution over coated slide in a sealed chamber, incubate at **40°C for 1 h**.
+8. Collect vesicle suspension into a clean tube.
+9. **Measure osmolarity** of the collected suspension with the osmometer. Record $c_{in}$. This is your true internal osmolarity — discard the nominal value.
+
+---
+
+## Part C — External Solution
+
+10. Prepare external glucose solution targeting $c_{out} = c_{in} - \Delta$, where $\Delta = 5$–10 mOsm/kg for a floppy, flickering regime.
+11. Add **Trolox at 1 mM** to the external glucose solution as antioxidant. Osmotic contribution is negligible (~1 mOsm/kg).
+12. **Measure $c_{out}$** on the osmometer and verify the offset is within target. Adjust if needed.
+13. Log both $c_{in}$ and $c_{out}$ in your notebook for every batch.
+
+---
+
+## Part D — Sample Chamber Assembly
+
+14. Assemble observation chamber with the **gold substrate as the bottom surface** (heating side). Use spacers appropriate for your imaging geometry.
+15. Mix vesicle suspension into glucose-Trolox bath at a ratio of **≤ 1:10** (vesicle suspension : external bath) to ensure bath osmolarity dominates.
+16. Allow vesicles to sediment to the gold substrate: **10–15 min** at rest. Glucose exterior is denser than sucrose interior so sedimentation is driven naturally.
+17. Quick morphological pre-check under phase contrast before any illumination:
+    - Spherical with visible thermal fluctuations → correct osmotic regime, proceed.
+    - Smooth taut sphere → recheck osmolarity, likely imbalance.
+    - Tubes, pearling, debris → preparation issue, discard batch.
+
+---
+
+## Part E — Acquisition
+
+18. Select target vesicle. Minimize pre-illumination time during focusing — use transmitted light only, no blue illumination until acquisition starts.
+19. Set blue light intensity to the **minimum effective power** for your optothermal effect. Characterize threshold once and don't exceed it without reason.
+
+**For flickering spectroscopy:** acquire a baseline sequence (no heating) of sufficient length for your Fourier analysis. Keep the vesicle away from the heated zone or use a separate vesicle not exposed to the gold hotspot.
+
+**For shape transformation:** trigger the heating event, record the full sequence. For repeated heating cycles on the same vesicle, be aware of potential cumulative oxidative drift — limit to a small number of cycles or use a fresh vesicle per event if quantitative mechanics matter.
+
+20. After acquisition, record: $c_{in}$, $c_{out}$, $\Delta$, illumination power, acquisition duration, vesicle radius, and whether labeled or unlabeled.
+
+---
+
+## Part F — Quality Controls (per batch)
+
+- Osmometer readings logged for every preparation.
+- At least one unlabeled vesicle imaged per session alongside any labeled ones.
+- For long flickering acquisitions: check $R(t)$ for drift. Systematic radius decrease or sudden permeabilization events indicate oxidative damage — discard that trace.
+- Periodic repeat of $\kappa$ extraction on a control vesicle (no heating) to catch session-to-session drift in preparation quality.
