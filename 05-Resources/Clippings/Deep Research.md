@@ -183,3 +183,22 @@ This takes 2 minutes and catches any preparation error before you waste imaging 
 ---
 
 What's your current setup — do you have osmometer access, or are you working from conductivity/refractometry? That changes what's practical to implement.
+
+
+A few things worth tightening at each step:
+
+## 1. Glass Slides
+
+The chloroform cleaning is good but 3× may not be enough if the slides have any residue — worth doing a final rinse with ethanol and letting them air-dry completely before spin coating. Any organic contaminant left on the surface will interfere with uniform lipid film formation. Also, after breaking: handle only by edges from this point, skin oils matter.
+
+## 2. Lipid Solution
+
+4 mM in chloroform is standard for DOPC. The main thing to watch is **chloroform evaporation during handling** — if you're drawing from a stock vial repeatedly, the concentration drifts upward over time. Keep the vial sealed and on ice, and prepare fresh working solution rather than reusing old aliquots. Also verify your lipid stock isn't degraded: DOPC oxidizes and you'll see it as reduced vesicle quality and inconsistent $\kappa$ values.
+
+## 3. Spin Coating
+
+The biggest variable here is **when you start dripping**. You want the slide already spinning at full speed before adding the lipid — if you drip while it's still accelerating you get uneven coverage. Drip slowly and continuously from the center, letting centrifugal force spread it outward.
+
+The **desiccator time** is important and often underestimated. 1 hour is a minimum — if you have time, overnight desiccation gives more reproducible films because you're certain all chloroform is gone. Residual solvent changes how the film swells and directly affects lamellarity. If you're in a hurry, a gentle nitrogen purge in the desiccator before sealing speeds things up.
+
+One thing not in your protocol: do you desiccate under active vacuum or just in a closed desiccator with drying agent? Active vacuum pulls chloroform out much faster and more completely.
