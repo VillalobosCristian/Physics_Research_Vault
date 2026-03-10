@@ -154,3 +154,32 @@ On the biophysical side, a challenge is to push measurements to the **molecular
 From a technological perspective, **stability** and **scalability** of GUV production is a practical challenge for industrial or clinical applications. Liposomes are already used in medicine (e.g., mRNA vaccine delivery), but those are mostly nanometer-scale LUVs. GUVs could potentially serve as microreactors or drug carriers for large payloads, but producing and storing them in large quantity is tough – they are more fragile and prone to aggregation or oxidation over time. Research into polymer-lipid hybrids and encapsulating antioxidants is partially addressing this, making vesicles tougher ( [Polymer–Lipid Hybrid Materials - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11905483/#:~:text=different%20properties%20such%20as%20bending,and%20surprisingly%2C%20some%20properties%20are) ) ( [Polymer–Lipid Hybrid Materials - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11905483/#:~:text=Specifically%2C%20hybrid%20vesicles%20can%3A%20,delivery%2C%2032%E2%80%9324%20field%20effect%20transistors) ).
 
 In conclusion, giant unilamellar vesicles have established themselves as a **versatile platform bridging biology, chemistry, and physics**. They have yielded fundamental insights (like how membrane tension can be measured optically ( [Identifying and Manipulating Giant Vesicles: Review of Recent Approaches - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9144095/#:~:text=,PMC%20free%20article) ) or how an actin cortex stiffens a membrane ( [Studying actin-induced cell shape changes using Giant Unilamellar Vesicles and reconstituted actin networks - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9704537/#:~:text=Helfer%20et%20al,a%202D%20shear%20modulus%20on) )) and are paving the way for constructing life-like systems from the bottom up. The next decade will likely see GUVs used even more in interdisciplinary ways – perhaps as smart drug delivery devices that can sense the environment and release contents on cue, or as simplified cell models to test synthetic pathways (e.g., artificial organelles within GUVs performing photosynthesis or replication). By continuing to refine experimental methods and theoretical models, and by addressing the challenges of complexity and stability, researchers will further unlock the potential of GUVs to both explain the **principles of cellular membranes** and harness them in **innovative applications**([Advances in giant unilamellar vesicle preparation techniques and applications | CoLab](https://colab.ws/articles/10.1016%2Fj.cis.2023.102935#:~:text=electric%2C%20and%20magnetic%20barriers,potential%20techniques%20for%20dedicated%20applications)) ( [Identifying and Manipulating Giant Vesicles: Review of Recent Approaches - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9144095/#:~:text=supramolecular%20chemistry%20for%20understanding%20cellular,33%2C15%20%2C%2035%2C17%20%2C%2037) ).
+
+
+A few interconnected issues worth tightening up:
+
+## 1. Measure, don't assume
+
+The ~30 mM evaporation correction you found is an average — it will vary with humidity, chamber geometry, and how long the lid is open. The only reliable approach is to **measure the internal solution osmolarity directly from the collection tube** with an osmometer (freezing-point depression) before preparing the external glucose. If CRPP has one (most CNRS labs do), this should become the standard step. Nominal concentrations are just the starting point.
+
+## 2. The glucose target isn't trivially "match sucrose"
+
+Sucrose and glucose at equal osmolarity have different molecular weights (342 vs 180 g/mol), so you're already doing this right by matching osmolarity rather than molarity. But the question is: do you want _strictly_ isoosmolar, or a slight hypo-osmotic exterior? For flickering spectroscopy you actually want vesicles in the flaccid regime — a small offset of ~5–10 mOsm/kg hypo-osmotic exterior keeps them fluctuating without being deflated. For the optothermal shape-change experiments, the tension state at the start matters for interpreting the response, so it's worth being explicit about which regime you're targeting and preparing accordingly.
+
+## 3. Refractive index vs osmotic balance are independent constraints
+
+The glucose exterior gives you phase-contrast contrast and sedimentation — those are set by the glucose concentration. The osmotic balance is set by matching osmolarity. These two constraints are satisfied simultaneously when you use glucose at the right concentration, but it's worth checking: is your phase-contrast image quality sensitive to the exact glucose level? If you've been iterating on glucose concentration to optimize image contrast, make sure that hasn't drifted away from osmotic balance.
+
+## 4. Practical protocol checkpoints
+
+After preparation, a quick morphological check before any experiment:
+
+- Spherical, visibly fluctuating vesicles with no visible tubes or pearling → balanced and floppy
+- Smooth, taut spheres → hyper-osmotic exterior (deflated) or slightly hypo-osmotic interior — check osmometer
+- Obvious shape distortions → large osmotic imbalance
+
+This takes 2 minutes and catches any preparation error before you waste imaging time.
+
+---
+
+What's your current setup — do you have osmometer access, or are you working from conductivity/refractometry? That changes what's practical to implement.
