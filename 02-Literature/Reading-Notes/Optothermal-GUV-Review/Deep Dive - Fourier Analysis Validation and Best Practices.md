@@ -424,3 +424,18 @@ Before accepting κ results, verify the following:
 - [[rautu2017_The role of optical projection in membrane fluctuation analysis]]
 - [[sciortino2025_Active membrane deformations of a minimal synthetic cell]]
 - [[vesicle_analysis_v2.m_Pipeline Documentation]]
+
+
+
+
+The main differences are mechanical and osmotic:
+
+**Membrane tension and floppiness.** Lower osmolarity means less osmotic pressure difference if there's any mismatch, so vesicles at 100 mM tend to be slightly floppier — good for flickering spectroscopy. At 200 mM, the higher internal osmotic pressure gives slightly more robust, rounder vesicles that are easier to identify and track, but with somewhat reduced fluctuation amplitude.
+
+**Yield and size distribution.** Empirically, higher sucrose concentrations (up to an optimum) improve yield and favor larger GUVs during gentle hydration, likely because the higher ionic strength and viscosity of the sucrose solution slow down membrane detachment and promote more complete swelling. 200 mM is typically closer to this optimum for DOPC.
+
+**Refractive index contrast.** At 200 mM the sucrose/glucose refractive index contrast is stronger, giving better phase contrast visibility. At 100 mM the contrast is weaker and vesicles can be harder to see, especially smaller ones.
+
+**Practical osmolarity matching.** With your observed ~30 mM evaporation drift, 100 mM is proportionally more affected (30% shift vs 15% at 200 mM), making reproducible osmolarity matching harder.
+
+**Bottom line:** 200 mM is the better working concentration for your system — better yield, better imaging contrast, and more robust against evaporation-induced drift. 100 mM is only preferable if you specifically need very floppy vesicles with large fluctuation amplitudes and are willing to deal with lower yield and weaker contrast.
