@@ -196,3 +196,190 @@ The spectrum gives you **equilibrium elasticity** ($\kappa$, $\sigma$). The AC
 |Fit range $q \in [6,15]$|Rigid-body modes excluded|Low-$\kappa$ bias if $q_{\min}$ too small|
 
 The most important correction _not_ in this version is the **camera integration time correction** $\chi(\tau_l, T_{\exp})$ — the finite exposure time blurs fast modes and suppresses the high-$q$ spectrum, causing $\kappa$ to be _overestimated_. You mentioned adding this in a previous version; if it's absent here, that's the dominant source of bias (you found ~63 → ~35 $k_BT$ with it included).
+
+
+
+# Mathematical Foundations of `flickeringSpectroscopy.m`
+
+---
+
+## 1. Contour Decomposition into Fourier Modes
+
+The vesicle contour is sampled as $r(\phi_j, t)$ in polar coordinates, with $\phi_j = 2\pi j/N_\text{ang}$ and $j = 0, \ldots, N_\text{ang}-1$. The relative radial fluctuation is defined as:
+
+$$u(\phi, t) = \frac{r(\phi, t)}{\bar{R}(t)} - 1, \qquad \bar{R}(t) = \frac{1}{N_\text{ang}}\sum_j r(\phi_j, t)$$
+
+Dividing by $\bar{R}(t)$ removes instantaneous center-of-mass translation; subtracting the mean over all $\phi$ ensures zero mean. The equilibrium radius $R_0 = \langle \bar{R}(t) \rangle_t$ is computed separately.
+
+The discrete Fourier transform of the contour at each frame is:
+
+$$\hat{U}_q(t) = \frac{1}{N_\text{ang}} \sum_{j=0}^{N_\text{ang}-1} u(\phi_j, t), e^{-iq\phi_j}$$
+
+which is exactly `fft(...)/Nang` in the code. Since $u$ is real, $\hat{U}_{-q} = \hat{U}_q^*$, so the two-sided power $|\hat{U}_q|^2 + |\hat{U}_{-q}|^2 = 2|\hat{U}_q|^2$, giving the factor of 2 in:
+
+```matlab
+Uq_sq = 2 * abs(U(2:nMax+1, :)).^2;
+spectrum = mean(Uq_sq, 2);
+```
+
+The measured spectrum is:
+
+$$\langle |\hat{u}_q|^2 \rangle \approx \frac{2}{N_t}\sum_t |\hat{U}_q(t)|^2$$
+
+---
+
+## 2. Helfrich Hamiltonian for a Quasi-Spherical Vesicle
+
+The 3D shape of a vesicle fluctuating around a sphere of radius $R_0$ is expanded in real spherical harmonics:
+
+$$r(\theta,\phi) = R_0 \left[1 + \sum_{l=2}^{\infty}\sum_{m=-l}^{l} u_{lm}, Y_l^m(\theta,\phi)\right]$$
+
+where $u_{lm}$ are dimensionless complex amplitudes (with $u_{l,-m} = (-1)^m u_{lm}^*$ for a real surface). The Helfrich free energy (bending + tension) evaluated to quadratic order in $u_{lm}$ is:
+
+$$\mathcal{H} = \frac{\kappa}{2R_0^2} \sum_{l,m} \lambda_l, |u_{lm}|^2$$
+
+with the eigenvalue:
+
+$$\boxed{\lambda_l = l(l+1)\left[(l-1)(l+2) + \bar{\sigma}\right]}$$
+
+where $\bar{\sigma} = \sigma R_0^2/\kappa$ is the dimensionless (reduced) tension. Equivalently, expanding the product:
+
+$$\lambda_l = l^2(l+1)^2 - (2-\bar{\sigma}),l(l+1)$$
+
+which is exactly `lambda = l^2*(l+1)^2 - (2-sbar)*l*(l+1)` in the code. Note that $l=0,1$ are excluded (translation and rotation), so the sum starts at $l=2$.
+
+**Equipartition** gives, for each mode independently:
+
+$$\frac{\kappa}{2R_0^2},\lambda_l, \langle|u_{lm}|^2\rangle = \frac{k_BT}{2} \implies \langle|u_{lm}|^2\rangle = \frac{k_BT R_0^2}{\kappa,\lambda_l}$$
+
+The variance diverges as $\bar{\sigma} \to 0$ for $l=2$ (zero mode of the floppy sphere), which is why the $q \geq 6$ cutoff is imposed — low modes are contaminated by large-amplitude excursions and rigid-body drift.
+
+---
+
+## 3. Projection onto the Equatorial 2D Contour (Pécréaux Formula)
+
+The microscope images the vesicle in a focal plane, giving access only to the equatorial profile at $\theta = \pi/2$. The question is: what is the theoretical variance $\langle|\hat{u}_q|^2\rangle$ of the 2D Fourier modes in terms of the 3D parameters $\kappa$ and $\sigma$?
+
+**Step 1 — Evaluate $Y_l^m$ at the equator.**
+
+$$Y_l^m!\left(\frac{\pi}{2},\phi\right) = \sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}}; P_l^m(0); e^{im\phi}$$
+
+where $P_l^m(0)$ is the associated Legendre polynomial evaluated at zero. A key selection rule is:
+
+$$P_l^m(0) = 0 \quad \text{if } l+m \text{ is odd}$$
+
+For even $l+m$, with $a=(l+m)/2$ and $b=(l-m)/2$:
+
+$$P_l^m(0) = (-1)^a \frac{(2a)!}{2^a, a!; 2^b, b!} = (-1)^{(l+m)/2} \frac{(l+m)!}{2^l \left(\frac{l+m}{2}\right)!\left(\frac{l-m}{2}\right)!}$$
+
+This is `Plm_zero` in the code, written in log-gamma form for numerical stability.
+
+**Step 2 — Link the 2D Fourier mode to 3D harmonics.**
+
+The equatorial profile has Fourier coefficient:
+
+$$\hat{u}_q = \frac{1}{2\pi}\int_0^{2\pi} u!\left(\frac{\pi}{2},\phi\right)e^{-iq\phi},d\phi = \sum_{l \geq q} u_{lq},\sqrt{\frac{2l+1}{4\pi}\frac{(l-q)!}{(l+q)!}};P_l^q(0)$$
+
+(the integral selects only the $m=q$ harmonic; all terms with $m\neq q$ vanish).
+
+**Step 3 — Compute the variance.**
+
+Since different $l$-modes are uncorrelated:
+
+$$\langle|\hat{u}_q|^2\rangle = \sum_{\substack{l=q \ l+q;\text{even}}}^{l_\text{max}} \frac{2l+1}{4\pi}\frac{(l-q)!}{(l+q)!}\left[P_l^q(0)\right]^2 \langle|u_{lq}|^2\rangle$$
+
+Substituting equipartition:
+
+$$\boxed{\langle|\hat{u}_q|^2\rangle = \frac{k_BT}{\kappa}\sum_{\substack{l=q \ l+q;\text{even}}}^{l_\text{max}} \frac{2l+1}{4\pi}\frac{(l-q)!}{(l+q)!}\frac{\left[P_l^q(0)\right]^2}{\lambda_l}}$$
+
+In the `theory` function this is computed as `(kBT/kappa) * s_sum / 4`, where:
+
+$$\texttt{n_lq} = \frac{2l+1}{\pi}\frac{(l-q)!}{(l+q)!}, \qquad \text{and the factor } \frac{1}{4} = \frac{1}{4\pi} \cdot \pi$$
+
+So the factor $1/(4\pi)$ is split as $\frac{1}{\pi} \times \frac{1}{4}$. This is the exact Pécréaux 2004 projection formula.
+
+**Physical content:** At low tension ($\bar\sigma \ll l(l+1)$), $\lambda_l \approx l^3(l+1)^3/l \sim l^3$ so $\langle|\hat{u}_q|^2\rangle \propto q^{-3}$ (bending-dominated). At high tension, $\lambda_l \approx \bar\sigma, l(l+1)$ and $\langle|\hat{u}_q|^2\rangle \propto q^{-1}$ (tension-dominated). The $q^{-1}$ reference curve in the spectrum figure reflects this.
+
+---
+
+## 4. Spectrum Fitting
+
+The fit minimizes the log-residual:
+
+$$\mathcal{L}(\kappa,\sigma) = \sum_{q=q_\text{min}}^{q_\text{max}} \left[\log_{10}\langle|\hat{u}_q|^2\rangle_\text{data} - \log_{10} S(q;\kappa,\sigma)\right]^2$$
+
+Working in log space gives equal relative weight to all modes regardless of the four-orders-of-magnitude dynamic range in $S(q)$. The optimizer is `fminsearch` (Nelder-Mead) with multiple starting points to avoid local minima.
+
+---
+
+## 5. Mode Dynamics: ACF and Relaxation Times
+
+Each 3D mode $u_{lm}$ satisfies an overdamped Langevin equation:
+
+$$\gamma_l, \dot{u}_{lm} = -\frac{\kappa,\lambda_l}{R_0^2},u_{lm} + \xi_{lm}(t)$$
+
+where $\gamma_l = \eta R_0, f(l)$ is the hydrodynamic friction coefficient for a sphere (Brochard-Lennon 1975; $f(l)$ is a rational function of $l$). This is formally an Ornstein-Uhlenbeck process, giving:
+
+$$C_{lm}(\tau) = \langle u_{lm}(t+\tau),u_{lm}^*(t)\rangle = \langle|u_{lm}|^2\rangle,e^{-\tau/\tau_l}, \qquad \tau_l = \frac{\gamma_l R_0^2}{\kappa,\lambda_l}$$
+
+The 2D projected ACF is:
+
+$$C_q(\tau) = \langle \hat{u}_q(t+\tau),\hat{u}_q^*(t)\rangle = \sum_{l \geq q} w_{lq}^2, \langle|u_{lq}|^2\rangle, e^{-\tau/\tau_l}$$
+
+where $w_{lq}^2 = \frac{2l+1}{4\pi}\frac{(l-q)!}{(l+q)!}[P_l^q(0)]^2$. This is in principle a multi-exponential sum. However, since $\tau_l \sim l^{-3}$ (bending regime), the slowest mode ($l=q$) dominates strongly at long lags, making the single-exponential approximation valid for $C_q(\tau) > 0.2$ (the threshold used in the code).
+
+The code computes the normalized ACF for the real part of $\hat{U}_q$:
+
+$$C_q(\tau_k) = \frac{\sum_t \text{Re}[\hat{U}_q(t)],\text{Re}[\hat{U}_q(t+\tau_k)]}{\sum_t \text{Re}[\hat{U}_q(t)]^2}, \qquad \tau_k = k/f_\text{fps}$$
+
+via `xcorr(..., 'normalized')`, which includes zero-lag normalization.
+
+---
+
+## 6. Single-Exponential Fit: OLS Through the Origin in Log Space
+
+With $A=1$ enforced (normalized ACF), the model is $C_q(\tau) = e^{-\tau/\tau_q}$. Taking the log:
+
+$$\log C_q(\tau) = -\frac{\tau}{\tau_q} \equiv -\alpha, \tau, \qquad \alpha = \frac{1}{\tau_q}$$
+
+This is a linear model $y_i = -\alpha, t_i$ through the origin ($y_i \equiv \log C_q(\tau_i)$). The OLS estimator is:
+
+$$\hat\alpha = -\frac{\sum_i t_i, y_i}{\sum_i t_i^2} \implies \tau_q = -\frac{\sum_i t_i^2}{\sum_i t_i, \log C_q(\tau_i)}$$
+
+**Uncertainty (delta method).** The residuals are $\varepsilon_i = y_i + \alpha, t_i = \log C_q(\tau_i) + t_i/\tau_q$. The residual variance (1 free parameter) is:
+
+$$\hat\sigma^2 = \frac{1}{n-1}\sum_i \varepsilon_i^2$$
+
+Since $\alpha = -\sum_i t_i y_i / \sum_i t_i^2$, the variance of $\hat\alpha$ under homoscedastic errors is $\text{Var}(\hat\alpha) = \hat\sigma^2 / \sum_i t_i^2$. Propagating to $\tau_q = 1/\alpha$ via the delta method ($\text{Var}(\tau_q) \approx \tau_q^4,\text{Var}(\hat\alpha)$):
+
+$$\text{Var}(\tau_q) = \frac{\hat\sigma^2,\tau_q^4}{\sum_i t_i^2}$$
+
+giving a 95% CI of $\tau_q \pm 1.96\sqrt{\text{Var}(\tau_q)}$, as coded.
+
+---
+
+## 7. Milner-Safran Reference Scaling Laws
+
+The full hydrodynamic friction for a sphere in viscous medium (Milner & Safran 1987) gives:
+
+$$\tau_l = \frac{\eta R_0^3}{\kappa}\cdot\frac{(2l+1)(2l^2+2l-1)}{l(l+1)(l-1)(l+2)}\cdot\frac{2}{\lambda_l/(l(l+1))}$$
+
+In the **bending-dominated** limit ($\bar\sigma \ll l^2$): $\lambda_l \approx l^3(l+1)$ and the friction factor $\sim 4/l$, giving:
+
+$$\tau_l^\text{bend} \approx \frac{4\eta R_0^3}{\kappa, l^3}$$
+
+In the **tension-dominated** limit ($\bar\sigma \gg l^2$): $\lambda_l \approx \bar\sigma,l(l+1)$ and friction $\sim 1/l$:
+
+$$\tau_l^\text{tens} \approx \frac{\eta R_0}{\sigma, l}$$
+
+These are the two reference curves in Figure 3, using $\eta_\text{water} = 10^{-3}$ Pa·s. Comparing your measured $\tau_q$ data against these curves tells you which regime you're in: if $\tau_q$ tracks $q^{-3}$ you are bending-dominated; if it tracks $q^{-1}$ you are tension-dominated.
+
+---
+
+## Summary of the Fitting Hierarchy
+
+The pipeline extracts three physical quantities:
+
+$$\text{Spectrum} \xrightarrow{\text{Pécréaux fit}} (\kappa,,\sigma) \qquad \text{ACF per mode} \xrightarrow{\text{OLS log-fit}} \tau_q \xrightarrow{\text{compare}} \eta_\text{eff}$$
+
+The spectrum fit is equilibrium (time-averaged) and gives elastic parameters. The ACF fit is dynamical and gives the viscous dissipation timescale. Consistency between $(\kappa,\sigma)$ from the spectrum and the location of $\tau_q$ relative to the Milner-Safran curves is an internal check on the self-consistency of the Helfrich model for your vesicle.
