@@ -408,7 +408,7 @@ The microscope images only the equatorial slice at $\theta = \pi/2$. The relativ
 
 $$u!\left(\tfrac{\pi}{2} ; \phi\right) = \frac{r(\pi/2 ; \phi)}{R_0} - 1 = \sum_{l ; m} u_{lm};Y_l^m!\left(\tfrac{\pi}{2} ; \phi\right)$$
 
-![[Pasted image 20260317154144.png]]
+---
 
 ## Step A — Evaluating $Y_l^m$ at the Equator
 
