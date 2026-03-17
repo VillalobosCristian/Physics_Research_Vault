@@ -385,3 +385,157 @@ $$\text{Spectrum} \xrightarrow{\text{Pécréaux fit}} (\kappa,,\sigma) \qquad \t
 The spectrum fit is equilibrium (time-averaged) and gives elastic parameters. The ACF fit is dynamical and gives the viscous dissipation timescale. Consistency between $(\kappa,\sigma)$ from the spectrum and the location of $\tau_q$ relative to the Milner-Safran curves is an internal check on the self-consistency of the Helfrich model for your vesicle.
 
 
+
+# Equatorial Projection: Full Derivation
+
+---
+
+## Setup and Notation
+
+The vesicle shape in spherical coordinates, expanded around the equilibrium sphere of radius $R_0$:
+
+$$r(\theta,\phi) = R_0\left[1 + \sum_{l=2}^{L}\sum_{m=-l}^{l}u_{lm},Y_l^m(\theta,\phi)\right]$$
+
+The $u_{lm}$ are dimensionless complex amplitudes with the reality condition $u_{l,-m} = (-1)^m u_{lm}^*$. The complex spherical harmonics in the Condon-Shortley convention are:
+
+$$Y_l^m(\theta,\phi) = \underbrace{\sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}}}_{\equiv; N_{lm}}, P_l^m(\cos\theta), e^{im\phi}$$
+
+The microscope images only the equatorial slice at $\theta = \pi/2$. The relative fluctuation of that profile is:
+
+$$u!\left(\tfrac{\pi}{2},\phi\right) = \frac{r(\pi/2,\phi)}{R_0} - 1 = \sum_{l,m} u_{lm},Y_l^m!\left(\tfrac{\pi}{2},\phi\right)$$
+
+---
+
+## Step A — Evaluating $Y_l^m$ at the Equator
+
+At $\theta = \pi/2$ the exponential factor $e^{im\phi}$ is untouched. The only nontrivial piece is the associated Legendre polynomial at zero argument:
+
+$$Y_l^m!\left(\tfrac{\pi}{2},\phi\right) = N_{lm}\cdot P_l^m(0)\cdot e^{im\phi}$$
+
+### A.1 — The parity selection rule
+
+Use the Rodrigues representation:
+
+$$P_l^m(x) = \frac{(-1)^m}{2^l,l!},(1-x^2)^{m/2},\frac{d^{l+m}}{dx^{l+m}}(x^2-1)^l$$
+
+Set $x=0$. The factor $(1-x^2)^{m/2}\big|_{x=0} = 1$, so you need only evaluate the derivative. Expand the polynomial:
+
+$$(x^2-1)^l = \sum_{k=0}^{l}\binom{l}{k}x^{2k}(-1)^{l-k}$$
+
+Taking the $(l+m)$-th derivative at $x=0$:
+
+$$\frac{d^{l+m}}{dx^{l+m}}x^{2k}\bigg|_{x=0} = (2k)!,\delta_{2k,,l+m}$$
+
+The Kronecker delta demands $2k = l+m$, which is only satisfiable if:
+
+$$l + m \equiv 0 \pmod{2} \quad\Longrightarrow\quad \boxed{P_l^m(0) = 0 ;;\text{if};; l+m \text{ is odd}}$$
+
+This is a deep parity constraint: the equatorial plane $\theta=\pi/2$ is a mirror plane of the sphere. Spherical harmonics with $l+m$ odd are antisymmetric under this reflection and therefore vanish there.
+
+### A.2 — Explicit closed form when $l+m$ is even
+
+Define $k_0 = (l+m)/2$ (integer) and $b = (l-m)/2 = l - k_0$. The surviving term in the derivative is:
+
+$$\left.\frac{d^{l+m}}{dx^{l+m}}(x^2-1)^l\right|_{x=0} = \binom{l}{k_0}(-1)^{l-k_0}(l+m)! = \frac{l!}{k_0!,b!},(-1)^{b},(l+m)!$$
+
+Substituting back:
+
+$$P_l^m(0) = \frac{(-1)^m}{2^l l!}\cdot\frac{l!}{k_0!,b!},(-1)^{b},(l+m)! = \frac{(-1)^{m+b}}{2^l}\cdot\frac{(l+m)!}{k_0!,b!}$$
+
+Since $m + b = m + (l-m)/2 = (l+m)/2 = k_0$:
+
+$$\boxed{P_l^m(0) = (-1)^{(l+m)/2}\cdot\frac{(l+m)!}{2^{l};\left[\frac{l+m}{2}\right]!;\left[\frac{l-m}{2}\right]!}}$$
+
+This is what `Plm_zero` computes, written in `gammaln` form to avoid overflow for large $l$:
+
+$$(-1)^a\exp!\Big[\ln(2a)! - a\ln 2 - \ln(a!) - b\ln 2 - \ln(b!)\Big], \quad a=\tfrac{l+m}{2},; b=\tfrac{l-m}{2}$$
+
+Note that in the theory function only $[P_l^m(0)]^2$ appears, so the sign is irrelevant there.
+
+---
+
+## Step B — The Selection Rule from Fourier Orthogonality
+
+The 2D Fourier coefficient of the equatorial profile is:
+
+$$\hat{u}_q \equiv \frac{1}{2\pi}\int_0^{2\pi}u!\left(\tfrac{\pi}{2},\phi\right),e^{-iq\phi},d\phi$$
+
+Substitute the full expansion, pull the integral inside the sum:
+
+$$\hat{u}_q = \sum_{l,m}u_{lm},N_{lm},P_l^m(0);\underbrace{\frac{1}{2\pi}\int_0^{2\pi}e^{i(m-q)\phi},d\phi}_{=;\delta_{m,q}}$$
+
+This integral is exactly $\delta_{m,q}$ — the Fourier basis functions are orthogonal on $[0,2\pi]$. The sum over $m$ collapses immediately, leaving only $m=q$:
+
+$$\hat{u}_q = \sum_{l\geq q}, u_{lq},N_{lq},P_l^q(0)$$
+
+Applying the parity rule ($P_l^q(0)=0$ when $l+q$ odd):
+
+$$\boxed{\hat{u}_q = \sum_{\substack{l = q,,q+2,,q+4,\ldots}}^{L} u_{lq};\sqrt{\frac{2l+1}{4\pi}\frac{(l-q)!}{(l+q)!}};P_l^q(0)}$$
+
+This is the key structural result. A single azimuthal Fourier mode $q$ in the 2D equatorial image receives contributions from an entire **ladder** of 3D spherical harmonics at $m=q$, separated in $l$ by steps of 2. The geometry of the observation (equatorial slice) has scrambled together modes that are distinct in 3D.
+
+Geometrically: the constraints are $m=q$ (Fourier orthogonality) and $l \geq |m|$ (spherical harmonic definition), together with the mirror-parity $l+q$ even.
+
+---
+
+## Step C — Computing the Variance
+
+Write $W_{lq} \equiv N_{lq},P_l^q(0)$ for brevity. Then:
+
+$$\langle|\hat{u}_q|^2\rangle = \left\langle\left|\sum_{l}u_{lq},W_{lq}\right|^2\right\rangle = \sum_{l,l'}W_{lq},W_{l'q},\langle u_{lq},u_{l'q}^*\rangle$$
+
+### C.1 — Mode uncorrelation
+
+The Helfrich Hamiltonian is diagonal in $(l,m)$:
+
+$$F = \frac{\kappa}{2}\sum_{l=2}^{L}\sum_{m=-l}^{l}\lambda_l,|u_{lm}|^2, \qquad \lambda_l = l(l+1)\left[(l-1)(l+2)+\bar\sigma\right]$$
+
+Different modes are statistically independent (Gaussian measure, diagonal quadratic form), so:
+
+$$\langle u_{lq},u_{l'q}^*\rangle = \langle|u_{lq}|^2\rangle,\delta_{ll'}$$
+
+The double sum reduces to a single sum.
+
+### C.2 — Equipartition for each mode
+
+Each term in $F$ is a harmonic oscillator. By the equipartition theorem:
+
+$$\frac{\kappa,\lambda_l}{2},\langle|u_{lm}|^2\rangle = \frac{k_BT}{2} \implies \langle|u_{lm}|^2\rangle = \frac{k_BT}{\kappa,\lambda_l}$$
+
+Note: $\lambda_l$ is a pure dimensionless number (product of integers and $\bar\sigma = \sigma R_0^2/\kappa$). The factor $R_0^2$ that appears in the curvature eigenvalue ($\delta H \sim u_{lm}/R_0$) is exactly cancelled by the factor of $R_0^2$ from the area element in the curvature integral. This is why the final spectrum has **no explicit $R_0$ dependence** despite the vesicle size appearing in the physical problem.
+
+### C.3 — The final projection formula
+
+Substituting equipartition into the variance:
+
+$$\langle|\hat{u}_q|^2\rangle = \sum_{\substack{l\geq q\l+q;\text{even}}}W_{lq}^2\cdot\frac{k_BT}{\kappa\lambda_l} = \frac{k_BT}{\kappa}\sum_{\substack{l\geq q\l+q;\text{even}}}\frac{2l+1}{4\pi}\frac{(l-q)!}{(l+q)!}\frac{[P_l^q(0)]^2}{\lambda_l}$$
+
+$$\boxed{\langle|\hat{u}_q|^2\rangle = \frac{k_BT}{4\pi\kappa}\sum_{\substack{l= q,q+2,\ldots}}^{L}\frac{(2l+1)(l-q)!}{(l+q)!};\frac{[P_l^q(0)]^2}{\lambda_l}}$$
+
+This is the **Pécréaux 2004 equatorial projection formula**, and it is what the `theory` function computes. The splitting $1/(4\pi) = (1/4)\times(1/\pi)$ is exactly how the code implements it:
+
+```matlab
+n_lq = (2*l+1)/pi * (l-q)!/(l+q)!      % absorbs the 1/pi
+S(i) = (kBT/kappa) * s_sum / 4          % the remaining 1/4
+```
+
+---
+
+## Step D — Why the Sum Converges Rapidly
+
+Each term in the sum has two competing factors. The weight $N_{lq}^2[P_l^q(0)]^2$ decreases with $l$ for fixed $q$ because:
+
+- $(l-q)!/(l+q)! \sim l^{-2q}$ for large $l$
+- $[P_l^q(0)]^2$ oscillates but is bounded by $\sim l^0$
+
+The denominator $\lambda_l \sim l^4$ for large $l$ (bending dominated). Combined, each term decays as $\sim l^{-2q-3}$, so the sum converges very rapidly. For $q=6$ the terms fall off as $l^{-15}$: contributions beyond $l\approx 20$ are numerically negligible. The choice $l_\text{max}=200$ in the code is conservative by orders of magnitude.
+
+---
+
+## The Full Chain of Information Flow
+
+$$\underbrace{r(\theta,\phi)}_{\text{3D shape}}\xrightarrow{;\theta=\pi/2;}\underbrace{r!\left(\tfrac{\pi}{2},\phi\right)}_{\text{equatorial contour}}\xrightarrow{;\text{FFT};}\hat{u}_q\xrightarrow{;\text{time average};}\langle|\hat{u}_q|^2\rangle$$
+
+$$\langle|\hat{u}_q|^2\rangle = \frac{k_BT}{4\pi\kappa}\sum_{l\geq q}\frac{(2l+1)(l-q)!}{(l+q)!}\frac{[P_l^q(0)]^2}{l(l+1)[(l-1)(l+2)+\bar\sigma]}$$
+
+The left-hand side is what you measure directly from the contour time series. The right-hand side depends only on two physical parameters $\kappa$ and $\sigma$ (through $\bar\sigma = \sigma R_0^2/\kappa$). Fitting this equation to your measured spectrum is the entire spectroscopy experiment.
