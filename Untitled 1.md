@@ -294,7 +294,7 @@ $$\boxed{\langle|\hat{u}_q|^2\rangle = \frac{k_BT}{\kappa}\sum_{\substack{l=q \ 
 
 In the `theory` function this is computed as `(kBT/kappa) * s_sum / 4`, where:
 
-$$\texttt{n_lq} = \frac{2l+1}{\pi}\frac{(l-q)!}{(l+q)!}, \qquad \text{and the factor } \frac{1}{4} = \frac{1}{4\pi} \cdot \pi$$
+$$\mathrm{n_lq} = \frac{2l+1}{\pi}\frac{(l-q)!}{(l+q)!}, \qquad \text{and the factor } \frac{1}{4} = \frac{1}{4\pi} \cdot \pi$$
 
 So the factor $1/(4\pi)$ is split as $\frac{1}{\pi} \times \frac{1}{4}$. This is the exact Pécréaux 2004 projection formula.
 
@@ -383,3 +383,5 @@ The pipeline extracts three physical quantities:
 $$\text{Spectrum} \xrightarrow{\text{Pécréaux fit}} (\kappa,,\sigma) \qquad \text{ACF per mode} \xrightarrow{\text{OLS log-fit}} \tau_q \xrightarrow{\text{compare}} \eta_\text{eff}$$
 
 The spectrum fit is equilibrium (time-averaged) and gives elastic parameters. The ACF fit is dynamical and gives the viscous dissipation timescale. Consistency between $(\kappa,\sigma)$ from the spectrum and the location of $\tau_q$ relative to the Milner-Safran curves is an internal check on the self-consistency of the Helfrich model for your vesicle.
+
+
