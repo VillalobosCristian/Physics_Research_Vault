@@ -541,3 +541,125 @@ $$\underbrace{r(\theta ; \phi)}_{\text{3D shape}}\xrightarrow{;\theta=\pi/2;}\un
 $$\langle|\hat{u}_q|^2\rangle = \frac{k_BT}{4\pi\kappa}\sum_{\substack{l \geq q \ l+q;\text{even}}}\frac{(2l+1)(l-q)!}{(l+q)!}\frac{[P_l^q(0)]^2}{l(l+1)[(l-1)(l+2)+\bar\sigma]}$$
 
 The left-hand side is what you measure directly from the contour time series. The right-hand side depends only on two physical parameters $\kappa$ and $\sigma$ (through $\bar\sigma = \sigma R_0^2/\kappa$). Fitting this equation to your measured spectrum is the entire spectroscopy experiment.
+
+
+
+## The FFT spectrum
+
+```matlab
+U = fft(uMat, [], 1) / Nang;
+```
+
+`fft(..., [], 1)` takes the discrete Fourier transform along dimension 1 — the angular dimension. For each time frame $t$, it decomposes the shape $u(\theta, t)$ into its Fourier modes:
+
+$$u(\theta, t) = \sum_{q=0}^{N_\theta - 1} \hat{U}_q(t), e^{iq\theta}$$
+
+Dividing by `Nang` ($= N_\theta = 360$) gives the properly normalized coefficients $\hat{U}_q(t)$, so that Parseval's theorem holds — the total power in real space equals the total power summed over all modes. Without this normalization the amplitudes would depend on how many angles you sampled, which would be unphysical.
+
+The result `U` has shape (360 × Nt). Row 1 is the $q=0$ component (the mean radius — already removed), row 2 is $q=1$, row $q+1$ is mode $q$, and so on up to $q = N_\theta/2 = 180$.
+
+---
+
+```matlab
+Uq_sq = 2 * abs(U(2:nMax+1, :)).^2;
+```
+
+`U(2:nMax+1, :)` picks out rows corresponding to modes $q = 1, 2, \ldots, 180$ — skipping row 1 which is $q=0$.
+
+`abs(...).^2` gives the squared modulus of the complex Fourier coefficient at each mode and each time frame: $|\hat{U}_q(t)|^2$.
+
+**Why the factor of 2?** The contour $u(\theta, t)$ is a real-valued signal. For a real signal, the Fourier transform is Hermitian symmetric: $\hat{U}_{-q} = \hat{U}_q^*$, so $|\hat{U}_{-q}|^2 = |\hat{U}_q|^2$. Modes $+q$ and $-q$ carry equal power. The FFT of a real signal of length $N$ gives you modes $q = 0, 1, \ldots, N/2$ — the positive half only, but each positive mode represents both $+q$ and $-q$. Multiplying by 2 accounts for both contributions and gives you the full two-sided power. Physically this corresponds to the fact that each mode $q$ has two independent components: a cosine $a_q(t)$ and a sine $b_q(t)$, each contributing equally to the power.
+
+---
+
+```matlab
+spectrum = mean(Uq_sq, 2);
+sem_spec = std(Uq_sq, 0, 2) / sqrt(Nt);
+```
+
+`mean(Uq_sq, 2)` averages over the time axis (dimension 2) — for each mode $q$, you average $|\hat{U}_q(t)|^2$ over all $N_t$ frames. This is the time-averaged power spectrum:
+
+$$\langle|\hat{u}_q|^2\rangle = \frac{1}{N_t}\sum_{t=1}^{N_t} 2|\hat{U}_q(t)|^2$$
+
+By the ergodic hypothesis — valid for a membrane in thermal equilibrium — this time average equals the ensemble average that the theory predicts.
+
+`sem_spec` is the standard error of the mean: $\sigma_q / \sqrt{N_t}$, where $\sigma_q$ is the standard deviation of $|\hat{U}_q(t)|^2$ across frames. This is the error bar on each spectral point. It shrinks as $1/\sqrt{N_t}$, which is why longer recordings give tighter spectra and better-constrained fits.
+
+---
+
+## The Legendre table
+
+Now for the second part. The Pécréaux formula is:
+
+$$\langle|\hat{u}_q|^2\rangle = \frac{k_BT}{4\kappa} \sum_{\substack{l=q \ l+q\text{ even}}}^{l_\text{max}} \underbrace{\frac{2l+1}{\pi}\frac{(l-q)!}{(l+q)!}\left[P_l^q(0)\right]^2}_{\text{coeff}(l,q)} \cdot \frac{1}{\lambda_l}$$
+
+The part labelled $\text{coeff}(l,q)$ depends only on the geometry — on $l$ and $q$ — and not on the physical parameters $\kappa$ and $\sigma$. It never changes during the fit. So you compute it once and store it.
+
+```matlab
+legCoeff = cell(nMax, 1);
+for n = 1:nMax
+    coeffs_l = zeros(lmax, 1);
+    for l = n:lmax
+```
+
+`legCoeff{q}` will be a vector of length `lmax` where entry `l` stores $\text{coeff}(l,q)$ for that particular pair. The outer loop runs over all equatorial modes $q$ (called `n` in the code, following the paper's notation where $n$ is the equatorial mode number). The inner loop runs over all 3D spherical modes $l \geq q$.
+
+---
+
+```matlab
+if mod(l+n, 2) ~= 0, continue; end
+```
+
+This is the **parity selection rule**. $P_l^q(0)$ is exactly zero whenever $l+q$ is odd. This is a mathematical property of associated Legendre polynomials evaluated at $x=0$ — it follows from their symmetry under $\theta \to \pi - \theta$ (reflection through the equatorial plane). Skipping odd pairs avoids computing something that will be zero anyway, cutting the work roughly in half.
+
+---
+
+```matlab
+a = (l+n)/2;   b = (l-n)/2;
+logP = gammaln(2*a+1) - a*log(2) - gammaln(a+1) ...
+     - b*log(2)        - gammaln(b+1);
+P    = ((-1)^a) * exp(logP);
+```
+
+This computes $P_l^q(0)$ — the associated Legendre polynomial at $x=0$.
+
+The formula comes from the standard expression for $P_l^m(0)$ when $l+m$ is even:
+
+$$P_l^q(0) = (-1)^a \cdot \frac{(2a)!}{2^a, a!\cdot 2^b, b!} \quad \text{where } a = \frac{l+q}{2},; b = \frac{l-q}{2}$$
+
+Direct computation of $(2a)!$ overflows for $a \gtrsim 85$ (exceeds double precision range). The solution is to work in log-space:
+
+$$\log P_l^q(0) = \log\Gamma(2a+1) - a\log 2 - \log\Gamma(a+1) - b\log 2 - \log\Gamma(b+1)$$
+
+`gammaln(n)` computes $\log\Gamma(n)$ stably for any $n$, and since $\Gamma(n+1) = n!$ for integers, this gives the log-factorial without overflow. The final value is recovered as `exp(logP)`, which is safe because the log is $\mathcal{O}(1)$ even for large $l$.
+
+The sign $(-1)^a$ is the Condon-Shortley phase convention for associated Legendre polynomials.
+
+---
+
+```matlab
+logC     = log(2*l+1) - log(pi) + gammaln(l-n+1) - gammaln(l+n+1);
+coeffs_l(l) = exp(logC) * P^2;
+```
+
+This computes the full geometric weight:
+
+$$\text{coeff}(l,q) = \frac{2l+1}{\pi} \cdot \frac{(l-q)!}{(l+q)!} \cdot \left[P_l^q(0)\right]^2$$
+
+Again in log-space:
+
+$$\log\left(\frac{2l+1}{\pi}\cdot\frac{(l-q)!}{(l+q)!}\right) = \log(2l+1) - \log\pi + \log\Gamma(l-q+1) - \log\Gamma(l+q+1)$$
+
+The ratio $(l-q)!/(l+q)!$ is what kills the high-$l$ contributions — for $l \gg q$ this goes as $(l+q)^{-2q}$, falling rapidly to zero and making the sum converge. This is why $l_\text{max} = 200$ is sufficient: by $l = 200$ the coefficients are negligibly small for all $q \geq 6$.
+
+Finally `exp(logC) * P^2` gives the full coefficient and stores it at position `l` in the vector for mode `q`.
+
+---
+
+The payoff: inside the cost function called hundreds of times by the optimizer, the inner loop reduces to just:
+
+```matlab
+s_sum = s_sum + cArr(l) / lam;
+```
+
+— a single division per $(l,q)$ pair, where `lam` is the only thing that changes between optimizer calls because it depends on $\sigma$ via $\bar{\sigma} = \sigma R_0^2/\kappa$. All the expensive geometry is already done.
