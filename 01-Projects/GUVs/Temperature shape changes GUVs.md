@@ -191,4 +191,3 @@ q=6 contributes $(\log_{10}(1\times10^{-5}) - \log_{10}(1\times10^{-5}))^2 \appr
 
 **Concretely:** a residual of $\log_{10}(S_\text{data}/S_\text{model}) = 0.1$ means the model is off by a factor of $10^{0.1} \approx 1.26$ — a 26% error. Same at every q.
 
-Does this make sense before we write the code for it?
