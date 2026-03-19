@@ -157,37 +157,3 @@ I also filter the min shape gap, how many frames between shape changes to make i
 ## Detection analysis- shape and drift
 
 The details of the code will be in the following note [[Heating detection code]]
-
-
-Let's go. We'll build the fit piece by piece, understanding each decision.
-
----
-
-## The fitting problem — what we're actually doing
-
-You have 15 data points: $S_\text{data}(q)$ for $q = 6, 7, \ldots, 20$. You want to find the two numbers $\kappa$ and $\sigma$ such that the Pécréaux/Milner-Safran model $S_\text{model}(q; \kappa, \sigma)$ best matches those 15 points.
-
-"Best matches" means minimizing a cost function. The question is: **what cost function?**
-
----
-
-## Step 1: Why log10 residuals?
-
-Your spectrum looks like this in orders of magnitude:
-
-```
-S(q=6)  ~ 1e-5
-S(q=10) ~ 5e-6
-S(q=20) ~ 2e-7
-```
-
-If you used **linear residuals**: $$\text{cost} = \sum_q \left(S_\text{data}(q) - S_\text{model}(q)\right)^2$$
-
-the q=6 point contributes $(10^{-5})^2 = 10^{-10}$ to the cost, while q=20 contributes $(10^{-7})^2 = 10^{-14}$. The optimizer completely ignores q=20 — it's 10,000 times less important. You'd be fitting only the low-q points, which constrains σ but not κ.
-
-If you use **log10 residuals**: $$\text{cost} = \sum_q \left(\log_{10} S_\text{data}(q) - \log_{10} S_\text{model}(q)\right)^2$$
-
-q=6 contributes $(\log_{10}(1\times10^{-5}) - \log_{10}(1\times10^{-5}))^2 \approx 0$ and q=20 contributes equally when the fit is good. Every mode has equal weight regardless of its amplitude. This is what you want — κ lives in the slope of the high-q tail, so those modes must matter.
-
-**Concretely:** a residual of $\log_{10}(S_\text{data}/S_\text{model}) = 0.1$ means the model is off by a factor of $10^{0.1} \approx 1.26$ — a 26% error. Same at every q.
-

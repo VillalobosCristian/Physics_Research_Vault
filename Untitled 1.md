@@ -663,3 +663,249 @@ s_sum = s_sum + cArr(l) / lam;
 ```
 
 — a single division per $(l,q)$ pair, where `lam` is the only thing that changes between optimizer calls because it depends on $\sigma$ via $\bar{\sigma} = \sigma R_0^2/\kappa$. All the expensive geometry is already done.
+
+
+
+Almost exactly right — just one thing to clarify about **what we sum the cost over**.
+
+---
+
+## The two sums are at different levels
+
+**The sum over $l$** is _inside_ the model — it's how you compute $S_\text{model}(q)$ for one mode $q$:
+
+$$S_\text{model}(q) = \frac{k_BT}{4\kappa} \sum_{\substack{l \geq q \ l+q \text{ even}}} \frac{n_{lq}}{\lambda_l(\kappa,\sigma)}$$
+
+This is not what you minimize — this is just evaluating one number.
+
+**The cost sum is over $q$** — comparing data vs model at each measured mode:
+
+$$\text{cost}(\kappa,\sigma) = \sum_{q=6}^{20} \left(\log_{10} S_\text{data}(q) - \log_{10} S_\text{model}(q)\right)^2$$
+
+---
+
+## So the full structure is
+
+```
+cost(kappa, sigma):
+    for each q in [6,7,...,20]:           <- outer sum: defines the cost
+        S_model(q) = kBT/(4*kappa)
+                   * sum over l>=q:       <- inner sum: evaluates one model point
+                         n_lq / lambda_l(kappa, sigma)
+        cost += (log10 S_data(q) - log10 S_model(q))^2
+    return cost
+```
+
+Which maps exactly to the code:
+
+```matlab
+for ii = 1:length(nFit)       % <- loop over q: builds up the cost
+    q     = nFit(ii);
+    s_sum = 0;
+    for l = q:lmax             % <- loop over l: evaluates S_model(q)
+        lam    = (l-1)*(l+2)*(l*(l+1) + sbar);
+        s_sum  = s_sum + cArr(l)/lam;
+    end
+    S_mod(ii) = (kBT/kap) * s_sum / 4;
+end
+cost = sum((log10(dataFit) - log10(S_mod)).^2);
+```
+
+---
+
+## What you're really fitting
+
+You're not fitting $\lambda_l$ directly — $\lambda_l$ is determined by $\kappa$ and $\sigma$ through:
+
+$$\lambda_l = (l-1)(l+2)\left[l(l+1) + \bar\sigma\right] \quad \text{where} \quad \bar\sigma = \frac{\sigma R_0^2}{\kappa}$$
+
+So the two free parameters $(\kappa, \sigma)$ control the _shape_ of $S_\text{model}(q)$ through $\lambda_l$, and the _amplitude_ through the $k_BT/4\kappa$ prefactor. The optimizer searches for the $(\kappa, \sigma)$ pair that makes $S_\text{model}(q)$ match $S_\text{data}(q)$ at all 15 modes simultaneously.
+
+Does that clarify the structure? Ready to continue with Stage 2 of the grid?
+
+
+
+## The fitting — equations, code, and explanation together
+
+---
+
+### Step 1: Select the data to fit
+
+We only use modes $q = 6$ to $q = 20$. Below 6: rigid-body drift. Above 20: detection noise.
+
+$$S_\text{data}(q), \quad q \in {6, 7, \ldots, 20}$$
+
+```matlab
+fitMask = (nVec >= qMin) & (nVec <= qMax);
+nFit    = nVec(fitMask);      % [6;7;8;...;20] — 15 values
+dataFit = spectrum(fitMask);  % measured S(q) at those 15 modes
+```
+
+`fitMask` is a logical vector — `true` at positions 6–20, `false` everywhere else. `nFit` and `dataFit` are just the 15 values we care about.
+
+---
+
+### Step 2: Define the parameter space
+
+We search for two parameters in **log-space**:
+
+$$p_1 = \log_{10}!\left(\frac{\kappa}{k_BT}\right), \qquad p_2 = \log_{10}(\sigma)$$
+
+Why log-space? Because $\sigma$ spans 6 orders of magnitude. A step of 0.1 in log-space means a 26% change — same proportional sensitivity everywhere. In linear space a step of $10^{-9}$ near $\sigma = 10^{-9}$ is huge, but near $\sigma = 10^{-5}$ it's invisible.
+
+```matlab
+lkap_c = linspace(0.5, 2.5, 25);  % log10(kappa/kBT): covers 3 to 316 kBT
+lsig_c = linspace(-10, -4, 25);   % log10(sigma):     covers 1e-10 to 1e-4 N/m
+```
+
+25 values each → $25 \times 25 = 625$ candidate pairs. Wide enough to cover all physically reasonable values.
+
+---
+
+### Step 3: Initialize the search
+
+```matlab
+best_cost_c = inf;    % best cost found so far — start at infinity
+best_lk_c   = 1.2;   % will be overwritten on first valid point
+best_ls_c   = -7;
+```
+
+`inf` guarantees the first valid point always becomes the initial best, no matter how bad it is.
+
+---
+
+### Step 4: The outer loops — candidate pairs
+
+```matlab
+for ci = 1:length(lkap_c)
+    for cj = 1:length(lsig_c)
+
+        kap  = 10^lkap_c(ci) * kBT;   % kappa in Joules
+        sig  = 10^lsig_c(cj);          % sigma in N/m
+        sbar = sig * R0^2 / kap;       % sigma_bar = sigma*R0^2/kappa
+```
+
+For each of the 625 pairs, convert from log-space back to physical units. $\bar\sigma$ is derived — not searched over.
+
+---
+
+### Step 5: Evaluate $S_\text{model}(q)$ — the inner loops
+
+This is the Pécréaux/Milner-Safran formula:
+
+$$S_\text{model}(q) = \frac{k_BT}{4\kappa} \sum_{\substack{l \geq q \ l+q \text{ even}}}^{l_\text{max}} \frac{n_{lq}}{\lambda_l}$$
+
+with the Milner-Safran eigenvalue:
+
+$$\lambda_l = (l-1)(l+2)\left[l(l+1) + \bar\sigma\right]$$
+
+```matlab
+        S_mod = zeros(length(nFit), 1);
+        ok    = true;
+
+        for ii = 1:length(nFit)        % loop over q = 6,7,...,20
+            q     = nFit(ii);
+            s_sum = 0;
+            cArr  = legCoeff{q};       % precomputed n_lq for this q
+
+            for l = q:lmax             % sum over 3D modes l >= q
+                if mod(l+q,2)~=0, continue; end   % parity rule
+
+                lam = (l-1)*(l+2) * (l*(l+1) + sbar);  % lambda_l
+
+                if lam <= 0            % unphysical: tension destabilises sphere
+                    ok = false;
+                    break;
+                end
+
+                s_sum = s_sum + cArr(l) / lam;   % accumulate n_lq / lambda_l
+            end
+
+            if ~ok, break; end
+
+            S_mod(ii) = (kBT/kap) * s_sum / 4;  % prefactor kBT/4kappa
+        end
+
+        if ~ok || any(S_mod <= 0), continue; end  % skip unphysical pairs
+```
+
+Three levels of loops:
+
+- **`ci`, `cj`** — search over candidate $(\kappa, \sigma)$ pairs
+- **`ii`** — evaluate model at each of the 15 fit modes $q$
+- **`l`** — accumulate the Legendre sum for one $q$
+
+`ok = false` triggers when $\lambda_l \leq 0$ — physically this means the membrane would be unstable. Those parameter combinations are impossible, skip them.
+
+---
+
+### Step 6: The cost function
+
+$$\text{cost}(\kappa, \sigma) = \sum_{q=6}^{20} \left(\log_{10} S_\text{data}(q) - \log_{10} S_\text{model}(q)\right)^2$$
+
+```matlab
+        cost_val = sum((log10(dataFit) - log10(S_mod)).^2);
+
+        if cost_val < best_cost_c
+            best_cost_c = cost_val;
+            best_lk_c   = lkap_c(ci);
+            best_ls_c   = lsig_c(cj);
+        end
+    end
+end
+
+fprintf('Coarse best: kappa=%.1f kBT, sigma=%.1e, cost=%.4f\n', ...
+    10^best_lk_c, 10^best_ls_c, best_cost_c);
+```
+
+`log10(dataFit) - log10(S_mod)` is the vector of residuals — one per mode. Squaring and summing gives a single number that measures how badly the model fits. The pair with the smallest cost wins.
+
+---
+
+### Step 7: Fine grid — zoom in
+
+The coarse grid found the right basin but with coarse precision (~25% per step). The fine grid searches a ±0.4 log-unit window around the coarse best with 40 steps — precision of ~2% per step.
+
+$$\text{search window: } [p_{1,\text{best}} \pm 0.4] \times [p_{2,\text{best}} \pm 0.4]$$
+
+```matlab
+hw     = 0.4;
+lkap_f = linspace(best_lk_c - hw, best_lk_c + hw, 40);
+lsig_f = linspace(best_ls_c - hw, best_ls_c + hw, 40);
+```
+
+The fine grid is **identical in structure** to the coarse grid — same loops, same cost, same model. Only the search range and resolution change. That's why the code looks repetitive — it is, intentionally.
+
+```matlab
+% [exact same loop structure as coarse grid]
+% ...
+kappa     = 10^best_lk_f * kBT;
+sigma     = 10^best_ls_f;
+sigma_bar = sigma * R0^2 / kappa;
+
+fprintf('kappa     = %.1f kBT\n', kappa/kBT);
+fprintf('sigma     = %.2e N/m\n', sigma);
+fprintf('sigma_bar = %.4f\n',      sigma_bar);
+fprintf('cost      = %.4f\n',      best_cost_f);
+```
+
+---
+
+Now add this all to the script and run it. The coarse grid takes ~3 minutes, fine grid ~1 minute. Tell me the numbers and we move to the ACF section.Run it. While the coarse grid runs (~3 min), here's the full picture of what's happening visually:
+
+The cost landscape in log-space looks like a valley — elongated because $\kappa$ and $\sigma$ are partially degenerate (many pairs give similar slopes). The coarse grid finds which part of the valley you're in. The fine grid finds the bottom of that valley precisely.
+
+Expected output:
+
+```
+Coarse grid (25x25 = 625 points)... best: kappa=~34 kBT, sigma=~1e-8, cost=~0.05
+Fine grid (40x40 = 1600 points)... done.
+
+=== FIT RESULTS ===
+kappa     = ~34 kBT
+sigma     = ~2e-8 N/m
+sigma_bar = ~small
+cost      = ~0.004
+```
+
+Tell me the numbers and we move to Section 6 — the ACF.

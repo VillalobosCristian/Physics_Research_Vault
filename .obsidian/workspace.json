@@ -77,7 +77,8 @@
               "title": "Fourier Spectrum Fitting"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -230,13 +231,13 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "8757e3432403628f",
+  "active": "ffccd5a032a0f700",
   "lastOpenFiles": [
+    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "Heating detection code.md",
     "Fourier Spectrum Fitting.md",
     "Untitled 1.md",
     "02-Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
-    "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "Pasted image 20260317154144.png",
     "Pasted image 20260317154142.png",
     "02-Literature/References/rautu, orsi2017_The role of optical projection in the analysis of membrane fluctuations 1.pdf",
