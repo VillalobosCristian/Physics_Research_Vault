@@ -8,7 +8,7 @@ Dividing by $\bar{R}(t)$ removes instantaneous center-of-mass translation; subtr
 
 The discrete Fourier transform of the contour at each frame is:
 
-Ñe
+
 ## Helfrich Hamiltonian for a Quasi-Spherical Vesicle
 
 The 3D shape of a vesicle fluctuating around a sphere of radius $R_0$ is expanded in real spherical harmonics:
