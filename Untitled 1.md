@@ -1005,3 +1005,79 @@ Now add it to your script:Copy that block and paste it at the end of your script
 
 **η_eff extraction** — for each successfully fitted mode, inverts the Milner-Safran formula using the already-known $\kappa$ and $\sigma_\text{bar}$ to get one η estimate. Takes the median. Result: `eta_eff` scalar.
 
+
+
+
+---
+
+## The two limiting cases
+
+Starting from the full spectrum:
+
+$$\langle|\hat{u}_q|^2\rangle = \frac{k_BT}{4\kappa} \sum_{\substack{l \geq q \ l+q \text{ even}}} \frac{n_{lq}}{(l-1)(l+2)[l(l+1) + \bar\sigma]}$$
+
+The dimensionless tension $\bar\sigma = \sigma R_0^2/\kappa$ controls which term dominates the denominator.
+
+---
+
+## Limit 1: Pure bending ($\bar\sigma \to 0$)
+
+When tension is negligible, $l(l+1) \gg \bar\sigma$ for all modes, so:
+
+$$(l-1)(l+2)[l(l+1) + \bar\sigma] \approx (l-1)(l+2),l(l+1) \approx l^4$$
+
+The spectrum becomes:
+
+$$\langle|\hat{u}_q|^2\rangle \approx \frac{k_BT}{4\kappa} \sum_{l \geq q} \frac{n_{lq}}{l^4}$$
+
+The sum converges fast and the dominant contribution comes from $l \approx q$, giving:
+
+$$\langle|\hat{u}_q|^2\rangle \propto \frac{k_BT}{\kappa, q^4} \quad \text{(in 3D)}$$
+
+But remember you measure the equatorial projection — integrating over $q_y$ costs one power of $q$, giving the slope you actually observe:
+
+$$\langle|\hat{u}_q|^2\rangle \propto q^{-3}$$
+
+**What this means practically:** slope = −3 in log-log. You can fit both $\kappa$ and $\sigma$ independently — $\kappa$ controls the amplitude, $\sigma$ is consistent with zero. Your baseline shows this: slope = −3.1, σ̄ = 27 (small).
+
+---
+
+## Limit 2: High tension ($\bar\sigma \gg l(l+1)$)
+
+When tension dominates, $l(l+1) + \bar\sigma \approx \bar\sigma$ for all modes in your fit range, so:
+
+$$(l-1)(l+2)[l(l+1) + \bar\sigma] \approx \bar\sigma,(l-1)(l+2) \approx \bar\sigma, l^2$$
+
+The spectrum becomes:
+
+$$\langle|\hat{u}_q|^2\rangle \approx \frac{k_BT}{4\kappa,\bar\sigma} \sum_{l \geq q} \frac{n_{lq}}{l^2} \propto \frac{k_BT}{\sigma R_0^2}, \frac{1}{q^2} \quad \text{(in 3D)}$$
+
+After equatorial projection:
+
+$$\langle|\hat{u}_q|^2\rangle \propto q^{-1}$$
+
+**What this means practically:** slope = −1 in log-log. The spectrum is nearly flat. The key consequence: **$\kappa$ disappears from the formula** — it cancels with $\bar\sigma = \sigma R_0^2/\kappa$. Only $\sigma$ is measurable. This is the degeneracy problem you hit in the post-heat segments.
+
+---
+
+## The crossover
+
+The crossover between the two regimes happens at mode $q^*$ where $l(l+1) \approx \bar\sigma$, i.e.:
+
+$$q^* \approx \sqrt{\bar\sigma} = R_0\sqrt{\frac{\sigma}{\kappa}}$$
+
+For your baseline: $\bar\sigma = 27$, so $q^* \approx 5$ — the crossover is below your fit range, which is why you see a clean −3 slope from q=6 upward.
+
+For your post-heat: $\bar\sigma \sim 150$–200, so $q^* \approx 13$ — the crossover sits **inside** your fit range q=6–20. This is why the spectrum has slope ~−2 in that range and neither pure limit applies. The fit can find a (κ, σ) pair that matches the slope, but many pairs give the same slope — the valley in the cost landscape.
+
+---
+
+## Summary table
+
+|Regime|Condition|Slope|What you can measure|
+|---|---|---|---|
+|Pure bending|$\bar\sigma \ll q^2$|−3|κ and σ independently|
+|Crossover|$\bar\sigma \sim q^2$|−2 to −3|Both, but degenerate|
+|High tension|$\bar\sigma \gg q^2$|−1|σ only, κ drops out|
+
+This is the cleanest way to explain to your advisor why you report κ only from the baseline and σ from all segments.
