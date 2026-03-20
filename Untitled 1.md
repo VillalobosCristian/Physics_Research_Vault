@@ -1005,4 +1005,3 @@ Now add it to your script:Copy that block and paste it at the end of your script
 
 **η_eff extraction** — for each successfully fitted mode, inverts the Milner-Safran formula using the already-known $\kappa$ and $\sigma_\text{bar}$ to get one η estimate. Takes the median. Result: `eta_eff` scalar.
 
-Run it and tell me the τ_q table and η_eff value — then we add the three figures.
