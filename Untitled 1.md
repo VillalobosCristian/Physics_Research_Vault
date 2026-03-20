@@ -909,3 +909,100 @@ cost      = ~0.004
 ```
 
 Tell me the numbers and we move to Section 6 — the ACF.
+
+
+Let's build it piece by piece, same as the fitting section.
+
+---
+
+## The ACF — what it is and why we compute it
+
+The power spectrum told you **how much** each mode fluctuates. The ACF tells you **how long** each mode stays correlated — the memory of the fluctuation.
+
+For mode $q$, the autocorrelation function is:
+
+$$C_q(\tau) = \frac{\langle u_q(t+\tau), u_q(t) \rangle}{\langle u_q^2 \rangle}$$
+
+At $\tau=0$: $C_q(0) = 1$ — perfect correlation with itself. As $\tau$ increases, the membrane forgets its shape and $C_q(\tau) \to 0$.
+
+Milner-Safran predicts this decay is a simple exponential:
+
+$$C_q(\tau) = e^{-\tau/\tau_q}$$
+
+where $\tau_q$ is the relaxation time of mode $q$. Measuring $\tau_q$ gives you $\eta_\text{eff}$.
+
+---
+
+## Step 1: Compute the ACF
+
+```matlab
+max_lag = min(max_lag_fr, floor(Nt/3));
+lags_s  = (0:max_lag)' / fps;
+```
+
+`max_lag` is the maximum lag in frames. We cap it at $N_t/3$ — beyond that, the number of independent pairs drops too low for a reliable estimate. In seconds: `lags_s` goes from 0 to `max_lag/fps`.
+
+```matlab
+q_acf = q_acf(q_acf >= 1 & q_acf <= nMax);
+n_q   = numel(q_acf);
+C_q   = zeros(max_lag+1, n_q);
+```
+
+One column of `C_q` per mode — each column is a full ACF curve.
+
+```matlab
+for qi = 1:n_q
+    c_re = real(U(q_acf(qi)+1, :))';   % cosine amplitude a_q(t), Nt x 1
+    c_re = detrend(c_re, 1);            % remove linear trend
+    [acf, lags_all] = xcorr(c_re, max_lag, 'normalized');
+    C_q(:,qi) = acf(lags_all >= 0);    % keep positive lags only
+end
+```
+
+**`real(U(q+1,:))`** — takes the cosine component $a_q(t)$ of the complex Fourier coefficient. The sine component $b_q(t)$ would give identical results — both components have the same ACF by symmetry.
+
+**`detrend(c_re, 1)`** — removes a linear trend from the time series. Slow drift in the vesicle position or focus can create an artificial slow component in the ACF. Removing it keeps only the genuine fluctuation dynamics.
+
+**`xcorr(...,'normalized')`** — computes the full two-sided ACF and normalizes so $C_q(0)=1$ exactly. `lags_all >= 0` keeps only positive lags — the ACF is symmetric, the negative side is redundant.
+
+---
+
+## Step 2: Fit the exponential — the OLS trick
+
+Taking the log of $C_q(\tau) = e^{-\tau/\tau_q}$:
+
+$$\log C_q(\tau) = -\frac{\tau}{\tau_q}$$
+
+This is a **straight line through the origin** in the variables $(\tau,, \log C_q)$, with slope $-1/\tau_q$. The OLS solution for a line through the origin with one free parameter is exact — no iteration needed:
+
+$$\tau_q = -\frac{\sum_i t_i^2}{\sum_i t_i \log C_q(t_i)}$$
+
+We only fit where $C_q > 0.2$ — below that the signal is in the noise and $\log C_q$ becomes unreliable.
+
+The **95% CI** comes from propagating the residual variance via the delta method:
+
+$$\text{Var}(\tau_q) = \frac{\sigma^2_\text{res} \cdot \tau_q^4}{\sum_i t_i^2}$$
+
+---
+
+## Step 3: Extract η_eff
+
+Once you have $\tau_q$ for each mode, invert the Milner-Safran formula:
+
+$$\tau_q = \frac{\eta_\text{eff} R_0^3}{\kappa \lambda_q} \cdot \frac{4q^2+6q+3}{q(q+1)}$$
+
+$$\Rightarrow \eta_\text{eff} = \frac{\tau_q \cdot \kappa \cdot \lambda_q}{R_0^3} \cdot \frac{q(q+1)}{4q^2+6q+3}$$
+
+This gives one estimate per mode. Take the median — more robust than the mean to outliers from noisy ACF fits.
+
+Now add it to your script:Copy that block and paste it at the end of your script after the `fprintf('sigma = ...')` line. Here's a summary of the three subsections so you know what each part does before running:
+
+---
+
+**ACF computation** — for each mode in `q_acf`, extracts the time series of the cosine amplitude $a_q(t)$, detrends it, and computes the normalized autocorrelation. Result: `C_q` matrix, one column per mode, rows = lag times.
+
+**Exponential fit** — for each ACF, restricts to the region where $C_q > 0.2$, takes the log to make it linear, and applies the OLS formula to get $\tau_q$ in one step. Also computes the 95% CI. Result: `tau_q` array and `fit_ok` flag.
+
+**η_eff extraction** — for each successfully fitted mode, inverts the Milner-Safran formula using the already-known $\kappa$ and $\sigma_\text{bar}$ to get one η estimate. Takes the median. Result: `eta_eff` scalar.
+
+Run it and tell me the τ_q table and η_eff value — then we add the three figures.
