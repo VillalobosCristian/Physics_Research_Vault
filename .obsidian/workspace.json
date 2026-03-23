@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,10 +230,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "ffccd5a032a0f700",
+  "active": "1e4f9f8016068083",
   "lastOpenFiles": [
-    "Fourier Spectrum Fitting.md",
     "Untitled 1.md",
+    "Fourier Spectrum Fitting.md",
     "02-Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
     "Heating detection code.md",
