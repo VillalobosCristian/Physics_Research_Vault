@@ -1198,3 +1198,231 @@ Thermal_cycles_100_40x_50fps_3
 Thermal_lightON_vesicle_exptime01_50fps_40x_1
 Thermal_thenLightOn_50fps_40x_11
 Vesicle_Light_cycles_40x_50fps_4
+
+
+## Pipeline architecture and data flow
+
+---
+
+### Folder structure
+
+Each experiment lives in its own folder:
+
+```
+/Volumes/SSD samsung/Vesicles2026/
+│
+├── Exp2_DOPC_40x_45fps_7/          ← run all scripts from here
+│   ├── frame_0001.tif, ...          ← raw images
+│   ├── contourExtraction_hybrid_fixed.mat   ← output of script 1
+│   ├── analysisWorkspace.mat                ← output of script 2
+│   ├── Exp2_DOPC_40x_45fps_7_pecreaux_fit_results.mat   ← output of script 3
+│   └── figures/                             ← all PDFs saved here
+│
+├── Thermal_thenLightOn_50fps_40x_11/
+│   └── ...
+│
+└── Data_reviewed/                  ← collection folder, run pop scripts here
+    ├── Exp2_DOPC_40x_45fps_7_analysisWorkspace.mat
+    ├── Exp2_DOPC_40x_45fps_7_pecreaux_fit_results.mat
+    ├── Thermal_thenLightOn_50fps_40x_11_analysisWorkspace.mat
+    ├── Thermal_thenLightOn_50fps_40x_11_pecreaux_fit_results.mat
+    └── figures/
+```
+
+---
+
+### Script 1 — `hybrid_detectionmethod.m`
+
+**Run from:** experiment folder  
+**Reads:** raw `.tif` images  
+**Writes:** `contourExtraction_hybrid_fixed.mat`
+
+**What it does:** Interactive — asks you to crop, draw inner/outer search boundaries. Then processes every frame: radial gradient detection, dual-peak prominence search, subpixel refinement, MAD outlier rejection, adaptive zone update.
+
+**Key output struct:** `allContours(frame)` with fields:
+
+```
+r_midline_smooth    [360 x 1]  midline radius per angle [px]
+r_inner_smooth      [360 x 1]
+r_outer_smooth      [360 x 1]
+x_midline, y_midline           Cartesian contour coordinates
+meanRadius, searchCenter       tracking state
+```
+
+---
+
+### Script 2 — `eventDetection.m`
+
+**Run from:** experiment folder  
+**Reads:** `contourExtraction_hybrid_fixed.mat`  
+**Writes:** `analysisWorkspace.mat` (local) + `expName_analysisWorkspace.mat` (Data_reviewed)
+
+**What it does:** Computes per-frame shape descriptors, detects heating events via 3-channel threshold (drift rate, roughness, circularity), segments the movie, computes σ_δh fluctuation maps, Fourier spectra, and ACFs per segment.
+
+**Key variables saved:**
+
+|Variable|Description|
+|---|---|
+|`allContours`|Full contour struct array from script 1|
+|`segments`|Struct array: label, start, stop, type, index|
+|`heatingCycles`|Per-event metrics: onset, offset, drift, roughness change|
+|`baselines`|Per-baseline z-scores vs Baseline 0|
+|`fourier_segs`|Per-segment spectrum, ACF, τ_q|
+|`fps`, `pxSize_um`, `expName`|Calibration + experiment identity|
+|`roughness_smooth`, `circularity_smooth`, `drift_smooth`, `t_sec`|Smoothed time traces|
+|`q_range = 6:20`, `q_acf = [6 8 10 12 15]`|Mode ranges|
+
+**Segment types:** `'baseline'`, `'heating'`, `'post_heat'`  
+**Segment index:** 0 for baseline, k for Heat k / Post-heat k
+
+---
+
+### Script 3 — `pecreaux_fit_free.m`
+
+**Run from:** experiment folder  
+**Reads:** `analysisWorkspace.mat`  
+**Writes:** `expName_pecreaux_fit_results.mat` (local) + copy to Data_reviewed
+
+**What it does:** Fits κ and σ per segment (skips heating) using 2-stage grid search in log-space. Milner-Safran eigenvalue. Slope-based reliability flag. Saves spectra and model curves for plotting.
+
+**Key output struct:** `fit_results(si)` with fields:
+
+|Field|Description|
+|---|---|
+|`name`, `type`, `index`|Segment identity|
+|`R0_um`|Mean radius [μm]|
+|`kappa`, `kappa_kBT`|Bending rigidity [J] and [kBT]|
+|`sigma`, `sigma_bar`|Tension [N/m] and dimensionless|
+|`data_slope`, `model_slope`|Log-log spectral slopes|
+|`kappa_reliable`|Logical: true if slope < −2.5|
+|`regime`|`'bending'`, `'crossover'`, or `'tension'`|
+|`cost`|Final grid search cost|
+|`spectrum`, `sem`|Full spectrum and error [180 x 1]|
+
+**Fitting convention:**
+
+- Parameters in log-space: `p1 = log10(κ/kBT)`, `p2 = log10(σ)`
+- Stage 1: coarse 25×25 grid, log10(κ/kBT) ∈ [0.5, 2.5], log10(σ) ∈ [−10, −4]
+- Stage 2: fine 40×40 grid, ±0.4 log-units around coarse best
+- Cost: $\sum_q (\log_{10} S_\text{data} - \log_{10} S_\text{model})^2$
+- Eigenvalue: $\lambda_l = (l-1)(l+2)[l(l+1) + \bar\sigma]$ (Milner-Safran)
+
+---
+
+### Script 4 — `diagnostics.m`
+
+**Run from:** experiment folder  
+**Reads:** `analysisWorkspace.mat`  
+**Writes:** figures only
+
+Computes inter-cycle timing, peak shape metrics during heating, roughness recovery timescale (exponential fit), and baseline z-score evolution. Standalone — no saved `.mat`.
+
+---
+
+### Script 5 — `folder_diagnostic.m`
+
+**Run from:** Data_reviewed  
+**Reads:** all `*_pecreaux_fit_results.mat` + matching `*_analysisWorkspace.mat`  
+**Writes:** console only
+
+Checks workspace presence, date consistency, sigma at grid boundary, duplicates (same σ AND R₀). Prints per-segment summary and σ progression table. Run this whenever you add new experiments.
+
+---
+
+### Script 6 — `population_analysis.m`
+
+**Run from:** Data_reviewed  
+**Reads:** all `*_pecreaux_fit_results.mat`  
+**Writes:** figures + console summary
+
+Builds two flat tables from all experiments then produces population-level figures. Adding a new experiment: just drop its `expName_pecreaux_fit_results.mat` into Data_reviewed and re-run — it gets picked up automatically by `dir('*_pecreaux_fit_results.mat')`.
+
+---
+
+### Script 7 — `population_figures.m`
+
+**Run from:** Data_reviewed  
+**Reads:** all `*_pecreaux_fit_results.mat`  
+**Writes:** 5 figures (Fig 1, 2, 4, 5, 8)
+
+Same loading logic as script 6. Visual encoding defined once at the top — change `col_bl`, `col_ph`, or `mk_from_cycle` to restyle all figures at once. To add a new trajectory figure, copy any existing figure block and change the `yv = [rows.FIELD]` line to whatever quantity you want.
+
+---
+
+### Adding a new experiment
+
+```
+1. cd /path/to/new_experiment_folder
+2. Run hybrid_detectionmethod.m  →  contourExtraction_hybrid_fixed.mat
+3. Run eventDetection.m          →  analysisWorkspace.mat (local + Data_reviewed copy)
+4. Run pecreaux_fit_free.m       →  expName_pecreaux_fit_results.mat (local + Data_reviewed copy)
+5. cd /Volumes/.../Data_reviewed
+6. Run folder_diagnostic.m       →  verify no issues
+7. Run population_figures.m      →  updated population plots
+```
+
+### Adding a new population figure
+
+In `population_figures.m`, the pattern is always:
+
+```matlab
+fig_new = figure(...);
+[~, ax, ~, qleg] = quickPlot('Parent', axes(fig_new), 'Grid','on');
+% optional: set(ax, 'YScale','log');
+
+for i = 1:n_exp
+    mask = strcmp({cycle_tbl.expName}, baseline_tbl(i).expName);
+    rows = cycle_tbl(mask);
+    ci   = [rows.cycle_idx];
+    yv   = [rows.YOUR_FIELD];      % <-- change this
+    [ci, ord] = sort(ci); yv = yv(ord); rows = rows(ord);
+    draw_traj(ax, ci, yv, rows, col_bl, col_ph, mk_from_cycle);
+end
+
+xlabel(ax, '...'); ylabel(ax, '...');
+qleg(ax, make_legend_entries(ax, col_bl, col_ph, col_leg));
+savefigures_new(fig_new, 'pop_figN_name');
+```
+
+
+Several directions, roughly ordered from most to least immediately actionable.
+
+---
+
+## Short term — more from the data you already have
+
+**Camera correction for κ.** You have τ_q from the ACF fits in `fourier_segs`. Applying the Pécréaux correction factor χ(τ_q, T_exp) would give corrected κ values for the bending-dominated baselines. From earlier analysis the correction is modest (~10–20%) but worth reporting for a publication. The infrastructure is already there — it just needs one more loop in `pecreaux_fit_free.m`.
+
+**Osmotic timescale from recovery.** In Vesicle_Light_cycles_40x_50fps_3 you observed σ decreasing between cycles. Fitting an exponential to σ(t) between heating events would give τ_osm — the membrane permeation timescale. Comparing this to τ_perm = V/(P_f · A · R_T · Δc) from the literature would tell you whether the recovery is osmotic or structural.
+
+**Anisotropy of fluctuations.** The σ_δh(θ) maps already exist in `segments(s).sigma_dh`. Computing the angular variance — std(σ_δh)/mean(σ_δh) — quantifies whether fluctuations are spatially uniform. Anisotropic σ_δh could indicate localized substrate adhesion or inhomogeneous heating.
+
+**κ from post-heat segments via fixed-κ fit.** For tension-dominated post-heat segments, fixing κ at the baseline value and fitting only σ gives a cleaner σ estimate. You already know κ from the baseline — use it.
+
+---
+
+## Medium term — new experiments
+
+**Vary inter-cycle gap systematically.** You have 65 s gaps in one experiment. Running the same vesicle with 10 s, 65 s, 200 s, and 600 s gaps would map out the osmotic recovery timescale directly as a function of waiting time. σ_post would decrease monotonically with longer gaps if the mechanism is osmotic.
+
+**Vary heating duration and power.** Right now all your heating events are ~10 s. Shorter pulses (2–5 s) might allow area measurement without driving the vesicle into the noise floor. Longer pulses might show hysteresis.
+
+**Temperature-controlled baseline.** Raising the bath temperature slowly (0.1 °C/min) while recording would give you dκ/dT and dσ/dT for DOPC without the transient effects of optothermal heating. This separates the equilibrium thermal response from the irreversible optothermal one.
+
+**Cholesterol mixtures.** DOPC/CHOL vesicles have higher κ (up to 4×). If your hypothesis is that κ controls the mechanical response to heating, a stiffer membrane should show smaller σ buildup per cycle. Fig 6 hints at this from population variability — a controlled composition experiment would test it directly.
+
+---
+
+## Longer term — deeper analysis
+
+**Active membrane signature.** During heating, the membrane is driven out of equilibrium. The spectrum ⟨|û_q|²⟩ during a heating event doesn't follow Helfrich — it has an effective temperature T_eff > T. Fitting the heating-segment spectra to a T_eff model (rather than excluding them) would quantify how much excess energy is injected per mode. This connects directly to active membrane theory (Prost, Ramaswamy).
+
+**Population statistics with more vesicles.** With 7–9 clean experiments you can compute mean ± SEM for σ_post1/σ_baseline, ΔR₀, and κ_baseline. With 20+ you could do proper statistical testing. The pipeline is ready — it's just a matter of running more experiments.
+
+**Comparison to slow heating literature.** Several groups have measured how σ evolves with temperature in GUVs using micropipettes or thermal stages. Comparing your optothermal σ values to those equilibrium measurements would quantify how far from equilibrium your fast-heating protocol drives the system.
+
+---
+
+## One idea that could be a paper on its own
+
+**The irreversibility threshold.** From your data, the first heating cycle always causes area expulsion (ΔR₀ < 0), but subsequent cycles do not. There should be a heating power threshold below which the membrane deforms elastically (recovers) and above which it expels area irreversibly. Mapping this threshold as a function of κ, initial σ, and heating rate would be a clean, quantitative result — and directly relevant to any application involving lipid membranes under photothermal stress.
