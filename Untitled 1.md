@@ -1095,7 +1095,7 @@ $$\lambda_l = (l-1)(l+2)\left[l(l+1) + \bar\sigma\right]$$
 
 The two limiting behaviors come from comparing $l(l+1)$ and $\bar\sigma$ inside the bracket. The crossover is defined as the mode $l^*$ where these two terms are exactly equal:
 
-$$l^_(l^_+1) = \bar\sigma$$
+$$l(l+1) = \bar\sigma$$
 
 This is a quadratic equation in $l^*$.
 
