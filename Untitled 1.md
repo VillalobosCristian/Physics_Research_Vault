@@ -1191,3 +1191,10 @@ Your fit range q=6–20 is sensitive to crossover when:
 $$6 \lesssim l^* \lesssim 20 \implies 6 \lesssim \sqrt{\bar\sigma} \lesssim 20 \implies 36 \lesssim \bar\sigma \lesssim 400$$
 
 Outside this window you either measure pure bending (σ̄ < 36) or pure tension (σ̄ > 400) — and in the pure tension case κ becomes unmeasurable.
+
+
+Exp1_DOPC_40x_45fps_1
+Thermal_cycles_100_40x_50fps_3
+Thermal_lightON_vesicle_exptime01_50fps_40x_1
+Thermal_thenLightOn_50fps_40x_11
+Vesicle_Light_cycles_40x_50fps_4
