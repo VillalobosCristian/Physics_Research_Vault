@@ -1081,3 +1081,113 @@ For your post-heat: $\bar\sigma \sim 150$–200, so $q^* \approx 13$ — the cro
 |High tension|$\bar\sigma \gg q^2$|−1|σ only, κ drops out|
 
 This is the cleanest way to explain to your advisor why you report κ only from the baseline and σ from all segments.
+
+
+## Deriving the crossover explicitly
+
+---
+
+### Starting point
+
+The denominator of each term in the sum is:
+
+$$\lambda_l = (l-1)(l+2)\left[l(l+1) + \bar\sigma\right]$$
+
+The two limiting behaviors come from comparing $l(l+1)$ and $\bar\sigma$ inside the bracket. The crossover is defined as the mode $l^*$ where these two terms are exactly equal:
+
+$$l^_(l^_+1) = \bar\sigma$$
+
+This is a quadratic equation in $l^*$.
+
+---
+
+### Solving the quadratic exactly
+
+Write it out:
+
+$$(l^_)^2 + l^_ - \bar\sigma = 0$$
+
+This is a standard quadratic $al^{_2} + bl^_ + c = 0$ with $a=1$, $b=1$, $c=-\bar\sigma$. Applying the quadratic formula:
+
+$$l^* = \frac{-1 \pm \sqrt{1 + 4\bar\sigma}}{2}$$
+
+Take the positive root (since $l^*$ must be positive):
+
+$$\boxed{l^* = \frac{-1 + \sqrt{1 + 4\bar\sigma}}{2}}$$
+
+This is the **exact crossover mode**.
+
+---
+
+### The large $\bar\sigma$ approximation
+
+For $\bar\sigma \gg 1$, expand the square root:
+
+$$\sqrt{1 + 4\bar\sigma} = \sqrt{4\bar\sigma}\sqrt{1 + \frac{1}{4\bar\sigma}} \approx 2\sqrt{\bar\sigma}\left(1 + \frac{1}{8\bar\sigma}\right) = 2\sqrt{\bar\sigma} + \frac{1}{4\sqrt{\bar\sigma}}$$
+
+Substituting:
+
+$$l^* = \frac{-1 + 2\sqrt{\bar\sigma} + \frac{1}{4\sqrt{\bar\sigma}}}{2} = \sqrt{\bar\sigma} - \frac{1}{2} + \frac{1}{8\sqrt{\bar\sigma}}$$
+
+For large $\bar\sigma$ the last two terms are negligible:
+
+$$\boxed{l^* \approx \sqrt{\bar\sigma} = R_0\sqrt{\frac{\sigma}{\kappa}}}$$
+
+---
+
+### What happens at $l = l^*$ explicitly
+
+At exactly $l = l^*$, both terms contribute equally to $\lambda_l$:
+
+$$\lambda_{l^_} = (l^_-1)(l^_+2)\left[l^_(l^_+1) + \bar\sigma\right] = (l^_-1)(l^*+2) \cdot 2\bar\sigma$$
+
+compared to the two limits:
+
+$$\lambda_{l^_}\big|_{\bar\sigma=0} = (l^_-1)(l^_+2)\cdot l^_(l^_+1) = (l^_-1)(l^*+2)\cdot\bar\sigma$$
+
+$$\lambda_{l^_}\big|_{\bar\sigma\to\infty} = (l^_-1)(l^*+2)\cdot\bar\sigma$$
+
+So at the crossover, $\lambda_{l^*}$ is exactly **twice** what either pure limit would give. The denominator is at its most different from both limits — neither approximation is valid here. This is precisely why fitting in the crossover regime gives degenerate results: the spectrum has contributions from both terms in the bracket simultaneously.
+
+---
+
+### The smooth transition — how the slope changes
+
+To see the slope change continuously, look at how $\lambda_l$ scales with $l$ in different regimes:
+
+$$\lambda_l = (l^2+l-2)(l^2+l+\bar\sigma)$$
+
+Let $x = l^2+l$ (which scales as $l^2$ for large $l$). Then:
+
+$$\lambda_l = (x-2)(x+\bar\sigma) \approx x^2 + \bar\sigma x = x\left(x + \bar\sigma\right)$$
+
+The effective power of $l$ in $\lambda_l$ is:
+
+$$\lambda_l \sim \begin{cases} l^4 & l \ll l^* \quad (\text{bending, slope} -3) \ l^2\bar\sigma & l \gg l^* \quad (\text{tension, slope} -1) \end{cases}$$
+
+At intermediate $l \sim l^*$, the effective scaling is:
+
+$$\lambda_l \sim l^2(l^2 + \bar\sigma) \sim l^2 \cdot 2\bar\sigma \sim l^2$$
+
+giving a local slope of $-2$ in the spectrum — which is exactly what your crossover segments show (slope $\approx -2$).
+
+---
+
+### Applying to your experiments
+
+$$l^* = \frac{-1 + \sqrt{1+4\bar\sigma}}{2}$$
+
+|Segment|$\bar\sigma$|$l^*$ exact|$l^* \approx \sqrt{\bar\sigma}$|slope observed|
+|---|---|---|---|---|
+|Baseline (exp 1)|0.87|$\frac{-1+\sqrt{4.48}}{2} = 0.56$|0.93|−3.11|
+|Post-heat 1 (exp 1)|134|$\frac{-1+\sqrt{537}}{2} = 11.1$|11.6|−2.19|
+|Post-heat 2 (exp 1)|223|$\frac{-1+\sqrt{893}}{2} = 14.4$|14.9|−2.01|
+|Baseline (exp 3)|296|$\frac{-1+\sqrt{1185}}{2} = 16.7$|17.2|−1.87|
+
+The pattern is clear: when $l^_$ is below your fit range (q=6), the entire fit range sees bending and slope ≈ −3. When $l^_$ is inside your fit range, you see crossover and slope between −2 and −1. When $l^*$ is above your fit range, the entire window sees tension and slope ≈ −1.
+
+Your fit range q=6–20 is sensitive to crossover when:
+
+$$6 \lesssim l^* \lesssim 20 \implies 6 \lesssim \sqrt{\bar\sigma} \lesssim 20 \implies 36 \lesssim \bar\sigma \lesssim 400$$
+
+Outside this window you either measure pure bending (σ̄ < 36) or pure tension (σ̄ > 400) — and in the pure tension case κ becomes unmeasurable.
