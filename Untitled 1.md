@@ -1426,3 +1426,173 @@ Several directions, roughly ordered from most to least immediately actionable.
 ## One idea that could be a paper on its own
 
 **The irreversibility threshold.** From your data, the first heating cycle always causes area expulsion (ΔR₀ < 0), but subsequent cycles do not. There should be a heating power threshold below which the membrane deforms elastically (recovers) and above which it expels area irreversibly. Mapping this threshold as a function of κ, initial σ, and heating rate would be a clean, quantitative result — and directly relevant to any application involving lipid membranes under photothermal stress.
+
+
+
+Good timing to standardize — once you have 20+ experiments the naming chaos compounds fast.
+
+---
+
+## Proposed naming convention
+
+```
+YYYYMMDD_LIPID_CONDITIONS_OBJ_FPS_N
+```
+
+**Examples:**
+
+```
+20260324_DOPC_thermal_40x_50fps_1
+20260324_DOPC_thermal_40x_50fps_2
+20260324_DOPC_CHOL20_thermal_40x_50fps_1
+20260401_DOPC_lightON_40x_50fps_1
+20260401_DOPC_thermal_slowheat_40x_50fps_1
+```
+
+**Fields:**
+
+|Field|Examples|Purpose|
+|---|---|---|
+|`YYYYMMDD`|`20260324`|Unambiguous sort by date|
+|`LIPID`|`DOPC`, `DOPC_CHOL20`|Composition|
+|`CONDITIONS`|`thermal`, `lightON`, `slowheat`|Experiment type|
+|`OBJ`|`40x`, `63x`|Objective|
+|`FPS`|`50fps`|Frame rate|
+|`N`|`1`, `2`, `3`|Replicate number that day|
+
+This directly fixes the diagnostic problem — `folder_diagnostic.m` searches for a folder matching `expName`, which comes from `fileparts(pwd)`. With date-prefixed names, folders sort chronologically in Finder and MATLAB `dir()` calls.
+
+---
+
+## Folder structure going forward
+
+```
+/Volumes/SSD samsung/Vesicles2026/
+│
+├── raw/                            ← never touch after acquisition
+│   ├── 20260324_DOPC_thermal_40x_50fps_1/
+│   │   └── frame_0001.tif, ...
+│   └── 20260324_DOPC_thermal_40x_50fps_2/
+│       └── ...
+│
+├── processed/                      ← run scripts here
+│   ├── 20260324_DOPC_thermal_40x_50fps_1/
+│   │   ├── contourExtraction_hybrid_fixed.mat
+│   │   ├── analysisWorkspace.mat
+│   │   ├── 20260324_DOPC_thermal_40x_50fps_1_pecreaux_fit_results.mat
+│   │   └── figures/
+│   └── ...
+│
+└── Data_reviewed/                  ← population analysis lives here
+    ├── 20260324_DOPC_thermal_40x_50fps_1_pecreaux_fit_results.mat
+    ├── 20260324_DOPC_thermal_40x_50fps_1_analysisWorkspace.mat
+    └── figures/
+```
+
+Raw images stay untouched. Processing happens in a parallel `processed/` tree. If contour extraction fails you re-run on the raw without worrying about overwriting anything.
+
+---
+
+## Run order and checklist
+
+Make this a literal checklist you keep next to the microscope:
+
+```
+□ 1. Acquire images → save to raw/YYYYMMDD_LIPID_CONDITIONS_OBJ_FPS_N/
+□ 2. cd processed/YYYYMMDD_LIPID_CONDITIONS_OBJ_FPS_N/
+□ 3. hybrid_detectionmethod.m    → check contour quality in live plot
+□ 4. eventDetection.m            → check fig1_overview: are heating events detected?
+□ 5. pecreaux_fit_free.m         → check console: slopes and costs reasonable?
+□ 6. cd Data_reviewed/
+□ 7. folder_diagnostic.m         → STATUS: OK for new experiment?
+□ 8. population_figures.m        → updated population plots
+```
+
+Steps 3–5 each have a natural quality gate — if contours look bad at step 3 you stop and re-acquire rather than propagating bad data through the pipeline.
+
+---
+
+## Quality gates — what to check at each step
+
+**After `hybrid_detectionmethod.m`:**
+
+- Mean detection success > 90% (printed in console)
+- Midline looks smooth in the live plot — no jumps or outlier spikes
+- `nOutliersRejected` stays low (< 5% of angles per frame)
+
+**After `eventDetection.m`:**
+
+- `fig1_overview` shows heating events shaded in the right places
+- Baseline 0 has at least 500 frames before the first event
+- Roughness and circularity return to near-baseline after each event
+
+**After `pecreaux_fit_free.m`:**
+
+- Baseline cost < 0.05 (good fit)
+- Baseline slope between −2.5 and −4 (bending dominated)
+- σ_baseline < 10⁻⁸ N/m (not pre-stressed)
+- σ increases monotonically across post-heat segments
+
+If any gate fails — stop, understand why, fix before adding to Data_reviewed.
+
+---
+
+## One small addition to `pecreaux_fit_free.m` worth adding now
+
+A metadata struct saved alongside `fit_results`:
+
+```matlab
+metadata.expName      = expName;
+metadata.date         = datestr(now, 'yyyy-mm-dd HH:MM:SS');
+metadata.fps          = fps;
+metadata.pxSize_um    = pxSize_um;
+metadata.qMin         = qMin;
+metadata.qMax         = qMax;
+metadata.lmax         = lmax;
+metadata.n_frames     = numFrames;
+metadata.n_segs_fit   = n_fit;
+metadata.matlab_ver   = version;
+
+save([expName '_pecreaux_fit_results.mat'], ...
+    'fit_results', 'metadata', 'kBT', 'pxSize_um', 'fps', ...
+    'qMin', 'qMax', 'lmax', 'expName');
+```
+
+This means every `.mat` file carries its own provenance — when you open a file a year from now you know exactly when it was processed, with what parameters, and with which MATLAB version. The `folder_diagnostic.m` can then print this automatically.
+
+
+Good — clean and informative. One small suggestion: put the number of cycles at the end with a zero-padded replicate number so files sort correctly:
+
+```
+20260424_DOPC_40x_50fps_3cycles_01
+20260424_DOPC_40x_50fps_3cycles_02
+20260424_DOPC_40x_50fps_5cycles_01
+```
+
+**Why `_01` not `_1`:** when you have 10+ replicates, `_1` sorts as `_1, _10, _11, _2` in Finder and `dir()`. `_01` sorts correctly as `_01, _02, ..., _10`.
+
+**Why cycles before replicate:** lets you group by experiment type first, then replicate. `dir('*_3cycles_*')` gives you all 3-cycle experiments instantly.
+
+---
+
+Also worth adding the condition if you start varying things:
+
+```
+20260424_DOPC_40x_50fps_3cycles_01          ← standard thermal
+20260424_DOPC_40x_50fps_3cycles_gap30s_01   ← longer recovery gap
+20260424_DOPC_CHOL20_40x_50fps_3cycles_01   ← different lipid
+```
+
+The `population_analysis.m` group detection already parses the name — you'd just update this block when new conditions appear:
+
+```matlab
+if contains(name, 'CHOL')
+    grp = 'DOPC/CHOL';
+elseif contains(name, 'gap')
+    grp = 'Long gap';
+else
+    grp = 'DOPC standard';
+end
+```
+
+Everything else in the pipeline works unchanged — the folder name becomes `expName` automatically via `fileparts(pwd)`.
