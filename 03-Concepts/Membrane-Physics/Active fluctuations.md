@@ -2,9 +2,9 @@
 title: "Active Fluctuations"
 aliases: [non-equilibrium fluctuations, active membrane fluctuations]
 tags:
-  - "#membrane-biophysics"
-  - "#active-matter"
-  - "#non-equilibrium"
+  - membrane-biophysics
+  - active-matter
+  - non-equilibrium
 ---
 
 # Active Fluctuations

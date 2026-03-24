@@ -1,5 +1,9 @@
 ---
-´:
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
 ---
  When performing the [[contour analysis of the vesicles]] we want to understand from those fluctuations how to extract information about the physical properties of the vesicle.
 We will use mainly quasi-spherical vesicles, so oblate vesicles probably should be decompose differently. 

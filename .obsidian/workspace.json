@@ -65,14 +65,10 @@
             "id": "7d2d51fbf0770014",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 2"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -258,6 +254,15 @@
   },
   "active": "7d2d51fbf0770014",
   "lastOpenFiles": [
+    "Untitled 2.md",
+    "fix_frontmatter.py",
+    "Vault Guide.md",
+    "Dashboard.md",
+    "MOCs/MOC - Experimental Protocols.md",
+    "MOCs/MOC - Literature.md",
+    "MOCs/MOC - Projects.md",
+    "MOCs/MOC - Statistical Mechanics & Transport.md",
+    "MOCs/MOC - Membrane Biophysics.md",
     "Templates/Project_Note.md",
     "Templates/Daily_Note.md",
     "Templates/Meeting_Note.md",
@@ -276,9 +281,6 @@
     "Resources/Concepts/Membrane-Physics/06_ACF_Viscosity_Extraction.md",
     "Resources/Concepts/Membrane-Physics/05_Flickering_Fitting_Procedure.md",
     "Resources/Concepts/Membrane-Physics/04_Flickering_Spectrum_Computation.md",
-    "Resources/Concepts/Membrane-Physics/03_Pecreaux_Projection_Formula.md",
-    "Resources/Concepts/Membrane-Physics/02_Helfrich_Hamiltonian_GUV.md",
-    "Resources/Concepts/Membrane-Physics/01_Flickering_Spectroscopy_Overview.md",
     "Resources/Literature/Reading-Notes/Pasted image 20250203111007.png",
     "Resources/Literature/PDFs/My papers",
     "Resources/Literature/Exported Items.bib",
@@ -289,12 +291,6 @@
     "Resources/Literature/PDFs/yoon, hong2009_Flickering Analysis of Erythrocyte Mechanical Properties Dependence on Oxygenation Level, Cell Shap.pdf",
     "Resources/Literature/PDFs/würger2016_Hydrodynamic Boundary Effects on Thermophoresis of Confined Colloids.pdf",
     "Resources/Literature/PDFs/würger2010_Thermal non-equilibrium transport in colloids.pdf",
-    "Resources/Literature/PDFs/williamson, law2025_FlickerPrint An Analysis Package for Measuring Interfacial Tension and Bending Rigidity of Biomolec.pdf",
-    "Resources/Literature/Reading-Notes/wel2016_Lipid membrane-mediated attractions between curvature inducing objects.md",
-    "Resources/Literature/Reading-Notes/villalobos-concha_Optothermal assembly and manipulation of colloids via non-coherent light.md",
-    "Resources/Literature/Reading-Notes/vanderwel2017_Microparticle Assembly Pathways on Lipid Membranes.md",
-    "Resources/Literature/Reading-Notes/seifert1997_Configurations of fluid membranes and vesicles.md",
-    "Resources/Literature/Reading-Notes/morales-penningston2010_GUV preparation and imaging_ Minimizing artifacts.md",
     "Attachments/Images/tractories.png",
     "Attachments/Images/pdf_maxwell 1.png",
     "Attachments/Images/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",

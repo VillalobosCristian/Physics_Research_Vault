@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [osmotic-pressure, thermal-fluctuations, vesicle-stability, membrane-permeability]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#osmotic-response"
-  - "#thermal-effects"
+  - literature-note
+  - membrane-biophysics
+  - osmotic-response
+  - thermal-effects
 ---
 
 # Thermal fluctuations and osmotic stability of lipid vesicles

@@ -1,11 +1,11 @@
 ---
 tags:
-  - "#membranes"
-  - "#two-dimensional-surfaces"
-  - "#surface-parameterization"
-  - "#differential-geometry"
-  - "#interface-mathematics"
-  - "#surface-coordinates"
+  - membranes
+  - two-dimensional-surfaces
+  - surface-parameterization
+  - differential-geometry
+  - interface-mathematics
+  - surface-coordinates
 ---
 In many physical systems, we encounter **interfaces** or **membranes** separating different phases or media (e.g.\ liquid-vapor interfaces, lipid bilayers in cells, polymer-air boundaries). These interfaces can often be idealized as **two-dimensional** surfaces in three-dimensional space:
 $$

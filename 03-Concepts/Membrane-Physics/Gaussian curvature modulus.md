@@ -2,9 +2,9 @@
 title: "Gaussian Curvature Modulus"
 aliases: [κ̄, kappa bar, saddle-splay modulus]
 tags:
-  - "#membrane-biophysics"
-  - "#elasticity"
-  - "#differential-geometry"
+  - membrane-biophysics
+  - elasticity
+  - differential-geometry
 ---
 
 # Gaussian Curvature Modulus

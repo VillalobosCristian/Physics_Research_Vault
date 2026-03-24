@@ -1,5 +1,9 @@
 ---
 title: Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles
+status: active
+tags:
+topic:
+project:
 authors: Yareni A. Ayala, Ramin Omidvar, Winfried Römer, Alexander Rohrbach
 year: 2023
 ---

@@ -1,15 +1,19 @@
 ---
-tags:
-  - "#postdoc"
-  - "#research"
-  - "#physics"
-  - "#membranes"
-  - "#lipids"
-  - "#interface-physics"
-  - "#two-dimensional-surfaces"
-  - "#membrane-biophysics"
-  - "#surface-parameterization"
-  - "#mathematical-physics"
+status: active
+tags: 
+- postdoc
+- research
+- physics
+- membranes
+- lipids
+- interface-physics
+- two-dimensional-surfaces
+- membrane-biophysics
+- surface-parameterization
+- mathematical-physics
+topic: 
+- membrane-physics
+project:
 ---
 # Differential Geometry of Surfaces
 

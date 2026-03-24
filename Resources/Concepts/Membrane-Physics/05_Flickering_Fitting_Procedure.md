@@ -1,3 +1,12 @@
+---
+title: 05_Flickering_Fitting_Procedure
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
+---
 # Flickering Spectroscopy — Fitting Procedure
 
 Tags: #GUV #flickering #fitting #MATLAB #code

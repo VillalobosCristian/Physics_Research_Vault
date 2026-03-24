@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [bending-rigidity, membrane-stretching, area-expansion, thermal-effects, lipid-bilayer]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#bending-rigidity"
-  - "#thermal-effects"
+  - literature-note
+  - membrane-biophysics
+  - bending-rigidity
+  - thermal-effects
 ---
 
 # On the coupling between membrane bending and stretching in lipid vesicles

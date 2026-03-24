@@ -1,10 +1,10 @@
 ---
 tags:
-  - "#physics"
-  - "#mathematical-physics"
-  - "#fluid-dynamics"
-  - "#statistical-mechanics"
-  - "#thermal-distributions"
+  - physics
+  - mathematical-physics
+  - fluid-dynamics
+  - statistical-mechanics
+  - thermal-distributions
 ---
 
 # Maxwell Distribution

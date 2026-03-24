@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [fluctuation-spectroscopy, bending-rigidity, DOPC, phase-contrast, confocal-microscopy]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#fluctuation-analysis"
-  - "#bending-rigidity"
-  - "#microscopy-methods"
+  - literature-note
+  - fluctuation-analysis
+  - bending-rigidity
+  - microscopy-methods
 ---
 
 # Fluctuation spectroscopy of GUVs using confocal and phase contrast microscopy

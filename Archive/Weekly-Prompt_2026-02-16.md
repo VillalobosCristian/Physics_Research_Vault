@@ -3,10 +3,10 @@ title: "Weekly Research Prompt — Optothermal GUV Project"
 date: 2026-02-16
 status: "active"
 tags:
-  - "#weekly-prompt"
-  - "#optothermal"
-  - "#GUV"
-  - "#research-summary"
+  - weekly-prompt
+  - optothermal
+  - GUV
+  - research-summary
 ---
 
 # Weekly Research Prompt — 16 February 2026

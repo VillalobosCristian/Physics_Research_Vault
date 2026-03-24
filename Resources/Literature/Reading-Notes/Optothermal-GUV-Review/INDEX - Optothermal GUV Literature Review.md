@@ -2,11 +2,14 @@
 title: "INDEX - Optothermal GUV Literature Review"
 date: 2026-02-13
 status: "active"
-tags:
-  - "#index"
-  - "#literature-review"
-  - "#optothermal"
-  - "#GUV"
+tags: 
+- index
+- literature-review
+- optothermal
+- GUV
+- literature-note
+topic:
+project:
 ---
 
 # Optothermal GUV Literature Review — Master Index

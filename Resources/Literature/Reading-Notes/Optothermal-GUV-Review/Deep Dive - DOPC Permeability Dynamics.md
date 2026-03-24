@@ -1,5 +1,14 @@
 ---
 title: Deep Dive - DOPC Permeability Dynamics
+date: '2026-03-24'
+status: active
+tags: 
+- literature-note
+topic:
+project:
+---
+---
+title: Deep Dive - DOPC Permeability Dynamics
 date: 2026-02-16
 tags: [#deep-dive, #permeability, #DOPC, #pore-dynamics]
 aliases: [DOPC Permeability Analysis, Transient Permeability Spike]

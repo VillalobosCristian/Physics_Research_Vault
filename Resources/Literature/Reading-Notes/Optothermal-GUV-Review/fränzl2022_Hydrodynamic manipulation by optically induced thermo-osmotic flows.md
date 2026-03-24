@@ -1,18 +1,21 @@
 ---
 title: "Hydrodynamic manipulation of nano-objects by optically induced thermo-osmotic flows"
+status: "reviewed"
+tags: 
+- literature-note
+- optothermal
+- thermo-osmotic-flow
+- gold-substrate
+- literature-note
+topic:
+project:
 authors: Martin Fränzl, Frank Cichos
 citekey: franzl2022
-year: 2022
-journal: Nature Communications
 date_read: 2026-02-13
-status: "reviewed"
+journal: Nature Communications
 key_topics: [thermo-osmotic-flow, gold-film, plasmonic-heating, hydrodynamic-manipulation, boundary-layer]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#thermo-osmotic-flow"
-  - "#gold-substrate"
+year: 2022
 ---
 
 # Hydrodynamic manipulation of nano-objects by optically induced thermo-osmotic flows

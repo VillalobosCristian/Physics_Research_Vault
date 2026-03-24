@@ -1,3 +1,11 @@
+---
+title: Untitled 2
+date: '2026-03-24'
+status: active
+tags:
+topic:
+project:
+---
 A new collection **"Current Work — Priority Reading"** (30 papers) has been created in your Zotero library. Here is the full structured critical bibliography:
 
 ---

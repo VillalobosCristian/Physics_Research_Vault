@@ -2,9 +2,9 @@
 title: "Fluctuation Spectroscopy"
 aliases: [flicker spectroscopy, membrane spectroscopy]
 tags:
-  - "#membrane-biophysics"
-  - "#experimental-methods"
-  - "#guv"
+  - membrane-biophysics
+  - experimental-methods
+  - guv
 ---
 
 # Fluctuation Spectroscopy

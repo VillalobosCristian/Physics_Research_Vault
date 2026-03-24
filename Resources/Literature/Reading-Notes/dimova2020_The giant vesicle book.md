@@ -1,5 +1,9 @@
 ---
 title: The giant vesicle book
+status: active
+tags:
+topic:
+project:
 authors: Rumiana Dimova, Carlos M. Marques
 year: 2020
 ---

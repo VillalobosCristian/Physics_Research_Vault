@@ -1,10 +1,14 @@
 ---
 title: "Active Fluctuations"
+status: active
+tags: 
+- membrane-biophysics
+- active-matter
+- non-equilibrium
+topic: 
+- membrane-physics
+project:
 aliases: [non-equilibrium fluctuations, active membrane fluctuations]
-tags:
-  - "#membrane-biophysics"
-  - "#active-matter"
-  - "#non-equilibrium"
 ---
 
 # Active Fluctuations

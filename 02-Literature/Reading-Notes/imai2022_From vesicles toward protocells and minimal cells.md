@@ -3,13 +3,13 @@ title: From vesicles toward protocells and minimal cells
 authors: Masayuki Imai, Yuka Sakuma, Minoru Kurisu, Peter Walde
 year: 2022
 tags:
-  - "#membranes"
-  - "#lipids"
-  - "#membrane-biophysics"
-  - "#vesicle-formation"
-  - "#protocells"
-  - "#origin-of-life"
-  - "#cell-biology"
+  - membranes
+  - lipids
+  - membrane-biophysics
+  - vesicle-formation
+  - protocells
+  - origin-of-life
+  - cell-biology
 ---
 [[imai2022_From vesicles toward protocells and minimal cells.pdf]]
 # Abstract 

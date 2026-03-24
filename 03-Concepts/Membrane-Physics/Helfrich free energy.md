@@ -2,9 +2,9 @@
 title: "Helfrich Free Energy"
 aliases: [curvature energy, bending energy, Helfrich Hamiltonian]
 tags:
-  - "#membrane-biophysics"
-  - "#elasticity"
-  - "#theory"
+  - membrane-biophysics
+  - elasticity
+  - theory
 ---
 
 # Helfrich Free Energy

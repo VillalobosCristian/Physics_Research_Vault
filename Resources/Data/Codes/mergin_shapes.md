@@ -1,3 +1,12 @@
+---
+title: mergin_shapes
+date: '2026-03-24'
+status: active
+tags: 
+- code
+topic:
+project:
+---
 # **Merging Algorithm - Step by Step Explanation** 
 
 Great question! This is a classic **gap-filling algorithm**. Let me break it down completely.

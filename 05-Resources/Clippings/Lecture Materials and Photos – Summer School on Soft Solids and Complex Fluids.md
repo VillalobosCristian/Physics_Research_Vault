@@ -7,14 +7,14 @@ created: 2024-12-30
 description: 
 tags:
   - clippings
-  - "#physics"
-  - "#research"
-  - "#membrane-biophysics"
-  - "#fluid-dynamics"
-  - "#statistical-mechanics"
-  - "#lecture-materials"
-  - "#academic-resources"
-  - "#summer-school"
+  - physics
+  - research
+  - membrane-biophysics
+  - fluid-dynamics
+  - statistical-mechanics
+  - lecture-materials
+  - academic-resources
+  - summer-school
 ---
 **2024**
 

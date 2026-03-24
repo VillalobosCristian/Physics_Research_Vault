@@ -1,3 +1,12 @@
+---
+title: 04_Flickering_Spectrum_Computation
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
+---
 # Flickering Spectrum Computation
 
 Tags: #GUV #flickering #MATLAB #FFT #code

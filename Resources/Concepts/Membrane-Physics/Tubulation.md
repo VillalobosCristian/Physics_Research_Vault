@@ -1,10 +1,14 @@
 ---
 title: "Tubulation"
+status: active
+tags: 
+- membrane-biophysics
+- morphology
+- guv
+topic: 
+- membrane-physics
+project:
 aliases: [membrane tubes, tether pulling, tubule formation]
-tags:
-  - "#membrane-biophysics"
-  - "#morphology"
-  - "#guv"
 ---
 
 # Tubulation

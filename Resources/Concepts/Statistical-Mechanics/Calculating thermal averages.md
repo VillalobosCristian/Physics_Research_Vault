@@ -1,3 +1,12 @@
+---
+title: Calculating thermal averages
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- statistical-mechanics
+project:
+---
 Whenever need to calculate the thermal averages of small-amplitude fluctuations we follows four rules:
 - 1.- Write the free energy to quadratic order in the amplitude of the fluctuations. In the base state the energy is minimal, so there are no linear terms. 
 - 2 .- Write the fluctuation amplitudes in terms of Fourier modes (or spherical modes for spherically symmetric problems), to find these diagonalize the free energy-in other words, differents modes are treated as independent, i.e. as uncoupled [[Gaussian variables]].

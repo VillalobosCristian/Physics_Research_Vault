@@ -1,3 +1,13 @@
+---
+title: Temperature shape changes GUVs
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- GUVs
+---
 The idea here is to write and update the ideas, theory and progress on the experiments using the [[Optothermal platform]] used for colloids. 
 
 ## The concept

@@ -7,14 +7,14 @@ created: 2025-02-02
 description: Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question.
 tags:
   - clippings
-  - "#membrane-biophysics"
-  - "#lipids"
-  - "#bilayer-properties"
-  - "#membrane-elasticity"
-  - "#guv-formation"
-  - "#literature-review"
-  - "#experimental-methods"
-  - "#membrane-mechanics"
+  - membrane-biophysics
+  - lipids
+  - bilayer-properties
+  - membrane-elasticity
+  - guv-formation
+  - literature-review
+  - experimental-methods
+  - membrane-mechanics
 ---
 Here is a comprehensive categorization of sources related to lipid membrane mechanics and GUV studies, organized by key research themes:
 

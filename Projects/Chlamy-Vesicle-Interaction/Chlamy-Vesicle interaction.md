@@ -1,3 +1,14 @@
+---
+title: Chlamy-Vesicle interaction
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- Chlamy-Vesicle
+- Chlamy-Vesicle-Interaction
+---
 This document is to keep notes, ideas, and protocols for the experiments of chlamy and vesicle interaction. 
 
 ## Second round experiments

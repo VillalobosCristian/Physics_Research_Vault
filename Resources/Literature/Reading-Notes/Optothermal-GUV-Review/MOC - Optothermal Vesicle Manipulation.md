@@ -2,19 +2,21 @@
 title: "MOC - Optothermal Vesicle Manipulation"
 date: 2026-02-13
 status: "active"
-related_papers:
-  - "[[hill2018_Opto-Thermophoretic Attraction Trapping and Manipulation of Lipid Vesicles]]"
+tags: 
+- MOC
+- optothermal
+- thermophoresis
+- vesicle-manipulation
+- literature-note
+topic:
+project:
+related_papers: - "[[hill2018_Opto-Thermophoretic Attraction Trapping and Manipulation of Lipid Vesicles]]"
   - "[[nalupurackal2022_Hydro-thermophoretic trap for microparticles near gold substrate]]"
   - "[[talbot2019_Directed tubule growth from GUVs in thermal gradient]]"
   - "[[villalobos-concha_Optothermal assembly via non-coherent light]]"
   - "[[fränzl2022_Hydrodynamic manipulation by optically induced thermo-osmotic flows]]"
   - "[[kyrsting2011_Heat Profiling of Gold Nanoparticles using Vesicle Cargo Release]]"
   - "[[rørvig-lund2015_Vesicle Fusion Triggered by Optically Heated Gold Nanoparticles]]"
-tags:
-  - "#MOC"
-  - "#optothermal"
-  - "#thermophoresis"
-  - "#vesicle-manipulation"
 ---
 
 # MOC — Optothermal/Thermophoretic Manipulation of Vesicles

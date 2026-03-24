@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [optical-projection, fluctuation-spectroscopy, bending-rigidity, phase-contrast, correction-methods]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#fluctuation-analysis"
-  - "#methods"
-  - "#optical-corrections"
+  - literature-note
+  - fluctuation-analysis
+  - methods
+  - optical-corrections
 ---
 
 # The role of optical projection in the analysis of membrane fluctuations

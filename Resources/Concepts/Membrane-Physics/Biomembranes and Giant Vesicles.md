@@ -1,11 +1,15 @@
 ---
-tags:
-  - "#membrane-biophysics"
-  - "#bilayer-properties"
-  - "#guv-formation"
-  - "#lipids"
-  - "#osmotic-effects"
-  - "#membrane-fluidity"
+status: active
+tags: 
+- membrane-biophysics
+- bilayer-properties
+- guv-formation
+- lipids
+- osmotic-effects
+- membrane-fluidity
+topic: 
+- membrane-physics
+project:
 ---
 
 

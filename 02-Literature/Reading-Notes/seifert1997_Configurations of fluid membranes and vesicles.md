@@ -3,14 +3,14 @@ title: Configurations of fluid membranes and vesicles
 authors: Udo Seifert
 year: 1997
 tags:
-  - "#membrane-biophysics"
-  - "#bilayer-properties"
-  - "#mathematical-physics"
-  - "#thermal-distributions"
-  - "#vesicle-formation"
-  - "#shape-transitions"
-  - "#membrane-elasticity"
-  - "#biological-physics"
+  - membrane-biophysics
+  - bilayer-properties
+  - mathematical-physics
+  - thermal-distributions
+  - vesicle-formation
+  - shape-transitions
+  - membrane-elasticity
+  - biological-physics
 ---
 
 # Abstract 

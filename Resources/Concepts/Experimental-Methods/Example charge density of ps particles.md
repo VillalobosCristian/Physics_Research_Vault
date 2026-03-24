@@ -1,3 +1,12 @@
+---
+title: Example charge density of ps particles
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- experimental-methods
+project:
+---
 # Cálculo de la carga de una partícula
 
 Para calcular cuánta carga lleva **cada partícula** (suponiendo que todos los grupos COOH estén desprotonados y por tanto cargados negativamente), se procede así:

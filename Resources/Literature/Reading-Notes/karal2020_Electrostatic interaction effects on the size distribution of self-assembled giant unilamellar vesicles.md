@@ -1,15 +1,18 @@
 ---
 title: Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesicles
+status: active
+tags: 
+- membrane-biophysics
+- bilayer-properties
+- guv-formation
+- membrane-elasticity
+- size-distribution
+- vesicle-energetics
+- literature-note
+topic:
+project:
 authors: Mohammad Abu Sayem Karal, Marzuk Ahmed, Victor Levadny, Marina Belaya, Md. Kabir Ahamed, Mostafizur Rahman, Md. Mostofa Shakil
 year: 2020
-source: 
-tags:
-  - "#membrane-biophysics"
-  - "#bilayer-properties"
-  - "#guv-formation"
-  - "#membrane-elasticity"
-  - "#size-distribution"
-  - "#vesicle-energetics"
 ---
 
 [[karal, ahmed2020_Electrostatic interaction effects on the size distribution of self-assembled giant unilamellar vesic.pdf]] 

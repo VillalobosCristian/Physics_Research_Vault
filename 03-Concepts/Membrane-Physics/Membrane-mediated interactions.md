@@ -2,8 +2,8 @@
 title: "Membrane-Mediated Interactions"
 aliases: [curvature-mediated forces, membrane-induced attraction]
 tags:
-  - "#membrane-biophysics"
-  - "#particle-interactions"
+  - membrane-biophysics
+  - particle-interactions
 ---
 
 # Membrane-Mediated Interactions

@@ -1,18 +1,21 @@
 ---
 title: "Vesicle Fusion Triggered by Optically Heated Gold Nanoparticles"
+status: "reviewed"
+tags: 
+- literature-note
+- optothermal
+- membrane-biophysics
+- DOPC
+- literature-note
+topic:
+project:
 authors: Andreas Rørvig-Lund, Azra Bahadori, Szabolcs Semsey, Poul Martin Bendix, Lene B. Oddershede
 citekey: rorviglund2015
-year: 2015
-journal: Nano Letters
 date_read: 2026-02-13
-status: "reviewed"
+journal: Nano Letters
 key_topics: [vesicle-fusion, plasmonic-heating, DOPC, membrane-area-expansion, lipid-mixing]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#membrane-biophysics"
-  - "#DOPC"
+year: 2015
 ---
 
 # Vesicle Fusion Triggered by Optically Heated Gold Nanoparticles

@@ -1,18 +1,21 @@
 ---
 title: "A hydro-thermophoretic trap for microparticles near a gold-coated substrate"
+status: "reviewed"
+tags: 
+- literature-note
+- optothermal
+- thermophoresis
+- gold-substrate
+- literature-note
+topic:
+project:
 authors: G. Nalupurackal, M. Gunaseelan, S. Roy, M. Lokesh, S. Kumar, R. Vaippully, R. Singh, B. Roy
 citekey: nalupurackal2022
-year: 2022
-journal: Soft Matter
 date_read: 2026-02-13
-status: "reviewed"
+journal: Soft Matter
 key_topics: [thermophoretic-trapping, gold-substrate, temperature-measurement, microparticles]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#thermophoresis"
-  - "#gold-substrate"
+year: 2022
 ---
 
 # A hydro-thermophoretic trap for microparticles near a gold-coated substrate

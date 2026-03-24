@@ -1,5 +1,9 @@
 ---
 title: Advantages of statistical analysis of giant vesicle flickering for bending elasticity measurements
+status: active
+tags:
+topic:
+project:
 authors: P. Méléard, T. Pott, H. Bouvrais, J. H. Ipsen
 year: 2011
 ---

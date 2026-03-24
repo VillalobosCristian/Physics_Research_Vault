@@ -1,5 +1,9 @@
 ---
 title: Autonomous Engulfment of Active Colloids by Giant Lipid Vesicles
+status: active
+tags:
+topic:
+project:
 authors: Florent Fessler, Martin Wittman, Juliane Simmchen, Antonio Stocco
 year: 2024
 ---

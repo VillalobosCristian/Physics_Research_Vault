@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [contour-analysis, fluctuation-spectroscopy, bending-rigidity, phase-contrast, Fourier-analysis]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#fluctuation-analysis"
-  - "#methods"
-  - "#contour-detection"
+  - literature-note
+  - fluctuation-analysis
+  - methods
+  - contour-detection
 ---
 
 # Refined contour analysis of giant unilamellar vesicles

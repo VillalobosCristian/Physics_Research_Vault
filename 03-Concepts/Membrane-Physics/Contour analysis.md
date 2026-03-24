@@ -2,9 +2,9 @@
 title: "Contour Analysis"
 aliases: [contour tracking, membrane contour analysis]
 tags:
-  - "#membrane-biophysics"
-  - "#experimental-methods"
-  - "#image-analysis"
+  - membrane-biophysics
+  - experimental-methods
+  - image-analysis
 ---
 
 # Contour Analysis

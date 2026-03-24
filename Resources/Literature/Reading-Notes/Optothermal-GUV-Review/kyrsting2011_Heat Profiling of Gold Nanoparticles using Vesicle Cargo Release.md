@@ -1,18 +1,21 @@
 ---
 title: "Heat Profiling of Three-Dimensionally Optically Trapped Gold Nanoparticles using Vesicle Cargo Release"
+status: "reviewed"
+tags: 
+- literature-note
+- optothermal
+- plasmonic-heating
+- membrane-permeability
+- literature-note
+topic:
+project:
 authors: Anders Kyrsting, Poul M. Bendix, Dimitrios G. Stamou, Lene B. Oddershede
 citekey: kyrsting2011
-year: 2011
-journal: Nano Letters
 date_read: 2026-02-13
-status: "reviewed"
+journal: Nano Letters
 key_topics: [plasmonic-heating, gold-nanoparticles, temperature-profiling, membrane-permeability, vesicle-leaking]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#plasmonic-heating"
-  - "#membrane-permeability"
+year: 2011
 ---
 
 # Heat Profiling of Gold Nanoparticles using Vesicle Cargo Release

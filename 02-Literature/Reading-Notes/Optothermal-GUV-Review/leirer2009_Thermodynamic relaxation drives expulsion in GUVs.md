@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [phase-transition, vesicle-deformation, thermal-relaxation, pore-formation, content-expulsion]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#thermal-effects"
-  - "#shape-transitions"
+  - literature-note
+  - membrane-biophysics
+  - thermal-effects
+  - shape-transitions
 ---
 
 # Thermodynamic relaxation drives expulsion in giant unilamellar vesicles

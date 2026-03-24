@@ -1,3 +1,14 @@
+---
+title: State of the Art
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- MSCA-2025
+- MSCA-Proposal-2025
+---
 
 
 

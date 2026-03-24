@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [thermal-gradient, tubule-growth, GUV-deformation, phase-separation, lipid-domains]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#thermal-effects"
-  - "#shape-transitions"
+  - literature-note
+  - membrane-biophysics
+  - thermal-effects
+  - shape-transitions
 ---
 
 # Directed tubule growth from giant unilamellar vesicles in a thermal gradient

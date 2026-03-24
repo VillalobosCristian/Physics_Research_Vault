@@ -2,16 +2,18 @@
 title: "MOC - Analysis Methods for Vesicle Fluctuations"
 date: 2026-02-13
 status: "active"
-related_papers:
-  - "[[pécréaux2004_Refined contour analysis of GUVs]]"
+tags: 
+- MOC
+- methods
+- fluctuation-analysis
+- contour-detection
+- literature-note
+topic:
+project:
+related_papers: - "[[pécréaux2004_Refined contour analysis of GUVs]]"
   - "[[faizi2020_Fluctuation spectroscopy of GUVs phase contrast and confocal]]"
   - "[[rautu2017_The role of optical projection in membrane fluctuation analysis]]"
   - "[[sciortino2025_Active membrane deformations of a minimal synthetic cell]]"
-tags:
-  - "#MOC"
-  - "#methods"
-  - "#fluctuation-analysis"
-  - "#contour-detection"
 ---
 
 # MOC — Analysis Methods for Vesicle Fluctuations

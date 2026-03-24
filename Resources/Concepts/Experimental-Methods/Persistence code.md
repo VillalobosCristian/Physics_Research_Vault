@@ -1,3 +1,12 @@
+---
+title: Persistence code
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- experimental-methods
+project:
+---
 Everything is kept as usual to extract trajectories from trackmate data.
 I remove tracks that are shorter than 10 time steps (depending on the framerate). 
 

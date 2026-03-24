@@ -1,3 +1,11 @@
+---
+title: Untitled 1
+date: '2026-03-24'
+status: active
+tags:
+topic:
+project:
+---
 # Flickering Spectroscopy: Complete Walkthrough
 
 ---

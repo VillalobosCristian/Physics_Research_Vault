@@ -1,19 +1,22 @@
 ---
 title: "Active membrane deformations of a minimal synthetic cell"
+status: "reviewed"
+tags: 
+- literature-note
+- membrane-biophysics
+- active-matter
+- fluctuation-analysis
+- DOPC
+- literature-note
+topic:
+project:
 authors: A. Sciortino, H. Faizi, D.A. Fedosov, L. Frechette, P.M. Vlahovska, G. Gompper, A.R. Bausch
 citekey: sciortino2025
-year: 2025
-journal: Nature Physics
 date_read: 2026-02-13
-status: "reviewed"
+journal: Nature Physics
 key_topics: [active-matter, membrane-deformations, DOPC, microtubule-network, fluctuation-spectroscopy, synthetic-cell]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#active-matter"
-  - "#fluctuation-analysis"
-  - "#DOPC"
+year: 2025
 ---
 
 # Active membrane deformations of a minimal synthetic cell

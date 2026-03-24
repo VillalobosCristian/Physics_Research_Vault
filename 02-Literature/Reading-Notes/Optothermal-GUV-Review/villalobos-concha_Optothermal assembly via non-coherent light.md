@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [optothermal-assembly, non-coherent-light, gold-substrate, thermo-osmotic-slip, colloidal-crystals]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#gold-substrate"
-  - "#thermo-osmotic-slip"
+  - literature-note
+  - optothermal
+  - gold-substrate
+  - thermo-osmotic-slip
 ---
 
 # Optothermal assembly and manipulation of colloids via non-coherent light

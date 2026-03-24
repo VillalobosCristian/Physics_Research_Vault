@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [plasmonic-heating, gold-nanoparticles, temperature-profiling, membrane-permeability, vesicle-leaking]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#plasmonic-heating"
-  - "#membrane-permeability"
+  - literature-note
+  - optothermal
+  - plasmonic-heating
+  - membrane-permeability
 ---
 
 # Heat Profiling of Gold Nanoparticles using Vesicle Cargo Release

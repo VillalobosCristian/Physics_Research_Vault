@@ -1,10 +1,14 @@
 ---
 title: "Gaussian Curvature Modulus"
+status: active
+tags: 
+- membrane-biophysics
+- elasticity
+- differential-geometry
+topic: 
+- membrane-physics
+project:
 aliases: [κ̄, kappa bar, saddle-splay modulus]
-tags:
-  - "#membrane-biophysics"
-  - "#elasticity"
-  - "#differential-geometry"
 ---
 
 # Gaussian Curvature Modulus

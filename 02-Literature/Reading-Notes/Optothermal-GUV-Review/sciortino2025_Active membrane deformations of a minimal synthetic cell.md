@@ -9,11 +9,11 @@ status: "reviewed"
 key_topics: [active-matter, membrane-deformations, DOPC, microtubule-network, fluctuation-spectroscopy, synthetic-cell]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#active-matter"
-  - "#fluctuation-analysis"
-  - "#DOPC"
+  - literature-note
+  - membrane-biophysics
+  - active-matter
+  - fluctuation-analysis
+  - DOPC
 ---
 
 # Active membrane deformations of a minimal synthetic cell

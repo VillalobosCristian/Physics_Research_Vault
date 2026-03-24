@@ -3,9 +3,9 @@ title: "Quantitative Comparison - My Findings vs Literature"
 date: 2026-02-13
 status: "active"
 tags:
-  - "#comparison"
-  - "#quantitative"
-  - "#literature-review"
+  - comparison
+  - quantitative
+  - literature-review
 ---
 
 # Quantitative Comparison: My Findings vs Literature

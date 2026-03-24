@@ -1,10 +1,14 @@
 ---
 title: "Helfrich Free Energy"
+status: active
+tags: 
+- membrane-biophysics
+- elasticity
+- theory
+topic: 
+- membrane-physics
+project:
 aliases: [curvature energy, bending energy, Helfrich Hamiltonian]
-tags:
-  - "#membrane-biophysics"
-  - "#elasticity"
-  - "#theory"
 ---
 
 # Helfrich Free Energy

@@ -1,3 +1,12 @@
+---
+title: Radial Distribution Function
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- statistical-mechanics
+project:
+---
 The radial distribution function$g(r)$ tells u: How likely am I to find a particle at distance r from another particle, compared to a completely random distribution?
 
 - **g(r) = 1**: Random distribution (like a gas)

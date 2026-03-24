@@ -2,9 +2,9 @@
 title: "Membrane Fluctuation Spectrum"
 aliases: [fluctuation power spectrum, undulation spectrum]
 tags:
-  - "#membrane-biophysics"
-  - "#fluctuations"
-  - "#spectroscopy"
+  - membrane-biophysics
+  - fluctuations
+  - spectroscopy
 ---
 
 # Membrane Fluctuation Spectrum

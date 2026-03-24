@@ -1,3 +1,13 @@
+---
+title: Summary of results-code-physics
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- Cooling-by-Heating
+---
 ## Fluid physics after light is turn on
 
 In the presence of the thermal gradient for what i understand we will have: 

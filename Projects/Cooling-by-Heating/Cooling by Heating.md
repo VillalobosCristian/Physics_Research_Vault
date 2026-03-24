@@ -1,3 +1,13 @@
+---
+title: Cooling by Heating
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- Cooling-by-Heating
+---
 To-do. 
 
 [  ] Use fluorescent microparticles as temperature probes to map the 2D temperature profile around the laser spot.

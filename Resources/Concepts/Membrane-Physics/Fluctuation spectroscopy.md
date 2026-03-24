@@ -1,10 +1,14 @@
 ---
 title: "Fluctuation Spectroscopy"
+status: active
+tags: 
+- membrane-biophysics
+- experimental-methods
+- guv
+topic: 
+- membrane-physics
+project:
 aliases: [flicker spectroscopy, membrane spectroscopy]
-tags:
-  - "#membrane-biophysics"
-  - "#experimental-methods"
-  - "#guv"
 ---
 
 # Fluctuation Spectroscopy

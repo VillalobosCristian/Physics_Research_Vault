@@ -1,10 +1,14 @@
 ---
 title: "Vesicle Shapes"
+status: active
+tags: 
+- membrane-biophysics
+- morphology
+- guv
+topic: 
+- membrane-physics
+project:
 aliases: [vesicle morphology, membrane shapes]
-tags:
-  - "#membrane-biophysics"
-  - "#morphology"
-  - "#guv"
 ---
 
 # Vesicle Shapes

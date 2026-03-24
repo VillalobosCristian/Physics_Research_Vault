@@ -9,10 +9,10 @@ related_papers:
   - "[[wennerström2022_Thermal fluctuations and osmotic stability of lipid vesicles]]"
   - "[[talbot2019_Directed tubule growth from GUVs in thermal gradient]]"
 tags:
-  - "#MOC"
-  - "#shape-transitions"
-  - "#vesicle-deformation"
-  - "#invagination"
+  - MOC
+  - shape-transitions
+  - vesicle-deformation
+  - invagination
 ---
 
 # MOC — Vesicle Shape Deformations and Invaginations

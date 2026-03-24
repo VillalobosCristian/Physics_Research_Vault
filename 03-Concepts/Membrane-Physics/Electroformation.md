@@ -2,9 +2,9 @@
 title: "Electroformation"
 aliases: [electroswelling, GUV electroformation]
 tags:
-  - "#membrane-biophysics"
-  - "#experimental-methods"
-  - "#guv-preparation"
+  - membrane-biophysics
+  - experimental-methods
+  - guv-preparation
 ---
 
 # Electroformation

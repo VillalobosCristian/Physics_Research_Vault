@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [optothermal-trapping, thermophoresis, lipid-vesicles, plasmonic-heating, DOPC]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#thermophoresis"
-  - "#vesicle-manipulation"
+  - literature-note
+  - optothermal
+  - thermophoresis
+  - vesicle-manipulation
 ---
 
 # Opto-Thermophoretic Attraction, Trapping, and Dynamic Manipulation of Lipid Vesicles

@@ -1,3 +1,12 @@
+---
+title: 02_Helfrich_Hamiltonian_GUV
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
+---
 # Helfrich Hamiltonian for a Quasi-Spherical GUV
 
 Tags: #GUV #Helfrich #statistical-mechanics #membrane

@@ -1,3 +1,12 @@
+---
+title: 03_Pecreaux_Projection_Formula
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
+---
 # Pécréaux Equatorial Projection Formula
 
 Tags: #GUV #Pecreaux #projection #Legendre #derivation

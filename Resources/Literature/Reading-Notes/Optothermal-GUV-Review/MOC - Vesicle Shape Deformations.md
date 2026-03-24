@@ -2,17 +2,19 @@
 title: "MOC - Vesicle Shape Deformations and Invaginations"
 date: 2026-02-13
 status: "active"
-related_papers:
-  - "[[käs1991_Shape transitions of giant vesicles induced by area-to-volume changes]]"
+tags: 
+- MOC
+- shape-transitions
+- vesicle-deformation
+- invagination
+- literature-note
+topic:
+project:
+related_papers: - "[[käs1991_Shape transitions of giant vesicles induced by area-to-volume changes]]"
   - "[[sciortino2025_Active membrane deformations of a minimal synthetic cell]]"
   - "[[leirer2009_Thermodynamic relaxation drives expulsion in GUVs]]"
   - "[[wennerström2022_Thermal fluctuations and osmotic stability of lipid vesicles]]"
   - "[[talbot2019_Directed tubule growth from GUVs in thermal gradient]]"
-tags:
-  - "#MOC"
-  - "#shape-transitions"
-  - "#vesicle-deformation"
-  - "#invagination"
 ---
 
 # MOC — Vesicle Shape Deformations and Invaginations

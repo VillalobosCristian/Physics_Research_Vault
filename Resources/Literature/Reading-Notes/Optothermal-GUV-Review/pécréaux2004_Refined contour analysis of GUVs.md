@@ -1,18 +1,21 @@
 ---
 title: "Refined contour analysis of giant unilamellar vesicles"
+status: "reviewed"
+tags: 
+- literature-note
+- fluctuation-analysis
+- methods
+- contour-detection
+- literature-note
+topic:
+project:
 authors: J. Pécréaux, H.-G. Döbereiner, J. Prost, J.-F. Joaniny, P. Bassereau
 citekey: pecreaux2004
-year: 2004
-journal: European Physical Journal E
 date_read: 2026-02-13
-status: "reviewed"
+journal: European Physical Journal E
 key_topics: [contour-analysis, fluctuation-spectroscopy, bending-rigidity, phase-contrast, Fourier-analysis]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#fluctuation-analysis"
-  - "#methods"
-  - "#contour-detection"
+year: 2004
 ---
 
 # Refined contour analysis of giant unilamellar vesicles

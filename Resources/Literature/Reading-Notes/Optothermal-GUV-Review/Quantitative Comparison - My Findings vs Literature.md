@@ -2,10 +2,13 @@
 title: "Quantitative Comparison - My Findings vs Literature"
 date: 2026-02-13
 status: "active"
-tags:
-  - "#comparison"
-  - "#quantitative"
-  - "#literature-review"
+tags: 
+- comparison
+- quantitative
+- literature-review
+- literature-note
+topic:
+project:
 ---
 
 # Quantitative Comparison: My Findings vs Literature

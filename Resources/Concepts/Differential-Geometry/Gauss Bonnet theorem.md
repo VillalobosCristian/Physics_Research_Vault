@@ -1,3 +1,12 @@
+---
+title: Gauss Bonnet theorem
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- differential-geometry
+project:
+---
 $$
 \begin{array}{c}
 \text{Differential geometry} \qquad\qquad\qquad\qquad \text{Topology} \\

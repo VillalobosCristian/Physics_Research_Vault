@@ -1,18 +1,21 @@
 ---
 title: "Fluctuation spectroscopy of giant unilamellar vesicles using confocal and phase contrast microscopy"
+status: "reviewed"
+tags: 
+- literature-note
+- fluctuation-analysis
+- bending-rigidity
+- microscopy-methods
+- literature-note
+topic:
+project:
 authors: Hammad A. Faizi, Cody J. Reeves, Vasil N. Georgiev, Petia M. Vlahovska, Rumiana Dimova
 citekey: faizi2020
-year: 2020
-journal: Soft Matter
 date_read: 2026-02-13
-status: "reviewed"
+journal: Soft Matter
 key_topics: [fluctuation-spectroscopy, bending-rigidity, DOPC, phase-contrast, confocal-microscopy]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#fluctuation-analysis"
-  - "#bending-rigidity"
-  - "#microscopy-methods"
+year: 2020
 ---
 
 # Fluctuation spectroscopy of GUVs using confocal and phase contrast microscopy

@@ -1,7 +1,10 @@
 ---
 title: Optothermal assembly and manipulation of colloids via non-coherent light
+status: active
+tags:
+topic:
+project:
 authors: Cristian Villalobos-Concha, Joshua Davis, Alexandre Baron, Laura Alvarez
-year: 
 ---
 
 # Abstract 

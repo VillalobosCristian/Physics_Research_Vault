@@ -1,5 +1,9 @@
 ---
 title: Aggregation-fragmentation and individual dynamics of active clusters
+status: active
+tags:
+topic:
+project:
 authors: F. Ginot, I. Theurkauff, F. Detcheverry, C. Ybert, C. Cottin-Bizonne
 year: 2018
 ---

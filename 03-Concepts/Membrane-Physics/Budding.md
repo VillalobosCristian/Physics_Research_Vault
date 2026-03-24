@@ -1,11 +1,11 @@
 ---
 tags:
-  - "#membranes"
-  - "#lipids"
-  - "#membrane-biophysics"
-  - "#fluid-dynamics"
-  - "#vesicle-formation"
-  - "#thermal-transitions"
+  - membranes
+  - lipids
+  - membrane-biophysics
+  - fluid-dynamics
+  - vesicle-formation
+  - thermal-transitions
 ---
 Process in which a structure grows or forms as an outward protrusion from an existing entity. In the context of lipid membranes, cell biology, or biophysics, budding specifically describes the formation of a small, vesicle-like structure or domain that separates from a larger membrane.
 > ([[seifert1997_Configurations of fluid membranes and vesicles.pdf#page=5&selection=127,0,138,64&color=yellow|seifert1997_Configurations of fluid membranes and vesicles, p.5]])

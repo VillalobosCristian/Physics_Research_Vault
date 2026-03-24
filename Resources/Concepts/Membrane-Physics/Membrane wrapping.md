@@ -1,10 +1,14 @@
 ---
 title: "Membrane Wrapping"
+status: active
+tags: 
+- membrane-biophysics
+- particle-interactions
+- guv
+topic: 
+- membrane-physics
+project:
 aliases: [particle wrapping, engulfment, endocytic wrapping]
-tags:
-  - "#membrane-biophysics"
-  - "#particle-interactions"
-  - "#guv"
 ---
 
 # Membrane Wrapping

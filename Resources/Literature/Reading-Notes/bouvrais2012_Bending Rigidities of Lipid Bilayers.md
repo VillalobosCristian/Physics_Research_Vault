@@ -1,5 +1,9 @@
 ---
 title: Bending Rigidities of Lipid Bilayers
+status: active
+tags:
+topic:
+project:
 authors: Hélène Bouvrais
 year: 2012
 ---

@@ -1,12 +1,16 @@
 ---
-tags:
-  - "#physics"
-  - "#membranes"
-  - "#interface-physics"
-  - "#two-dimensional-surfaces"
-  - "#helfrich-model"
-  - "#spherical-harmonics"
-  - "#membrane-biophysics"
+status: active
+tags: 
+- physics
+- membranes
+- interface-physics
+- two-dimensional-surfaces
+- helfrich-model
+- spherical-harmonics
+- membrane-biophysics
+topic: 
+- membrane-physics
+project:
 ---
 The total energy of the system is given by the Helfrich model:
 $$E=\frac{\kappa}{2}\int_A \mathrm{d}A\ (c_1+c_2)^2+\sigma A+pV$$

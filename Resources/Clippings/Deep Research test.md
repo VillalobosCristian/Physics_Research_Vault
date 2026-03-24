@@ -1,3 +1,11 @@
+---
+title: Deep Research test
+date: '2026-03-24'
+status: active
+tags:
+topic:
+project:
+---
 [[Thermal fluctuations]][[Budding]][[Biomimetic]][[Thermal fluctuations]]
 
 # Experimental Methods for Studying GUV Fluctuations

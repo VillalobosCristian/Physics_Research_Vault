@@ -10,10 +10,10 @@ related_papers:
   - "[[sahu2025_Osmotic forces modify lipid membrane fluctuations]]"
   - "[[wennerström2025_Coupling between membrane bending and stretching]]"
 tags:
-  - "#MOC"
-  - "#membrane-permeability"
-  - "#thermal-effects"
-  - "#osmotic-response"
+  - MOC
+  - membrane-permeability
+  - thermal-effects
+  - osmotic-response
 ---
 
 # MOC — Temperature-Dependent Membrane Permeability

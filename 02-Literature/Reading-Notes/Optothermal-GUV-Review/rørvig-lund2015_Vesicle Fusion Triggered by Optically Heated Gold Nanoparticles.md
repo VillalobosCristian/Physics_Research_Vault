@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [vesicle-fusion, plasmonic-heating, DOPC, membrane-area-expansion, lipid-mixing]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#membrane-biophysics"
-  - "#DOPC"
+  - literature-note
+  - optothermal
+  - membrane-biophysics
+  - DOPC
 ---
 
 # Vesicle Fusion Triggered by Optically Heated Gold Nanoparticles

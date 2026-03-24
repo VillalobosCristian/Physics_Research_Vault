@@ -7,12 +7,12 @@ created: 2025-01-23
 description: 
 tags:
   - clippings
-  - "#differential-geometry"
-  - "#gaussian-curvature"
-  - "#surface-parameterization"
-  - "#mathematical-physics"
-  - "#curvature-analysis"
-  - "#surface-mathematics"
+  - differential-geometry
+  - gaussian-curvature
+  - surface-parameterization
+  - mathematical-physics
+  - curvature-analysis
+  - surface-mathematics
 ---
 ---
 

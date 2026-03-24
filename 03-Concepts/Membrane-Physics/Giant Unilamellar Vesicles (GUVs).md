@@ -1,12 +1,12 @@
 ---
 tags:
-  - "#membrane-biophysics"
-  - "#lipids"
-  - "#bilayer-properties"
-  - "#membrane-elasticity"
-  - "#guv-formation"
-  - "#phase-transitions"
-  - "#lipid-structure"
+  - membrane-biophysics
+  - lipids
+  - bilayer-properties
+  - membrane-elasticity
+  - guv-formation
+  - phase-transitions
+  - lipid-structure
 ---
 
 GUVs are a  single [[Lipid Bilayer Structure]], with sizes  that typically range from 10 to 100 microns in diameter, making them easily observable under a light microscope.

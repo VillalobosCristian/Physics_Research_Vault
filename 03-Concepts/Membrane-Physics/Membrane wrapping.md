@@ -2,9 +2,9 @@
 title: "Membrane Wrapping"
 aliases: [particle wrapping, engulfment, endocytic wrapping]
 tags:
-  - "#membrane-biophysics"
-  - "#particle-interactions"
-  - "#guv"
+  - membrane-biophysics
+  - particle-interactions
+  - guv
 ---
 
 # Membrane Wrapping

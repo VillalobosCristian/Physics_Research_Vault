@@ -1,3 +1,11 @@
+---
+title: NotebookLM
+date: '2026-03-24'
+status: active
+tags:
+topic:
+project:
+---
 # Briefing Document: Lipid Vesicle Dynamics and Properties
 
 This briefing document synthesizes key themes and important [[Ideas]] from the provided sources regarding the dynamics, properties, and behavior of lipid vesicles, particularly giant unilamellar vesicles (GUVs), and their interactions with nanoparticles and external fields.

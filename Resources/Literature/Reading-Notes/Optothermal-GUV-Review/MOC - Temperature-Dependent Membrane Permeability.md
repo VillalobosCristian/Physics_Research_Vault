@@ -2,18 +2,20 @@
 title: "MOC - Temperature-Dependent Membrane Permeability"
 date: 2026-02-13
 status: "active"
-related_papers:
-  - "[[wennerström2022_Thermal fluctuations and osmotic stability of lipid vesicles]]"
+tags: 
+- MOC
+- membrane-permeability
+- thermal-effects
+- osmotic-response
+- literature-note
+topic:
+project:
+related_papers: - "[[wennerström2022_Thermal fluctuations and osmotic stability of lipid vesicles]]"
   - "[[leirer2009_Thermodynamic relaxation drives expulsion in GUVs]]"
   - "[[kyrsting2011_Heat Profiling of Gold Nanoparticles using Vesicle Cargo Release]]"
   - "[[rørvig-lund2015_Vesicle Fusion Triggered by Optically Heated Gold Nanoparticles]]"
   - "[[sahu2025_Osmotic forces modify lipid membrane fluctuations]]"
   - "[[wennerström2025_Coupling between membrane bending and stretching]]"
-tags:
-  - "#MOC"
-  - "#membrane-permeability"
-  - "#thermal-effects"
-  - "#osmotic-response"
 ---
 
 # MOC — Temperature-Dependent Membrane Permeability

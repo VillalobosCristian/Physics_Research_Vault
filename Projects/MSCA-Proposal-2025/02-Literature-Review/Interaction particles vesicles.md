@@ -1,3 +1,14 @@
+---
+title: Interaction particles vesicles
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- MSCA-2025
+- MSCA-Proposal-2025
+---
 ## Key Parameters Influencing Interactions
 
 Several physical factors govern whether adhesion, partial wrapping, or full engulfment occurs:

@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [shape-transitions, vesicle-morphology, area-to-volume-ratio, stomatocyte, budding, invagination]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#shape-transitions"
-  - "#vesicle-morphology"
+  - literature-note
+  - membrane-biophysics
+  - shape-transitions
+  - vesicle-morphology
 ---
 
 # Shape transitions and shape stability of giant phospholipid vesicles in pure water

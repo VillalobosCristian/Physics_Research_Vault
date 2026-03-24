@@ -2,9 +2,9 @@
 title: "Vesicle Shapes"
 aliases: [vesicle morphology, membrane shapes]
 tags:
-  - "#membrane-biophysics"
-  - "#morphology"
-  - "#guv"
+  - membrane-biophysics
+  - morphology
+  - guv
 ---
 
 # Vesicle Shapes

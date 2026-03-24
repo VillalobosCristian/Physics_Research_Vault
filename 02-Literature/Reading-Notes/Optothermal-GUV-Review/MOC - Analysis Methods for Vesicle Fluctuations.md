@@ -8,10 +8,10 @@ related_papers:
   - "[[rautu2017_The role of optical projection in membrane fluctuation analysis]]"
   - "[[sciortino2025_Active membrane deformations of a minimal synthetic cell]]"
 tags:
-  - "#MOC"
-  - "#methods"
-  - "#fluctuation-analysis"
-  - "#contour-detection"
+  - MOC
+  - methods
+  - fluctuation-analysis
+  - contour-detection
 ---
 
 # MOC — Analysis Methods for Vesicle Fluctuations

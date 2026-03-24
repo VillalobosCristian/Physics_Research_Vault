@@ -2,8 +2,8 @@
 title: "Mean Curvature"
 aliases: [H, average curvature]
 tags:
-  - "#membrane-biophysics"
-  - "#differential-geometry"
+  - membrane-biophysics
+  - differential-geometry
 ---
 
 # Mean Curvature

@@ -1,3 +1,12 @@
+---
+title: 08_GUV_Analysis_Pipeline
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
+---
 # GUV Analysis Pipeline — Architecture and Workflow
 
 Tags: #GUV #pipeline #MATLAB #workflow #lab-management

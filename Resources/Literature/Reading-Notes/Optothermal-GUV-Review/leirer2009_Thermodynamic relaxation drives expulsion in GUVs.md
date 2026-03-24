@@ -1,18 +1,21 @@
 ---
 title: "Thermodynamic relaxation drives expulsion in giant unilamellar vesicles"
+status: "reviewed"
+tags: 
+- literature-note
+- membrane-biophysics
+- thermal-effects
+- shape-transitions
+- literature-note
+topic:
+project:
 authors: C.T. Leirer, B. Wunderlich, A. Wixforth, M.F. Schneider
 citekey: leirer2009expulsion
-year: 2009
-journal: Physical Biology
 date_read: 2026-02-13
-status: "reviewed"
+journal: Physical Biology
 key_topics: [phase-transition, vesicle-deformation, thermal-relaxation, pore-formation, content-expulsion]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#thermal-effects"
-  - "#shape-transitions"
+year: 2009
 ---
 
 # Thermodynamic relaxation drives expulsion in giant unilamellar vesicles

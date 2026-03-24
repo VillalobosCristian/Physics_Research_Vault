@@ -1,18 +1,21 @@
 ---
 title: "Osmotic forces modify lipid membrane fluctuations"
+status: "reviewed"
+tags: 
+- literature-note
+- membrane-biophysics
+- osmotic-response
+- fluctuation-analysis
+- literature-note
+topic:
+project:
 authors: Amaresh Sahu
 citekey: sahu2025
-year: 2025
-journal: arXiv preprint
 date_read: 2026-02-13
-status: "reviewed"
+journal: arXiv preprint
 key_topics: [osmotic-forces, membrane-fluctuations, solute-diffusion, surface-tension, membrane-dynamics]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#osmotic-response"
-  - "#fluctuation-analysis"
+year: 2025
 ---
 
 # Osmotic forces modify lipid membrane fluctuations

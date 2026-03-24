@@ -1,3 +1,12 @@
+---
+title: 06_ACF_Viscosity_Extraction
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
+---
 # ACF, Relaxation Times, and Viscosity Extraction
 
 Tags: #GUV #ACF #viscosity #Milner-Safran #MATLAB

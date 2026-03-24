@@ -1,3 +1,13 @@
+---
+title: Experiments
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- Cooling-by-Heating
+---
 # Experiments to date
 
 ## Power Series Analysis

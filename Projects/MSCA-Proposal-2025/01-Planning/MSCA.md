@@ -1,3 +1,14 @@
+---
+title: MSCA
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- MSCA-2025
+- MSCA-Proposal-2025
+---
 # Proposal structure 
 
 - Part A: Administrative forms.

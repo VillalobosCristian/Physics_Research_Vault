@@ -1,10 +1,14 @@
 ---
 title: "Flickering"
+status: active
+tags: 
+- membrane-biophysics
+- fluctuations
+- guv
+topic: 
+- membrane-physics
+project:
 aliases: [membrane flickering, flicker]
-tags:
-  - "#membrane-biophysics"
-  - "#fluctuations"
-  - "#guv"
 ---
 
 # Flickering

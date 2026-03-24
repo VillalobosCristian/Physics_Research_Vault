@@ -1,18 +1,21 @@
 ---
 title: "Opto-Thermophoretic Attraction, Trapping, and Dynamic Manipulation of Lipid Vesicles"
+status: "reviewed"
+tags: 
+- literature-note
+- optothermal
+- thermophoresis
+- vesicle-manipulation
+- literature-note
+topic:
+project:
 authors: Esteban H. Hill, Jingang Li, Linhan Lin, Yuebing Zheng
 citekey: hill2018
-year: 2018
-journal: Langmuir
 date_read: 2026-02-13
-status: "reviewed"
+journal: Langmuir
 key_topics: [optothermal-trapping, thermophoresis, lipid-vesicles, plasmonic-heating, DOPC]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#thermophoresis"
-  - "#vesicle-manipulation"
+year: 2018
 ---
 
 # Opto-Thermophoretic Attraction, Trapping, and Dynamic Manipulation of Lipid Vesicles

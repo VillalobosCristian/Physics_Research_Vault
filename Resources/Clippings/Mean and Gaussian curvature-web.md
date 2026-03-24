@@ -1,18 +1,18 @@
 ---
 title: introduction.html
-source: https://www.grad.hr/itproject_math/Links/sonja/gausseng/introduction/introduction.html
-author: 
-published: 
+status: active
+tags: 
+- clippings
+- differential-geometry
+- gaussian-curvature
+- surface-parameterization
+- mathematical-physics
+- curvature-analysis
+- surface-mathematics
+topic:
+project:
 created: 2025-01-23
-description: 
-tags:
-  - clippings
-  - "#differential-geometry"
-  - "#gaussian-curvature"
-  - "#surface-parameterization"
-  - "#mathematical-physics"
-  - "#curvature-analysis"
-  - "#surface-mathematics"
+source: https://www.grad.hr/itproject_math/Links/sonja/gausseng/introduction/introduction.html
 ---
 ---
 

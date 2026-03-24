@@ -1,10 +1,10 @@
 ---
 tags:
-  - "#lipids"
-  - "#membranes"
-  - "#membrane-biophysics"
-  - "#bilayer-properties"
-  - "#molecular-diffusion"
+  - lipids
+  - membranes
+  - membrane-biophysics
+  - bilayer-properties
+  - molecular-diffusion
 ---
 A lipid bilayer is composed of amphiphilic lipid molecules arranged so that their hydrophobic tails face inward and hydrophilic heads face the aqueous environment. This [[self-assembled]] structure is the basis of all biological membranes.
 ![[[[Lipids.excalidraw]]]]

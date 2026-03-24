@@ -1,17 +1,21 @@
 ---
 title: Microparticle Assembly Pathways on Lipid Membranes
+status: active
+tags: 
+- membrane-biophysics
+- lipids
+- microscopy-methods
+- particle-interactions
+- membrane-elasticity
+- microparticle-assembly
+- membrane-adhesion
+- particle-dynamics
+- protocol
+- literature-note
+topic:
+project:
 authors: Casper Van Der Wel, Doris Heinrich, Daniela J. Kraft
 year: 2017
-tags:
-  - "#membrane-biophysics"
-  - "#lipids"
-  - "#microscopy-methods"
-  - "#particle-interactions"
-  - "#membrane-elasticity"
-  - "#microparticle-assembly"
-  - "#membrane-adhesion"
-  - "#particle-dynamics"
-  - "#protocol"
 ---
 
 # Abstract 

@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [thermo-osmotic-flow, gold-film, plasmonic-heating, hydrodynamic-manipulation, boundary-layer]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#thermo-osmotic-flow"
-  - "#gold-substrate"
+  - literature-note
+  - optothermal
+  - thermo-osmotic-flow
+  - gold-substrate
 ---
 
 # Hydrodynamic manipulation of nano-objects by optically induced thermo-osmotic flows

@@ -1,3 +1,14 @@
+---
+title: Abstract
+date: '2026-03-24'
+status: active
+tags: 
+- project
+topic:
+project: 
+- MSCA-2025
+- MSCA-Proposal-2025
+---
 Living cells exhibit complex interaction to adapt and respond to the environment. 
 
 

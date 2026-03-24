@@ -1,13 +1,17 @@
 ---
-tags:
-  - "#thermal-distributions"
-  - "#particle-interactions"
-  - "#membrane-adhesion"
-  - "#fluctuation-analysis"
-  - "#membrane-fluidity"
-  - "#particle-uptake"
-  - "#membrane-deformation"
-  - "#adhesive-energy"
+status: active
+tags: 
+- thermal-distributions
+- particle-interactions
+- membrane-adhesion
+- fluctuation-analysis
+- membrane-fluidity
+- particle-uptake
+- membrane-deformation
+- adhesive-energy
+topic: 
+- membrane-physics
+project:
 ---
 **What is the role of [[Thermal fluctuations]] in the context of particle uptake by GUVs?**
 

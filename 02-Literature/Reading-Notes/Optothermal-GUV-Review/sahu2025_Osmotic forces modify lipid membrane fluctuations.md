@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [osmotic-forces, membrane-fluctuations, solute-diffusion, surface-tension, membrane-dynamics]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#osmotic-response"
-  - "#fluctuation-analysis"
+  - literature-note
+  - membrane-biophysics
+  - osmotic-response
+  - fluctuation-analysis
 ---
 
 # Osmotic forces modify lipid membrane fluctuations

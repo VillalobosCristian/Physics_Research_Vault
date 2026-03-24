@@ -1,7 +1,10 @@
 ---
 title: Colloid Transport by Interfacial Forces
+status: active
+tags:
+topic:
+project:
 authors: J L Anderson
-year: 
 ---
 
 # Abstract 

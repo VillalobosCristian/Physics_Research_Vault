@@ -1,3 +1,12 @@
+---
+title: 07_Bending_Tension_Regimes
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
+---
 # Bending vs Tension Regimes — Crossover Derivation
 
 Tags: #GUV #flickering #Helfrich #crossover #theory

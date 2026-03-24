@@ -1,3 +1,12 @@
+---
+title: Heating detection code
+date: '2026-03-24'
+status: active
+tags: 
+- code
+topic:
+project:
+---
 Let me read the current file carefully before explaining.---
 
 ## Section 1 — Load

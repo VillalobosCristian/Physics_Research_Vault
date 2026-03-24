@@ -1,12 +1,12 @@
 ---
 title: "UMA EVENTS-1235 - Summer School On Soft Solids And Complex Fluids Bruinsma Lec 4"
-source: "https://echo360.org/media/6e596e6b-02cd-4f05-9803-b174ee2f4214/public"
-author:
-published:
+status: active
+tags: 
+- "clippings"
+topic:
+project:
 created: 2024-12-30
-description:
-tags:
-  - "clippings"
+source: "https://echo360.org/media/6e596e6b-02cd-4f05-9803-b174ee2f4214/public"
 ---
 ![logo](https://files.echo360.org/c4a29c15-265c-404e-9ed7-17f518602cf7/wKl917rETNqdtIjZrpDb_UMass-Seal-(Reverse-white).png?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vZmlsZXMuZWNobzM2MC5vcmcvYzRhMjljMTUtMjY1Yy00MDRlLTllZDctMTdmNTE4NjAyY2Y3L3dLbDkxN3JFVE5xZHRJalpycERiX1VNYXNzLVNlYWwtKFJldmVyc2Utd2hpdGUpLnBuZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczNTUzNDY4NX19fV19&Signature=ZzRBmJGnX9QlhKagcj1ydYPgD0c4ivGyACeHSUaMWNBi7mq-wYQPjjv7JgoKe7CWQg6M-IB6Ckxrsg2zQ2GPtM7vMrQssUXNB3ZabqLFt9rVqE4~1BckyvoVagrLUB27hbRZ0EkFKMN01fF0to1gocmibp1cwb6VtfxkNV-ZnUllFbw-QYKYTsPwkVbAXgAeZ~1LzdJBfjlQW22sGgWb-HpfdS2gsS9OFqITqthHhTqR9kryYtdDy7kdj9mLMsoXPSQkxsCOXdwy~klzllkak-rCstmFvtdWSUHliBQmq0KuligPCdEZfRJGf-MkAcVuqkb8UtpSTp7ATMBS0BS1bQ__&Key-Pair-Id=APKAIPMYRDQXV3PXG2XA)
 

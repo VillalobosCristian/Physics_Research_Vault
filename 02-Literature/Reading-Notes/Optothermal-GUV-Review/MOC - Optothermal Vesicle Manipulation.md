@@ -11,10 +11,10 @@ related_papers:
   - "[[kyrsting2011_Heat Profiling of Gold Nanoparticles using Vesicle Cargo Release]]"
   - "[[rørvig-lund2015_Vesicle Fusion Triggered by Optically Heated Gold Nanoparticles]]"
 tags:
-  - "#MOC"
-  - "#optothermal"
-  - "#thermophoresis"
-  - "#vesicle-manipulation"
+  - MOC
+  - optothermal
+  - thermophoresis
+  - vesicle-manipulation
 ---
 
 # MOC — Optothermal/Thermophoretic Manipulation of Vesicles

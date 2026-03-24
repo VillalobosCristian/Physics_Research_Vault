@@ -1,3 +1,11 @@
+---
+title: Deep Research
+date: '2026-03-24'
+status: active
+tags:
+topic:
+project:
+---
 [[Helfrich model]][[Budding]][[Gaussian curvature]][[Spontaneous curvature]][[Helfrich model]][[Biomimetic]]
 
 # Giant Unilamellar Vesicles as Model Membranes (2015–2025 Literature Review)

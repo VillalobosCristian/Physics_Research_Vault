@@ -1,20 +1,20 @@
 ---
 title: Lecture Materials and Photos – Summer School on Soft Solids and Complex Fluids
-source: https://websites.umass.edu/softmatter/lecture-notes/
-author: 
-published: 
+status: active
+tags: 
+- clippings
+- physics
+- research
+- membrane-biophysics
+- fluid-dynamics
+- statistical-mechanics
+- lecture-materials
+- academic-resources
+- summer-school
+topic:
+project:
 created: 2024-12-30
-description: 
-tags:
-  - clippings
-  - "#physics"
-  - "#research"
-  - "#membrane-biophysics"
-  - "#fluid-dynamics"
-  - "#statistical-mechanics"
-  - "#lecture-materials"
-  - "#academic-resources"
-  - "#summer-school"
+source: https://websites.umass.edu/softmatter/lecture-notes/
 ---
 **2024**
 

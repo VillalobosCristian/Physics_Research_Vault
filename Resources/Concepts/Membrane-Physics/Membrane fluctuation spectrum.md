@@ -1,10 +1,14 @@
 ---
 title: "Membrane Fluctuation Spectrum"
+status: active
+tags: 
+- membrane-biophysics
+- fluctuations
+- spectroscopy
+topic: 
+- membrane-physics
+project:
 aliases: [fluctuation power spectrum, undulation spectrum]
-tags:
-  - "#membrane-biophysics"
-  - "#fluctuations"
-  - "#spectroscopy"
 ---
 
 # Membrane Fluctuation Spectrum

@@ -1,9 +1,13 @@
 ---
 title: Protocol - Temperature Calibration Methods for Optothermal GUV Systems
 date: 2026-02-16
-tags: [protocol, temperature-calibration, experimental-method, optothermal, GUV]
-aliases: [Temperature Measurement Protocol, Optothermal Temperature Calibration]
 status: active
+tags: 
+- [protocol, temperature-calibration, experimental-method, optothermal, GUV]
+- literature-note
+topic:
+project:
+aliases: [Temperature Measurement Protocol, Optothermal Temperature Calibration]
 ---
 
 ## Overview

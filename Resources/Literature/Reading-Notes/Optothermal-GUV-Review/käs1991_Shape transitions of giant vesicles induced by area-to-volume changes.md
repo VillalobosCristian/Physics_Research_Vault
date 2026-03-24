@@ -1,18 +1,21 @@
 ---
 title: "Shape transitions and shape stability of giant phospholipid vesicles in pure water induced by area-to-volume changes"
+status: "reviewed"
+tags: 
+- literature-note
+- membrane-biophysics
+- shape-transitions
+- vesicle-morphology
+- literature-note
+topic:
+project:
 authors: Josef Käs, Erich Sackmann
 citekey: kas1991
-year: 1991
-journal: Biophysical Journal
 date_read: 2026-02-13
-status: "reviewed"
+journal: Biophysical Journal
 key_topics: [shape-transitions, vesicle-morphology, area-to-volume-ratio, stomatocyte, budding, invagination]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#shape-transitions"
-  - "#vesicle-morphology"
+year: 1991
 ---
 
 # Shape transitions and shape stability of giant phospholipid vesicles in pure water

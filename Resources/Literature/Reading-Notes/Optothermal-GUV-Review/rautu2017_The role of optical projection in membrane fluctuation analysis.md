@@ -1,18 +1,21 @@
 ---
 title: "The role of optical projection in the analysis of membrane fluctuations"
+status: "reviewed"
+tags: 
+- literature-note
+- fluctuation-analysis
+- methods
+- optical-corrections
+- literature-note
+topic:
+project:
 authors: S.A. Rautu, D. Orsi, L. Di Michele, G. Rowlands, P. Cicuta, M.S. Turner
 citekey: rautu2017
-year: 2017
-journal: Soft Matter
 date_read: 2026-02-13
-status: "reviewed"
+journal: Soft Matter
 key_topics: [optical-projection, fluctuation-spectroscopy, bending-rigidity, phase-contrast, correction-methods]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#fluctuation-analysis"
-  - "#methods"
-  - "#optical-corrections"
+year: 2017
 ---
 
 # The role of optical projection in the analysis of membrane fluctuations

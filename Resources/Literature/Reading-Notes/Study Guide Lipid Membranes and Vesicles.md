@@ -1,3 +1,12 @@
+---
+title: Study Guide Lipid Membranes and Vesicles
+date: '2026-03-24'
+status: active
+tags: 
+- literature-note
+topic:
+project:
+---
 ## I. Key Concepts
 
 - **[[Lipid Bilayer Structure]]:** Understand the amphiphilic nature of lipids, their self-assembly into bilayers in aqueous solutions, and the concept of hydrophobic effect.

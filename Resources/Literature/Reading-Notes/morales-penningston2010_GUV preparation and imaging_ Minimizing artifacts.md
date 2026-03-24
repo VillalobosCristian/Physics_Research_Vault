@@ -1,4 +1,13 @@
 ---
+title: morales-penningston2010_GUV preparation and imaging_ Minimizing artifacts
+date: '2026-03-24'
+status: active
+tags: 
+- literature-note
+topic:
+project:
+---
+---
 title: GUV preparation and imaging: Minimizing artifacts
 authors: Nelson F. Morales-Penningston, Jing Wu, Elaine R. Farkas, Shih Lin Goh, Tatyana M. Konyakhina, Judy Y. Zheng, Watt W. Webb, Gerald W. Feigenson
 year: 2010

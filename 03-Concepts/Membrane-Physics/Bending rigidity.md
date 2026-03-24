@@ -2,9 +2,9 @@
 title: "Bending Rigidity"
 aliases: [bending modulus, κ, kappa]
 tags:
-  - "#membrane-biophysics"
-  - "#elasticity"
-  - "#guv"
+  - membrane-biophysics
+  - elasticity
+  - guv
 ---
 
 # Bending Rigidity

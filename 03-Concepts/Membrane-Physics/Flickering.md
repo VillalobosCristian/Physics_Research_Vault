@@ -2,9 +2,9 @@
 title: "Flickering"
 aliases: [membrane flickering, flicker]
 tags:
-  - "#membrane-biophysics"
-  - "#fluctuations"
-  - "#guv"
+  - membrane-biophysics
+  - fluctuations
+  - guv
 ---
 
 # Flickering

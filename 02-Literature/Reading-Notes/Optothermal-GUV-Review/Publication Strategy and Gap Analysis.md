@@ -3,9 +3,9 @@ title: "Publication Strategy and Gap Analysis"
 date: 2026-02-13
 status: "active"
 tags:
-  - "#publication"
-  - "#strategy"
-  - "#gap-analysis"
+  - publication
+  - strategy
+  - gap-analysis
 ---
 
 # Publication Strategy and Gap Analysis

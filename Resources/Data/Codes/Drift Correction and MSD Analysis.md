@@ -1,3 +1,12 @@
+---
+title: Drift Correction and MSD Analysis
+date: '2026-03-24'
+status: active
+tags: 
+- code
+topic:
+project:
+---
 
 
  Script to perform drift correction on trajectory data and analyze the mean square displacement (MSD) of tracked particles. The drift correction is based on a velocity correlation method, and the script also computes both individual and ensemble MSD curves.

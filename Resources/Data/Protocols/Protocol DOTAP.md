@@ -1,3 +1,12 @@
+---
+title: Protocol DOTAP
+date: '2026-03-24'
+status: active
+tags: 
+- protocol
+topic:
+project:
+---
 For this protocol basically we did the following:
 ![[+]]
 

@@ -1,12 +1,12 @@
 ---
 tags:
-  - "#physics"
-  - "#mathematical-physics"
-  - "#interface-physics"
-  - "#membrane-biophysics"
-  - "#fluid-dynamics"
-  - "#surface-tension"
-  - "#marangoni-effect"
+  - physics
+  - mathematical-physics
+  - interface-physics
+  - membrane-biophysics
+  - fluid-dynamics
+  - surface-tension
+  - marangoni-effect
 ---
 # Revisiting the [[boundary conditions]] at a fluid-fluid interface in the context of a bubble or a droplet
 

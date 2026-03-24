@@ -1,10 +1,14 @@
 ---
 title: "Contour Analysis"
+status: active
+tags: 
+- membrane-biophysics
+- experimental-methods
+- image-analysis
+topic: 
+- membrane-physics
+project:
 aliases: [contour tracking, membrane contour analysis]
-tags:
-  - "#membrane-biophysics"
-  - "#experimental-methods"
-  - "#image-analysis"
 ---
 
 # Contour Analysis

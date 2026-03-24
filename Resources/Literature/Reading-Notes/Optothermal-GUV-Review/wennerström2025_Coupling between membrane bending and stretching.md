@@ -1,18 +1,21 @@
 ---
 title: "On the coupling between membrane bending and stretching in lipid vesicles"
+status: "reviewed"
+tags: 
+- literature-note
+- membrane-biophysics
+- bending-rigidity
+- thermal-effects
+- literature-note
+topic:
+project:
 authors: Håkan Wennerström, Emma Sparr, Joakim Stenhammar
 citekey: wennerstrom2025
-year: 2025
-journal: Journal of Colloid and Interface Science
 date_read: 2026-02-13
-status: "reviewed"
+journal: Journal of Colloid and Interface Science
 key_topics: [bending-rigidity, membrane-stretching, area-expansion, thermal-effects, lipid-bilayer]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#bending-rigidity"
-  - "#thermal-effects"
+year: 2025
 ---
 
 # On the coupling between membrane bending and stretching in lipid vesicles

@@ -9,10 +9,10 @@ status: "reviewed"
 key_topics: [thermophoretic-trapping, gold-substrate, temperature-measurement, microparticles]
 related_projects: [Temperature shape changes GUVs]
 tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#thermophoresis"
-  - "#gold-substrate"
+  - literature-note
+  - optothermal
+  - thermophoresis
+  - gold-substrate
 ---
 
 # A hydro-thermophoretic trap for microparticles near a gold-coated substrate

@@ -1,18 +1,21 @@
 ---
 title: "Thermal fluctuations and osmotic stability of lipid vesicles"
+status: "reviewed"
+tags: 
+- literature-note
+- membrane-biophysics
+- osmotic-response
+- thermal-effects
+- literature-note
+topic:
+project:
 authors: Håkan Wennerström, Emma Sparr, Joakim Stenhammar
 citekey: wennerstrom2022
-year: 2022
-journal: Physical Review E
 date_read: 2026-02-13
-status: "reviewed"
+journal: Physical Review E
 key_topics: [osmotic-pressure, thermal-fluctuations, vesicle-stability, membrane-permeability]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#osmotic-response"
-  - "#thermal-effects"
+year: 2022
 ---
 
 # Thermal fluctuations and osmotic stability of lipid vesicles

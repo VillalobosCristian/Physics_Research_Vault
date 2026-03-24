@@ -1,11 +1,11 @@
 ---
 tags:
-  - "#statistical-mechanics"
-  - "#thermal-distributions"
-  - "#quantum-mechanics"
-  - "#microstates"
-  - "#thermodynamic-equilibrium"
-  - "#quantum-statistics"
+  - statistical-mechanics
+  - thermal-distributions
+  - quantum-mechanics
+  - microstates
+  - thermodynamic-equilibrium
+  - quantum-statistics
 ---
 # Formulario
 

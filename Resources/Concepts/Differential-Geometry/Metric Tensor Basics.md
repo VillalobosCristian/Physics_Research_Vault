@@ -1,3 +1,12 @@
+---
+title: Metric Tensor Basics
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- differential-geometry
+project:
+---
 
 
 **Definition.** The metric tensor $g_{ab}$ on a surface gives the inner product of tangent vectors:

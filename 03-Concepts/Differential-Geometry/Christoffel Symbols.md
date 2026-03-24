@@ -1,9 +1,9 @@
 ---
 tags:
-  - "#mathematical-physics"
-  - "#surface-parameterization"
-  - "#differential-geometry"
-  - "#tensor-calculus"
+  - mathematical-physics
+  - surface-parameterization
+  - differential-geometry
+  - tensor-calculus
 ---
 When dealing with covariant derivatives on the surface, we need the \textbf{Christoffel symbols}:
 $$

@@ -1,3 +1,12 @@
+---
+title: Protocol GUVs
+date: '2026-03-24'
+status: active
+tags: 
+- protocol
+topic:
+project:
+---
 ## Protocol [[Giant Unilamellar Vesicles (GUVs)]]
 
 ### 1. Prepare Glass Slides

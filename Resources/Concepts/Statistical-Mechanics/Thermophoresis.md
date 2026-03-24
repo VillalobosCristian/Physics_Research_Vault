@@ -1,3 +1,12 @@
+---
+title: Thermophoresis
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- statistical-mechanics
+project:
+---
 Themophoresis in water moves particles along a temperature gradient. 
 Typically is assumed that particle velocity $v$ is linear with the temperature gradient such as:
 

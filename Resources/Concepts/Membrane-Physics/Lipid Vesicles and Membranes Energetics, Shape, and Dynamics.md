@@ -1,3 +1,12 @@
+---
+title: Lipid Vesicles and Membranes Energetics, Shape, and Dynamics
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- membrane-physics
+project:
+---
 ### Frequently Asked Questions: Lipid Vesicles and Membranes
 
 **1. What are the key energetic considerations in the wrapping of nanoparticles by lipid membranes?** The wrapping of nanoparticles by membranes is governed by a balance between the elastic deformation energy of the membrane and the adhesive energy between the particle and the membrane. Bending the membrane to conform to the particle increases the elastic energy, while the interaction with the particle through van der Waals forces or specific binding reduces the energy. The extent of wrapping is determined by minimizing the total energy, considering factors such as the bending rigidity of the membrane and the strength and range of the particle-membrane interaction.

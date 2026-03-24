@@ -1,3 +1,12 @@
+---
+title: Rhodamine B Protocol
+date: '2026-03-24'
+status: active
+tags:
+topic: 
+- experimental-methods
+project:
+---
 # Rhodamine B Solution Protocol 
 
 ## 1: Buffer (20 mM, pH 9.6)

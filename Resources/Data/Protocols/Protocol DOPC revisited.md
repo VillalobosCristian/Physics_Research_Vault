@@ -1,11 +1,14 @@
 ---
-tags:
-  - "#protocol"
-  - "#lipids"
-  - "#membranes"
-  - "#bilayer-properties"
-  - "#lipid-calculation"
-  - "#stock-solution-preparation"
+status: active
+tags: 
+- protocol
+- lipids
+- membranes
+- bilayer-properties
+- lipid-calculation
+- stock-solution-preparation
+topic:
+project:
 ---
 xThe idea is to revisit the process, to avoid mistakes... 
 ##  Steps 

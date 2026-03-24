@@ -1,10 +1,14 @@
 ---
 title: "Electroformation"
+status: active
+tags: 
+- membrane-biophysics
+- experimental-methods
+- guv-preparation
+topic: 
+- membrane-physics
+project:
 aliases: [electroswelling, GUV electroformation]
-tags:
-  - "#membrane-biophysics"
-  - "#experimental-methods"
-  - "#guv-preparation"
 ---
 
 # Electroformation

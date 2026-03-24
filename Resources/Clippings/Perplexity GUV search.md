@@ -1,20 +1,22 @@
 ---
 title: Perplexity
-source: https://www.perplexity.ai/search/find-a-complete-sources-giant-ilE9W74AQi2.xtgtOVLwZQ
+status: active
+tags: 
+- clippings
+- membrane-biophysics
+- lipids
+- bilayer-properties
+- membrane-elasticity
+- guv-formation
+- literature-review
+- experimental-methods
+- membrane-mechanics
+topic:
+project:
 author: []
-published: 
 created: 2025-02-02
 description: Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question.
-tags:
-  - clippings
-  - "#membrane-biophysics"
-  - "#lipids"
-  - "#bilayer-properties"
-  - "#membrane-elasticity"
-  - "#guv-formation"
-  - "#literature-review"
-  - "#experimental-methods"
-  - "#membrane-mechanics"
+source: https://www.perplexity.ai/search/find-a-complete-sources-giant-ilE9W74AQi2.xtgtOVLwZQ
 ---
 Here is a comprehensive categorization of sources related to lipid membrane mechanics and GUV studies, organized by key research themes:
 

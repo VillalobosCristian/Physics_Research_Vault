@@ -1,10 +1,10 @@
 ---
 tags:
-  - "#particle-dynamics"
-  - "#thermal-distributions"
-  - "#fluctuation-analysis"
-  - "#mean-square-displacement"
-  - "#trajectory-analysis"
+  - particle-dynamics
+  - thermal-distributions
+  - fluctuation-analysis
+  - mean-square-displacement
+  - trajectory-analysis
 ---
 Following https://tinevez.github.io/msdanalyzer/tutorial/MSDTuto_drift.html
 

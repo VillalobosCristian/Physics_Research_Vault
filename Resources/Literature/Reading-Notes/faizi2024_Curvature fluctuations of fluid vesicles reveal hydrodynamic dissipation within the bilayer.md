@@ -1,5 +1,9 @@
 ---
 title: Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer
+status: active
+tags:
+topic:
+project:
 authors: Hammad A. Faizi, Rony Granek, Petia M. Vlahovska
 year: 2024
 ---

@@ -1,18 +1,21 @@
 ---
 title: "Directed tubule growth from giant unilamellar vesicles in a thermal gradient"
+status: "reviewed"
+tags: 
+- literature-note
+- membrane-biophysics
+- thermal-effects
+- shape-transitions
+- literature-note
+topic:
+project:
 authors: E.L. Talbot, J. Kotar, L. Di Michele, P. Cicuta
 citekey: talbot2019
-year: 2019
-journal: Soft Matter
 date_read: 2026-02-13
-status: "reviewed"
+journal: Soft Matter
 key_topics: [thermal-gradient, tubule-growth, GUV-deformation, phase-separation, lipid-domains]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#membrane-biophysics"
-  - "#thermal-effects"
-  - "#shape-transitions"
+year: 2019
 ---
 
 # Directed tubule growth from giant unilamellar vesicles in a thermal gradient

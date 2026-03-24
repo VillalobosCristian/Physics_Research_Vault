@@ -1,10 +1,14 @@
 ---
 title: "Bending Rigidity"
+status: active
+tags: 
+- membrane-biophysics
+- elasticity
+- guv
+topic: 
+- membrane-physics
+project:
 aliases: [bending modulus, κ, kappa]
-tags:
-  - "#membrane-biophysics"
-  - "#elasticity"
-  - "#guv"
 ---
 
 # Bending Rigidity

@@ -1,6 +1,11 @@
 ---
 date: 2026-02-16
-tags: [reference, quantitative, DOPC, mechanical-properties, controls]
+status: active
+tags: 
+- [reference, quantitative, DOPC, mechanical-properties, controls]
+- literature-note
+topic:
+project:
 ---
 
 # Quantitative Reference: DOPC Mechanical Properties and Controls

@@ -1,9 +1,13 @@
 ---
 title: "Mean Curvature"
+status: active
+tags: 
+- membrane-biophysics
+- differential-geometry
+topic: 
+- membrane-physics
+project:
 aliases: [H, average curvature]
-tags:
-  - "#membrane-biophysics"
-  - "#differential-geometry"
 ---
 
 # Mean Curvature

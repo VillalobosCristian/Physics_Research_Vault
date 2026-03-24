@@ -1,10 +1,14 @@
 ---
-tags:
-  - "#physics"
-  - "#mathematical-physics"
-  - "#fluid-dynamics"
-  - "#statistical-mechanics"
-  - "#thermal-distributions"
+status: active
+tags: 
+- physics
+- mathematical-physics
+- fluid-dynamics
+- statistical-mechanics
+- thermal-distributions
+topic: 
+- statistical-mechanics
+project:
 ---
 
 # Maxwell Distribution

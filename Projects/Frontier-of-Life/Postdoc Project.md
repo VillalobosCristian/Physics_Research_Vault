@@ -1,12 +1,14 @@
 ---
-status:
-  - planned/in-progress/completed
-tags:
-  - postdoc
-  - research
-  - physics
-  - membranes
-  - lipids
+status: - planned/in-progress/completed
+tags: 
+- postdoc
+- research
+- physics
+- membranes
+- lipids
+topic:
+project: 
+- Frontier-of-Life
 ---
 # SHAPING LIPID MEMBRANES VIA CHEMICAL SIGNALS
 

@@ -1,10 +1,14 @@
 ---
 date: 2026-02-16
-tags:
-  - deep-dive
-  - fourier-analysis
-  - fluctuation-spectroscopy
-  - methods
+status: active
+tags: 
+- deep-dive
+- fourier-analysis
+- fluctuation-spectroscopy
+- methods
+- literature-note
+topic:
+project:
 ---
 
 # Deep Dive: Fourier Analysis Validation and Best Practices

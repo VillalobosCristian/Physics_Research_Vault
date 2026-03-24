@@ -1,18 +1,21 @@
 ---
 title: "Optothermal assembly and manipulation of colloids via non-coherent light"
+status: "reviewed"
+tags: 
+- literature-note
+- optothermal
+- gold-substrate
+- thermo-osmotic-slip
+- literature-note
+topic:
+project:
 authors: C. Villalobos-Concha, J. Davis, A. Baron, L. Alvarez
 citekey: villalobosconcha2024
-year: 2024
-journal: Preprint
 date_read: 2026-02-13
-status: "reviewed"
+journal: Preprint
 key_topics: [optothermal-assembly, non-coherent-light, gold-substrate, thermo-osmotic-slip, colloidal-crystals]
 related_projects: [Temperature shape changes GUVs]
-tags:
-  - "#literature-note"
-  - "#optothermal"
-  - "#gold-substrate"
-  - "#thermo-osmotic-slip"
+year: 2024
 ---
 
 # Optothermal assembly and manipulation of colloids via non-coherent light

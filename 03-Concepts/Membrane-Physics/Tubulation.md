@@ -2,9 +2,9 @@
 title: "Tubulation"
 aliases: [membrane tubes, tether pulling, tubule formation]
 tags:
-  - "#membrane-biophysics"
-  - "#morphology"
-  - "#guv"
+  - membrane-biophysics
+  - morphology
+  - guv
 ---
 
 # Tubulation

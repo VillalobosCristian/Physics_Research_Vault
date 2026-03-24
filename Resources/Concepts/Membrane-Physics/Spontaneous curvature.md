@@ -1,10 +1,14 @@
 ---
-tags:
-  - "#academic-resources"
-  - "#membranes"
-  - "#membrane-biophysics"
-  - "#bilayer-properties"
-  - "#membrane-elasticity"
-  - "#spontaneous-curvature"
+status: active
+tags: 
+- academic-resources
+- membranes
+- membrane-biophysics
+- bilayer-properties
+- membrane-elasticity
+- spontaneous-curvature
+topic: 
+- membrane-physics
+project:
 ---
 It describes the intrinsic tendency of a membrane to bend in a particular direction due to asymmetries in its molecular composition or environmental conditions.
