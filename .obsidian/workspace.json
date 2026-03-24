@@ -90,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -242,13 +242,13 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "880090600f46ae62",
+  "active": "ffccd5a032a0f700",
   "lastOpenFiles": [
+    "Heating detection code.md",
     "Untitled 1.md",
     "Fourier Spectrum Fitting.md",
     "02-Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
     "01-Projects/GUVs/Temperature shape changes GUVs.md",
-    "Heating detection code.md",
     "Pasted image 20260317154144.png",
     "Pasted image 20260317154142.png",
     "02-Literature/References/rautu, orsi2017_The role of optical projection in the analysis of membrane fluctuations 1.pdf",
