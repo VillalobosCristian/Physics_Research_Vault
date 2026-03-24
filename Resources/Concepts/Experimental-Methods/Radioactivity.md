@@ -1,0 +1,1 @@
+Radioactivity is a phenomenon during which unstable atomic nuclei disintegrate and free energy, resulting in stable atomic nuclei.
