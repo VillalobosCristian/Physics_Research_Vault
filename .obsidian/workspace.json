@@ -36,6 +36,18 @@
             }
           },
           {
+            "id": "880090600f46ae62",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
+            }
+          },
+          {
             "id": "ffccd5a032a0f700",
             "type": "leaf",
             "state": {
@@ -78,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -230,7 +242,7 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "1e4f9f8016068083",
+  "active": "880090600f46ae62",
   "lastOpenFiles": [
     "Untitled 1.md",
     "Fourier Spectrum Fitting.md",
