@@ -5,18 +5,54 @@
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
-  "collapse-color-groups": true,
-  "colorGroups": [],
-  "collapse-display": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#literature-note  ",
+      "color": {
+        "a": 1,
+        "rgb": 14048348
+      }
+    },
+    {
+      "query": "tag:#active-matter  ",
+      "color": {
+        "a": 1,
+        "rgb": 14069084
+      }
+    },
+    {
+      "query": "tag:#biological-physics  ",
+      "color": {
+        "a": 1,
+        "rgb": 11392604
+      }
+    },
+    {
+      "query": "tag:#membrane  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084188
+      }
+    },
+    {
+      "query": "tag:#vesicle-deformation  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084269
+      }
+    }
+  ],
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "nodeSizeMultiplier": 0.986636284722222,
+  "lineSizeMultiplier": 1.61891493055556,
+  "collapse-forces": false,
+  "centerStrength": 0.347873263888889,
+  "repelStrength": 6.97222222222222,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.18951179319939873,
-  "close": true
+  "scale": 0.5044801418635003,
+  "close": false
 }

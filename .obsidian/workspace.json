@@ -65,10 +65,14 @@
             "id": "7d2d51fbf0770014",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Resources/Data/Codes/Heating detection code.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Heating detection code"
             }
           },
           {
@@ -132,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#membrane-biophysics",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -254,10 +258,15 @@
   },
   "active": "7d2d51fbf0770014",
   "lastOpenFiles": [
+    "Resources/Data/Codes/Drift Correction and MSD Analysis.md",
+    "Untitled 1.md",
     "Untitled 2.md",
+    "03_Pecreaux_Projection_Formula.md",
+    "02_Helfrich_Hamiltonian_GUV.md",
+    "01_Flickering_Spectroscopy_Overview.md",
+    "Dashboard.md",
     "fix_frontmatter.py",
     "Vault Guide.md",
-    "Dashboard.md",
     "MOCs/MOC - Experimental Protocols.md",
     "MOCs/MOC - Literature.md",
     "MOCs/MOC - Projects.md",
@@ -276,11 +285,6 @@
     "Resources/Data/Codes/mergin_shapes.md",
     "Resources/Data/Codes/Heating detection code.md",
     "Resources/Concepts/Membrane-Physics/Fourier Spectrum Fitting.md",
-    "Resources/Concepts/Membrane-Physics/08_GUV_Analysis_Pipeline.md",
-    "Resources/Concepts/Membrane-Physics/07_Bending_Tension_Regimes.md",
-    "Resources/Concepts/Membrane-Physics/06_ACF_Viscosity_Extraction.md",
-    "Resources/Concepts/Membrane-Physics/05_Flickering_Fitting_Procedure.md",
-    "Resources/Concepts/Membrane-Physics/04_Flickering_Spectrum_Computation.md",
     "Resources/Literature/Reading-Notes/Pasted image 20250203111007.png",
     "Resources/Literature/PDFs/My papers",
     "Resources/Literature/Exported Items.bib",
