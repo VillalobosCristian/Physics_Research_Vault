@@ -21,6 +21,10 @@ Then algae were mixed with sucrose GUV and let the vesicle sediment, for the fir
 For the next experiment,  I had the vesicle already sedimented for hours and take from the very bottom, and did the same mixing, this increase a lot the number of vesicles and proced to take some videos. 
 For next experiments I would like to have more algae, so maybe a centrifugation step would be nice. 
 
-## Results exp2 
+## Third round experiments
 
 
+1. Pellet chlamy at 300–500 × g, 3–5 min
+2. Resuspend directly in the pre-sedimented GUV fraction (287 mM sucrose-glucose)
+3. Wait ~45 min until swimming recovers, then image. (let's try with low height chamber)
+	
