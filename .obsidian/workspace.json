@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
+                "file": "MOCs/MOC - Membrane Biophysics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chlamy-Vesicle interaction"
+              "title": "MOC - Membrane Biophysics"
             }
           }
         ]
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -174,8 +173,13 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "1970ee7816608e56",
+  "active": "07a89a5c30172928",
   "lastOpenFiles": [
+    "02-Literature/My Library.bib",
+    "02-Literature/References/döbereiner, käs1993_Budding and fission of vesicles.pdf",
+    "02-Literature/References",
+    "02-Literature",
+    "Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "2026-03-25.md",
     "Templates/Concept_Note.md",
     "Resources/Data/Codes/Heating detection code.md",
@@ -202,8 +206,6 @@
     "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/faizi2020_Fluctuation spectroscopy of GUVs phase contrast and confocal.md",
     "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Reference - DOPC Mechanical Properties and Controls.md",
     "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
-    "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/Publication Strategy and Gap Analysis.md",
-    "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/Protocol - Temperature Calibration Methods.md",
     "Archive/Legacy/02-Literature/References/volpe, araújo2025_Roadmap for animate matter.pdf",
     "Archive/Legacy/02-Literature/References/yoon, hong2009_Flickering Analysis of Erythrocyte Mechanical Properties Dependence on Oxygenation Level, Cell Shap.pdf",
     "Archive/Legacy/Papers/References/My papers",
@@ -212,9 +214,6 @@
     "Archive/Legacy/Papers/References/Cristian_Villalobos_Concha_CV copy.docx",
     "Archive/Legacy/Papers/Reading_Notes/Pasted image 20250203111007.png",
     "Archive/Legacy/02-Literature/References/zhou, dai2023_Low-temperature optothermal nanotweezers.pdf",
-    "Archive/Legacy/02-Literature/References/zhong-can, helfrich1989_Bending energy of vesicle membranes General expressions for the first, second, and third variation.pdf",
-    "Archive/Legacy/02-Literature/References/zhang, min2021_Plasmonic tweezers for nanoscale optical trapping and beyond.pdf",
-    "Archive/Legacy/02-Literature/References/yu, li_Pressure in active matter.pdf",
     "Archive/Legacy/04-Data/Protocols/Pasted image 20250220094708.png",
     "Archive/Legacy/05-Resources/Attachments/tractories.png",
     "Archive/Legacy/05-Resources/Attachments/pdf_maxwell 1.png",
