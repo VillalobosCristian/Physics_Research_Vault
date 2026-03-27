@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MOCs/MOC - Membrane Biophysics.md",
+                "file": "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MOC - Membrane Biophysics"
+              "title": "INDEX - Optothermal GUV Literature Review"
             }
           }
         ]
@@ -173,8 +173,13 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "07a89a5c30172928",
+  "active": "1970ee7816608e56",
   "lastOpenFiles": [
+    "MOCs/MOC - Projects.md",
+    "MOCs/MOC - Literature.md",
+    "MOCs/MOC - Experimental Protocols.md",
+    "MOCs/MOC - Membrane Biophysics.md",
+    "Resources/My Library.bib",
     "02-Literature/My Library.bib",
     "02-Literature/References/döbereiner, käs1993_Budding and fission of vesicles.pdf",
     "02-Literature/References",
@@ -203,17 +208,12 @@
     "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/käs1991_Shape transitions of giant vesicles induced by area-to-volume changes.md",
     "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/hill2018_Opto-Thermophoretic Attraction Trapping and Manipulation of Lipid Vesicles.md",
     "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/fränzl2022_Hydrodynamic manipulation by optically induced thermo-osmotic flows.md",
-    "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/faizi2020_Fluctuation spectroscopy of GUVs phase contrast and confocal.md",
-    "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Reference - DOPC Mechanical Properties and Controls.md",
-    "Archive/Legacy/02-Literature/Reading-Notes/Optothermal-GUV-Review/Quantitative Comparison - My Findings vs Literature.md",
     "Archive/Legacy/02-Literature/References/volpe, araújo2025_Roadmap for animate matter.pdf",
     "Archive/Legacy/02-Literature/References/yoon, hong2009_Flickering Analysis of Erythrocyte Mechanical Properties Dependence on Oxygenation Level, Cell Shap.pdf",
     "Archive/Legacy/Papers/References/My papers",
     "Archive/Legacy/Papers/References/Cristian_Villalobos_Concha_CV.docx",
     "Archive/Legacy/02-Literature/References/wennerström, sparr2022_Thermal fluctuations and osmotic stability of lipid vesicles.pdf",
-    "Archive/Legacy/Papers/References/Cristian_Villalobos_Concha_CV copy.docx",
     "Archive/Legacy/Papers/Reading_Notes/Pasted image 20250203111007.png",
-    "Archive/Legacy/02-Literature/References/zhou, dai2023_Low-temperature optothermal nanotweezers.pdf",
     "Archive/Legacy/04-Data/Protocols/Pasted image 20250220094708.png",
     "Archive/Legacy/05-Resources/Attachments/tractories.png",
     "Archive/Legacy/05-Resources/Attachments/pdf_maxwell 1.png",

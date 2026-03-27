@@ -1,1 +1,0 @@
-The process of going form a point on the surface to a point on the unit sphere is called 

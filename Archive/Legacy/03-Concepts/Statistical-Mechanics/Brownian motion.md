@@ -1,1 +1,0 @@
-The [[mean square displacement]]

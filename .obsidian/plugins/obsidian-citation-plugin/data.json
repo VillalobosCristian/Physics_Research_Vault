@@ -1,9 +1,9 @@
 {
   "citationExportFormat": "biblatex",
   "literatureNoteTitleTemplate": "{{citekey}}_{{title}}",
-  "literatureNoteFolder": "02-Literature/Reading-Notes",
+  "literatureNoteFolder": "Resources/Literature/Reading-Notes",
   "literatureNoteContentTemplate": "---\ntitle: {{title}}\nauthors: {{authorString}}\nyear: {{year}}\n---\n\n# Abstract \n{{abstract}}\n\n\n",
   "markdownCitationTemplate": "[@{{citekey}}]",
   "alternativeMarkdownCitationTemplate": "@{{citekey}}",
-  "citationExportPath": "Resources/"
+  "citationExportPath": "Resources/My Library.bib"
 }
