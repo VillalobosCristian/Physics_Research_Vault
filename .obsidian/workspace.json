@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "chlamy",
+                "query": "path:\"Resources/Literature/PDFs/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
