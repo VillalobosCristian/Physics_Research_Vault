@@ -2,8 +2,8 @@
   "promptDelete": false,
   "alwaysUpdateLinks": true,
   "newFileLocation": "folder",
-  "newFileFolderPath": "Notes/New Notes",
-  "attachmentFolderPath": "./",
+  "newFileFolderPath": "Resources/Concepts/Membrane-Physics",
+  "attachmentFolderPath": "Attachments/Images",
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "Letter",

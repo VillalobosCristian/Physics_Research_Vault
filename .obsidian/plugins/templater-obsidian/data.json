@@ -15,7 +15,15 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "",
+      "folder": "Resources/Literature/Reading-Notes",
+      "template": "Templates/Literature_Note.md"
+    },
+    {
+      "folder": "Resources/Concepts",
+      "template": "Templates/Concept_Note.md"
+    },
+    {
+      "folder": "Projects",
       "template": ""
     }
   ],
@@ -33,5 +41,6 @@
   ],
   "startup_templates": [
     ""
-  ]
+  ],
+  "intellisense_render": 1
 }
