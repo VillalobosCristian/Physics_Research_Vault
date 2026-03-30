@@ -4,6 +4,7 @@ date: 2026-03-30
 tags:
   - meta
   - workflow
+status: "active"
 ---
 
 # Workflow — How to Use This Vault

@@ -4,6 +4,7 @@ date: 2026-03-24
 tags:
   - meta
   - guide
+status: "active"
 ---
 
 # Vault Guide — Physics Research Second Brain

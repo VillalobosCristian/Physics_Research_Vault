@@ -1,3 +1,16 @@
+---
+title: "Käs & Sackmann 1991 — Shape Transitions of GUVs (Detailed Analysis)"
+authors: Käs, Sackmann
+year: 1991
+date_read: 2026-03-25
+status: "read"
+tags:
+  - literature-note
+topic:
+  - membrane-physics
+project:
+  - GUVs
+---
 
 ## Summary: Käs & Sackmann 1991
 
