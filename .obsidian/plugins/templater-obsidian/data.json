@@ -24,7 +24,11 @@
     },
     {
       "folder": "Projects",
-      "template": ""
+      "template": "Templates/Project_Note.md"
+    },
+    {
+      "folder": "Resources/Data/Experiments",
+      "template": "Templates/Experiment_Log.md"
     }
   ],
   "enable_file_templates": false,

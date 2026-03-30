@@ -9,6 +9,10 @@ tags:
 
 > Entry point to the vault. Navigate by topic, not by folder.
 
+## Start Here
+- [[Workflow]] — Daily routine, how to add papers, weekly maintenance
+- [[Vault Guide]] — Full system documentation
+
 ## Maps of Content
 
 | MOC | Scope |
