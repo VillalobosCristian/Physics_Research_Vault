@@ -244,4 +244,118 @@ A few implementation notes before you run this:
 
 ---
 
-Shall I now build the clean full script integrating this into Document 2's structure, or do you want to first sanity-check the $\chi^2$ magnitudes against your existing ACF-derived $\tau_q$ values?
+## The Camera Correction — Logic and Implementation
+
+---
+
+### The problem in one sentence
+
+The camera does not see instantaneous contours — it time-averages the membrane position over the exposure window $T_\text{exp}$. This suppresses the measured fluctuation amplitude, so a naive fit returns a $\kappa$ that is too large.
+
+---
+
+### Step 1 — What the camera actually records
+
+Each pixel value during frame $n$ accumulates light over the interval $[t_n,, t_n + T_\text{exp}]$. The recorded contour displacement is therefore:
+
+$$\tilde{u}_q(t_n) = \frac{1}{T_\text{exp}} \int_{t_n}^{t_n+T_\text{exp}} u_q(t), dt$$
+
+The equilibrium mode dynamics are exponentially relaxing:
+
+$$\langle u_q(t), u_q(0) \rangle = \langle|u_q|^2\rangle_\text{eq}, e^{-t/\tau_q}$$
+
+Propagating the time-average through this autocorrelation gives the **suppression factor**:
+
+$$\langle|\tilde{u}_q|^2\rangle = \chi^2(\tau_q, T_\text{exp})\cdot \langle|u_q|^2\rangle_\text{eq}$$
+
+$$\boxed{\chi(\tau_q, T_\text{exp}) = \frac{1 - e^{-T_\text{exp}/\tau_q}}{T_\text{exp}/\tau_q}}$$
+
+This is always $\leq 1$. When $\tau_q \gg T_\text{exp}$: $\chi \to 1$ (no correction needed). When $\tau_q \ll T_\text{exp}$: $\chi \to 0$ (mode is completely washed out).
+
+---
+
+### Step 2 — Why this biases $\kappa$
+
+The equilibrium spectrum is:
+
+$$\langle|u_q|^2\rangle_\text{eq} = \frac{k_BT}{\kappa}\sum_\ell \frac{c_{\ell q}}{\lambda_\ell(\bar\sigma)} \cdot \frac{1}{2}$$
+
+which decreases as $\kappa$ increases. The camera gives you $\chi^2 \cdot \langle|u_q|^2\rangle_\text{eq}$, which is smaller than the true equilibrium value. When you fit without correction, the optimizer compensates by pushing $\kappa$ **upward** to bring the model down to meet the suppressed data. Result: $\kappa$ is overestimated.
+
+High-$q$ modes are most affected because they relax fastest ($\tau_q \propto q^{-3}$ in the bending regime), so $\chi^2$ drops most steeply at high $q$. This also flattens the apparent spectral slope, which the fit partially absorbs into $\sigma$.
+
+---
+
+### Step 3 — The key quantity: $\alpha = \eta_\text{eff} R_0^3 / \kappa$
+
+To compute $\chi^2_q$ you need $\tau_q$. From Milner-Safran hydrodynamics:
+
+$$\tau_q = \frac{\eta_\text{eff} R_0^3}{\kappa, \lambda_q(\bar\sigma)} \cdot f_q \equiv \alpha \cdot \frac{f_q}{\lambda_q(\bar\sigma)}$$
+
+where $f_q = (4q^2+6q+3)/(q(q+1))$ is a purely geometric factor and $\lambda_q = (q-1)(q+2)[q(q+1)+\bar\sigma]$ is the Milner-Safran eigenvalue.
+
+The critical insight: **you never need $\eta_\text{eff}$ and $\kappa$ separately**. The correction only depends on $\alpha = \eta_\text{eff} R_0^3/\kappa$, which has units of seconds and sets the overall timescale of relaxation.
+
+---
+
+### Step 4 — Extracting $\alpha$ from the ACF (independently of the spectral fit)
+
+The measured ACF of mode $q$ decays as $C_q(\tau) = e^{-\tau/\tau_q}$. Fitting exponentials to the measured $C_q(\tau)$ gives $\tau_q^\text{meas}$ for several modes. These measured times satisfy:
+
+$$\tau_q^\text{meas} = \alpha \cdot \frac{f_q}{\lambda_q(\bar\sigma)}$$
+
+This is a two-parameter model in $(\alpha, \bar\sigma)$. A 1D grid search over $\bar\sigma$ with analytic OLS for $\alpha$ at each $\bar\sigma$ extracts both — **with no reference to $\kappa$ from the spectral fit**.
+
+```
+for each sigma_bar candidate:
+    tau_pred(q) = f_q / lam_q(sigma_bar)      % shape only, no alpha
+    log_alpha   = mean( log(tau_meas) - log(tau_pred) )   % OLS
+    residual    = sum( (log tau_meas - log_alpha - log tau_pred)^2 )
+keep the (sigma_bar, alpha) pair with minimum residual
+```
+
+This is the fix for the runaway seen earlier. The old approach used $\eta_\text{eff} = \tau_q^\text{meas} \cdot \kappa_\text{nc} \cdot \lambda_q / (R_0^3 f_q)$, making $\eta_\text{eff} \propto \kappa_\text{nc}$. With a tension-dominated spectrum producing an inflated $\kappa_\text{nc}$, $\eta_\text{eff}$ was inflated, making $\chi^2$ too strong, pushing $\kappa$ lower, which fed back into an even larger $\eta_\text{eff}$ — collapse. By fitting $\alpha$ directly from ACF data the loop is broken entirely.
+
+---
+
+### Step 5 — The corrected spectral fit (single pass)
+
+The corrected model at each grid point $(\kappa_\text{trial}, \sigma_\text{trial})$ is:
+
+$$S_q^\text{model} = \chi^2_q(\kappa_\text{trial}, \sigma_\text{trial}) \cdot \frac{k_BT}{\kappa_\text{trial}} \sum_\ell \frac{c_{\ell q}}{\lambda_\ell(\bar\sigma_\text{trial})} \cdot \frac{1}{2}$$
+
+where:
+
+$$\chi^2_q = \left[\frac{1 - e^{-x_q}}{x_q}\right]^2, \qquad x_q = \frac{T_\text{exp}}{\tau_q}, \qquad \tau_q = \alpha_\text{ACF} \cdot \frac{f_q}{\lambda_q(\bar\sigma_\text{trial})}$$
+
+Three things change at each grid point: $\lambda_q$ changes with $\bar\sigma_\text{trial}$, so $\tau_q$ and $\chi^2_q$ both change. But $\alpha_\text{ACF}$ is fixed — it is a constant extracted from the data, not a free parameter of the spectral fit. No outer iteration is needed.
+
+The flow in the code is:
+
+```
+alpha_acf, sigbar_acf  ← ACF grid search   [data-anchored, kappa-free]
+         ↓
+for each (kappa_trial, sigma_trial) in grid:
+    sbar  = sigma_trial * R0^2 / kappa_trial
+    lam_q = (q-1)(q+2)[q(q+1) + sbar]
+    tau_q = alpha_acf * f_q / lam_q          ← alpha fixed
+    chi2  = [(1-exp(-T_exp/tau_q))/(T_exp/tau_q)]^2
+    S_mod = chi2 * (kBT/kappa_trial) * sum_l c_lq/lam_l / 2
+cost = sum( (log10 data - log10 S_mod)^2 )
+         ↓
+kappa_cc, sigma_cc  ← best grid point
+eta_eff = alpha_acf * kappa_cc / R0^3       ← back-calculated at the end
+```
+
+---
+
+### Step 6 — Validity conditions
+
+The correction is only meaningful when:
+
+1. **$\tau_q \sim T_\text{exp}$ for some modes in the fit range.** At 50 fps with $T_\text{exp} = 20$ ms, this requires $\tau_q \gtrsim 10$ ms, which holds in bending-dominated spectra ($\bar\sigma \lesssim 50$, slope $< -2$). In tension-dominated vesicles all $\tau_q \ll T_\text{exp}$ and the ACF has already decayed to zero by lag 1 — the correction is unmeasurable.
+    
+2. **The measured $\tau_q$ follow MS $q$-scaling** (flat ratio column). If the ACF is noise-dominated the ratios scatter wildly and the two validity checks reject the fit:
+    
+    - `boundary_hit`: $\bar\sigma_\text{ACF}$ reached the grid edge — no interior minimum, no physical solution.
+    - `rms_log_ratio > 0.5`: the $q$-dependence of measured $\tau_q$ is inconsistent with MS — likely noise or rigid-body drift.
