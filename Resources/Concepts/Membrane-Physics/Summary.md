@@ -1,0 +1,117 @@
+---
+title: "2026-04-03"
+date: 2026-04-03
+tags:
+  - daily
+---
+
+# 2026-04-03, Friday
+
+## Today's Focus
+<% tp.file.cursor(1) %>
+
+## Lab Work
+-
+
+## Analysis / Code
+-
+## Pipeline Summary
+
+---
+
+### Stage 1 — Contour extraction (`hybrid_detectionmethod.m`)
+
+For each frame, the vesicle contour is detected by radial gradient search in phase contrast. Output: `r(θ, t)` — the midline radius at 360 angles for every frame.
+
+---
+
+### Stage 2 — Event detection (`local_event_detection.m`)
+
+**Input:** `contourExtraction_hybrid_fixed.mat`
+
+Three shape descriptors computed per frame:
+
+- **Circularity** $= 4\pi A/P^2$ — drops when vesicle deforms
+- **Roughness** $= \sigma_r/\langle r \rangle$ — increases when membrane fluctuates strongly
+- **Drift rate** — CM displacement per frame, spikes when vesicle moves during heating
+
+Each descriptor is smoothed and compared to a 3σ threshold computed from the first 1000 frames (Baseline 0). A heating event is flagged when **any** descriptor exceeds its threshold. Events closer than 300 frames are merged, then filtered by minimum duration (≥30 frames) and minimum excursion.
+
+The movie is then segmented into:
+
+```
+Baseline 0 | Heat 1 | Post-heat 1 | Heat 2 | Post-heat 2 | ...
+```
+
+For each segment the power spectrum $\langle|\hat{u}_q|^2\rangle$ and mode ACFs $C_q(\tau)$ are computed.
+
+**Output:** `analysisWorkspace.mat`
+
+---
+
+### Stage 3 — Pécréaux spectral fit (`Fitting_Eventd.m`)
+
+**Input:** `analysisWorkspace.mat`
+
+**Heating segments are skipped** — they are non-equilibrium. Only `baseline` and `post_heat` segments with ≥150 frames are fitted.
+
+The normalised displacement: $$u(\theta, t) = \frac{r(\theta,t)}{\langle r(t)\rangle_\theta} - 1$$
+
+The power spectrum is fitted to the Pécréaux/Milner-Safran model:
+
+$$\langle|\hat{u}_q|^2\rangle = \frac{k_BT}{\kappa} \sum_{\ell \geq q} \frac{c_{\ell q}}{\lambda_\ell(\bar\sigma)} \cdot \frac{1}{2}$$
+
+with $\lambda_\ell = (\ell-1)(\ell+2)[\ell(\ell+1) + \bar\sigma]$ and $\bar\sigma = \sigma R_0^2/\kappa$.
+
+Two free parameters: $\kappa$ (bending rigidity) and $\sigma$ (membrane tension). Grid search over $\log_{10}\kappa$ and $\log_{10}\sigma$, coarse 25×25 then fine 40×40, minimising $\sum(\log_{10}\text{data} - \log_{10}\text{model})^2$.
+
+**Output:** `*_pecreaux_fit_results.mat`
+
+---
+
+### The reliability condition
+
+The model has two regimes depending on which term dominates:
+
+$$S_q \sim \begin{cases} k_BT/(\kappa, q^3) & \bar\sigma \ll q^2 \quad \text{(bending)} \ k_BT/(\sigma R_0^2, q) & \bar\sigma \gg q^2 \quad \text{(tension)} \end{cases}$$
+
+In the **tension regime** both $\kappa$ and $\bar\sigma$ appear only through their ratio — the fit is degenerate in $\kappa$. The spectrum constrains $\sigma$ well but $\kappa$ can take almost any value while keeping $\bar\sigma$ fixed.
+
+**In code**, the regime is classified by the **log-log slope of the data**:
+
+```matlab
+slope_bending = -2.5;   % steeper → bending dominated
+slope_tension = -1.5;   % flatter → tension dominated
+
+if data_slope < -2.5
+    regime = 'bending';   kappa_reliable = true;
+elseif data_slope > -1.5
+    regime = 'tension';   kappa_reliable = false;
+else
+    regime = 'crossover'; kappa_reliable = false;
+end
+```
+
+Physically: slope $\approx -3$ is the bending prediction ($S_q \propto q^{-3}$), slope $\approx -1$ is the tension prediction ($S_q \propto q^{-1}$). Only when the spectrum is clearly bending-dominated (slope $< -2.5$) does the fit return a meaningful $\kappa$. **$\sigma$ is reliable in all regimes.**
+
+---
+
+### What each output file contains
+
+|File|Key variables|What it tells you|
+|---|---|---|
+|`analysisWorkspace.mat`|`segments`, `fourier_segs`, `heatingCycles`, `baselines`|When events occurred, spectra, ACFs, shape changes|
+|`*_pecreaux_fit_results.mat`|`fit_results` struct array|$\kappa$, $\sigma$, $\bar\sigma$, regime, reliability flag per segment|
+
+---
+
+
+> We track GUV contour fluctuations at 50 fps, detect LED-induced heating events from three shape descriptors, segment the movie into baseline and post-heat periods, and fit the equilibrium power spectrum of each period to the Pécréaux/Milner-Safran model to extract bending rigidity $\kappa$ and membrane tension $\sigma$ — with $\kappa$ reliable only when the spectrum is steeper than $q^{-2.5}$ (bending-dominated) and $\sigma$ reliable in all regimes.
+## Reading
+- [[]]
+
+## Ideas & Questions
+-
+
+## Tomorrow
+- [ ]
