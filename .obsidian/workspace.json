@@ -106,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -258,10 +258,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "e8e7e9d70e29b272",
+  "active": "594d557996e58bde",
   "lastOpenFiles": [
-    "Templates/Daily_Note.md",
     "Resources/Concepts/Membrane-Physics/2026-04-08, Wednesday.md",
+    "Templates/Daily_Note.md",
     "Resources/Concepts/Membrane-Physics/Untitled 2.md",
     "Resources/Concepts/Membrane-Physics/Summary.md",
     "Resources/Concepts/Membrane-Physics/Untitled 1.md",
