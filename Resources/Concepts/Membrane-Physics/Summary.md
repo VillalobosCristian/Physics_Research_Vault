@@ -115,3 +115,20 @@ Physically: slope $\approx -3$ is the bending prediction ($S_q \propto q^{-3}$),
 
 ## Tomorrow
 - [ ]
+The contour gives you the mean radius $R_0$ at baseline and the change $\Delta R$ during heating. Under the thin-shell approximation the vesicle is a sphere, so:
+
+$$A = 4\pi R^2 \implies \frac{\Delta A}{A} = \frac{4\pi(R_0 + \Delta R)^2 - 4\pi R_0^2}{4\pi R_0^2} = \frac{2\Delta R}{R_0} + \left(\frac{\Delta R}{R_0}\right)^2$$
+
+The second term is negligible when $\Delta R \ll R_0$. In your data $\Delta R \sim 1$--$2,\mu$m against $R_0 \sim 10$--$15,\mu$m, so $(\Delta R / R_0)^2 \lesssim 0.02$. The working approximation is:
+
+$$\boxed{\frac{\Delta A}{A} \approx \frac{2,\Delta R}{R_0}}$$
+
+which in the script is:
+
+```matlab
+dAA_pct = 2 * dR_cyc1 ./ R0_base_um * 100;   % [%]
+```
+
+where `dR_cyc1 = hc.rad_change * pxSize_um` is the difference between the post-heat and pre-heat window mean radii in µm, and `R0_base_um = baselines(1).mu_rad * pxSize_um` is the baseline mean radius in µm.
+
+One caveat worth stating to your advisor: $\Delta R$ here is the change in the **equatorial mean radius** extracted from the 2D phase contrast projection, not a direct 3D measurement. For a sphere the equatorial radius equals $R_0$, but during invagination the vesicle is non-spherical. The quantity you are computing is therefore the projected area change, which underestimates the true membrane area change if the invagination is deep and axisymmetric. It is a lower bound on $\Delta A / A$.
