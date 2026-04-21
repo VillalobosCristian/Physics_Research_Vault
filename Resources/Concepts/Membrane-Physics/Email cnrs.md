@@ -68,3 +68,5 @@ Clean separation in the (dA/A, log10 σ ratio) plane -- floppy in top-left (inva
 - **050226 κ (~58 kBT) vs 110326/160426 (~29 kBT)** is a significant session-level discrepancy (1.9x). Before publication this must be either reproduced (confirming a real protocol difference) or isolated to a spin-coater or sucrose batch difference. Current dataset cannot distinguish.
 - **σ_bar gap between floppy and tensed populations is ~5x** (min tensed / max floppy). Looks like two distinct preparation outcomes rather than a continuum -- consistent with the hydration-dependent population effect you mentioned. May warrant a discussion section on what fraction of GUVs land in each state under the current protocol.
 - **All 050226 experiments used multi-cycle protocols; all 160426 are 1-cycle.** Slope evolution beyond PH2 is available only for 050226 and 110326.
+
+---
