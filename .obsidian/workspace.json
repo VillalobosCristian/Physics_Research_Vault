@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/GUVs/Temperature shape changes GUVs.md",
+                "file": "Resources/Data/Codes/Heating detection code.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Temperature shape changes GUVs"
+              "title": "Heating detection code"
             }
           },
           {
@@ -120,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -272,11 +272,13 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "0a82e18b17179a9d",
+  "active": "e47840b0df439ac7",
   "lastOpenFiles": [
+    "Projects/GUVs/Temperature shape changes GUVs.md",
+    "Resources/Data/Codes/Heating detection code.md",
+    "Resources/Concepts/Membrane-Physics/Email cnrs.md",
     "Attachments/Images/Pasted image 20260421095949.png",
     "Resources/Concepts/Membrane-Physics/2026-04-14, Tuesday.md",
-    "Resources/Concepts/Membrane-Physics/Email cnrs.md",
     "Resources/Concepts/Membrane-Physics/Untitled 3.md",
     "Resources/Concepts/Membrane-Physics/2026-04-08, Wednesday.md",
     "Resources/Concepts/Membrane-Physics/Fluctuation spectroscopy.md",
@@ -292,7 +294,6 @@
     "Resources/Concepts/Membrane-Physics/Untitled.md",
     "Resources/Literature/Reading-Notes/käs, sackmann1991_Shape transitions of GUVs - Detailed Analysis.md",
     "Resources/Concepts/Membrane-Physics/Obsidian new work flow.md",
-    "Resources/Data/Codes/Heating detection code.md",
     "Workflow.md",
     "Resources/Literature/PDFs/arianrhod2024_Vector - A Surprising Story of Space Time and Mathematical Transformation.pdf",
     "Resources/Literature/PDFs/karal, ahmed2020_Electrostatic interaction effects on the size distribution of self-assembled GUVs.pdf",
@@ -300,7 +301,6 @@
     "Resources/Literature/PDFs/faizi, granek2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
     "Resources/Literature/PDFs/willems2024_GUV Hydration Protocol (eLabFTW).pdf",
     "Resources/Literature/PDFs/gracià, bezlyepkina2010_Effect of cholesterol on rigidity SI.pdf",
-    "Projects/GUVs/Temperature shape changes GUVs.md",
     "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
     "MOCs/MOC - Projects.md",
     "MOCs/MOC - Literature.md",
@@ -318,7 +318,6 @@
     "Archive/Legacy/05-Resources/Attachments/pdf_maxwell 1.png",
     "Archive/Legacy/05-Resources/Attachments/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",
     "Archive/Legacy/05-Resources/Attachments/Pasted image 20250909165151.png",
-    "Archive/Legacy/05-Resources/Attachments/Pasted image 20250829124328.png",
-    "Archive/Legacy/05-Resources/Attachments/Pasted image 20250717164545.png"
+    "Archive/Legacy/05-Resources/Attachments/Pasted image 20250829124328.png"
   ]
 }
