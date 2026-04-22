@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
+                "file": "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Vesicle Shape Deformations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INDEX - Optothermal GUV Literature Review"
+              "title": "MOC - Vesicle Shape Deformations"
             }
           },
           {
@@ -119,8 +119,7 @@
               "title": "Email cnrs"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -272,17 +271,18 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "bd6e4bd0a7d8045b",
+  "active": "1970ee7816608e56",
   "lastOpenFiles": [
+    "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
     "Resources/Data/Codes/Heating detection code.md",
+    "Resources/Concepts/Membrane-Physics/2026-04-08, Wednesday.md",
+    "Resources/Concepts/Membrane-Physics/Summary.md",
     "Projects/GUVs/Temperature shape changes GUVs.md",
     "Resources/Concepts/Membrane-Physics/Email cnrs.md",
     "Attachments/Images/Pasted image 20260421095949.png",
     "Resources/Concepts/Membrane-Physics/2026-04-14, Tuesday.md",
     "Resources/Concepts/Membrane-Physics/Untitled 3.md",
-    "Resources/Concepts/Membrane-Physics/2026-04-08, Wednesday.md",
     "Resources/Concepts/Membrane-Physics/Fluctuation spectroscopy.md",
-    "Resources/Concepts/Membrane-Physics/Summary.md",
     "Resources/Concepts/Membrane-Physics/Camera Integration Time Correction.md",
     "Templates/Daily_Note.md",
     "Resources/Concepts/Membrane-Physics/Untitled 2.md",
@@ -301,7 +301,6 @@
     "Resources/Literature/PDFs/faizi, granek2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
     "Resources/Literature/PDFs/willems2024_GUV Hydration Protocol (eLabFTW).pdf",
     "Resources/Literature/PDFs/gracià, bezlyepkina2010_Effect of cholesterol on rigidity SI.pdf",
-    "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
     "MOCs/MOC - Projects.md",
     "MOCs/MOC - Literature.md",
     "MOCs/MOC - Experimental Protocols.md",
