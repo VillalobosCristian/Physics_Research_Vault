@@ -132,3 +132,27 @@ dAA_pct = 2 * dR_cyc1 ./ R0_base_um * 100;   % [%]
 where `dR_cyc1 = hc.rad_change * pxSize_um` is the difference between the post-heat and pre-heat window mean radii in µm, and `R0_base_um = baselines(1).mu_rad * pxSize_um` is the baseline mean radius in µm.
 
 One caveat worth stating to your advisor: $\Delta R$ here is the change in the **equatorial mean radius** extracted from the 2D phase contrast projection, not a direct 3D measurement. For a sphere the equatorial radius equals $R_0$, but during invagination the vesicle is non-spherical. The quantity you are computing is therefore the projected area change, which underestimates the true membrane area change if the invagination is deep and axisymmetric. It is a lower bound on $\Delta A / A$.
+
+
+
+The slide is clean and the hypothesis is well stated. Three candidate equations worth adding, in order of impact:
+
+**Most useful -- the reduced volume:**
+
+$$\nu = \frac{V}{\frac{4\pi}{3}\left(\frac{A}{4\pi}\right)^{3/2}}$$
+
+This is the key quantity that changes irreversibly. Adding it makes explicit what "expels area as volume" means -- $\nu$ drops permanently after each cycle. Käs-Sackmann use it as the central observable.
+
+**Second -- the tension jump:**
+
+$$\sigma_{PH1} \approx \sigma_0 \exp!\left(\frac{8\pi\kappa}{k_BT},\frac{\Delta A}{A}\right)$$
+
+This directly connects your two measured quantities and makes the slide testable. It is the quantitative prediction you can verify from the $\Delta A/A$ vs $\log_{10}(\sigma_{PH1}/\sigma_0)$ plot.
+
+**Third -- osmotic recovery timescale:**
+
+$$\tau_{perm} \sim \frac{R_0}{3 P_f v_w c_s}$$
+
+Explains the "Recovery?" arrow physically -- roughness recovers on this timescale as water slowly re-enters.
+
+**My recommendation:** add only the tension jump equation. It bridges the left panel (you see $\Delta R$ in the drift) with the right panel (you measure $\sigma$), making the hypothesis quantitative without cluttering the slide. The reduced volume and $\tau_{perm}$ are better placed on a dedicated discussion/interpretation slide.

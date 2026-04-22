@@ -120,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -272,10 +272,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "e47840b0df439ac7",
+  "active": "bd6e4bd0a7d8045b",
   "lastOpenFiles": [
-    "Projects/GUVs/Temperature shape changes GUVs.md",
     "Resources/Data/Codes/Heating detection code.md",
+    "Projects/GUVs/Temperature shape changes GUVs.md",
     "Resources/Concepts/Membrane-Physics/Email cnrs.md",
     "Attachments/Images/Pasted image 20260421095949.png",
     "Resources/Concepts/Membrane-Physics/2026-04-14, Tuesday.md",
