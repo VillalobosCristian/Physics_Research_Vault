@@ -105,3 +105,7 @@ Inner and outer leaflets expand at different rates due to different composition 
 
 ---
 *See also:* [[MOC - Temperature-Dependent Membrane Permeability]], [[MOC - Analysis Methods for Vesicle Fluctuations]], [[Temperature shape changes GUVs]]
+
+
+
+
