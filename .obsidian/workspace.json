@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "c72fe6f5ff201654",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resources/Concepts/Membrane-Physics/Untitled 4.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 4"
+            }
+          },
+          {
             "id": "e47840b0df439ac7",
             "type": "leaf",
             "state": {
@@ -119,7 +133,8 @@
               "title": "Email cnrs"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -271,8 +286,13 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "1970ee7816608e56",
+  "active": "c72fe6f5ff201654",
   "lastOpenFiles": [
+    "Attachments/Images/Pasted image 20260505141016.png",
+    "Attachments/Images/Pasted image 20260505140902.png",
+    "Attachments/Images/Pasted image 20260505140728.png",
+    "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Vesicle Shape Deformations.md",
+    "Resources/Concepts/Membrane-Physics/Untitled 4.md",
     "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
     "Resources/Data/Codes/Heating detection code.md",
     "Resources/Concepts/Membrane-Physics/2026-04-08, Wednesday.md",
@@ -307,16 +327,12 @@
     "MOCs/MOC - Membrane Biophysics.md",
     "Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "2026-03-25.md",
-    "Templates/Concept_Note.md",
     "Attachments/Images/Pasted image 20260317154144.png",
     "Attachments/Images/Pasted image 20260317154142.png",
-    "Resources/Clippings/COMSOL Analysis Report - Super-Gaussian LED.md",
     "Archive/Legacy/Papers/Reading_Notes/Pasted image 20250203111007.png",
     "Archive/Legacy/04-Data/Protocols/Pasted image 20250220094708.png",
     "Archive/Legacy/05-Resources/Attachments/tractories.png",
     "Archive/Legacy/05-Resources/Attachments/pdf_maxwell 1.png",
-    "Archive/Legacy/05-Resources/Attachments/WhatsApp Image 2025-07-11 at 15.43.40.jpeg",
-    "Archive/Legacy/05-Resources/Attachments/Pasted image 20250909165151.png",
-    "Archive/Legacy/05-Resources/Attachments/Pasted image 20250829124328.png"
+    "Archive/Legacy/05-Resources/Attachments/WhatsApp Image 2025-07-11 at 15.43.40.jpeg"
   ]
 }
