@@ -112,8 +112,12 @@ GUVs are currently in pure sucrose -- must add glucose exterior for sedimentatio
 - **No particle attachment:** increase biotin mol% or incubation time; ensure GUV wash step removes free lipid debris competing for streptavidin sites
 - **Particle clusters:** re-wash particles; pipette more vigorously before use; use same day after washing
 - **Poor GUV formation:** extend desiccation time; check chloroform film uniformity after spin coating
-- **Particles visible on gold substrate but not on GUVs:** streptavidin active but biotin inaccessible -- consider switching to DOPE-PEG2000-Biotin (Avanti 880129)
-- **Blue LED cross-talk with fluorescence:** Flash Red (ex 660 nm / em 690 nm) is spectrally orthogonal to blue LED (~450 nm) -- no cross-talk
+
 ## Plans for testing
 
-Until now 1% and 5% biotin concentration was used, when using 5
+Until now 1% and 5% biotin concentration was used, when using 5% the vesicles looks very small and because of that I couldnt see very well if particles where actually attached. 
+
+For 1% and after incubation without motion i saw particles attatched to the GUVs, single or cluster of particles. I think is is more or less the soft spot to try. 
+
+Maybe good idea is to use biger particles ~1um, let's see.
+The results i got are still very preliminar so we need to continue trying to improve the protocol
