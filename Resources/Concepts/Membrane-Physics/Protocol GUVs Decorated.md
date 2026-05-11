@@ -27,7 +27,7 @@ Perform on the day of the experiment.
 
 **Wash cycle** -- repeat x3:
 
-1. Add glucose 200 mOsm to **1000 µL total**-
+1. Add glucose 200 mOsm to **1000 µL total**
 2. Vortex 10 s
 3. Centrifuge **14,000 rcf, 10 min**
 4. Aspirate supernatant with 200 µL pipette -- leave ~50 µL at bottom
@@ -40,7 +40,6 @@ Perform on the day of the experiment.
 - Vortex 30 s + pipette 40x vigorously
 - Use same day
 
----
 
 ## Part 2 -- Lipid Mixture Preparation
 
@@ -56,15 +55,14 @@ $$C_\text{stock} = \frac{25,\text{mg/mL}}{786.1,\text{g/mol}} = 31.8,\text{mM}$$
 
 ### 2c. Lipid mixtures (230 µL per tube)
 
-Add components **in this order**:
 
-|Component|T1 (1 mol% biotin)|T2 (5 mol% biotin)|
-|---|---|---|
-|Chloroform|198 µL|193 µL|
-|DOPC 4 mM|29 µL|29 µL|
-|DOPE-Biotin 0.968 mM|1.2 µL|6.3 µL|
-|RhPE 10 mg/mL|1.3 µL|1.3 µL|
-|**Total**|**~230 µL**|**~230 µL**|
+| Component            | T1 (1 mol% biotin) | T2 (5 mol% biotin) |
+| -------------------- | ------------------ | ------------------ |
+| Chloroform           | 198 µL             | 193 µL             |
+| DOPC 4 mM            | 29 µL              | 29 µL              |
+| DOPE-Biotin 0.968 mM | 1.2 µL             | 6.3 µL             |
+| RhPE 10 mg/mL        | 1.3 µL             | 1.3 µL             |
+| **Total**            | **~230 µL**        | **~230 µL**        |
 
 Mix 10x with Hamilton syringe after each addition.
 
@@ -84,74 +82,38 @@ Per tube (50 µL per slide, up to 4 slides per tube):
 
 ## Part 4 -- Gentle Hydration
 
-1. Preheat plate to **60°C**, wait 10 min for equilibration
+1. Preheat plate to **40°C**, wait 10 min for equilibration
 2. Clip spacer onto coated slide, secure with 4 clips (remove metal parts for flat contact)
 3. Add **500 µL sucrose 200 mOsm** -- ensure full coverage of slide interior
 4. Cover with aluminium foil
-5. Incubate **30 min at 60°C**
+5. Incubate **30 min at 40°C**
 6. Recover GUV suspension into Eppendorf
-
+Important here, since there is evaporation the final concentration of sucrose always increase, for 1 hour and 500 uL the difference is around 30 mM. So is preferably **sucrose** at a lower concentration and then adjust the glucose before adding
 ---
 
 ## Part 5 -- GUV Transfer to Sucrose/Glucose Medium
 
 GUVs are currently in pure sucrose -- must add glucose exterior for sedimentation.
 
-**1.** Take **100 µL** GUV suspension  
-**2.** Add to **200 µL glucose 200 mOsm** in new Eppendorf  
-**3.** Invert gently 3x  
-**4.** Wait **20 min** at RT in the dark -- GUVs sediment (sucrose inside > glucose outside)  
-**5.** Aspirate **100 µL from the bottom** slowly -- enriched GUV fraction, reduced lipid debris  
-**6.** Transfer to new Eppendorf with **100 µL fresh glucose 200 mOsm**  
-**7.** Invert 3x -- ready for particle incubation
-
 ---
 
 ## Part 6 -- Particle Decoration
 
 1. Vortex washed particles **30 s** + pipette 40x with 200 µL tip
-2. Add **10 µL particles** to 200 µL clean GUV suspension
-3. Mix by inverting **5x** -- no vortex
-4. Incubate **60 min at 37°C**, in the dark, at rest
+2. Add **10 µL particles** to 200 µL clean GUV suspension (Here we need to play with concentration of vesicles)
+3. Mix by inverting **5x** ---> this is not clear yet to me
+4. Incubate **60 min approx**
 
+-
 ---
 
-## Part 7 -- Imaging
-
-1. Deposit **50 µL** decorated GUV suspension onto gold substrate
-2. Add **50 µL glucose 200 mOsm**
-3. Wait **15 min** for sedimentation
-4. Observe at **100x**, phase contrast + Flash Red fluorescence channel
-5. Perform optothermal heating cycles with blue LED
-
-### Controls
-
-|Control|Preparation|Purpose|
-|---|---|---|
-|Bare GUV (no particles)|T1/T2 without beads|Baseline shape dynamics|
-|Particles only (no GUVs)|Beads in glucose on substrate|Confirm no non-specific gold adhesion|
-
----
-
-## Key Numbers
-
-|Parameter|Value|
-|---|---|
-|DOPE-Biotin MW|1033.4 g/mol|
-|DOPE-Biotin stock|9.68 mM in chloroform|
-|RhPE MW|1301.8 g/mol|
-|Particle diameter|400 nm|
-|Particle stock|10 mg/mL (1% solids)|
-|Working particle concentration|0.001% solids in glucose 200 mOsm|
-|Sucrose/glucose osmolarity|200 mOsm each|
-|Incubation temperature|37°C, 60 min|
-
----
-
-## Notes and Troubleshooting
+## Notes     
 
 - **No particle attachment:** increase biotin mol% or incubation time; ensure GUV wash step removes free lipid debris competing for streptavidin sites
 - **Particle clusters:** re-wash particles; pipette more vigorously before use; use same day after washing
 - **Poor GUV formation:** extend desiccation time; check chloroform film uniformity after spin coating
 - **Particles visible on gold substrate but not on GUVs:** streptavidin active but biotin inaccessible -- consider switching to DOPE-PEG2000-Biotin (Avanti 880129)
 - **Blue LED cross-talk with fluorescence:** Flash Red (ex 660 nm / em 690 nm) is spectrally orthogonal to blue LED (~450 nm) -- no cross-talk
+## Plans for testing
+
+Until now 1% and 5% biotin concentration was used, when using 5
