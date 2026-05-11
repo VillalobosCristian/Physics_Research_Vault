@@ -36,6 +36,20 @@
             }
           },
           {
+            "id": "4134397657d989b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resources/Concepts/Membrane-Physics/Protocol GUVs Decorated.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Protocol GUVs Decorated"
+            }
+          },
+          {
             "id": "e47840b0df439ac7",
             "type": "leaf",
             "state": {
@@ -134,7 +148,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -286,8 +300,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "c72fe6f5ff201654",
+  "active": "4134397657d989b0",
   "lastOpenFiles": [
+    "Resources/Concepts/Membrane-Physics/Untitled 4.md",
+    "Resources/Concepts/Membrane-Physics/Protocol GUVs Decorated.md",
     "Attachments/Images/Pasted image 20260505145224.png",
     "Attachments/Images/Pasted image 20260505144829.png",
     "Attachments/Images/Pasted image 20260505144824.png",
@@ -298,9 +314,7 @@
     "Attachments/Images/Pasted image 20260505141423.png",
     "Attachments/Images/Pasted image 20260505141016.png",
     "Attachments/Images/Pasted image 20260505140902.png",
-    "Attachments/Images/Pasted image 20260505140728.png",
     "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Vesicle Shape Deformations.md",
-    "Resources/Concepts/Membrane-Physics/Untitled 4.md",
     "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
     "Resources/Data/Codes/Heating detection code.md",
     "Resources/Concepts/Membrane-Physics/2026-04-08, Wednesday.md",
