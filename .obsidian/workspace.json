@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -328,10 +328,11 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "4829e35a79e0c980",
+  "active": "e47840b0df439ac7",
   "lastOpenFiles": [
-    "Resources/Concepts/Membrane-Physics/Untitled 5.md",
+    "Resources/Concepts/Membrane-Physics/Untitled 7.md",
     "Resources/Concepts/Membrane-Physics/Untitled 6.md",
+    "Resources/Concepts/Membrane-Physics/Untitled 5.md",
     "Resources/Concepts/Membrane-Physics/Protocol GUVs Decorated.md",
     "Resources/Concepts/Membrane-Physics/Untitled 4.md",
     "Attachments/Images/Pasted image 20260505145224.png",
@@ -374,7 +375,6 @@
     "Resources/Literature/PDFs/gracià, bezlyepkina2010_Effect of cholesterol on rigidity SI.pdf",
     "MOCs/MOC - Projects.md",
     "MOCs/MOC - Literature.md",
-    "MOCs/MOC - Experimental Protocols.md",
-    "MOCs/MOC - Membrane Biophysics.md"
+    "MOCs/MOC - Experimental Protocols.md"
   ]
 }
