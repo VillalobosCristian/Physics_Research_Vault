@@ -219,3 +219,6 @@ Independent mechanical cross-check. Micropipette aspiration or tether pulling on
 12. A. H. Bahrami (2026), cup/invagination bending energy equal to $16\pi\kappa$ and shape-morphology classification. Note: the full bibliographic record for this 2026 reference was not independently verified; cite as provided. The underlying two-sphere bending result ($8\pi\kappa$ per closed sphere, scale-invariant) is classical and is also covered by ref. 7.
 
 Secondary benchmark (not in the original list, directly relevant to Section 6): W. Rawicz, K. C. Olbrich, T. McIntosh, D. Needham, and E. Evans, "Effect of chain length and unsaturation on elasticity of lipid bilayers," Biophys. J. 79, 328-339 (2000), reports DOPC $\kappa$ near the Faizi benchmark by micropipette aspiration.
+
+
+
