@@ -222,3 +222,205 @@ Secondary benchmark (not in the original list, directly relevant to Section 6): 
 
 
 
+
+
+Yes. The cleanest place for **equipartition** is on the **Helfrich slide**, immediately after you write the quadratic mode energy.
+
+The logic should be:
+
+[  
+\text{Helfrich energy}  
+\rightarrow  
+\text{quadratic mode stiffness}  
+\rightarrow  
+\text{equipartition}  
+\rightarrow  
+\text{mode amplitudes}  
+\rightarrow  
+\text{projection to measured 2D spectrum}.  
+]
+
+So your three-slide sequence should be:
+
+---
+
+## Slide 1 — Tracking: what we measure
+
+This slide should stay purely experimental.
+
+You say:
+
+> We record the vesicle contour over time. From each frame, we extract the equatorial radius (r(\phi,t)), normalize it by the instantaneous mean radius, and obtain the radial displacement field (u(\phi,t)). We then decompose this contour into angular Fourier modes (\hat u_q(t)). The time-averaged squared amplitudes give the experimental fluctuation spectrum.
+
+The key point is:
+
+[  
+r(\phi,t)  
+\rightarrow  
+u(\phi,t)  
+\rightarrow  
+\hat u_q(t)  
+\rightarrow  
+\langle |\hat u_q|^2\rangle.  
+]
+
+At the bottom of this slide, instead of **“To do what?”**, I would write:
+
+This gives the experimental fluctuation spectrum of the vesicle contour.
+
+Then verbally transition:
+
+> Now we need a mechanical theory that predicts the shape of this spectrum.
+
+---
+
+## Slide 2 — Helfrich + equipartition: why fluctuations encode mechanics
+
+This is where equipartition belongs.
+
+The slide should explain that the membrane is not just randomly fluctuating: every shape mode has an elastic energy cost. Softer modes fluctuate more; stiffer modes fluctuate less.
+
+You start with the minimal Helfrich energy:
+
+[  
+\mathcal F=\int \left[\frac{\kappa}{2}(2H)^2+\sigma\right]dA.  
+]
+
+Then for a quasi-spherical vesicle:
+
+[  
+r(\theta,\phi,t)=R_0[1+u(\theta,\phi,t)]  
+]
+
+with
+
+[  
+u(\theta,\phi,t)=\sum_{\ell,m}u_{\ell m}(t)Y_\ell^m(\theta,\phi).  
+]
+
+Expanding the Helfrich energy to second order gives:
+
+[  
+F^{(2)}=\frac{1}{2}\sum_{\ell\geq2,m}K_\ell |u_{\ell m}|^2.  
+]
+
+This is the key moment for equipartition. Each mode behaves like a thermal harmonic spring:
+
+[  
+\frac{1}{2}K_\ell |u_{\ell m}|^2.  
+]
+
+Equipartition gives:
+
+# [  
+\frac{1}{2}K_\ell \langle |u_{\ell m}|^2\rangle
+
+\frac{1}{2}k_BT.  
+]
+
+Therefore:
+
+# [  
+\langle |u_{\ell m}|^2\rangle
+
+\frac{k_BT}{K_\ell}.  
+]
+
+And since
+
+[  
+K_\ell=  
+\kappa(\ell-1)(\ell+2)[\ell(\ell+1)+\bar\sigma],  
+]
+
+you obtain:
+
+# [  
+\langle |u_{\ell m}|^2\rangle
+
+\frac{k_BT}  
+{\kappa(\ell-1)(\ell+2)[\ell(\ell+1)+\bar\sigma]}.  
+]
+
+The sentence on the slide should be:
+
+Equipartition converts the elastic stiffness of each shape mode into its thermal fluctuation amplitude.
+
+That is better than saying “equipartition gives mode-by-mode amplitudes,” because it explains the physical meaning.
+
+Your spoken explanation could be:
+
+> The important point is that the Helfrich Hamiltonian assigns an elastic cost to every deformation mode. After expanding around a sphere, each spherical harmonic mode behaves like an independent spring with stiffness (K_\ell). At thermal equilibrium, equipartition tells us that each quadratic degree of freedom carries an energy of order (k_BT/2). Therefore, soft modes have large amplitudes and stiff modes have small amplitudes. This is the bridge between thermal fluctuations and mechanical parameters.
+
+Then the transition to the next slide:
+
+> But experimentally we do not observe the full 3D surface. We only observe a 2D equatorial contour, so we need one more step: the projection from spherical modes to contour modes.
+
+---
+
+## Slide 3 — Projection: from 3D theory to 2D contour spectrum
+
+This slide should not re-explain equipartition. It should use the result from the previous slide.
+
+The key message is:
+
+> The measured 2D Fourier mode (q) is not exactly one spherical mode (\ell). It receives contributions from many 3D modes with (\ell\ge q), weighted by geometry.
+
+So you write:
+
+# [  
+u\left(\frac{\pi}{2},\phi\right)
+
+\sum_{\ell,m}  
+u_{\ell m}  
+Y_\ell^m\left(\frac{\pi}{2},\phi\right).  
+]
+
+Then the projected contour spectrum becomes:
+
+# [  
+\langle |\hat u_q|^2\rangle
+
+\frac{k_BT}{\kappa}  
+\sum_{\ell=q}^{\ell_{\max}}  
+\frac{2\ell+1}{4\pi}  
+\frac{(\ell-q)!}{(\ell+q)!}  
+\frac{|P_\ell^q(0)|^2}  
+{(\ell-1)(\ell+2)[\ell(\ell+1)+\bar\sigma]},  
+]
+
+with (\ell+q) even.
+
+The slide sentence should be:
+
+The measured contour spectrum is the geometrical projection of the thermally excited 3D vesicle modes.
+
+Then your spoken explanation:
+
+> The previous slide gave the thermal amplitude of the full 3D spherical modes. However, in flickering spectroscopy we usually track only the equatorial contour. Taking a 2D slice mixes the 3D modes geometrically. This projection changes the scaling: bending-dominated modes scale approximately as (q^{-3}), while tension-dominated modes scale as (q^{-1}). This projected expression is the one we actually fit to obtain (\kappa) and (\sigma).
+
+---
+
+So, very simply:
+
+[  
+\boxed{  
+\text{Tracking tells us what we measure.}  
+}  
+]
+
+[  
+\boxed{  
+\text{Helfrich + equipartition tells us why fluctuations encode mechanics.}  
+}  
+]
+
+[  
+\boxed{  
+\text{Projection tells us how the 3D theory becomes the 2D measured spectrum.}  
+}  
+]
+
+The most important conceptual sentence for your presentation is:
+
+> Equipartition is the bridge between the elastic energy of a membrane mode and the fluctuation amplitude that we measure experimentally.
