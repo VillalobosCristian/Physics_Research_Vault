@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Resources/Concepts/Membrane-Physics/Untitled 8.md",
+                "file": "Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 8"
+              "title": "Chlamy-Vesicle interaction"
             }
           },
           {
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"Resources/Literature/PDFs/\" ",
+                "query": "chlamy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -243,7 +243,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -344,8 +345,8 @@
   },
   "active": "86f5ef6d6240a1fd",
   "lastOpenFiles": [
-    "Resources/Data/Codes/Heating detection code.md",
     "Resources/Concepts/Membrane-Physics/Untitled 8.md",
+    "Resources/Data/Codes/Heating detection code.md",
     "Resources/Concepts/Membrane-Physics/Untitled 7.md",
     "Resources/Concepts/Membrane-Physics/Untitled 6.md",
     "Resources/Concepts/Membrane-Physics/Untitled 5.md",
