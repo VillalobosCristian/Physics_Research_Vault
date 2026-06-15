@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
+                "file": "Resources/Concepts/Membrane-Physics/Protocol GUVs Decorated.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chlamy-Vesicle interaction"
+              "title": "Protocol GUVs Decorated"
             }
           },
           {
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "chlamy",
+                "query": "biotin",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -345,6 +345,8 @@
   },
   "active": "86f5ef6d6240a1fd",
   "lastOpenFiles": [
+    "Resources/Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
+    "Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "Resources/Concepts/Membrane-Physics/Untitled 8.md",
     "Resources/Data/Codes/Heating detection code.md",
     "Resources/Concepts/Membrane-Physics/Untitled 7.md",
@@ -388,8 +390,6 @@
     "Resources/Literature/PDFs/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Resources/Literature/PDFs/faizi, granek2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
     "Resources/Literature/PDFs/willems2024_GUV Hydration Protocol (eLabFTW).pdf",
-    "Resources/Literature/PDFs/gracià, bezlyepkina2010_Effect of cholesterol on rigidity SI.pdf",
-    "MOCs/MOC - Projects.md",
-    "MOCs/MOC - Literature.md"
+    "Resources/Literature/PDFs/gracià, bezlyepkina2010_Effect of cholesterol on rigidity SI.pdf"
   ]
 }
