@@ -133,3 +133,67 @@ This second equation is not just decoration, it's a real building block: Part 4'
 ### Before Part 3
 
 Still need, unchanged from before: rolling-window confirmation for $S_{2-5}(t)$, and whether $V(t)$ has any proxy at all. But more useful right now, since Section 2.2 makes a sharp, falsifiable prediction: **run the kinematic descriptor script on 2–3 more experiments and check whether rise time scales with $R_0^3/\kappa$.** That single check tells us whether Case A's simplest form survives, before Part 3 (volume) commits to building on top of it.
+
+
+
+## Physics-only estimate, no fitted data used
+
+### Step 1: direct area injection from thermal expansion
+
+$$\frac{\Delta A}{A} = \gamma_A,\Delta T$$
+
+|$\gamma_A$|$\Delta A/A$|
+|---|---|
+|$3\times10^{-3},\mathrm{K^{-1}}$|4.50%|
+|$3.5\times10^{-3},\mathrm{K^{-1}}$|5.25%|
+|$4\times10^{-3},\mathrm{K^{-1}}$|6.00%|
+
+Taking the midpoint, $\Delta A/A\approx5.25%$. In absolute terms:
+
+|$R_0$|$A_0$|$\Delta A$|
+|---|---|---|
+|10 $\mu$m|1256.6 $\mu\mathrm{m}^2$|66.0 $\mu\mathrm{m}^2$|
+|15 $\mu$m|2827.4 $\mu\mathrm{m}^2$|148.4 $\mu\mathrm{m}^2$|
+|20 $\mu$m|5026.5 $\mu\mathrm{m}^2$|263.9 $\mu\mathrm{m}^2$|
+
+Nothing here uses your measurements, just $\Delta T=15,\mathrm{K}$ and a literature-order $\gamma_A$.
+
+### Step 2: the first real physics content, where does this area go?
+
+The membrane has exactly two conventional channels for absorbing excess area, both described by the standard area-tension relation [Evans-Rawicz 1990]: $$\frac{\Delta A}{A} = \underbrace{\frac{k_BT}{8\pi\kappa}\ln!\frac{\sigma}{\sigma_0}}_{\text{entropic (undulations)}} + \underbrace{\frac{\sigma}{K_A}}_{\text{direct elastic stretch}}$$
+
+**Test the elastic channel first, it's the cleaner calculation.** If $5.25%$ had to be absorbed entirely by direct stretching, the required tension is $\sigma_{\rm required}=K_A\times(\Delta A/A)$. Using literature $K_A\approx200$–$265,\mathrm{mN/m}$ for PC bilayers:
+
+|$K_A$|$\sigma_{\rm required}$ (4.5%)|$\sigma_{\rm required}$ (5.25%)|$\sigma_{\rm required}$ (6.0%)|
+|---|---|---|---|
+|200 mN/m|9.0 mN/m|10.5 mN/m|12.0 mN/m|
+|230 mN/m|10.4 mN/m|12.1 mN/m|13.8 mN/m|
+|265 mN/m|11.9 mN/m|13.9 mN/m|15.9 mN/m|
+
+**This is the striking result.** Typical lysis (rupture) tension for PC bilayers is reported in the literature at roughly a few mN/m up to $\sim10,\mathrm{mN/m}$, corresponding to a critical areal strain around $3$–$5%$. Your $\Delta A/A\approx4.5$–$6%$ from a single heating pulse is already **at or above that critical strain**, before any tension-based accounting even happens. If the membrane could only respond by direct elastic stretching, every single pulse would put it at serious risk of rupture.
+
+### Step 3: confirming the elastic channel is really the relevant one here, not the entropic one
+
+The two terms in the Evans-Rawicz relation cross over (become comparable) at: $$\sigma^* \sim \frac{K_A,k_BT}{8\pi\kappa}$$
+
+|$K_A$|$\kappa=15,k_BT$|$\kappa=20,k_BT$|$\kappa=25,k_BT$|$\kappa=30,k_BT$|
+|---|---|---|---|---|
+|200 mN/m|0.53 $\mu$N/m|0.40 $\mu$N/m|0.32 $\mu$N/m|0.27 $\mu$N/m|
+|265 mN/m|0.70 $\mu$N/m|0.53 $\mu$N/m|0.42 $\mu$N/m|0.35 $\mu$N/m|
+
+The crossover sits around $0.3$–$0.7,\mu\mathrm{N/m}$ ($\sim10^{-3},\mathrm{mN/m}$), while $\sigma_{\rm required}$ from Step 2 is in the $9$–$16,\mathrm{mN/m}$ range, roughly **20,000 to 40,000 times above the crossover**. At that scale the entropic (undulation) term is completely saturated and negligible by comparison, the elastic $K_A$ channel is the only one that matters for accounting purposes, so Step 2's estimate isn't an oversimplification, it's the physically relevant regime.
+
+### The argument this gives you, entirely independent of any measured $\sigma(t)$
+
+1. A $15,\mathrm{K}$ pulse injects $\Delta A/A\approx4.5$–$6%$ of real, new lipid area (molecular thermal expansion, established mechanism, order-of-magnitude literature $\gamma_A$).
+2. That much area is comparable to or exceeds the typical lysis strain of a PC bilayer (literature $K_A$, literature lysis strain).
+3. Therefore, ordinary Helfrich elasticity (undulations + direct stretch) **cannot plausibly absorb the full injected area without approaching rupture tension**, this follows from $\gamma_A$, $K_A$, and $\Delta T$ alone.
+4. Since the vesicles are observed to survive many heating cycles (an experimental fact, not a fitted number), something other than uniform elastic stretching must be handling most of this area. Folding into invaginations, energetically neutral by Bahrami's result, is a mechanism that sidesteps this problem entirely: it stores area without paying the $K_A$ elastic cost or building toward lysis tension.
+
+This is a genuinely useful addition to the document: it motivates the folding mechanism from pure mechanics and a survival observation, with zero dependence on your spectral fits, your normalization fix, or any $\sigma(t)$ trace. It sits cleanly in Section 4/5 (minimal model / literature grounding) as an independent line of support alongside the kinematic evidence.
+
+## What needs verification before this goes in
+
+Every number here is a literature-typical value I'm carrying, not something derived or cited to a specific source in this conversation: $\gamma_A\sim3$–$4\times10^{-3},\mathrm{K^{-1}}$, $K_A\sim200$–$265,\mathrm{mN/m}$, lysis strain $\sim3$–$5%$. All three need real citations (Evans-Rawicz 1990 for $K_A$, Needham/Evans-type work for $\gamma_A$ and lysis strain) before this argument is stated as fact rather than order-of-magnitude reasoning. Worth doing that check before this becomes a document paragraph.
+
+**Natural next step, entirely optional and only when you're ready:** once this physics-only prediction exists, comparing it against your actual measured post-heat $\sigma$ values becomes a real, sharp test, if measured $\sigma$ turns out far below the $9$–$16,\mathrm{mN/m}$ this argument says would be needed for pure elastic accommodation, that's direct confirmation the area really did go somewhere else. But that's data-dependent and for later, this section stands on its own without it.
