@@ -97,3 +97,39 @@ Two things from before never got answered once we moved to the script:
 2. **Volume proxy**: still don't know if $V(t)$ is genuinely latent (no z-stack/confocal) or if there's an independent handle. This determines whether Part 3 can be written as something checkable against data or has to stay purely inferential.
 
 Answer those and we move to Part 2, the fast area forcing $A(t)$, next.I
+
+## Part 2: Area forcing $A(t)$, and why it isn't the whole story
+
+I'm not going to just restate the original algebraic slaving relation, because the real data from a few turns ago exposed something the first pass missed: even if $A_{\rm tot}(t)$ responds instantly to $T(t)$, that does **not** mean the observable shape variables (roughness, $S_{2-5}$) respond instantly too. Those are two different timescales, and conflating them is exactly what made the original "almost instant" picture fail against your actual trace. This section separates them properly.
+
+### 2.1 The forcing itself: two competing hypotheses, both still open
+
+**Case A, default: algebraic, fast.** Heat diffuses to the vesicle in $\tau_{\rm diff}\sim1$–6 ms (established earlier from $R_0^2/D_{\rm th}$), lipid conformational response is sub-ns. Under this hypothesis: $$A_{\rm tot}(t) = A_0\left[1+\gamma_A,\Delta T(t)\right], \qquad \Delta T(t) \approx \Delta T_{\max}\cdot\Theta(t) \text{ (step)}$$
+
+**Case B, competing: slow thermal ramp.** If the gold film itself doesn't equilibrate to its steady-state temperature within milliseconds, e.g. if there's a genuine multi-second thermal mass effect in the substrate, then: $$\Delta T(t) \approx \Delta T_{\max}\left(1-e^{-t/\tau_{\rm ramp}}\right)$$ with $\tau_{\rm ramp}$ an unmeasured parameter, not yet distinguished from Case A by anything in hand.
+
+I'm carrying both forward rather than picking one, because Section 2.2 below gives us a way to test Case A on its own terms before reaching for Case B.
+
+### 2.2 The distinction that actually matters: forcing timescale vs. response timescale
+
+This is the piece that was missing before. Suppose Case A holds, $A_{\rm tot}(t)$ genuinely jumps like a step. The vesicle's shape does **not** jump with it. Each mode amplitude $f_l(t)$ obeys overdamped Langevin dynamics around a moving target set by the instantaneous $\bar\sigma(t)$: $$\frac{df_l}{dt} = -\omega(l)\left[f_l(t) - f_l^{\rm eq}(t)\right] + \text{noise}$$ where $\omega(l)$ is exactly the Faizi/Pécréaux relaxation rate we already validated (Eq. 32, confirmed against their Table S1). If the equilibrium target itself steps at $t=0$ (a step in $A_{\rm tot}\Rightarrow$ step in $\bar\sigma$), the deterministic part of the trajectory is a clean exponential relaxation: $$\langle f_l(t)\rangle - f_l^{\rm eq} = \left[\langle f_l(0)\rangle - f_l^{\rm eq}\right]e^{-\omega(l)t}, \qquad \tau(l) \equiv 1/\omega(l)$$
+
+Since roughness$(t)^2=\sum_lP_l(t)$ (Part 1.2, exact) and the low-$l$ band dominates that sum (your own band-fraction check, baseline mean $0.93$), the aggregate roughness signal should relax at a rate close to the **slowest**, rate-limiting mode, $l=2$: $$\tau_{\rm predicted} \approx \tau(l{=}2) = \frac{1}{\omega(2)} = 0.382,\frac{\eta R_0^3}{\kappa}\qquad(\bar\sigma\approx0,\ \chi_s\approx0)$$
+
+**This means: even under the simplest possible forcing (Case A, instant step), the observable rise can still take several seconds, no folding kinetics, no exotic mechanism, required.** For your ballpark parameters ($R_0\sim15,\mu\mathrm{m}$, $\kappa\sim20,k_BT$), this lands in the 10-second range, the right order of magnitude for what you measured. This is testable directly: $\tau(l{=}2)\propto R_0^3/\kappa$, so if the rise time scales with vesicle size across your other experiments the way this formula predicts, that's strong evidence the rise phase is ordinary hydrodynamics, not a new process, and Case A stands without needing Case B at all.
+
+### 2.3 Why this framework does _not_ explain the fall, and that's informative, not a failure
+
+Here's where it gets interesting rather than just being a clean derivation. If $\bar\sigma$ is genuinely rising during the pulse (which your data says it is, roughness falls, meaning tension is increasing), then $\omega(l)$, which increases with $\bar\sigma$, should make relaxation **faster** as the pulse progresses, not slower. That predicts the fall should be quicker than the rise. Your actual measurement showed the opposite: fall ($17.76$ s) longer than rise ($12.16$ s).
+
+That mismatch is the real physical content of Part 4. It says the simple relaxation picture above, sufficient to explain the rise, is **not** sufficient to explain the fall. Something rate-limits the fall beyond ordinary mode relaxation, which is exactly the territory where a genuine folding/sequestration process ($\phi(t)$, irreversible on the pulse timescale) earns its place in the model rather than being an assumption bolted on for convenience. This gives Part 2 and Part 4 a clean division of labor: **rise phase, candidate explanation is ordinary hydrodynamic relaxation under fast forcing (this section, testable, no new mechanism needed); fall phase, needs a genuinely new kinetic term (next section).**
+
+### 2.4 What Part 2 hands to Part 3/4
+
+$$A_{\rm tot}(t) = A_0\left[1+\gamma_A\Delta T(t)\right] \quad\text{(Case A, pending the }R_0^3\text{ scaling test)}$$ $$\frac{df_l}{dt} = -\omega(l)\left[f_l(t)-f_l^{\rm eq}(\bar\sigma(t))\right] + \text{noise}, \qquad \omega(l) \text{ from Faizi Eq. (32)}$$
+
+This second equation is not just decoration, it's a real building block: Part 4's $\phi(t)$ dynamics will sit on top of this relaxation framework rather than replacing it, since the fall phase is presumably some combination of ordinary relaxation _and_ the new trapping process, not trapping alone.
+
+### Before Part 3
+
+Still need, unchanged from before: rolling-window confirmation for $S_{2-5}(t)$, and whether $V(t)$ has any proxy at all. But more useful right now, since Section 2.2 makes a sharp, falsifiable prediction: **run the kinematic descriptor script on 2–3 more experiments and check whether rise time scales with $R_0^3/\kappa$.** That single check tells us whether Case A's simplest form survives, before Part 3 (volume) commits to building on top of it.
