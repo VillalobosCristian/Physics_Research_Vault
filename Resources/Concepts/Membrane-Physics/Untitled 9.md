@@ -44,4 +44,56 @@ This table is the complete, corrected foundation. Two things from before are sti
 1. **Rolling-window size for $P_l(t)/S_{2-5}(t)$**: with a real ~9 s process to resolve at 50 fps, I'd fix this at 10 to 20 frames (0.2 to 0.4 s) as a starting point, that's fast enough to resolve the intra-pulse rise/fall shape without being dominated by shot noise. Confirm or override.
 2. **Volume proxy**: still need to know if $V(t)$ is genuinely latent (z-stack/confocal absent) or if there's any independent handle, this gates how strongly Part 3 can be written.
 
-Confirm those two and I'll move to Part 2, the fast area forcing $A(t)$.
+
+## 1.1: what each definition actually says, mechanically
+
+**$r(\theta,t)$** is the one raw quantity everything else is built from: the contour radius sampled at 360 fixed lab-frame angles, once per frame. Every other symbol in Part 1 is a functional of this single object.
+
+**$R_{\rm mean}(t)=\langle r(\theta,t)\rangle_\theta$** is the zeroth angular Fourier mode, the DC component. It's the "equivalent circle radius" of whatever shape exists at time $t$. Note this is subtly different from Faizi's $R=(3V/4\pi)^{1/3}$ (an equivalent-sphere radius from volume), the two coincide for a near-circular contour but diverge once the vesicle deforms strongly, worth remembering if we ever compare numbers directly against their formalism.
+
+**roughness$(t)=\mathrm{std}_\theta[r]/R_{\rm mean}$** is the normalized variance of the contour around its own instantaneous mean. Unwrap $r(\theta)$ into a 1D periodic signal in $\theta$, its variance over one period, normalized, is roughness$^2$. Zero for a perfect circle, grows as the contour departs from circular, broadband, mixes every wavelength together into one number. This is exactly the quantity we've been plotting and debugging for the last dozen turns.
+
+**$A_{\rm proj}(t)$, $P(t)$**: these are just calculus, not physics. $\tfrac12\oint r^2d\theta$ sums infinitesimal circular sectors, each of area $\tfrac12r^2d\theta$, to get enclosed area. $\oint\sqrt{r^2+r'^2},d\theta$ comes from Pythagoras on the arc element in polar coordinates, $ds^2=dr^2+r^2d\theta^2\Rightarrow ds=\sqrt{r^2+(dr/d\theta)^2},d\theta$. No thermodynamics anywhere in either formula.
+
+**circularity$(t)=4\pi A/P^2$**: the isoperimetric ratio. The isoperimetric inequality says for fixed perimeter, a circle encloses the maximum possible area, $4\pi A\le P^2$ always, equality exactly for a circle. So circularity $\in(0,1]$ by construction, capped at 1. It's sensitive to _any_ departure from circular, elongation, wiggliness, both mixed together, unlike aspect ratio below which isolates one specific mode.
+
+**aspect ratio$(t)$, $\phi_{\rm orient}(t)$**: built from the area's second-moment (inertia) tensor, a $2\times2$ symmetric matrix. Its two eigenvalues describe how "spread out" the enclosed mass is along two perpendicular axes; $\sqrt{\lambda_{\max}/\lambda_{\min}}$ is elongation, and the corresponding eigenvector's angle is $\phi_{\rm orient}$. This isolates specifically the $l=2$-like elliptical deformation and, critically, its **direction**, which circularity throws away entirely. We confirmed earlier that because the angular grid is lab-frame-fixed (not vesicle-frame-rotating), $\phi_{\rm orient}$ is directly comparable across frames and pulses, which is what makes the leaflet-couple vs. spatial-gradient test possible later.
+
+**$P_l(t)$, $S_{2-5}(t)$**: per-frame power in Fourier/Legendre mode $l$, and the sum restricted to $l=2$–$5$. This is literally what the mode-power section of the script computes, one $|U_l|^2$ per frame, no time-averaging.
+
+**$\mathrm{Var}[\text{roughness}(t)]$**: the temporal variance of the roughness _signal itself_ within a window. This is a stationarity diagnostic, not a shape descriptor, a genuinely settled process should have roughness fluctuating around a fixed mean with small, stable variance once you're averaging over enough frames; a still-evolving process shows elevated variance because the mean itself is drifting under you.
+
+## 1.2: the Parseval argument, in full, since this is the load-bearing claim of the whole document
+
+Write the normalized contour as a Fourier series in $\theta$ at fixed $t$: $$u(\theta,t) \equiv \frac{r(\theta,t)}{R_{\rm mean}(t)} - 1 = \sum_l u_l(t),e^{il\theta}$$
+
+Parseval's theorem for Fourier series states, with no physics content whatsoever, purely a statement about periodic functions: $$\frac{1}{2\pi}\int_0^{2\pi}|u(\theta,t)|^2,d\theta = \sum_l|u_l(t)|^2$$
+
+The left side is exactly $\mathrm{roughness}(t)^2$ by definition (since $u$ has zero angular mean by construction). So: $$\mathrm{roughness}(t)^2 = \sum_l|u_l(t)|^2 \propto \sum_l P_l(t)$$
+
+**This is exactly the identity your script's Parseval check tested**, `roughness_from_modes = sqrt(sum(P_l,1))`, and why it had to match roughness to floating-point precision (which it now does, once the Nyquist double-counting bug was fixed). It's not a physical prediction being verified, it's a mathematical tautology: break a periodic signal into harmonics, its variance is the sum of the harmonics' squared magnitudes. True for any $u(\theta)$, thermally equilibrated or violently driven, doesn't matter.
+
+**Contrast this with equipartition**, which is where the physics, and the stationarity requirement, actually enters: $$\langle|u_l|^2\rangle = \frac{k_BT}{\kappa}\times[\text{function of }l,\bar\sigma]$$
+
+This formula requires two things Parseval doesn't: (1) the mode amplitudes are Boltzmann-distributed, i.e. genuine thermal equilibrium, and (2) $\langle\cdot\rangle$ is a time-average over many frames taken while $\kappa,\sigma$ are _constant_. Neither holds mid-pulse. That's the whole reason roughness$(t)$ and $S_{2-5}(t)$, single-frame or short-rolling-window quantities, survive the driven transient, while $\kappa(t),\sigma(t)$, which require exactly that long stationary average to beat down noise via the equipartition relation, do not. Same underlying data, different question being asked of it.
+
+## 1.3: what changed, grounded in the real trace you already pulled
+
+The original picture (sub-second rise, then slow fall) came from a verbal description before we had real numbers. Your actual data from the 20.72–46.44 s heating segment showed roughness climbing continuously from the segment start, peaking near $t\approx23.7$ s, then falling. So "fast rise then slow fall" survives as the _qualitative_ shape, but the specific "~9 s" figure doesn't, the real rise phase alone was already several seconds, and total pulse duration in that experiment was closer to 35 s than 10 s. I flagged this explicitly rather than quietly keep repeating the old number, worth stating the same way in the presentation: the rise/fall structure is established, the specific timescale is experiment-dependent and still under investigation (we were mid-way through disentangling ordinary $l=2$ hydrodynamic relaxation from a genuine folding process when we paused for script debugging).
+
+## 1.4: the fabric analogy, if it helps for the slides
+
+Think of the membrane as a fixed length of fabric, total area is nearly conserved (the stretching modulus $K_A\sim0.2,\mathrm{N/m}$ is orders of magnitude stiffer than anything else in play, so lipids aren't being created or destroyed, just rearranged). The "visible, fluctuating" fabric is whatever's laid flat enough for the phase-contrast contour to trace it. As folding proceeds, some fabric gets tucked into a fold too fine or too steep to resolve, it hasn't disappeared, $A_{\rm tot}$ is unchanged, but the _visible_ reservoir $A_{\rm fluc}=A_{\rm tot}(1-\phi)$ has shrunk. That's why roughness and $S_{2-5}$ can fall even while $T(t)$, and therefore $A_{\rm tot}(t)$, are still elevated, and why $\phi(t)$ itself never shows up directly in any of these observables, only its footprint on the visible geometry. Important for the document: label $\phi(t)$ explicitly as inferred, not measured, every time it appears, unless you eventually get direct image confirmation of a visible pocket.
+
+## 1.5: table, one line each
+
+$R_{\rm mean}$, roughness, $A_{\rm proj}$, $P$, aspect ratio: all direct functionals of $r(\theta,t)$, computed and plotted, no fitting, hence available everywhere and untouched by the normalization issue, since none of them ever call `S_mod`. $P_l,S_{2-5}$: same, just noisier per-frame so needs the rolling window. $\mathrm{Var}[\text{roughness}]$: same family, a diagnostic rather than a shape descriptor. $\kappa,\sigma$: the one row that needs stationarity and was gated by the normalization bug, now resolved in `Fitting_event_corrected.m`. $A_{\rm tot},\phi,V$: the three latent variables, never measured, only inferred, this is the boundary between "what the data shows" (everything above the line) and "what the model proposes" (everything below it), worth drawing as a literal line in a presentation slide.
+
+## Still open, gating Part 2
+
+Two things from before never got answered once we moved to the script:
+
+1. **Rolling window for $S_{2-5}(t)$**: still sitting at a provisional 15 frames in the script. Confirm or adjust now that you've seen real traces, does 15 look right, too smoothed, or too jagged against the actual rise/fall shape you're seeing?
+2. **Volume proxy**: still don't know if $V(t)$ is genuinely latent (no z-stack/confocal) or if there's an independent handle. This determines whether Part 3 can be written as something checkable against data or has to stay purely inferential.
+
+Answer those and we move to Part 2, the fast area forcing $A(t)$, next.I
