@@ -197,3 +197,75 @@ This is a genuinely useful addition to the document: it motivates the folding me
 Every number here is a literature-typical value I'm carrying, not something derived or cited to a specific source in this conversation: $\gamma_A\sim3$–$4\times10^{-3},\mathrm{K^{-1}}$, $K_A\sim200$–$265,\mathrm{mN/m}$, lysis strain $\sim3$–$5%$. All three need real citations (Evans-Rawicz 1990 for $K_A$, Needham/Evans-type work for $\gamma_A$ and lysis strain) before this argument is stated as fact rather than order-of-magnitude reasoning. Worth doing that check before this becomes a document paragraph.
 
 **Natural next step, entirely optional and only when you're ready:** once this physics-only prediction exists, comparing it against your actual measured post-heat $\sigma$ values becomes a real, sharp test, if measured $\sigma$ turns out far below the $9$–$16,\mathrm{mN/m}$ this argument says would be needed for pure elastic accommodation, that's direct confirmation the area really did go somewhere else. But that's data-dependent and for later, this section stands on its own without it.
+
+
+
+
+
+# Building $V(t)$, one logical step at a time
+
+## Step 0: notation, fixed as agreed
+
+$$V(t) \text{ (actual enclosed volume, } \mu\mathrm{m}^3\text{)}, \qquad \hat V(t) \equiv V(t)/V_0 \text{ (dimensionless ratio)}$$
+
+$\hat V(t)$ replaces $u(t)$ from the earlier draft, no collision with $u(\theta,t)$ (the normalized radial fluctuation field). I'm keeping lowercase $\nu$ for reduced volume, distinct from $V$ by case, standard in this literature [Seifert 1997, Svetina-Zeks, Berndl 1990, Käs-Sackmann 1991], not the same kind of problem as $u(t)$ vs. $u(\theta,t)$ since case disambiguates it and every source we're citing uses this exact convention.
+
+## Step 1: why we need $V(t)$ at all, stated precisely
+
+$A(t)$ alone tells us how much membrane material exists. It says nothing about how that material is _geometrically constrained to arrange itself_. That constraint comes from the area-to-volume ratio, standard bilayer-couple/spontaneous-curvature shape control [Seifert 1997]. We need $V(t)$ specifically to compute $\nu(t)$, the actual shape-control parameter, not as an end in itself.
+
+## Step 2: what "the volume" physically is here
+
+The enclosed aqueous phase. Mechanistically independent of $A(t)$: $A(t)$ grows via an intra-membrane molecular process (gauche/trans isomerization, established, $\gamma_A$), a process that involves zero water molecules. Whether $V(t)$ changes at all, and by how much, is a completely separate physical question that has to be argued on its own terms.
+
+## Step 3: the branch point, three candidate mechanisms, not one assumed answer
+
+Three distinct physical processes could change $V(t)$ on the pulse timescale ($\sim24,\mathrm{s}$, this experiment):
+
+(a) **Osmotic permeation** across the membrane, water crossing to equilibrate with the external bath. Established timescale $\tau_{\rm perm}\sim10$–$100,\mathrm{s}$, comparable to the pulse duration itself, this session. Neither clearly fast nor clearly slow relative to $24,\mathrm{s}$, genuinely ambiguous, cannot be confidently invoked as either present or negligible.
+
+(b) **Bulk thermal expansion of the already-enclosed water**, no membrane crossing required at all, just the density of the same trapped mass changing with local temperature.
+
+(c) **Pore-mediated bulk flow**, a transient rupture allowing rapid volume loss, direct precedent exists [Käs & Sackmann 1991, observed pore formation during cooling of budded vesicle chains, established this session] but is not confirmed for this system.
+
+## Step 4: why mechanism (b) is the one we can actually defend right now
+
+(a) is timescale-ambiguous. (c) is precedented elsewhere but unconfirmed here. (b) requires only one assumption: that water sealed inside a $\sim17.6,\mu\mathrm{m}$-radius vesicle behaves thermally like bulk water. Nanoconfinement effects on thermal expansivity are a near-wall phenomenon, significant only within a few molecular layers ($\sim$nm) of a confining surface. A $17.6,\mu\mathrm{m}$ radius is four orders of magnitude larger than that length scale, so the fraction of enclosed water close enough to the membrane to be affected is vanishingly small. This justifies using tabulated _bulk_ water expansivity for the _enclosed_ volume, mechanism (b) is the one requiring the fewest and most defensible assumptions, which is why it's the one to build the Level-0 prediction on.
+
+## Step 5: the actual derivation, same logical form as $A_h(T)$
+
+$$\frac{dV_h}{dT} = \gamma_V V_h \quad\Rightarrow\quad V_h(T) = V_0,e^{\gamma_V\Delta T}$$
+
+identical mathematical structure to $A_h(T)=A_0e^{\gamma_A\Delta T}$ [already established], now applied to a different physical quantity with its own independent expansivity constant $\gamma_V$ (bulk water, standard tabulated range $\sim2$–$3\times10^{-4},\mathrm{K^{-1}}$ near room temperature, **still uncited in this pipeline**, flagged previously, unresolved).
+
+## Step 6: combining into reduced volume, every substitution shown
+
+$$\nu(T) \equiv \frac{V(T)}{\frac{4\pi}{3}\left(\frac{A(T)}{4\pi}\right)^{3/2}}$$
+
+Take the ratio at two temperatures: $$\frac{\nu_h(T)}{\nu_0} = \frac{V_h(T)/V_0}{\left[A_h(T)/A_0\right]^{3/2}}$$
+
+Substitute both exponentials: $$= \frac{e^{\gamma_V\Delta T}}{\left(e^{\gamma_A\Delta T}\right)^{3/2}} = \frac{e^{\gamma_V\Delta T}}{e^{\frac{3}{2}\gamma_A\Delta T}} = \exp\left[\left(\gamma_V-\frac{3}{2}\gamma_A\right)\Delta T\right]$$
+
+Nothing hidden, this is the full chain, already verified numerically ($0.9396$ at $\Delta T=15,\mathrm{K}$).
+
+## Step 7: is there a way to get $V(t)$ _directly from the contour data_, independent of this model prediction?
+
+This is the question the earlier "axisymmetric volume proxy" tried to answer, and it's essential to be precise about why it fails.
+
+A single equatorial phase-contrast contour gives $r(\theta,t)$ in one plane. It contains **zero information about the vesicle's extent along the optical ($z$) axis**. Any volume estimate built from this data alone must _assume_ a shape for that missing dimension, axisymmetric revolution about some axis, sphere, prolate or oblate ellipsoid. The size scale fed into that assumed revolution has to come from somewhere, and the only data available is $A_{\rm proj}(t)$ (or $R_{\rm mean}(t)$) itself, the _same_ in-plane measurement already used elsewhere.
+
+The consequence, verified directly two sessions ago: with aspect ratio $\approx1$ throughout this pulse (established, $1.003$–$1.107$), the resulting "volume" reduces almost exactly to $V_{\rm proxy}\propto A_{\rm proj}(t)^{3/2}$. It is not independent data, it is a $3/2$-power transform of a number we already had. It would show the _identical_ apparent drop whether real water left the vesicle or whether the same water got reshaped into a fold invisible to a 2D equatorial slice, the two physical scenarios are indistinguishable by this method, by construction, not by bad luck.
+
+## Step 8: the conclusion this forces
+
+$\nu_h(T)$ (Step 6) is a **model-derived prediction** under Level-0 assumptions, defensible, but a prediction, not a measurement. There is no independent contour-derived $V(t)$ to check it against, and there cannot be one from this data modality. Every figure and every sentence involving $\nu(t)$ or $V(t)$ in this document needs to say "the model implies" or "under Level-0 assumptions", never "we measure" or "we observe."
+
+## Step 9: what $\hat V(t)$ then represents, and why it's currently unconstrained
+
+$$\frac{\nu(t)}{\nu_0} = \frac{\hat V(t)}{[1+\alpha(t)]^{3/2}}$$
+
+Under pure Level-0 (mechanism (b) only, no pore): $\hat V(t)=e^{\gamma_V\Delta T(t)}$ exactly, this reduces to Step 6. Figure 4's exploration of $\hat V<e^{\gamma_V\Delta T}$ represents the _hypothetical_ addition of mechanism (c) (pore-mediated loss) on top of (b). Given Step 7/8, we have no way to fit or constrain $\hat V(t)$ from this experiment's data, so that figure is explicitly a sensitivity exploration ("if a pore opened, here is how much it would amplify the reduced-volume drop"), not a fit to anything observed. This needs to be stated in those exact terms wherever Figure 4 appears.
+
+## Where this leaves you
+
+Does this chain hold together the way you'd want to defend it in front of a committee or a referee, particularly Step 4 (bulk water assumption) and Step 7 (why the proxy fails)? Tell me which step, if any, you want to push on further before we write the corresponding subsection or touch any code.
