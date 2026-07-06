@@ -310,3 +310,41 @@ The honesty of the whole construction rests entirely on Steps 5 and 6 being stat
 |Treating a proxy/residual as a measurement in later prose|flagged repeatedly for $\nu_{\rm app}$ (oblate/prolate), same discipline now applied to $\phi_{\rm proj}$|
 
 You've been doing Step 5-and-9-style checking instinctively throughout this whole session, catching the $u(t)$ collision, the additive/multiplicative mismatch, the oblate/prolate labeling, the $90°$ orientation bug. What you're asking to learn now is just naming that instinct as a repeatable checklist, so you can run it deliberately on the _next_variable you define, rather than relying on it surfacing in review.
+
+# The mathematical construction, step by step, with rigor tracked explicitly
+
+Three pieces here are genuinely forced by mathematics (conservation, differential geometry, dimensional scaling). One piece is a modeling choice, not a derivation. I'll mark each explicitly, since conflating the two is exactly the mistake this construction needs to avoid.
+
+## Step 1: $\alpha(t)$, rigorous, from an ODE plus a conservation law
+
+Lipid count $N$ is conserved on the pulse timescale (no flip-flop, established floor $\sim10,\mathrm h$ [Bayerl et al. 1988, cited via Käs & Sackmann 1991], four orders of magnitude longer than $120,\mathrm s$). Area per lipid $a(T)$ obeys the phenomenological but exact ODE $$\frac{da}{dT} = \gamma_A a(T) \qquad\Rightarrow\qquad a(T) = a_0,e^{\gamma_A(T-T_0)}$$ Total membrane area is $A_h(T)=Na(T)$, and since $N$ is constant, the ODE integrates directly to $$A_h(t) = A_0,e^{\gamma_A\Delta T(t)} \equiv A_0[1+\alpha(t)], \qquad \alpha(t)\equiv e^{\gamma_A\Delta T(t)}-1$$ No approximation here beyond $\gamma_A$ itself being constant over the range [established caveat: Pan et al. 2008 measure $\gamma_A$ at a single temperature, $30^\circ\mathrm C$]. This is real derivation, not ansatz.
+
+## Step 2: the $V^{2/3}$ exponent, rigorous, from isotropic dilation
+
+Consider a family of shapes related by pure isotropic rescaling: $\mathbf x\to\lambda\mathbf x$ for every point on some fixed reference shape. Volume is a 3-form, area a 2-form; under this dilation the Jacobian gives, exactly, $$V(\lambda) = \lambda^3 V(1), \qquad A(\lambda) = \lambda^2 A(1)$$ Eliminating $\lambda$: $$A(\lambda) = \left(\frac{V(\lambda)}{V(1)}\right)^{2/3} A(1)$$ This holds for the true 3D surface. It also holds for a 2D projection under the _same_ dilation, because orthogonal projection $\Pi$ commutes with scaling: $\Pi(\lambda\mathbf x)=\lambda,\Pi(\mathbf x)$, a one-line linearity fact. So the projected area of a dilating self-similar shape scales identically: $$A_{\rm proj}(t) = A_{{\rm proj},0},\hat V(t)^{2/3}, \qquad \hat V(t)\equiv V(t)/V_0$$ Also rigorous, no approximation, **provided the shape stays exactly self-similar** (same proportions, only overall size changing). That proviso is where the trouble starts.
+
+## Step 3: the naive null hypothesis is geometrically over-constrained, not just empirically wrong
+
+This is the piece worth understanding carefully, since it's the actual mathematical reason a residual becomes _necessary_, not merely convenient.
+
+Within a single self-similar family, $\lambda$ is one parameter. $V$ and $A$ are both single-valued functions of that one parameter. You cannot vary them independently: fixing $\hat V(t)=1$ (no volume change) forces $\lambda=1$, which forces $A(\lambda)=A(1)$, area fixed too. **"Area grows while volume stays fixed and shape stays self-similar" is not merely unobserved, it is a mathematical contradiction, not three independent conditions but only two, since fixing any two of ${\lambda, V, A}$ within one self-similar family fixes the third.**
+
+So the naive Step-1 hypothesis you were shown many turns ago, $A_{\rm proj}(t)\sim A_{{\rm proj},0}[1+\alpha(t)]$ at implicitly fixed volume, was never geometrically consistent to begin with. Something in ${$shape, volume$}$ _must_move once $\alpha(t)>0$ is asserted at fixed $\hat V$. Substituting $A_h(t)=A_0[1+\alpha(t)]$ into the reduced-volume definition [Seifert 1997; already used throughout this session] at fixed $\hat V=1$: $$\nu(t) = \frac{V_0}{\frac{4\pi}{3}\left(\frac{A_0[1+\alpha(t)]}{4\pi}\right)^{3/2}} = \frac{\nu_0}{[1+\alpha(t)]^{3/2}} < \nu_0$$ $\nu$ is _forced_ downward. This is exactly the Level-0 "Consequence for reduced volume" result derived earlier this session, now shown to be not an added assumption but a direct consequence of asserting $\alpha(t)>0$ at $\hat V=1$. The vesicle is mathematically required to either change reduced volume within a smooth axisymmetric family (captured by $\nu_{\rm app}^{\rm oblate/prolate}$, built earlier this session), or abandon self-similarity entirely (genuine folding, invagination, non-axisymmetric distortion). This is the rigorous justification for why a residual term is _needed_, independent of what you name it.
+
+## Step 4: the multiplicative ansatz, a modeling choice, not a further derivation
+
+Here honesty matters. There is no single geometric argument that jointly produces $[1+\alpha(t)]\hat V(t)^{2/3}$ as one derived quantity. Step 1 governs $A_h$ (material, molecular). Step 2 governs how a _self-similar_ shape's projection tracks $V$. These describe different objects. The choice to write $$A_{\rm proj}(t) = A_{{\rm proj},0},[1+\alpha(t)],\hat V(t)^{2/3},[1-\phi_{\rm proj}(t)]$$ as a product of three independent, dimensionless factors is an **ansatz**: motivated by wanting each factor bounded and separately interpretable, and by the two rigorous pieces (Steps 1, 2) each contributing one factor in isolation, but the superposition itself is a modeling decision, not something forced by a single derivation the way Steps 1-3 were. State this plainly in the manuscript rather than implying the whole equation is derived end to end, a careful reader from the target reviewer pool will look for exactly this distinction.
+
+## Step 5: $\phi_{\rm proj}(t)$, defined by algebraic inversion, not asserted
+
+Given the ansatz in Step 4, solve for the one factor not otherwise constrained: $$1-\phi_{\rm proj}(t) = \frac{A_{\rm proj}(t)}{A_{{\rm proj},0}[1+\alpha(t)]\hat V(t)^{2/3}} \qquad\Rightarrow\qquad \phi_{\rm proj}(t) = 1-\frac{A_{\rm proj}(t)}{A_{{\rm proj},0}[1+\alpha(t)]\hat V(t)^{2/3}}$$ This is genuine algebra: three of four quantities in the ansatz are known or assumed ($A_{\rm proj}(t)$ measured, $\alpha(t)$ from Step 1, $\hat V(t)$ to be fixed next), the fourth is solved for. This step introduces no new physics, it only _names_ whatever value makes the ansatz equation balance.
+
+## Step 6: the degeneracy is a literal count of equations versus unknowns
+
+One equation (Step 4's ansatz), two unknowns ($\hat V(t)$, $\phi_{\rm proj}(t)$) for one data point $A_{\rm proj}(t)$. Underdetermined by inspection, not by a subtle argument, this is just counting. Closing the system requires one more equation or one assumed value. The Level-0 choice, $\hat V(t)=1$, is the minimal assumption consistent with the established permeation-timescale argument (established this session: $\tau_{\rm perm}\sim10$–$100,\mathrm s$, ambiguous relative to the $24.4,\mathrm s$ pulse, but no pore evidence exists for this specific dataset). With that closure: $$\phi_{\rm proj}(t) = 1 - \frac{A_{\rm proj}(t)/A_{{\rm proj},0}}{1+\alpha(t)}$$ which is the formula already evaluated to $\phi_{\rm proj}^{\rm trough}=0.3786$ two turns ago.
+
+## The complete picture, stated plainly
+
+$$\underbrace{\alpha(t)}_{\text{Step 1: rigorous}} \quad\text{and}\quad \underbrace{\hat V(t)^{2/3}\text{ scaling law}}_{\text{Step 2: rigorous}} \quad\xrightarrow{\text{Step 3: forces a residual to exist}}\quad \underbrace{\text{product ansatz}}_{\text{Step 4: chosen, not derived}} \quad\xrightarrow{\text{Step 5: algebra}}\quad \phi_{\rm proj}(t)$$
+
+The number $0.38$ is trustworthy as "the residual required under the stated assumptions", exactly as forceful as Step 4's ansatz and Step 6's closure, no more, no less. It is not trustworthy as "38% of the membrane is definitely hidden in folds", that claim would require independently constraining $\hat V(t)$, which this pipeline cannot do.
