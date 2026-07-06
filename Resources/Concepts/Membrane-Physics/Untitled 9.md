@@ -348,3 +348,7 @@ One equation (Step 4's ansatz), two unknowns ($\hat V(t)$, $\phi_{\rm proj}(t)$)
 $$\underbrace{\alpha(t)}_{\text{Step 1: rigorous}} \quad\text{and}\quad \underbrace{\hat V(t)^{2/3}\text{ scaling law}}_{\text{Step 2: rigorous}} \quad\xrightarrow{\text{Step 3: forces a residual to exist}}\quad \underbrace{\text{product ansatz}}_{\text{Step 4: chosen, not derived}} \quad\xrightarrow{\text{Step 5: algebra}}\quad \phi_{\rm proj}(t)$$
 
 	The number $0.38$ is trustworthy as "the residual required under the stated assumptions", exactly as forceful as Step 4's ansatz and Step 6's closure, no more, no less. It is not trustworthy as "38% of the membrane is definitely hidden in folds", that claim would require independently constraining $\hat V(t)$, which this pipeline cannot do.
+
+
+
+
