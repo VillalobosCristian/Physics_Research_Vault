@@ -269,3 +269,44 @@ Under pure Level-0 (mechanism (b) only, no pore): $\hat V(t)=e^{\gamma_V\Delta T
 ## Where this leaves you
 
 Does this chain hold together the way you'd want to defend it in front of a committee or a referee, particularly Step 4 (bulk water assumption) and Step 7 (why the proxy fails)? Tell me which step, if any, you want to push on further before we write the corresponding subsection or touch any code.
+
+
+# The general method, extracted
+
+What you just watched built is a specific instance of a technique with wide applicability in soft matter modeling: constructing a **residual bookkeeping variable** to isolate "what a partial mechanistic model doesn't yet explain" as its own well-defined, trackable quantity. This is worth learning as a reusable procedure, not just accepting once. Here's the recipe, each step stated abstractly with its instantiation in the $\phi_{\rm proj}$ derivation as the worked example.
+
+## The recipe
+
+**1. Identify the single measured quantity.** Here: $A_{\rm proj}(t)$, the one thing the pipeline actually tracks. Not $A_h$, not $V$, not $\phi$, those are all downstream constructs. Every residual variable starts by naming the one number that comes directly off the instrument.
+
+**2. State the null hypothesis: what would this quantity do if only your most-trusted mechanism operated, alone.**Here: pure thermal expansion, $A_{\rm proj}(t)/A_{{\rm proj},0}\sim1+\alpha(t)$. Then **explicitly falsify it against data**, don't just posit it and move on. The document does this correctly: it names the specific observed behavior (the post-peak collapse) that the null hypothesis cannot produce. If you skip this step, you can't justify why a residual is needed at all.
+
+**3. Add independently-motivated geometric or physical factors one at a time, in order of how well-constrained they are, before reaching for a free parameter.** Here: $G[\hat V]\sim\hat V^{2/3}$, justified by $R\sim V^{1/3}\Rightarrow A\sim R^2\sim V^{2/3}$, a scaling relation, not a fit. This ordering matters: every factor you can derive from geometry or an independent measurement should go in _before_ you define a catch-all residual, otherwise the residual silently absorbs effects that were actually explainable, and your final number overstates how much is genuinely mysterious.
+
+**4. Define the residual as a normalized ratio (or difference) of measured to fully-accounted-for expectation.** $$1-\phi_{\rm proj}(t) \equiv \frac{A_{\rm proj}(t)}{A_{{\rm proj},0}[1+\alpha(t)],G[\hat V(t)]}$$ This equation is **true by construction**, for any $A_{\rm proj}(t)$, any $\alpha(t)$, any $\hat V(t)$, you can always solve for a $\phi_{\rm proj}(t)$ that makes it hold. That's not a weakness, it's the point: a residual variable is a definition, not a prediction. The physics enters entirely through Steps 2 and 3 (what you chose to account for before defining the residual) and Step 5 below.
+
+**5. Immediately state what the residual is degenerate with.** This is the step people skip, and it's the one that separates honest bookkeeping from smuggling in an unconstrained fit. Here: one equation, two unknowns ($\hat V(t)$ and $\phi_{\rm proj}(t)$), one measurement. Write this down explicitly, in the manuscript, not just in your own notes. A reader who doesn't see this degeneracy stated might think $\phi_{\rm proj}$ is more constrained than it is.
+
+**6. Break the degeneracy with the most parsimonious, explicitly-labeled assumption available.** Here: $\hat V(t)=1$, justified by appeal to an independent physical argument (permeation too slow, no pore evidence), not chosen to make the number come out nicely. State the assumption's name (Level-0) so it can be relaxed later without confusion.
+
+**7. Connect immediately to a real number from your own data.** Don't leave the derivation purely symbolic. $\phi_{\rm proj}^{\rm trough}\simeq0.38$ turns an abstract bookkeeping identity into something falsifiable-adjacent, you can now ask "does this number behave sensibly across cycles, does it correlate with roughness or circularity" and start giving it scientific content beyond its tautological definition.
+
+**8. Check for collision with any bookkeeping variable you've already defined elsewhere in the same project.** Here: reconciling the new multiplicative $\phi_{\rm proj}$ against the earlier additive $\phi$ from the $\Delta a_\sigma(t)$ closure. They agree to $O(\alpha\phi)\approx1.7%$, close but not identical, and the document correctly picks one ($\phi_{\rm proj}$, multiplicative) to standardize on going forward rather than silently letting two similarly-named variables coexist.
+
+**9. Check for symbol collision with anything else in the pipeline.** $u(t)\to\hat V(t)$, because $u(\theta,t)$ already means something else. This is a mechanical check, but skipping it is exactly how a reader (or a future you, six months later) misreads an equation.
+
+## Why this is legitimate rather than a trick
+
+The honesty of the whole construction rests entirely on Steps 5 and 6 being stated, not on the algebra in Step 4. Anyone can write a residual that absorbs an unexplained discrepancy, that's trivial. What makes it defensible physics rather than curve-fitting in disguise is: you exhausted independently-motivated factors first (Step 3), you named exactly what else the residual could represent instead of what you're calling it (Step 5), and you labeled your simplifying choice as an assumption with a name, not a fact (Step 6). A referee from your target reviewer pool (Dimova, Kozlov, Weikl, Ou-Yang) will look for exactly these three things.
+
+## Pitfalls, all of which you've already caught in this project, worth recognizing as a pattern
+
+|Pitfall|Where it happened here|
+|---|---|
+|Reusing a symbol already meaning something else|$u(t)=V/V_0$ vs $u(\theta,t)$, three separate times this session|
+|Two similarly-defined variables left unreconciled|additive $\phi$ vs multiplicative $\phi_{\rm proj}$|
+|Silently picking a convenient parameter value instead of the best-motivated one|the earlier POPC/DMPC $\gamma_A$ bracket vs the DOPC-specific value, DMPC turned out to be contaminated by $T_m$-proximity, not a neutral bracket bound|
+|Not stating a degeneracy explicitly|$\hat V(t)$ vs $\phi_{\rm proj}(t)$, exactly what this document now does correctly|
+|Treating a proxy/residual as a measurement in later prose|flagged repeatedly for $\nu_{\rm app}$ (oblate/prolate), same discipline now applied to $\phi_{\rm proj}$|
+
+You've been doing Step 5-and-9-style checking instinctively throughout this whole session, catching the $u(t)$ collision, the additive/multiplicative mismatch, the oblate/prolate labeling, the $90°$ orientation bug. What you're asking to learn now is just naming that instinct as a repeatable checklist, so you can run it deliberately on the _next_variable you define, rather than relying on it surfacing in review.
