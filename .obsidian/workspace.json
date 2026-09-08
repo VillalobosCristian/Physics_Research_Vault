@@ -134,6 +134,18 @@
             }
           },
           {
+            "id": "d8e27a3bbe8c34b6",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.13.7"
+            }
+          },
+          {
             "id": "0a6e71f418f643c6",
             "type": "leaf",
             "state": {
@@ -218,7 +230,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -371,7 +383,7 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "41813d85778c468a",
+  "active": "d8e27a3bbe8c34b6",
   "lastOpenFiles": [
     "Resources/Concepts/Membrane-Physics/Untitled 9.md",
     "Resources/Concepts/Membrane-Physics/Mathematical Prerequisites for Active Matter.md",
