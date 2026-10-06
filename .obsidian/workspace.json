@@ -11,10 +11,14 @@
             "id": "a6e1621ad8ca1201",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Dashboard.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dashboard"
             }
           }
         ]
@@ -173,6 +177,8 @@
   },
   "active": "a6e1621ad8ca1201",
   "lastOpenFiles": [
+    "Vault Guide.md",
+    "Workflow.md",
     "Resources/Concepts/Membrane-Physics/Untitled.base",
     "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Vesicle Shape Deformations.md",
     "Resources/Concepts/Membrane-Physics/Untitled 4.md",
@@ -208,7 +214,6 @@
     "Resources/Concepts/Membrane-Physics/Untitled 3.md",
     "Resources/Concepts/Membrane-Physics/Camera Integration Time Correction.md",
     "Templates/Daily_Note.md",
-    "Resources/Concepts/Membrane-Physics/Untitled 2.md",
     "02-Literature/My Library.bib",
     "02-Literature",
     "Resources/Literature/PDFs/lara, sharadhi2026_Forces and symmetry breaking of a living meso-swimmer.pdf",
@@ -217,7 +222,6 @@
     "Resources/Literature/PDFs/karal, ahmed2020_Electrostatic interaction effects on the size distribution of self-assembled GUVs.pdf",
     "Resources/Literature/PDFs/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
     "Resources/Literature/PDFs/faizi, granek2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
-    "Resources/Literature/PDFs/willems2024_GUV Hydration Protocol (eLabFTW).pdf",
-    "Resources/Literature/PDFs/gracià, bezlyepkina2010_Effect of cholesterol on rigidity SI.pdf"
+    "Resources/Literature/PDFs/willems2024_GUV Hydration Protocol (eLabFTW).pdf"
   ]
 }
