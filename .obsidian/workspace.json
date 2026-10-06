@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fe6d0e7b85eb8b2c",
+        "id": "48da98762d9defc9",
         "type": "tabs",
         "children": [
           {
-            "id": "a6e1621ad8ca1201",
+            "id": "d4e24e17cfcd1c82",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,6 +19,26 @@
               },
               "icon": "lucide-file",
               "title": "Dashboard"
+            }
+          }
+        ]
+      },
+      {
+        "id": "fe6d0e7b85eb8b2c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a6e1621ad8ca1201",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resources/Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles"
             }
           }
         ]
@@ -175,10 +195,22 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "a6e1621ad8ca1201",
+  "active": "d4e24e17cfcd1c82",
   "lastOpenFiles": [
-    "Vault Guide.md",
+    "Resources/Literature/PDFs/bassereau, sorre2014_Bending lipid membranes Experiments after W. Helfrich's model.pdf",
+    "Resources/Literature/PDFs/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
+    "Resources/Literature/PDFs/agudo-canalejo, vutukuri2025_Synthetic cells get into shape.pdf",
+    "Resources/Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
+    "Attachments/Excalidraw/Lipid Bilayer Structure 2025-01-08 10.42.51.excalidraw.md",
+    "Attachments/Excalidraw/Lipid Bilayer Structure 2025-01-08 10.25.43.excalidraw.md",
+    "Attachments/Excalidraw/Cooling_by_heating.excalidraw.md",
+    "Attachments/Images/Pasted image 20250415141326.png",
+    "Attachments/Images/Pasted image 20250717161240.png",
+    "Attachments/Images/Pasted image 20250617135811.png",
+    "Attachments/Excalidraw/Drawing 2025-08-29 11.49.05.excalidraw.md",
     "Workflow.md",
+    "Vault Guide.md",
+    "Dashboard.md",
     "Resources/Concepts/Membrane-Physics/Untitled.base",
     "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/MOC - Vesicle Shape Deformations.md",
     "Resources/Concepts/Membrane-Physics/Untitled 4.md",
@@ -195,10 +227,8 @@
     "Resources/Concepts/Membrane-Physics/Summary.md",
     "Resources/Concepts/Membrane-Physics/Fluctuation spectroscopy.md",
     "Resources/Concepts/Membrane-Physics/Untitled 10.md",
-    "Resources/Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
     "Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
     "Resources/Concepts/Membrane-Physics/Untitled 8.md",
-    "Resources/Concepts/Membrane-Physics/Untitled 7.md",
     "Attachments/Images/Pasted image 20260505145224.png",
     "Attachments/Images/Pasted image 20260505144829.png",
     "Attachments/Images/Pasted image 20260505144824.png",
@@ -206,22 +236,12 @@
     "Attachments/Images/Pasted image 20260505143013.png",
     "Attachments/Images/Pasted image 20260505142749.png",
     "Attachments/Images/Pasted image 20260505142405.png",
-    "Attachments/Images/Pasted image 20260505141423.png",
-    "Attachments/Images/Pasted image 20260505141016.png",
-    "Attachments/Images/Pasted image 20260505140902.png",
-    "Resources/Literature/Reading-Notes/Optothermal-GUV-Review/INDEX - Optothermal GUV Literature Review.md",
-    "Projects/GUVs/Temperature shape changes GUVs.md",
-    "Resources/Concepts/Membrane-Physics/Untitled 3.md",
-    "Resources/Concepts/Membrane-Physics/Camera Integration Time Correction.md",
-    "Templates/Daily_Note.md",
     "02-Literature/My Library.bib",
     "02-Literature",
     "Resources/Literature/PDFs/lara, sharadhi2026_Forces and symmetry breaking of a living meso-swimmer.pdf",
     "Resources/Literature/PDFs/henriksen, ipsen2002_Thermal undulations of quasi-spherical vesicles stabilized by gravity.pdf",
     "Resources/Literature/PDFs/arianrhod2024_Vector - A Surprising Story of Space Time and Mathematical Transformation.pdf",
     "Resources/Literature/PDFs/karal, ahmed2020_Electrostatic interaction effects on the size distribution of self-assembled GUVs.pdf",
-    "Resources/Literature/PDFs/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf",
-    "Resources/Literature/PDFs/faizi, granek2024_Curvature fluctuations of fluid vesicles reveal hydrodynamic dissipation within the bilayer.pdf",
-    "Resources/Literature/PDFs/willems2024_GUV Hydration Protocol (eLabFTW).pdf"
+    "Resources/Literature/PDFs/bouvrais2012_Bending Rigidities of Lipid Bilayers.pdf"
   ]
 }
