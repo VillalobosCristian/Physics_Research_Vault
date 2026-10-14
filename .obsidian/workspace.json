@@ -4,37 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "48da98762d9defc9",
+        "id": "5e2a28bfbb2a7d02",
         "type": "tabs",
         "children": [
           {
-            "id": "d4e24e17cfcd1c82",
+            "id": "2c8520bce9c419c1",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "pdf",
+              "state": {
+                "file": "Resources/Literature/PDFs/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
+                "page": 1,
+                "left": -15,
+                "top": 524,
+                "zoom": 1.0160376435091032
+              },
+              "icon": "lucide-file-text",
+              "title": "bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets"
             }
           }
         ]
       },
       {
-        "id": "fe6d0e7b85eb8b2c",
+        "id": "3fb1df4a7256bcf9",
         "type": "tabs",
         "children": [
           {
-            "id": "a6e1621ad8ca1201",
+            "id": "4ff79d995e3126b3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Resources/Literature/Reading-Notes/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.md",
+                "file": "Resources/Literature/Reading-Notes/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles"
+              "title": "bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets"
             }
           }
         ]
@@ -191,8 +197,14 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "d4e24e17cfcd1c82",
+  "active": "2c8520bce9c419c1",
   "lastOpenFiles": [
+    "Resources/Literature/Reading-Notes/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.md",
+    "Resources/Literature/PDFs/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
+    "Resources/Literature/PDFs/bivas, tonchev2014_On the statistical mechanics of shape fluctuations of nearly spherical lipid vesicle.pdf",
+    "Resources/Literature/PDFs/baez2025_What is Entropy.pdf",
+    "Resources/Literature/Reading-Notes/duhr2005_Two-dimensional colloidal crystals formed by thermophoresis and convection.md",
+    "Resources/Concepts/Membrane-Physics/Untitled 11.md",
     "Dashboard.md",
     "Resources/Literature/PDFs/bassereau, sorre2014_Bending lipid membranes Experiments after W. Helfrich's model.pdf",
     "Resources/Literature/PDFs/ayala2023_Thermal fluctuations of the lipid membrane determine particle uptake into Giant Unilamellar Vesicles.pdf",
@@ -222,9 +234,6 @@
     "Resources/Concepts/Membrane-Physics/2026-04-08, Wednesday.md",
     "Resources/Concepts/Membrane-Physics/Summary.md",
     "Resources/Concepts/Membrane-Physics/Fluctuation spectroscopy.md",
-    "Resources/Concepts/Membrane-Physics/Untitled 10.md",
-    "Projects/Chlamy-Vesicle-Interaction/Chlamy-Vesicle interaction.md",
-    "Resources/Concepts/Membrane-Physics/Untitled 8.md",
     "Attachments/Images/Pasted image 20260505145224.png",
     "Attachments/Images/Pasted image 20260505144829.png",
     "Attachments/Images/Pasted image 20260505144824.png",
@@ -234,9 +243,6 @@
     "Attachments/Images/Pasted image 20260505142405.png",
     "02-Literature/My Library.bib",
     "02-Literature",
-    "Resources/Literature/PDFs/lara, sharadhi2026_Forces and symmetry breaking of a living meso-swimmer.pdf",
-    "Resources/Literature/PDFs/henriksen, ipsen2002_Thermal undulations of quasi-spherical vesicles stabilized by gravity.pdf",
-    "Resources/Literature/PDFs/arianrhod2024_Vector - A Surprising Story of Space Time and Mathematical Transformation.pdf",
-    "Resources/Literature/PDFs/karal, ahmed2020_Electrostatic interaction effects on the size distribution of self-assembled GUVs.pdf"
+    "Resources/Literature/PDFs/lara, sharadhi2026_Forces and symmetry breaking of a living meso-swimmer.pdf"
   ]
 }
