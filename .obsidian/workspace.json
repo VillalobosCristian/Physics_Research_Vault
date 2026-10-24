@@ -40,8 +40,21 @@
               "icon": "lucide-file",
               "title": "bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets"
             }
+          },
+          {
+            "id": "699612f01ab8682c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.14.5"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.14.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,10 +208,10 @@
       "tags-overview:Tags overview": false
     }
   },
-  "active": "2c8520bce9c419c1",
+  "active": "699612f01ab8682c",
   "lastOpenFiles": [
-    "Resources/Literature/Reading-Notes/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.md",
     "Resources/Literature/PDFs/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
+    "Resources/Literature/Reading-Notes/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.md",
     "Resources/Literature/PDFs/bivas, tonchev2014_On the statistical mechanics of shape fluctuations of nearly spherical lipid vesicle.pdf",
     "Resources/Literature/PDFs/baez2025_What is Entropy.pdf",
     "Resources/Literature/Reading-Notes/duhr2005_Two-dimensional colloidal crystals formed by thermophoresis and convection.md",
