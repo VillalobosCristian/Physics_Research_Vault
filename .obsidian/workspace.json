@@ -45,12 +45,14 @@
             "id": "699612f01ab8682c",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "pdf",
               "state": {
-                "currentVersion": "1.14.5"
+                "file": "Resources/Literature/PDFs/baez2025_What is Entropy.pdf",
+                "page": 1,
+                "zoom": 1
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.14.5"
+              "icon": "lucide-file-text",
+              "title": "baez2025_What is Entropy"
             }
           }
         ],
@@ -210,6 +212,8 @@
   },
   "active": "699612f01ab8682c",
   "lastOpenFiles": [
+    "Resources/Literature/PDFs/anzini, colombo2019_Thermal Forces from a Microscopic Perspective.pdf",
+    "Resources/Literature/PDFs/akiyama, hamaguchi2026_Tuning microswimmer motility by liposome encapsulation swimming and cargo transport of Chlamydomona.pdf",
     "Resources/Literature/PDFs/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.pdf",
     "Resources/Literature/Reading-Notes/bivas2010_Shape fluctuations of nearly spherical lipid vesicles and emulsion droplets.md",
     "Resources/Literature/PDFs/bivas, tonchev2014_On the statistical mechanics of shape fluctuations of nearly spherical lipid vesicle.pdf",
@@ -253,7 +257,6 @@
     "Attachments/Images/Pasted image 20260505142749.png",
     "Attachments/Images/Pasted image 20260505142405.png",
     "02-Literature/My Library.bib",
-    "02-Literature",
-    "Resources/Literature/PDFs/lara, sharadhi2026_Forces and symmetry breaking of a living meso-swimmer.pdf"
+    "02-Literature"
   ]
 }
